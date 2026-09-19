@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio system map</title>
+  <desc id="desc">A system map connecting operators, agents, research, product surfaces, and operational systems.</desc>
+  <rect width="1200" height="720" fill="#101318"/>
+  <g opacity="0.24" stroke="#f4f0e8" stroke-width="1">
+    <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M0 600H1200"/>
+    <path d="M120 0V720M240 0V720M360 0V720M480 0V720M600 0V720M720 0V720M840 0V720M960 0V720M1080 0V720"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-width="6">
+    <path d="M220 168C360 102 438 197 564 162C706 122 786 190 940 126" stroke="#4e9af1"/>
+    <path d="M164 508C304 388 438 488 558 402C690 306 790 396 1012 310" stroke="#d35d4c"/>
+    <path d="M246 600C404 556 500 620 654 534C792 456 854 532 1030 456" stroke="#7bbf7a"/>
+  </g>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <g transform="translate(96 90)">
+      <rect width="248" height="124" rx="14" fill="#f4f0e8"/>
+      <text x="24" y="45" font-size="24" font-weight="700" fill="#101318">Operators</text>
+      <text x="24" y="78" font-size="18" fill="#343b46">founders, domains,</text>
+      <text x="24" y="104" font-size="18" fill="#343b46">messy workflows</text>
+    </g>
+    <g transform="translate(476 80)">
+      <rect width="270" height="138" rx="14" fill="#4e9af1"/>
+      <text x="24" y="48" font-size="24" font-weight="700" fill="#07101d">Agentic tools</text>
+      <text x="24" y="82" font-size="18" fill="#07101d">sessions, model routing,</text>
+      <text x="24" y="108" font-size="18" fill="#07101d">review-first workflows</text>
+    </g>
+    <g transform="translate(842 92)">
+      <rect width="260" height="126" rx="14" fill="#f4f0e8"/>
+      <text x="24" y="46" font-size="24" font-weight="700" fill="#101318">Product surfaces</text>
+      <text x="24" y="80" font-size="18" fill="#343b46">interfaces, boards,</text>
+      <text x="24" y="106" font-size="18" fill="#343b46">creative engines</text>
+    </g>
+    <g transform="translate(120 386)">
+      <rect width="276" height="142" rx="14" fill="#d35d4c"/>
+      <text x="24" y="48" font-size="24" font-weight="700" fill="#160908">Research systems</text>
+      <text x="24" y="82" font-size="18" fill="#160908">proof windows, audits,</text>
+      <text x="24" y="108" font-size="18" fill="#160908">readiness gates</text>
+    </g>
+    <g transform="translate(522 376)">
+      <rect width="282" height="150" rx="14" fill="#f4f0e8"/>
+      <text x="24" y="50" font-size="24" font-weight="700" fill="#101318">Operating systems</text>
+      <text x="24" y="84" font-size="18" fill="#343b46">daemons, control planes,</text>
+      <text x="24" y="110" font-size="18" fill="#343b46">risk and forensics</text>
+    </g>
+    <g transform="translate(884 396)">
+      <rect width="224" height="120" rx="14" fill="#7bbf7a"/>
+      <text x="24" y="46" font-size="24" font-weight="700" fill="#071307">Evidence</text>
+      <text x="24" y="80" font-size="18" fill="#071307">demos, diagrams,</text>
+      <text x="24" y="106" font-size="18" fill="#071307">case studies</text>
+    </g>
+  </g>
+</svg>

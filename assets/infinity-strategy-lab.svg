@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Infinity sanitized strategy lab</title>
+  <desc id="desc">A fake-data strategy lab showing source mapping, quote audit, proof windows, and readiness gates.</desc>
+  <rect width="1280" height="760" fill="#101318"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="56" y="72" fill="#f7f4ee" font-size="34" font-weight="800">Infinity Strategy Lab</text>
+    <text x="56" y="108" fill="#aeb5c0" font-size="18">Synthetic research-to-readiness view. All windows, prices, rules, and reports are placeholders.</text>
+    <rect x="56" y="154" width="356" height="496" rx="8" fill="#f7f4ee"/>
+    <text x="88" y="202" fill="#101318" font-size="24" font-weight="800">Source map</text>
+    <text x="88" y="246" fill="#343b46" font-size="17">Rule family: synthetic</text>
+    <text x="88" y="280" fill="#343b46" font-size="17">Transcript: scrubbed note 03</text>
+    <text x="88" y="314" fill="#343b46" font-size="17">Chart snapshot: fake index</text>
+    <text x="88" y="348" fill="#343b46" font-size="17">Decision: research only</text>
+    <rect x="88" y="398" width="292" height="34" rx="4" fill="#d35d4c"/>
+    <rect x="88" y="448" width="240" height="34" rx="4" fill="#b88a35"/>
+    <rect x="88" y="498" width="268" height="34" rx="4" fill="#7bbf7a"/>
+    <text x="88" y="580" fill="#101318" font-size="18" font-weight="800">Audit status</text>
+    <text x="88" y="612" fill="#343b46" font-size="16">Quote fidelity: pass on fake set</text>
+    <rect x="462" y="154" width="356" height="226" rx="8" fill="#f7f4ee"/>
+    <text x="494" y="202" fill="#101318" font-size="24" font-weight="800">Proof windows</text>
+    <text x="494" y="246" fill="#343b46" font-size="17">Window A: synthetic pass</text>
+    <text x="494" y="280" fill="#343b46" font-size="17">Window B: needs review</text>
+    <text x="494" y="314" fill="#343b46" font-size="17">Window C: excluded</text>
+    <path d="M502 346H778" stroke="#d35d4c" stroke-width="5"/>
+    <path d="M502 346L560 314L628 334L704 276L778 300" fill="none" stroke="#3d7ec9" stroke-width="6" stroke-linecap="round"/>
+    <rect x="462" y="424" width="356" height="226" rx="8" fill="#f7f4ee"/>
+    <text x="494" y="472" fill="#101318" font-size="24" font-weight="800">Quote audit</text>
+    <text x="494" y="516" fill="#343b46" font-size="17">Synthetic bid/ask spread</text>
+    <text x="494" y="550" fill="#343b46" font-size="17">Execution-grade check</text>
+    <text x="494" y="584" fill="#343b46" font-size="17">Replay consistency: pass</text>
+    <rect x="868" y="154" width="356" height="496" rx="8" fill="#d35d4c"/>
+    <text x="900" y="202" fill="#160908" font-size="24" font-weight="800">Readiness gate</text>
+    <text x="900" y="250" fill="#160908" font-size="18">Research: complete</text>
+    <text x="900" y="292" fill="#160908" font-size="18">Backtest: constrained</text>
+    <text x="900" y="334" fill="#160908" font-size="18">Paper: pending review</text>
+    <text x="900" y="376" fill="#160908" font-size="18">Live: blocked</text>
+    <rect x="900" y="432" width="250" height="52" rx="4" fill="#f7f4ee"/>
+    <text x="924" y="465" fill="#101318" font-size="17" font-weight="800">Do not promote without audit</text>
+    <text x="900" y="542" fill="#160908" font-size="16">Public view hides exact rules, real trades, broker details, timing, and account scale.</text>
+  </g>
+</svg>

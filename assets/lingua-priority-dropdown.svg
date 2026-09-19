@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Lingua Priority dropdown proof</title>
+  <desc id="desc">Public-safe visual proof for Lingua Priority showing browser-detected languages, top global language backfill, alphabetical rest, and package verification.</desc>
+  <rect width="1200" height="760" fill="#f6f1e8"/>
+  <rect x="44" y="44" width="1112" height="672" rx="8" fill="#11151b"/>
+  <text x="84" y="104" fill="#f8f5ee" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Lingua Priority: better language dropdowns</text>
+  <text x="84" y="136" fill="#d9d1c3" font-family="Inter, Arial, sans-serif" font-size="17">A tiny zero-dependency UX package that orders language choices by real usage and browser preference.</text>
+
+  <defs>
+    <style>
+      .panel { fill: #f8f5ee; stroke: #d8cbb8; stroke-width: 2; }
+      .dark { fill: #1c232c; stroke: #667085; stroke-width: 2; }
+      .label { fill: #11151b; font: 800 20px Inter, Arial, sans-serif; }
+      .text { fill: #374151; font: 15px Inter, Arial, sans-serif; }
+      .muted { fill: #667085; font: 13px Inter, Arial, sans-serif; }
+      .dark-label { fill: #f8f5ee; font: 800 20px Inter, Arial, sans-serif; }
+      .dark-text { fill: #d9d1c3; font: 15px Inter, Arial, sans-serif; }
+      .tag { fill: #5aa897; font: 800 13px Inter, Arial, sans-serif; letter-spacing: .08em; }
+      .row { fill: #fffaf1; stroke: #e5d9c8; stroke-width: 1; }
+      .row-hot { fill: #e8f4ee; stroke: #b8d8cb; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="84" y="190" width="410" height="420" rx="8"/>
+  <text class="tag" x="112" y="226">DROPDOWN OUTPUT</text>
+  <text class="label" x="112" y="258">Suggested first</text>
+  <rect class="row-hot" x="112" y="288" width="354" height="48" rx="6"/>
+  <text class="text" x="134" y="318">Espanol</text>
+  <text class="muted" x="350" y="318">browser</text>
+  <rect class="row-hot" x="112" y="344" width="354" height="48" rx="6"/>
+  <text class="text" x="134" y="374">English</text>
+  <text class="muted" x="350" y="374">browser</text>
+  <rect class="row-hot" x="112" y="400" width="354" height="48" rx="6"/>
+  <text class="text" x="134" y="430">Chinese</text>
+  <text class="muted" x="338" y="430">global #2</text>
+  <rect class="row-hot" x="112" y="456" width="354" height="48" rx="6"/>
+  <text class="text" x="134" y="486">Hindi</text>
+  <text class="muted" x="346" y="486">global #4</text>
+  <text class="label" x="112" y="542">All languages</text>
+  <rect class="row" x="112" y="562" width="354" height="32" rx="6"/>
+  <text class="muted" x="134" y="583">Afrikaans, Albanian, Amharic...</text>
+
+  <rect class="panel" x="536" y="190" width="580" height="184" rx="8"/>
+  <text class="tag" x="564" y="226">API SHAPE</text>
+  <text class="label" x="564" y="258">Two arrays, practical defaults</text>
+  <text class="text" x="564" y="294">suggest(10) returns browser languages first, then top global languages.</text>
+  <text class="text" x="564" y="324">rest stays alphabetical, so the full dropdown remains predictable.</text>
+  <text class="text" x="564" y="354">SSR-safe detectBrowser() returns an empty array without navigator.</text>
+
+  <rect class="panel" x="536" y="406" width="580" height="142" rx="8"/>
+  <text class="tag" x="564" y="442">PACKAGE PROOF</text>
+  <text class="label" x="564" y="474">Small, auditable, dependency-free</text>
+  <text class="text" x="564" y="510">48 tests passed. ESM and CJS builds passed. Type declarations generated.</text>
+  <text class="text" x="564" y="536">npm audit reported 0 vulnerabilities for prod and moderate-level checks.</text>
+
+  <rect class="dark" x="536" y="580" width="580" height="74" rx="8"/>
+  <text class="dark-label" x="564" y="624">Hiring signal</text>
+  <text class="dark-text" x="728" y="624">taste in small UI details</text>
+  <text class="dark-text" x="922" y="624">package discipline</text>
+  <text class="dark-text" x="564" y="646">zero-dependency utility with data integrity and SSR behavior covered</text>
+
+  <text x="84" y="704" fill="#d9d1c3" font-family="Inter, Arial, sans-serif" font-size="13">Proof basis: local source, README API, npm test, npm run build, npm audit --omit=dev, and npm audit --audit-level=moderate.</text>
+</svg>

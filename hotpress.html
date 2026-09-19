@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hotpress - Gorka Molero Case Study</title>
+    <meta
+      name="description"
+      content="Case study for Hotpress/Hotpress, a live collaborative publishing product at hotpress.app with real-time CRDT editing, print-production PDF and EPUB exports, GitHub-backed storage, Stripe, Drizzle, and Next.js."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Gorka Molero</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="./index.html#work">Work</a>
+        <a href="./index.html#log">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero agents">
+        <p class="eyebrow">Live · publishing product</p>
+        <h1>Hotpress</h1>
+        <p class="hero-text">
+          A shipped collaborative publishing product: real-time writing, CRDT editing, print-production exports, Git-versioned storage, and paid product surfaces. Live at
+          <a href="https://hotpress.app">hotpress.app</a>.
+        </p>
+        <div class="case-meta">
+          <span>Live product</span>
+          <span><a href="https://hotpress.app">hotpress.app</a></span>
+          <span>Deeper review on request</span>
+        </div>
+      </section>
+
+      <section class="case-body">
+        <article class="case-main">
+          <h2>Problem</h2>
+          <p>
+            Serious writing and publishing work sits between authoring, collaboration, typography, storage, export quality, and commerce. A credible product needs to feel like an editor while also handling the unglamorous backend pieces that make publishing real.
+          </p>
+
+          <h2>What I Built</h2>
+          <p>
+            I built and shipped Hotpress — publicly named Hotpress, live at <a href="https://hotpress.app">hotpress.app</a> with Free/Pro/Team pricing: a collaborative writing and publishing product where teams write together in real time and every save can regenerate a print-ready book. The editor is Lexical with Liveblocks/Yjs CRDT collaboration: live cursors, presence, and comments. The publishing pipeline produces print-production PDF — CMYK output intent, bleed, trim marks, PDF/X — plus EPUB export, with 20+ typography templates and full front- and back-matter control.
+          </p>
+          <p>
+            Storage is GitHub-backed: every save is a commit in the user's own repository, so there is no vendor lock-in, and access security was migrated from broad OAuth scopes to a scoped GitHub App installation-token model. Stripe billing records purchases through idempotent webhooks. The result is ~41K lines of strict TypeScript on Next.js and Drizzle/Postgres, guarded by a ~4,800-line Playwright end-to-end suite covering the editor, collaboration, formatting, sharing, and the export paywall.
+          </p>
+
+          <div class="evidence-grid">
+            <div>
+              <strong>Product surface</strong>
+              <span>Editor, project library, 20+ typography templates, review, and publishing workflow.</span>
+            </div>
+            <div>
+              <strong>Collaboration core</strong>
+              <span>Lexical editor with Liveblocks/Yjs CRDT real-time editing and durable document state.</span>
+            </div>
+            <div>
+              <strong>Business layer</strong>
+              <span>Print-production PDF and EPUB exports, Git-backed storage, and Stripe subscriptions with idempotent webhooks.</span>
+            </div>
+          </div>
+
+          <figure class="proof-figure">
+            <img src="./assets/inkwell-publishing-system.svg" alt="Hotpress system diagram showing writer surface, CRDT collaboration, export pipeline, GitHub storage, Stripe and Drizzle, book outputs, review links, and commerce path." />
+            <figcaption>
+              Public-safe system diagram of the shipped product. It captures the product-engineering signal without exposing private content, customer data, manuscripts, repository internals, or payment configuration.
+            </figcaption>
+          </figure>
+
+          <h2>System Architecture</h2>
+
+          <h2>Technical Decisions</h2>
+          <ul class="case-list">
+            <li>Lexical plus Liveblocks/Yjs CRDT for conflict-free real-time editing instead of lock-based collaboration.</li>
+            <li>Git as the storage engine: every save is a commit, so history, recovery, and portability come for free and users keep their own manuscripts.</li>
+            <li>Print-production output — CMYK output intent, bleed, trim marks, PDF/X — rather than a generic "export to PDF".</li>
+            <li>Scoped GitHub App installation tokens instead of broad OAuth scopes for repository access.</li>
+            <li>Idempotent Stripe webhooks so billing state survives retries and replays.</li>
+            <li>A ~4,800-line Playwright end-to-end suite as the quality backbone for editor, collaboration, and export flows.</li>
+          </ul>
+
+          <h2>What This Proves</h2>
+          <p>
+            Unlike the private flagships, this one anyone can click: Hotpress combines collaborative editing, export infrastructure, storage design, monetization, and taste-heavy user experience in a single shipped product.
+          </p>
+
+          <h2>Privacy Boundary</h2>
+          <p>
+            The product itself is public — anyone can use it at <a href="https://hotpress.app">hotpress.app</a>. What stays private: user manuscripts, customer data, payment configuration, and repository internals. Screenshots and demos use fake content, and deeper source review is available on request.
+          </p>
+        </article>
+
+        <aside class="case-aside">
+          <h2>Public Evidence</h2>
+          <ul>
+            <li>Live product at <a href="https://hotpress.app">hotpress.app</a> with Free/Pro/Team pricing.</li>
+            <li>Real-time collaborative editor: Lexical with Liveblocks/Yjs CRDT.</li>
+            <li>Print-production PDF (CMYK, bleed, trim marks, PDF/X) and EPUB exports.</li>
+            <li>GitHub-backed storage — every save a commit — behind a scoped GitHub App.</li>
+            <li>~41K lines of TypeScript with a ~4,800-line Playwright e2e suite.</li>
+            <li>Proof note — available on request.</li>
+          </ul>
+
+          <h2>Privacy Boundary</h2>
+          <p>
+            The product is public; manuscripts, customer data, payment configuration, and repository internals stay private. Source walkthrough available on request.
+          </p>
+
+          <a class="button primary full" href="https://hotpress.app">Open hotpress.app</a>
+          <a class="button secondary full" href="./contact.html">Ask for a demo</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Gorka Molero</span>
+      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
+    </footer>
+  </body>
+</html>

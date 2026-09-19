@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Sidekick Tauri and sidecar boundary</title>
+  <desc id="desc">Public-safe Sidekick desktop shell proof showing renderer, Tauri command boundary, Rust shell, sidecar process, provider tools, Ableton OSC handoff, and verification status.</desc>
+  <rect width="1200" height="720" fill="#f7f3eb"/>
+  <rect x="48" y="44" width="1104" height="632" rx="8" fill="#111418"/>
+  <text x="84" y="104" fill="#f7f3eb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Tauri Shell Boundary</text>
+  <text x="84" y="138" fill="#bfc6cf" font-family="Inter, Arial, sans-serif" font-size="16">Source-grounded desktop proof: renderer invokes Rust commands, Rust owns OS boundaries, sidecar owns agent tools.</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="15">
+    <rect x="84" y="190" width="200" height="120" rx="8" fill="#20252c" stroke="#4b5563"/>
+    <text x="108" y="224" fill="#f7f3eb" font-weight="700">React renderer</text>
+    <text x="108" y="252" fill="#bfc6cf">Compact producer panel</text>
+    <text x="108" y="278" fill="#bfc6cf">Tauri API invokes</text>
+
+    <rect x="350" y="190" width="220" height="120" rx="8" fill="#f7f3eb" stroke="#d8d0c4"/>
+    <text x="374" y="224" fill="#111418" font-weight="700">Rust command layer</text>
+    <text x="374" y="252" fill="#303640">save audio temp file</text>
+    <text x="374" y="278" fill="#303640">project info, sidecar, OSC</text>
+
+    <rect x="636" y="190" width="220" height="120" rx="8" fill="#20252c" stroke="#4b5563"/>
+    <text x="660" y="224" fill="#f7f3eb" font-weight="700">Bundled sidecar</text>
+    <text x="660" y="252" fill="#bfc6cf">Mastra agent process</text>
+    <text x="660" y="278" fill="#bfc6cf">HTTP stream endpoint</text>
+
+    <rect x="922" y="190" width="194" height="120" rx="8" fill="#20252c" stroke="#4b5563"/>
+    <text x="946" y="224" fill="#f7f3eb" font-weight="700">Music tools</text>
+    <text x="946" y="252" fill="#bfc6cf">Generation</text>
+    <text x="946" y="278" fill="#bfc6cf">Audio + Ableton</text>
+  </g>
+
+  <g stroke="#d6a23a" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M288 250H346"/>
+    <path d="M574 250H632"/>
+    <path d="M860 250H918"/>
+  </g>
+  <g fill="#d6a23a">
+    <path d="M346 250l-13-8v16z"/>
+    <path d="M632 250l-13-8v16z"/>
+    <path d="M918 250l-13-8v16z"/>
+  </g>
+
+  <rect x="84" y="370" width="496" height="178" rx="8" fill="#f7f3eb" stroke="#d8d0c4"/>
+  <text x="112" y="410" fill="#111418" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Verified this pass</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#303640">
+    <text x="112" y="446">1. Tauri config bundles an external sidecar binary.</text>
+    <text x="112" y="476">2. Rust command handler registers sidecar and Ableton commands.</text>
+    <text x="112" y="506">3. Renderer invokes file/project/dialog/shortcut commands.</text>
+    <text x="112" y="536">4. `cargo check` passed for the Tauri shell.</text>
+  </g>
+
+  <rect x="620" y="370" width="496" height="178" rx="8" fill="#f7f3eb" stroke="#d8d0c4"/>
+  <text x="648" y="410" fill="#111418" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Still not claimed</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#303640">
+    <text x="648" y="446">1. Sidecar TypeScript build currently has type drift.</text>
+    <text x="648" y="476">2. Provider generation needs credentials and fake media.</text>
+    <text x="648" y="506">3. Ableton handoff needs a disposable DAW session.</text>
+    <text x="648" y="536">4. Packaged app demo remains future proof.</text>
+  </g>
+
+  <rect x="84" y="590" width="1032" height="46" rx="6" fill="#20252c" stroke="#4b5563"/>
+  <text x="112" y="619" fill="#bfc6cf" font-family="Inter, Arial, sans-serif" font-size="14">Boundary rule: no provider keys, generated audio, DAW paths, local project names, sample material, or live Ableton state in public proof.</text>
+</svg>

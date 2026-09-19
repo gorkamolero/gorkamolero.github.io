@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Saga agent prototype output proof</title>
+  <desc id="desc">Public-safe diagram showing the saga-agentic-ai writing-room prototype moving from brief to research, outline, draft, critique, and final script with a generated script excerpt.</desc>
+  <rect width="1120" height="720" fill="#0b0f19"/>
+  <rect x="40" y="40" width="1040" height="640" rx="8" fill="#101827" stroke="#26334b"/>
+  <text x="72" y="92" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Saga agent prototype output</text>
+  <text x="72" y="126" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="16">Grounded in saga-agentic-ai dated script files and callback log. Public-safe fictional sample, no credentials or private data.</text>
+
+  <g transform="translate(72 170)">
+    <rect width="214" height="112" rx="6" fill="#172033" stroke="#334155"/>
+    <text x="20" y="34" fill="#67e8f9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">01 Brief</text>
+    <text x="20" y="64" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">The Muse Machine</text>
+    <text x="20" y="91" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="13">Audience, duration, tone, story goal.</text>
+  </g>
+  <path d="M300 226 H360" stroke="#67e8f9" stroke-width="2" stroke-linecap="round"/>
+  <path d="M352 218 L362 226 L352 234" fill="none" stroke="#67e8f9" stroke-width="2" stroke-linecap="round"/>
+
+  <g transform="translate(374 170)">
+    <rect width="214" height="112" rx="6" fill="#172033" stroke="#334155"/>
+    <text x="20" y="34" fill="#67e8f9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">02 Research</text>
+    <text x="20" y="64" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Context pass</text>
+    <text x="20" y="91" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="13">Creativity, metafiction, AI authorship.</text>
+  </g>
+  <path d="M602 226 H662" stroke="#67e8f9" stroke-width="2" stroke-linecap="round"/>
+  <path d="M654 218 L664 226 L654 234" fill="none" stroke="#67e8f9" stroke-width="2" stroke-linecap="round"/>
+
+  <g transform="translate(676 170)">
+    <rect width="214" height="112" rx="6" fill="#172033" stroke="#334155"/>
+    <text x="20" y="34" fill="#67e8f9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">03 Outline</text>
+    <text x="20" y="64" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Scene structure</text>
+    <text x="20" y="91" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="13">Hook, discovery, blur, twist, CTA.</text>
+  </g>
+
+  <g transform="translate(72 330)">
+    <rect width="300" height="172" rx="6" fill="#111827" stroke="#334155"/>
+    <text x="20" y="34" fill="#a7f3d0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Generated script excerpt</text>
+    <text x="20" y="68" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">"I am the storyteller of my own life."</text>
+    <text x="20" y="100" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="13">Final script uses cinematic shot cues, narrator-only</text>
+    <text x="20" y="121" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="13">voiceover, pacing notes, and a closing thesis.</text>
+    <text x="20" y="148" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="12">Source: 2024-04-14_58.md, fictional sample output.</text>
+  </g>
+
+  <g transform="translate(410 330)">
+    <rect width="300" height="172" rx="6" fill="#111827" stroke="#334155"/>
+    <text x="20" y="34" fill="#a7f3d0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Critique loop</text>
+    <text x="20" y="68" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Structure, pacing, themes</text>
+    <text x="20" y="100" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="13">Callback log records a critic/editor pass over</text>
+    <text x="20" y="121" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="13">structure, characterization, atmosphere, and logic.</text>
+    <text x="20" y="148" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="12">Source: crew_callback_logs.txt, sanitized summary.</text>
+  </g>
+
+  <g transform="translate(748 330)">
+    <rect width="260" height="172" rx="6" fill="#111827" stroke="#334155"/>
+    <text x="20" y="34" fill="#a7f3d0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Archive boundary</text>
+    <text x="20" y="68" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Saved markdown artifacts</text>
+    <text x="20" y="100" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="13">Two dated outputs remain inspectable</text>
+    <text x="20" y="121" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="13">without provider keys, accounts, or runtime state.</text>
+    <text x="20" y="148" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="12">Proof of workflow shape, not production readiness.</text>
+  </g>
+
+  <g transform="translate(72 560)">
+    <rect width="936" height="78" rx="6" fill="#0f766e" fill-opacity="0.18" stroke="#2dd4bf" stroke-opacity="0.55"/>
+    <text x="24" y="32" fill="#ccfbf1" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">What this proves</text>
+    <text x="24" y="56" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="14">The early prototype already decomposed creative work into specialist agents, saved final artifacts, and produced reviewable outputs before the fuller Saga product UI.</text>
+  </g>
+</svg>

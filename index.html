@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gorka Molero - Senior AI Product Engineer</title>
+    <meta
+      name="description"
+      content="Gorka Molero, senior AI product engineer. Full-stack, AI agents, TypeScript/React/Node/Python. Trading infrastructure, publishing tools, AI storytelling, adventure games, music tools."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Gorka Molero home">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Gorka Molero</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#selected">Work</a>
+        <a href="./workbench.html">Projects</a>
+        <a href="#log">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="wordmark">GORKA<br />MOLERO</h1>
+        <hr class="rule" />
+        <p class="role">Senior AI Product Engineer</p>
+        <p class="role-meta">Full-stack &middot; AI agents &middot; TypeScript / React / Node / Python &middot; building since 2012</p>
+        <p class="role-meta">Remote, international &middot; currently at Roadie</p>
+        <div class="cta-row" aria-label="Contact routes">
+          <a class="primary" href="https://github.com/gorkamolero">GitHub</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+        <p class="intro">
+          I build software for complicated workflows: developer platforms, editing tools,
+          and products that put AI to work. My work spans product design, frontend, backend,
+          and the details that make a system usable. I'm a senior engineer at Roadie;
+          I've also shipped creator tools at Typeshare and built products of my own.
+        </p>
+      </section>
+
+      <section id="selected" class="section selected-work" aria-labelledby="selected-title">
+        <div class="section-heading">
+          <h2 id="selected-title" class="label">Selected work</h2>
+          <p>Three examples of how I build: a tool for developers, an AI product, and production software for people doing their work.</p>
+        </div>
+        <article class="selected-example">
+          <span class="eyebrow">Agent tooling</span>
+          <h3><a href="./claude-on-discord.html">Claude-on-Discord</a></h3>
+          <p>Delegate coding work through Discord threads, with separate worktrees, streamed tool activity, and human review. I built the workflow around the agent so its work stays inspectable.</p>
+          <a class="selected-link" href="./claude-on-discord.html">Explore the workflow &rarr;</a>
+        </article>
+        <article class="selected-example">
+          <span class="eyebrow">AI product</span>
+          <h3><a href="./the-pulse.html">The Pulse</a></h3>
+          <p>An interactive storytelling platform with worlds, narration, and multiplayer lobbies. The case study covers the product and the harness for evaluating narrative behavior.</p>
+          <a class="selected-link" href="./the-pulse.html">Read the case study &rarr;</a>
+        </article>
+        <article class="selected-example">
+          <span class="eyebrow">Professional engineering</span>
+          <h3><a href="#experience">Typeshare &amp; Roadie</a></h3>
+          <p>At Typeshare I shipped Tiptap-based thread and carousel editors. At Roadie I work on developer-platform interfaces. Both demand careful product decisions inside complex existing systems.</p>
+          <a class="selected-link" href="#experience">See my experience &rarr;</a>
+        </article>
+      </section>
+
+      <section id="games" class="section" aria-labelledby="games-title">
+        <div class="section-heading">
+          <h2 id="games-title" class="label">Games &mdash; AI storytelling</h2>
+          <p>The focus here is making AI do something genuinely compelling in a videogame &mdash; real, branching narrative, not a chatbot in a costume. A live storytelling platform, a graphic-adventure engine, and the language it all runs on.</p>
+        </div>
+        <div class="index-table">
+          <div class="index-row">
+            <span class="flag live">Live</span>
+            <span class="name"><a href="./the-pulse.html">the pulse</a></span>
+            <span class="cat">AI storytelling platform &mdash; worlds, narration, multiplayer lobbies, and an evaluation harness that scores narrative quality</span>
+            <a class="proof-link" href="https://the-pulse.games">live &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag case">API</span>
+            <span class="name"><a href="./anima.html">anima</a></span>
+            <span class="cat">graphic-adventure creation system and its first playable game &mdash; write scenes, place hotspots, walk them, with an AI art pipeline</span>
+            <a class="proof-link" href="https://will-api.vercel.app/api/health">live API &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag case">Case</span>
+            <span class="name"><a href="./storyscript.html">storyscript</a></span>
+            <span class="cat">the language &amp; headless engine underneath &mdash; write the story like a screenplay, test it with AI agents before any graphics exist</span>
+            <a class="proof-link" href="./storyscript.html">case &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section" aria-labelledby="agents-title">
+        <div class="section-heading">
+          <h2 id="agents-title" class="label">Agents &amp; developer tools</h2>
+          <p>Infrastructure for delegating real work to coding agents, and the tooling around it. All public source.</p>
+        </div>
+        <div class="index-table">
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./claude-on-discord.html">claude-on-discord</a></span>
+            <span class="cat">Claude Code running in Discord threads &mdash; delegate real coding work from anywhere, human review kept in the loop</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/claude-on-discord">source &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./koda.html">koda</a></span>
+            <span class="cat">desktop IDE for agent coding &mdash; review-first workflow, checkpoints, visual diffs, isolated worktrees</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/koda">source &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./maestro.html">maestro</a></span>
+            <span class="cat">headless life manager &mdash; spaces, priorities, and working context that agents can operate</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/maestro">source &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./saga.html">saga</a></span>
+            <span class="cat">agentic story studio &mdash; a writers' room of agents drafting long-form fiction</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/saga-ai">source &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./molter.html">molter</a></span>
+            <span class="cat">agent-to-agent dating experiment &mdash; five levels of progressive-disclosure negotiation between people's agents</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/molter">source &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./paperclip-openrouter.html">paperclip-openrouter</a></span>
+            <span class="cat">Paperclip adapter for OpenRouter &mdash; 300+ models through one chat-completions tool loop, no local CLI</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/paperclip-adapter-openrouter">source &nearr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="products-title">
+        <div class="section-heading">
+          <h2 id="products-title" class="label">Shipped products</h2>
+          <p>Things that are live and used, and the small craft libraries under them.</p>
+        </div>
+        <div class="index-table">
+          <div class="index-row">
+            <span class="flag live">Live</span>
+            <span class="name"><a href="./hotpress.html">hotpress</a></span>
+            <span class="cat">collaborative writing and publishing &mdash; built to print my translations of old books; every save renders a press-ready PDF</span>
+            <a class="proof-link" href="https://hotpress.app">hotpress.app &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag live">Live</span>
+            <span class="name"><a href="./datomania.html">datomania</a></span>
+            <span class="cat">Spanish public data made queryable &mdash; parliament, representatives, exports, a public API</span>
+            <a class="proof-link" href="https://datomania.info">datomania.info &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./streamtui.html">streamtui</a></span>
+            <span class="cat">terminal streaming client in Rust &mdash; search, cast to a screen, automate with JSON</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/streamtui">source &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./lingua-priority.html">lingua-priority</a></span>
+            <span class="cat">language pickers with practical defaults &mdash; small UX library, low dependency surface, polish</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/lingua-priority">source &nearr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="creative-title">
+        <div class="section-heading">
+          <h2 id="creative-title" class="label">Creative &amp; music tools</h2>
+          <p>Software for making things &mdash; sound, image, and the workflows around them.</p>
+        </div>
+        <div class="index-table">
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./sidekick.html">sidekick</a></span>
+            <span class="cat">desktop companion for music production &mdash; audio analysis and producer workflow in a native app</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/sidekick">source &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./solderpunk.html">solderpunk</a></span>
+            <span class="cat">music tools &mdash; synth explorers, MIDI control, and a working knowledge base for hardware patching</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/solderpunk">source &nearr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag public">Public</span>
+            <span class="name"><a href="./carvingen.html">carvingen</a></span>
+            <span class="cat">canvas for AI image and video generation, built for a real carving business</span>
+            <a class="proof-link" href="https://github.com/gorkamolero/carvingen">source &nearr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="private" class="section" aria-labelledby="private-title">
+        <div class="section-heading">
+          <h2 id="private-title" class="label">Private systems &mdash; real stakes</h2>
+          <p>Run with real money and real client data, so the code stays closed. I demo them live in interviews &mdash; architecture, tests, post-trade forensics. Everything shown publicly uses synthetic data.</p>
+        </div>
+        <div class="index-table">
+          <div class="index-row">
+            <span class="flag private">Private</span>
+            <span class="name"><a href="./mercurius.html">mercurius</a></span>
+            <span class="cat">futures trading infrastructure &mdash; parity-tested backtest engine, safety gates, a live two-person operation</span>
+            <a class="proof-link" href="./mercurius.html">ask for a demo &rarr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag private">Private</span>
+            <span class="name"><a href="./infinity.html">infinity</a></span>
+            <span class="cat">options research pipeline &mdash; every parameter cited, every claim backed by a regenerable artifact</span>
+            <a class="proof-link" href="./infinity.html">ask for a demo &rarr;</a>
+          </div>
+          <div class="index-row">
+            <span class="flag private">Private</span>
+            <span class="name"><a href="./land.html">land unconditional</a></span>
+            <span class="cat">automated land acquisition &mdash; county scanning, owner research, offer estimation, and a CRM for the operator</span>
+            <a class="proof-link" href="./land.html">ask for a demo &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="log" class="section" aria-labelledby="log-title">
+        <div class="section-heading">
+          <h2 id="log-title" class="label">About</h2>
+        </div>
+        <div id="experience">
+          <h3>Professional experience</h3>
+          <p class="hero-text"><strong>Roadie &middot; Senior Software Engineer &middot; 2024&ndash;present.</strong> Product and interface engineering for a developer platform, with React and TypeScript.</p>
+          <p class="hero-text"><strong>Typeshare &middot; Senior Contract Software Engineer &middot; 2022&ndash;2023.</strong> Shipped thread and carousel editing tools with Tiptap, React, and TypeScript; worked through structured content, media handling, and editor performance.</p>
+          <p class="hero-text"><strong>Earlier:</strong> co-founded Maility and built across its product and engineering stack; worked on design systems at Chessable and internal tools at Adalab. Building for the web since 2012.</p>
+        </div>
+        <p class="hero-text">
+          I started in UI because I cared how tools felt, and kept following the work down the stack:
+          full-stack products, startups, internal tools, agents. The pattern is stable &mdash; hand me
+          a messy domain with real stakes and I'll turn the workflow into software that can be used,
+          inspected, and improved.
+        </p>
+        <p class="hero-text">
+          The full project atlas, including archive and paused work, lives in the
+          <a class="inline-link" href="./workbench.html">workbench</a>.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="./contact.html">Contact</a>
+          <a class="button secondary" href="./workbench.html">Full atlas</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Gorka Molero</span>
+      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
+    </footer>
+  </body>
+</html>

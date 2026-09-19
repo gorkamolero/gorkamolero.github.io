@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">StreamTUI JSON command contract proof</title>
+  <desc id="desc">Sanitized terminal proof showing StreamTUI search, device, status, and test commands with v1 JSON envelopes and redacted local device data.</desc>
+  <rect width="1180" height="760" fill="#101412"/>
+  <rect x="42" y="42" width="1096" height="676" rx="8" fill="#151b18" stroke="#4a5f54" stroke-width="2"/>
+  <rect x="42" y="42" width="1096" height="54" rx="8" fill="#24342d"/>
+  <circle cx="76" cy="69" r="7" fill="#f1786b"/>
+  <circle cx="100" cy="69" r="7" fill="#f5c15d"/>
+  <circle cx="124" cy="69" r="7" fill="#71c386"/>
+  <text x="156" y="75" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#d9efe4">streamtui public proof capture</text>
+
+  <text x="72" y="138" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#8fd0a8">$ go run ./cmd/streamtui search "blade runner" --json</text>
+  <text x="94" y="177" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">{</text>
+  <text x="120" y="207" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">"ok": true,</text>
+  <text x="120" y="237" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">"data": [</text>
+  <text x="146" y="267" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">{ "title": "Blade Runner 2049", "media_type": "movie", "year": 2017 },</text>
+  <text x="146" y="297" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">{ "title": "Blade Runner", "media_type": "movie", "year": 1982 }</text>
+  <text x="120" y="327" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">],</text>
+  <text x="120" y="357" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">"error": null,</text>
+  <text x="120" y="387" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">"meta": { "version": "v1" }</text>
+  <text x="94" y="417" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">}</text>
+
+  <line x1="72" y1="456" x2="1108" y2="456" stroke="#31443b" stroke-width="2"/>
+
+  <text x="72" y="500" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#8fd0a8">$ go run ./cmd/streamtui devices list --json</text>
+  <text x="94" y="537" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">ok: true  data: [REDACTED_LOCAL_CHROMECASTS]  meta.version: v1</text>
+
+  <text x="72" y="586" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#8fd0a8">$ go test ./...</text>
+  <text x="94" y="623" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">ok streamtui/internal/cli  ok streamtui/internal/config</text>
+  <text x="94" y="653" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#dce8e0">ok streamtui/internal/domain  ok streamtui/internal/providers</text>
+
+  <rect x="72" y="680" width="1036" height="1" fill="#31443b"/>
+  <text x="72" y="704" font-family="Inter, Arial, sans-serif" font-size="15" fill="#9fb7aa">Sanitized from local command output. Raw LAN IPs and local Chromecast names are intentionally excluded.</text>
+</svg>

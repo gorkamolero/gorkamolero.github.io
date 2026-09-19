@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Mercurius fake mode boundary diagram</title>
+  <desc id="desc">A synthetic mode boundary diagram showing backtest, rehearsal, paper, and live boundaries without strategy or account data.</desc>
+  <rect width="1280" height="760" fill="#101318"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="56" y="72" fill="#f7f4ee" font-size="34" font-weight="800">Mercurius Mode Boundaries</text>
+    <text x="56" y="108" fill="#aeb5c0" font-size="18">Synthetic view of operating modes. No strategy, broker, account, endpoint, alert, or live log data.</text>
+
+    <rect x="56" y="152" width="1168" height="92" rx="8" fill="#f7f4ee"/>
+    <text x="88" y="188" fill="#101318" font-size="24" font-weight="800">Promotion rule</text>
+    <text x="88" y="222" fill="#343b46" font-size="17">A mode can only promote after evidence, gate checks, and operator review are satisfied.</text>
+
+    <g fill="none" stroke="#3d7ec9" stroke-width="5" stroke-linecap="round">
+      <path d="M300 405H430"/>
+      <path d="M590 405H720"/>
+      <path d="M880 405H1010"/>
+    </g>
+
+    <rect x="56" y="312" width="244" height="230" rx="8" fill="#f7f4ee"/>
+    <text x="88" y="360" fill="#101318" font-size="24" font-weight="800">Backtest</text>
+    <text x="88" y="404" fill="#343b46" font-size="17">Historical replay</text>
+    <text x="88" y="438" fill="#343b46" font-size="17">No routing</text>
+    <text x="88" y="472" fill="#343b46" font-size="17">Evidence only</text>
+    <rect x="88" y="500" width="146" height="34" rx="4" fill="#4e9af1"/>
+    <text x="108" y="523" fill="#07101d" font-size="15" font-weight="800">Research</text>
+
+    <rect x="346" y="312" width="244" height="230" rx="8" fill="#f7f4ee"/>
+    <text x="378" y="360" fill="#101318" font-size="24" font-weight="800">Rehearsal</text>
+    <text x="378" y="404" fill="#343b46" font-size="17">Production-like flow</text>
+    <text x="378" y="438" fill="#343b46" font-size="17">Sandbox executor</text>
+    <text x="378" y="472" fill="#343b46" font-size="17">Forensics checked</text>
+    <rect x="378" y="500" width="154" height="34" rx="4" fill="#7bbf7a"/>
+    <text x="398" y="523" fill="#071307" font-size="15" font-weight="800">Inspectable</text>
+
+    <rect x="636" y="312" width="244" height="230" rx="8" fill="#f7f4ee"/>
+    <text x="668" y="360" fill="#101318" font-size="24" font-weight="800">Paper</text>
+    <text x="668" y="404" fill="#343b46" font-size="17">Broker boundary</text>
+    <text x="668" y="438" fill="#343b46" font-size="17">No real capital</text>
+    <text x="668" y="472" fill="#343b46" font-size="17">Operator review</text>
+    <rect x="668" y="500" width="154" height="34" rx="4" fill="#b88a35"/>
+    <text x="688" y="523" fill="#181104" font-size="15" font-weight="800">Evidence gate</text>
+
+    <rect x="926" y="312" width="298" height="230" rx="8" fill="#d35d4c"/>
+    <text x="958" y="360" fill="#160908" font-size="24" font-weight="800">Live</text>
+    <text x="958" y="404" fill="#160908" font-size="17">Real-world consequence</text>
+    <text x="958" y="438" fill="#160908" font-size="17">Manual halt available</text>
+    <text x="958" y="472" fill="#160908" font-size="17">Post-trade review required</text>
+    <rect x="958" y="500" width="176" height="34" rx="4" fill="#f7f4ee"/>
+    <text x="978" y="523" fill="#101318" font-size="15" font-weight="800">Controlled path</text>
+
+    <text x="56" y="666" fill="#f7f4ee" font-size="18" font-weight="700">Safety idea</text>
+    <text x="56" y="696" fill="#aeb5c0" font-size="16">The same intent can be inspected across modes before any path with real consequence is allowed.</text>
+  </g>
+</svg>

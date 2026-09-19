@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Land fake-data deals map</title>
+  <desc id="desc">A synthetic operator dashboard for land acquisition, showing fake parcels, map pins, distance rings, due diligence verdicts, CRM stages, and privacy-safe public-data workflow boundaries.</desc>
+  <rect width="1200" height="820" fill="#f6f1e8"/>
+  <rect x="42" y="38" width="1116" height="744" rx="10" fill="#fffdf8" stroke="#d8cbb8" stroke-width="2"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="78" y="98" font-size="34" font-weight="800" fill="#101318">Land: fake-data deals map</text>
+    <text x="78" y="134" font-size="18" font-weight="700" fill="#46505a">Synthetic parcel research board. No owner names, addresses, APNs, coordinates, or CRM rows.</text>
+
+    <g transform="translate(78 174)">
+      <rect width="650" height="452" rx="8" fill="#e9efe8" stroke="#cad8c7"/>
+      <path d="M0 112 C86 88 133 110 201 78 C282 40 357 86 438 56 C520 24 586 54 650 26" fill="none" stroke="#c6d6c4" stroke-width="24" stroke-linecap="round"/>
+      <path d="M0 302 C86 278 142 318 232 284 C316 252 388 286 456 246 C532 202 587 220 650 184" fill="none" stroke="#d6dfcd" stroke-width="34" stroke-linecap="round"/>
+      <path d="M80 452 C146 392 198 372 272 396 C344 420 426 400 494 354 C554 314 606 304 650 320" fill="none" stroke="#d8c8b1" stroke-width="18" stroke-linecap="round"/>
+      <g fill="none" stroke="#9fb99b" stroke-width="2" opacity="0.65">
+        <circle cx="332" cy="236" r="82"/>
+        <circle cx="332" cy="236" r="154"/>
+        <circle cx="332" cy="236" r="226"/>
+      </g>
+      <g stroke="#fffdf8" stroke-width="5">
+        <circle cx="226" cy="172" r="13" fill="#1d6f42"/>
+        <circle cx="372" cy="214" r="13" fill="#b87820"/>
+        <circle cx="482" cy="142" r="13" fill="#8d2c2c"/>
+        <circle cx="302" cy="332" r="13" fill="#1d6f42"/>
+        <circle cx="526" cy="304" r="13" fill="#b87820"/>
+        <circle cx="134" cy="282" r="13" fill="#46505a"/>
+      </g>
+      <g transform="translate(26 26)">
+        <rect width="238" height="84" rx="7" fill="#fffdf8" stroke="#d8cbb8"/>
+        <text x="18" y="30" font-size="18" font-weight="800" fill="#101318">Map filters</text>
+        <text x="18" y="58" font-size="15" fill="#46505a">vacant + absentee + within 25mi</text>
+      </g>
+      <g transform="translate(384 338)">
+        <rect width="226" height="80" rx="7" fill="#101318"/>
+        <text x="18" y="30" font-size="17" font-weight="800" fill="#fffdf8">Operator center</text>
+        <text x="18" y="56" font-size="14" fill="#dbe5f1">distance rings, not real coordinates</text>
+      </g>
+    </g>
+
+    <g transform="translate(762 174)">
+      <rect width="336" height="452" rx="8" fill="#101318"/>
+      <text x="26" y="42" font-size="24" font-weight="800" fill="#fffdf8">Review queue</text>
+      <text x="26" y="74" font-size="15" fill="#dbe5f1">All parcels, owners, and values are synthetic.</text>
+
+      <g transform="translate(24 106)">
+        <rect width="288" height="82" rx="7" fill="#fffdf8"/>
+        <text x="18" y="28" font-size="17" font-weight="800" fill="#101318">LOT-A14</text>
+        <text x="18" y="54" font-size="14" fill="#46505a">12.4 ac - vacant - owner grade B</text>
+        <rect x="196" y="18" width="72" height="26" rx="13" fill="#dbeedd"/>
+        <text x="215" y="37" font-size="13" font-weight="800" fill="#1d6f42">Go</text>
+      </g>
+
+      <g transform="translate(24 206)">
+        <rect width="288" height="82" rx="7" fill="#fffdf8"/>
+        <text x="18" y="28" font-size="17" font-weight="800" fill="#101318">LOT-D39</text>
+        <text x="18" y="54" font-size="14" fill="#46505a">4.8 ac - access unclear - grade A</text>
+        <rect x="180" y="18" width="88" height="26" rx="13" fill="#f3dfbd"/>
+        <text x="199" y="37" font-size="13" font-weight="800" fill="#8b5514">Review</text>
+      </g>
+
+      <g transform="translate(24 306)">
+        <rect width="288" height="82" rx="7" fill="#fffdf8"/>
+        <text x="18" y="28" font-size="17" font-weight="800" fill="#101318">LOT-K07</text>
+        <text x="18" y="54" font-size="14" fill="#46505a">flood flag - weak comps - grade C</text>
+        <rect x="186" y="18" width="82" height="26" rx="13" fill="#efd7d3"/>
+        <text x="209" y="37" font-size="13" font-weight="800" fill="#8d2c2c">Kill</text>
+      </g>
+    </g>
+
+    <g transform="translate(78 664)">
+      <rect width="252" height="78" rx="8" fill="#eef4ed" stroke="#c7d8c3"/>
+      <text x="20" y="31" font-size="18" font-weight="800" fill="#101318">Public records</text>
+      <text x="20" y="57" font-size="15" fill="#46505a">collector lists + token-free GIS</text>
+    </g>
+    <g transform="translate(356 664)">
+      <rect width="242" height="78" rx="8" fill="#f4efe5" stroke="#ddcfb9"/>
+      <text x="20" y="31" font-size="18" font-weight="800" fill="#101318">Five-lens DD</text>
+      <text x="20" y="57" font-size="15" fill="#46505a">access, flood, value, title, data</text>
+    </g>
+    <g transform="translate(624 664)">
+      <rect width="216" height="78" rx="8" fill="#f0e7e2" stroke="#dfc8bd"/>
+      <text x="20" y="31" font-size="18" font-weight="800" fill="#101318">Offer bands</text>
+      <text x="20" y="57" font-size="15" fill="#46505a">formula-based, human-owned</text>
+    </g>
+    <g transform="translate(866 664)">
+      <rect width="232" height="78" rx="8" fill="#e7edf4" stroke="#c3d1df"/>
+      <text x="20" y="31" font-size="18" font-weight="800" fill="#101318">CRM stage</text>
+      <text x="20" y="57" font-size="15" fill="#46505a">mailing prep, pursue manually</text>
+    </g>
+  </g>
+</svg>

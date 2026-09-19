@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Land Unconditional - Gorka Molero Case Study</title>
+    <meta
+      name="description"
+      content="Sanitized case study for Land Unconditional, an automated land-acquisition system: county scanning, tax-record research, offer estimation, owner outreach preparation, and an operator CRM."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Gorka Molero</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="./index.html#work">Work</a>
+        <a href="./index.html#log">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero land">
+        <p class="eyebrow">Private · land acquisition</p>
+        <h1>Land Unconditional</h1>
+        <p class="hero-text">
+          An automated land-acquisition system for a US land operator: county scanning, tax-record research, offer estimation, owner outreach preparation, and a CRM the operator runs deals through.
+        </p>
+        <div class="case-meta">
+          <span>Private repo</span>
+          <span>Fake-data demo required</span>
+          <span>No owner or parcel PII</span>
+        </div>
+      </section>
+
+      <section class="case-body">
+        <article class="case-main">
+          <h2>Problem</h2>
+          <p>
+            Land acquisition work often spans county websites, GIS tools, tax records, spreadsheets, playbooks, and operator judgment. The valuable product is not a scraper. It is a workflow that helps a real business decide what to investigate, contact, and pursue.
+          </p>
+
+          <h2>What I Built</h2>
+          <p>
+            I built a token-free public-data pipeline across five Missouri counties: county collector tax-sale lists, direct GIS parcel queries, and the FEMA flood-hazard layer feed a normalized candidate pool of distressed, absentee, and heir signals. Each owner gets a wealth-footprint grade that estimates motivation to sell, and every candidate passes through five adversarial due-diligence lenses — access, flood, value, title, and data integrity — before it earns a verdict.
+          </p>
+          <p>
+            Because Missouri is a non-disclosure state, comps cannot simply be looked up; the system reconstructs them, and every reconstructed value is explicitly labeled as an opinion, never presented as fact. Vetted candidates land in an operator kanban CRM, and outreach and pursuit stay human decisions.
+          </p>
+
+          <h2>System Shape</h2>
+          <figure class="proof-figure">
+            <img src="./assets/land-fake-deals-map.svg" alt="Synthetic Land deals map with fake parcels, map pins, distance rings, review queue, due diligence verdicts, and CRM workflow stages." />
+            <figcaption>
+              Fake-data deals map. It shows the actual operator shape now evidenced for Land: public-record intake, token-free GIS research, map triage, due-diligence verdicts, formula-based offer bands, CRM staging, and human-owned outreach decisions without exposing owners, addresses, APNs, coordinates, or CRM rows.
+            </figcaption>
+          </figure>
+          <figure class="proof-figure">
+            <img src="./assets/land-deal-board.svg" alt="Sanitized land deal board with fake county sources, signals, deal board, outreach workflow, and due diligence copilot." />
+            <figcaption>
+              Fake-data deal operations board. It shows the transformation workflow without owner names, mailing addresses, APNs, exact parcels, or CRM records.
+            </figcaption>
+          </figure>
+          <figure class="proof-figure">
+            <img src="./assets/land-parcel-due-diligence.svg" alt="Synthetic land parcel review screen with fake signals, redacted owner fields, and due diligence copilot." />
+            <figcaption>
+              Synthetic parcel and due-diligence screen. It shows how research, signal extraction, and automated review become an operator workflow without exposing owner or parcel data.
+            </figcaption>
+          </figure>
+          <figure class="proof-figure">
+            <img src="./assets/land-before-after-workflow.svg" alt="Synthetic Land before and after workflow showing scattered research becoming an operator decision loop." />
+            <figcaption>
+              Synthetic before-and-after workflow. It shows the transformation from scattered manual research into a structured decision loop without exposing owner, parcel, or CRM data.
+            </figcaption>
+          </figure>
+          <figure class="proof-figure">
+            <img src="./assets/land-local-system-proof.svg" alt="Sanitized Land implementation proof diagram showing research corpus, county sweep scripts, scoring, Astro board, synchronized map filters, pipeline, and privacy boundary." />
+            <figcaption>
+              Local implementation proof. The Astro board builds, and the source shows research ingestion, county sweep scripts, scoring, map/list filters, and a pipeline surface. Raw board screenshots stay private until every real owner, parcel, address, and CRM value is replaced with fake data.
+            </figcaption>
+          </figure>
+
+          <h2>Technical Decisions</h2>
+          <ul class="case-list">
+            <li>Treat public-record collection as a pipeline, not a one-off scrape — token-free public data instead of paid APIs.</li>
+            <li>Convert domain heuristics into repeatable signals, including owner wealth-footprint motivation grading.</li>
+            <li>Make due diligence adversarial: five lenses (access, flood, value, title, data integrity) that try to kill each deal.</li>
+            <li>Label every reconstructed value as an opinion, because non-disclosure-state comps are estimates by definition.</li>
+            <li>Build an operator-facing board instead of a raw database.</li>
+            <li>Keep human judgment in the loop for outreach and deal decisions.</li>
+          </ul>
+
+          <h2>What This Proves</h2>
+          <p>
+            An established land-acquisition methodology, encoded: ~867 delinquent parcels tracked in the primary county, ~150 candidates sourced per daily sweep across 5 counties, every one graded through five due-diligence lenses before a human decides. Manual research became an operating system for a real business.
+          </p>
+        </article>
+
+        <aside class="case-aside">
+          <h2>Public Evidence</h2>
+          <ul>
+            <li>Fake-data land deal board included.</li>
+            <li>Source-to-decision workflow represented.</li>
+            <li>Signal extraction table represented.</li>
+            <li>Five-lens due-diligence verdicts represented.</li>
+            <li>Before-and-after workflow diagram included.</li>
+            <li>Local Astro board build proof — available on request.</li>
+          </ul>
+
+          <h2>Privacy Boundary</h2>
+          <p>
+            Owner names, addresses, APNs, exact parcels, county-specific operational detail, and CRM data stay private. Every visual above uses fake data. The pipeline, scoring lenses, and board can be walked through live, on request.
+          </p>
+
+          <a class="button primary full" href="./contact.html">Ask for a demo</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Gorka Molero</span>
+      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
+    </footer>
+  </body>
+</html>

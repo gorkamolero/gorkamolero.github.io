@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StoryScript - Gorka Molero Case Study</title>
+    <meta
+      name="description"
+      content="StoryScript: a plain-text language and headless engine for narrative point-and-click adventures. Write the story like a screenplay, test it with AI agents in CI before any graphics exist."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Gorka Molero</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="./index.html#work">Work</a>
+        <a href="./index.html#log">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero pulse">
+        <p class="eyebrow">Case · language &amp; engine</p>
+        <h1>StoryScript</h1>
+        <p class="hero-text">
+          A language I designed for point-and-click adventures, and the headless engine that runs it. You write the story like a screenplay &mdash; no JSON, no code &mdash; and it plays. The interesting part is what that unlocks: you can test a branching narrative with AI agents in a terminal before a single pixel is drawn.
+        </p>
+        <div class="case-meta">
+          <span>My own DSL</span>
+          <span>Console-first</span>
+          <span>Proof on request</span>
+        </div>
+      </section>
+
+      <section class="case-body">
+        <article class="case-main">
+          <h2>Problem</h2>
+          <p>
+            Two problems, one root. Writers should not have to learn JavaScript to write a story, and you cannot properly test a branching narrative when it is tangled inside game code and a renderer. Every playtest means launching the whole game and clicking through by hand, so most branches never get exercised and dead ends ship. The story needs to be its own thing: readable by a writer, executable on its own, and checkable by a machine.
+          </p>
+
+          <h2>What I Built</h2>
+          <p>
+            StoryScript is a small language and a direct interpreter for it. A <code>.story</code> file is plain text &mdash; scenes, hotspots, dialogue, choices, inventory, and flags &mdash; and the runtime reads it and executes line by line with a state machine. There is no JSON, no compiled AST, no build step between writing and playing. It runs in a terminal REPL, and because it is headless it is also the test harness: the same engine that plays the game can validate it in CI.
+          </p>
+
+          <figure class="proof-figure">
+            <img src="./assets/storyscript-repl.webp" alt="The StoryScript interpreter running in a terminal: it prints the Arkham Bus Depot scene, lists hotspots with their verbs, starts a dialogue with choices, and flags an unknown goto target during validation." />
+            <figcaption>
+              The interpreter playing a real <code>.story</code> file in the terminal &mdash; scene text, hotspots with their verbs, a dialogue with choices. The last line shows the validator catching a dangling goto (<code>Unknown target "grocery_store"</code>) with no game running.
+            </figcaption>
+          </figure>
+
+          <h2>The Language</h2>
+          <p>
+            A scene declares a place, what is in it, and what the player can do with each thing. Verbs (LOOK, TALK, USE) hang off hotspots; a goto (<code>-&gt;</code>) jumps to a dialogue or another scene.
+          </p>
+          <pre><code><span class="kw">SCENE</span> bus_station
+  location: <span class="str">"Arkham Bus Depot"</span>
+
+  <span class="kw">DESCRIPTION</span>
+    A small-town bus depot. Diesel and stale coffee.
+  <span class="kw">END</span>
+
+  <span class="kw">HOTSPOT</span> ticket_window
+    name: <span class="str">"Ticket Window"</span>
+    <span class="kw">LOOK</span>
+      <span class="str">"Scratched plexiglass. Someone carved 'DONT GO'."</span>
+    <span class="kw">END</span>
+    <span class="kw">TALK</span>
+      -> buy_ticket
+    <span class="kw">END</span>
+  <span class="kw">END</span>
+<span class="kw">END</span></code></pre>
+          <p>
+            Dialogue is a branching tree. Choices can set flags and hand the player items, and the state machine remembers all of it, so a later scene can react to what happened here.
+          </p>
+          <pre><code><span class="kw">DIALOGUE</span> buy_ticket
+  clerk: <span class="str">"Innsmouth? You sure?"</span>
+  <span class="kw">CHOICE</span>
+    > <span class="str">"One ticket."</span>
+      <span class="kw">SET</span> going_to_innsmouth
+      <span class="kw">GIVE</span> bus_ticket
+      -> END
+    > <span class="str">"Never mind."</span>
+      -> END
+  <span class="kw">END</span>
+<span class="kw">END</span>
+
+<span class="kw">TRIGGER</span> board_bus
+  <span class="kw">REQUIRE</span> HAS(bus_ticket)
+  <span class="kw">CUTSCENE</span> ...</code></pre>
+
+          <h2>CI for storytelling</h2>
+          <p>
+            This is the payoff of keeping the story headless. The whole game is a state machine you can drive without graphics, so an agent can play the entire narrative in seconds &mdash; walk every scene, take every dialogue branch, pick up every item &mdash; and do it a hundred times over. The interpreter validates the story graph as it loads and reports broken links (<code>Unknown target "grocery_store"</code>) before anyone plays. Roughly 6,500 lines of StoryScript author the full four-act game, and all of it can be exercised in CI without rendering a pixel.
+          </p>
+
+          <h2>Bring your own UI</h2>
+          <p>
+            The engine emits what happened &mdash; scene entered, line spoken, choice offered, item taken &mdash; and does not care what draws it. A terminal renders it as text; a React or Phaser layer renders it as a graphic adventure. My graphic-adventure system, <a class="inline-link" href="./anima.html">Anima</a>, is one such UI sitting on top of StoryScript. The language and the pixels stay independent.
+          </p>
+
+          <h2>Technical Decisions</h2>
+          <ul class="case-list">
+            <li>Make the story its own plain-text language, not JSON or engine code &mdash; a writer can read and edit it, and an LLM can draft it.</li>
+            <li>Interpret directly with a state machine, no intermediate AST or build step &mdash; the source is the runtime.</li>
+            <li>Keep the engine headless so it doubles as the test harness &mdash; play and validate through the same code path.</li>
+            <li>Separate the engine from the renderer with an event stream, so terminal, React, and Phaser are all just subscribers.</li>
+            <li>Validate the story graph on load and surface dangling gotos and unreachable scenes as warnings.</li>
+          </ul>
+
+          <h2>What This Proves</h2>
+          <p>
+            StoryScript is language-design judgment applied to a real problem: I built a small DSL, its parser, and its runtime, then wrote a whole game in it. It shows the instinct to make the right thing the format &mdash; readable for writers, generable for models, executable and testable for machines &mdash; instead of bolting a story onto a game engine.
+          </p>
+        </article>
+
+        <aside class="case-aside">
+          <h2>Public Evidence</h2>
+          <ul>
+            <li>The interpreter playing a real <code>.story</code> file in the terminal, shown above.</li>
+            <li>The validator catching a dangling goto with no game running.</li>
+            <li>A direct-interpretation state machine with parser tests.</li>
+            <li>~6,500 lines of StoryScript authoring a four-act game, testable headless.</li>
+            <li>Full source, the REPL, and the CI harness available on request.</li>
+          </ul>
+
+          <h2>Boundary</h2>
+          <p>
+            The examples here use original or public-domain material. Unreleased story text and the private game repo stay closed until published; the language, runtime, and REPL can be walked through live.
+          </p>
+
+          <a class="button primary full" href="./contact.html">Ask for a demo</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Gorka Molero</span>
+      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
+    </footer>
+  </body>
+</html>

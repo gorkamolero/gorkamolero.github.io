@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Infinity fake source-to-rule map</title>
+  <desc id="desc">A synthetic source-to-rule map showing generic source notes, rule categories, tests, and evidence gates without real strategy details.</desc>
+  <rect width="1280" height="760" fill="#101318"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="56" y="72" fill="#f7f4ee" font-size="34" font-weight="800">Infinity Source-to-Rule Map</text>
+    <text x="56" y="108" fill="#aeb5c0" font-size="18">Synthetic audit map. Source notes, rule labels, windows, and test outcomes are placeholders.</text>
+
+    <g fill="none" stroke="#3d7ec9" stroke-width="5" stroke-linecap="round">
+      <path d="M360 376H464"/>
+      <path d="M818 376H922"/>
+      <path d="M640 560V636"/>
+    </g>
+
+    <rect x="56" y="180" width="304" height="392" rx="8" fill="#f7f4ee"/>
+    <text x="88" y="228" fill="#101318" font-size="24" font-weight="800">Source notes</text>
+    <text x="88" y="276" fill="#343b46" font-size="17">Transcript: scrubbed A</text>
+    <text x="88" y="312" fill="#343b46" font-size="17">Chart note: placeholder</text>
+    <text x="88" y="348" fill="#343b46" font-size="17">Setup family: masked</text>
+    <text x="88" y="384" fill="#343b46" font-size="17">Risk phrase: generic</text>
+    <text x="88" y="420" fill="#343b46" font-size="17">Exit phrase: generic</text>
+    <rect x="88" y="492" width="214" height="38" rx="4" fill="#d35d4c"/>
+    <text x="108" y="517" fill="#160908" font-size="16" font-weight="800">No original edge shown</text>
+
+    <rect x="464" y="180" width="354" height="392" rx="8" fill="#f7f4ee"/>
+    <text x="496" y="228" fill="#101318" font-size="24" font-weight="800">Rule categories</text>
+    <text x="496" y="276" fill="#343b46" font-size="17">Entry condition: category</text>
+    <text x="496" y="312" fill="#343b46" font-size="17">Position boundary: category</text>
+    <text x="496" y="348" fill="#343b46" font-size="17">Risk limit: category</text>
+    <text x="496" y="384" fill="#343b46" font-size="17">Exit condition: category</text>
+    <text x="496" y="420" fill="#343b46" font-size="17">Invalidation: category</text>
+    <rect x="496" y="492" width="240" height="38" rx="4" fill="#4e9af1"/>
+    <text x="516" y="517" fill="#07101d" font-size="16" font-weight="800">Traceable assumption</text>
+
+    <rect x="922" y="180" width="302" height="392" rx="8" fill="#d35d4c"/>
+    <text x="954" y="228" fill="#160908" font-size="24" font-weight="800">Evidence gates</text>
+    <text x="954" y="278" fill="#160908" font-size="17">Proof window mapped</text>
+    <text x="954" y="314" fill="#160908" font-size="17">Quote audit attached</text>
+    <text x="954" y="350" fill="#160908" font-size="17">Replay consistent</text>
+    <text x="954" y="386" fill="#160908" font-size="17">Paper path pending</text>
+    <text x="954" y="422" fill="#160908" font-size="17">Live blocked</text>
+    <rect x="954" y="492" width="194" height="38" rx="4" fill="#f7f4ee"/>
+    <text x="974" y="517" fill="#101318" font-size="16" font-weight="800">Review required</text>
+
+    <rect x="438" y="636" width="404" height="64" rx="8" fill="#7bbf7a"/>
+    <text x="470" y="676" fill="#071307" font-size="20" font-weight="800">Every claim needs a trace.</text>
+  </g>
+</svg>

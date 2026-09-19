@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Paperclip OpenRouter adapter loop</title>
+  <desc id="desc">Public-safe architecture diagram showing Paperclip heartbeats, adapter execution, prompt construction, OpenRouter chat completions, Paperclip tools, issue updates, comments, and usage metadata.</desc>
+  <rect width="1200" height="760" fill="#f6f1e8"/>
+  <rect x="44" y="44" width="1112" height="672" rx="8" fill="#11151b"/>
+  <text x="84" y="104" fill="#f8f5ee" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Paperclip OpenRouter adapter</text>
+  <text x="84" y="136" fill="#d9d1c3" font-family="Inter, Arial, sans-serif" font-size="17">A small external adapter that routes Paperclip agent heartbeats through OpenRouter while preserving board tools and operational metadata.</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5aa897"/>
+    </marker>
+    <style>
+      .box { fill: #f8f5ee; stroke: #d8cbb8; stroke-width: 2; }
+      .box-dark { fill: #1c232c; stroke: #667085; stroke-width: 2; }
+      .label { fill: #11151b; font: 800 20px Inter, Arial, sans-serif; }
+      .text { fill: #374151; font: 15px Inter, Arial, sans-serif; }
+      .dark-label { fill: #f8f5ee; font: 800 20px Inter, Arial, sans-serif; }
+      .dark-text { fill: #d9d1c3; font: 15px Inter, Arial, sans-serif; }
+      .tiny { fill: #d9d1c3; font: 13px Inter, Arial, sans-serif; }
+      .arrow { stroke: #5aa897; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="box" x="84" y="190" width="250" height="128" rx="8"/>
+  <text class="label" x="108" y="230">Paperclip heartbeat</text>
+  <text class="text" x="108" y="262">Wake context</text>
+  <text class="text" x="108" y="286">Current issue</text>
+  <text class="text" x="108" y="310">Agent adapter config</text>
+
+  <rect class="box" x="475" y="190" width="250" height="128" rx="8"/>
+  <text class="label" x="499" y="230">Adapter execute()</text>
+  <text class="text" x="499" y="262">Resolve API key</text>
+  <text class="text" x="499" y="286">Build issue prompt</text>
+  <text class="text" x="499" y="310">Mark in_progress</text>
+
+  <rect class="box" x="866" y="190" width="250" height="128" rx="8"/>
+  <text class="label" x="890" y="230">OpenRouter loop</text>
+  <text class="text" x="890" y="262">/chat/completions</text>
+  <text class="text" x="890" y="286">Model routing</text>
+  <text class="text" x="890" y="310">Tool calls per turn</text>
+
+  <rect class="box" x="866" y="418" width="250" height="128" rx="8"/>
+  <text class="label" x="890" y="458">Paperclip tools</text>
+  <text class="text" x="890" y="490">Get/update issue</text>
+  <text class="text" x="890" y="514">Comments and sub-issues</text>
+  <text class="text" x="890" y="538">List agents and issues</text>
+
+  <rect class="box" x="475" y="418" width="250" height="128" rx="8"/>
+  <text class="label" x="499" y="458">Board outcome</text>
+  <text class="text" x="499" y="490">Final comment</text>
+  <text class="text" x="499" y="514">Status done or blocked</text>
+  <text class="text" x="499" y="538">Run summary</text>
+
+  <rect class="box" x="84" y="418" width="250" height="128" rx="8"/>
+  <text class="label" x="108" y="458">Runtime metadata</text>
+  <text class="text" x="108" y="490">Model and provider</text>
+  <text class="text" x="108" y="514">Input/output tokens</text>
+  <text class="text" x="108" y="538">OpenRouter cost when reported</text>
+
+  <path class="arrow" d="M334 254 H465"/>
+  <path class="arrow" d="M725 254 H856"/>
+  <path class="arrow" d="M991 318 V408"/>
+  <path class="arrow" d="M866 482 H735"/>
+  <path class="arrow" d="M475 482 H344"/>
+  <path class="arrow" d="M209 418 V328"/>
+
+  <rect class="box-dark" x="84" y="610" width="1032" height="68" rx="8"/>
+  <text class="dark-label" x="108" y="650">Package proof</text>
+  <text class="dark-text" x="310" y="650">TypeScript build</text>
+  <text class="dark-text" x="490" y="650">smoke test</text>
+  <text class="dark-text" x="630" y="650">npm pack dry run</text>
+  <text class="dark-text" x="835" y="650">39-file tarball</text>
+
+  <text class="tiny" x="84" y="704">Proof basis: local source, README architecture, npm run build, npm run smoke, and npm pack --dry-run.</text>
+</svg>

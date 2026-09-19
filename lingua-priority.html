@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lingua Priority - Gorka Molero Case Study</title>
+    <meta
+      name="description"
+      content="Case study for Lingua Priority, a small zero-dependency UX package that orders language dropdowns by real usage and browser preferences."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Gorka Molero</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="./index.html#work">Work</a>
+        <a href="./index.html#log">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero agents">
+        <p class="eyebrow">Public · UX library</p>
+        <h1>Lingua Priority</h1>
+        <p class="hero-text">
+          A tiny zero-dependency package that fixes language dropdown ordering by combining browser preferences, global speaker reach, internet usage, and predictable alphabetical fallback.
+        </p>
+        <div class="case-meta">
+          <span>Public repo</span>
+          <span>Zero dependencies</span>
+          <span>48 tests passed</span>
+        </div>
+      </section>
+
+      <section class="case-body">
+        <article class="case-main">
+          <h2>Problem</h2>
+          <p>
+            Most language selectors sort alphabetically, which buries high-usage languages such as Spanish under dozens of low-relevance choices. It is a small UX mistake, but it shows how often product defaults ignore real user behavior.
+          </p>
+
+          <h2>What I Built</h2>
+          <p>
+            Lingua Priority returns a suggested list and an alphabetical rest list. Browser languages come first when available, then top global languages backfill the list. The rest stays predictable for users who need the full catalog.
+          </p>
+
+          <div class="evidence-grid">
+            <div>
+              <strong>UX judgment</strong>
+              <span>Prioritizes likely choices while preserving full-language access.</span>
+            </div>
+            <div>
+              <strong>API shape</strong>
+              <span><code>suggest()</code>, <code>getTop()</code>, <code>sortBy()</code>, <code>preset()</code>, <code>find()</code>, and <code>codes()</code>.</span>
+            </div>
+            <div>
+              <strong>Package quality</strong>
+              <span>ESM, CJS, type declarations, zero runtime dependencies, SSR-safe browser detection.</span>
+            </div>
+          </div>
+
+          <figure class="proof-figure">
+            <img src="./assets/lingua-priority-dropdown.svg" alt="Lingua Priority proof diagram showing suggested languages, all-language fallback, API shape, package proof, and hiring signal." />
+            <figcaption>
+              Public-safe dropdown visual. It turns a small library into a legible proof of taste, defaults, package discipline, and test coverage.
+            </figcaption>
+          </figure>
+
+          <figure class="proof-figure">
+            <img src="./assets/lingua-priority-real-dropdown.png" alt="Package-driven Lingua Priority dropdown demo rendered from built package output with suggested languages and alphabetical fallback." />
+            <figcaption>
+              Package-driven dropdown proof captured from the built <code>dist/index.js</code> output. The screen shows <code>suggest(8)</code> rendering suggested languages first, then the alphabetical fallback list.
+            </figcaption>
+          </figure>
+
+          <h2>Technical Decisions</h2>
+          <ul class="case-list">
+            <li>Return simple arrays instead of prescribing a framework-specific component.</li>
+            <li>Keep browser detection SSR-safe so Next.js and Remix users avoid hydration problems.</li>
+            <li>Ship ESM, CJS, and type declarations while preserving zero runtime dependencies.</li>
+            <li>Cover data integrity, sorting, presets, lookup, browser detection, and suggestion behavior with tests.</li>
+          </ul>
+
+          <h2>What This Proves</h2>
+          <p>
+            Lingua Priority is small, but it is useful hiring evidence: taste in defaults, respect for user context, package discipline, and the ability to turn a sharp UX observation into an auditable utility.
+          </p>
+        </article>
+
+        <aside class="case-aside">
+          <h2>Public Evidence</h2>
+          <ul>
+            <li>README portfolio/status section added and pushed.</li>
+            <li><code>npm test</code> passed: 48 tests.</li>
+            <li><code>npm run build</code> passed with ESM, CJS, and type declarations.</li>
+            <li><code>npm audit --omit=dev</code> and <code>npm audit --audit-level=moderate</code> found 0 vulnerabilities.</li>
+            <li>Package-driven dropdown screenshot captured from built output.</li>
+            <li>Proof transcript — available on request.</li>
+          </ul>
+
+          <a class="button primary full" href="https://github.com/gorkamolero/lingua-priority">Open repo</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Gorka Molero</span>
+      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Maestro fake-data status synthesis</title>
+  <desc id="desc">Public-safe fake-data Maestro status synthesis showing spaces, tasks, documents, recommendation, and agent handoff.</desc>
+  <rect width="1200" height="720" fill="#f7f3eb"/>
+  <rect x="48" y="44" width="1104" height="632" rx="8" fill="#111418"/>
+  <text x="84" y="104" fill="#f7f3eb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Status Synthesis Demo</text>
+  <text x="84" y="138" fill="#bfc6cf" font-family="Inter, Arial, sans-serif" font-size="16">Fake-data Maestro workflow: spaces, tasks, documents, recommendation, and agent handoff.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="84" y="182" width="306" height="332" rx="8" fill="#20252c" stroke="#4b5563"/>
+    <text x="112" y="222" fill="#f7f3eb" font-size="22" font-weight="700">Active Spaces</text>
+    <text x="112" y="266" fill="#d6a23a" font-size="17" font-weight="700">Launch Portfolio</text>
+    <text x="112" y="292" fill="#bfc6cf" font-size="15">High priority, in progress</text>
+    <text x="112" y="330" fill="#d6a23a" font-size="17" font-weight="700">Client Automation</text>
+    <text x="112" y="356" fill="#bfc6cf" font-size="15">Waiting for input</text>
+    <text x="112" y="394" fill="#d6a23a" font-size="17" font-weight="700">Research Backlog</text>
+    <text x="112" y="420" fill="#bfc6cf" font-size="15">Parked, low urgency</text>
+    <rect x="112" y="456" width="246" height="34" rx="6" fill="#111418" stroke="#4b5563"/>
+    <text x="128" y="478" fill="#bfc6cf" font-size="14">State docs read before acting</text>
+
+    <rect x="448" y="182" width="306" height="332" rx="8" fill="#f7f3eb" stroke="#d8d0c4"/>
+    <text x="476" y="222" fill="#111418" font-size="22" font-weight="700">Recommendation</text>
+    <text x="476" y="266" fill="#303640" font-size="16">Focus on Launch Portfolio.</text>
+    <text x="476" y="300" fill="#303640" font-size="16">Why:</text>
+    <text x="500" y="330" fill="#303640" font-size="15">Highest hiring leverage</text>
+    <text x="500" y="360" fill="#303640" font-size="15">Clear dependency chain</text>
+    <text x="500" y="390" fill="#303640" font-size="15">Concrete acceptance checks</text>
+    <text x="476" y="438" fill="#303640" font-size="16">Next:</text>
+    <text x="500" y="468" fill="#303640" font-size="15">Proof, screenshots, safety scan</text>
+
+    <rect x="812" y="182" width="306" height="332" rx="8" fill="#20252c" stroke="#4b5563"/>
+    <text x="840" y="222" fill="#f7f3eb" font-size="22" font-weight="700">Agent Handoff</text>
+    <text x="840" y="266" fill="#bfc6cf" font-size="15">Task: capture public proof</text>
+    <text x="840" y="296" fill="#bfc6cf" font-size="15">Mode: disposable demo</text>
+    <text x="840" y="326" fill="#bfc6cf" font-size="15">Inputs: fake workspace only</text>
+    <text x="840" y="356" fill="#bfc6cf" font-size="15">Outputs: visual + transcript</text>
+    <text x="840" y="404" fill="#d6a23a" font-size="16" font-weight="700">Boundary</text>
+    <text x="840" y="434" fill="#bfc6cf" font-size="15">No real host, auth, IDs,</text>
+    <text x="840" y="462" fill="#bfc6cf" font-size="15">tasks, docs, or work state</text>
+  </g>
+
+  <g stroke="#d6a23a" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M392 348H444"/>
+    <path d="M756 348H808"/>
+  </g>
+  <g fill="#d6a23a">
+    <path d="M444 348l-13-8v16z"/>
+    <path d="M808 348l-13-8v16z"/>
+  </g>
+
+  <rect x="84" y="558" width="1034" height="56" rx="6" fill="#20252c" stroke="#4b5563"/>
+  <text x="112" y="592" fill="#bfc6cf" font-family="Inter, Arial, sans-serif" font-size="15">Public proof only: the real skill docs require host/auth cleanup and rotation before repo promotion.</text>
+</svg>

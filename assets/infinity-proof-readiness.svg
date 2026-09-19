@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Infinity fake proof window and readiness screen</title>
+  <desc id="desc">A synthetic proof-window report, quote audit, and readiness checklist for an options research system with no real strategy rules or trades.</desc>
+  <rect width="1280" height="760" fill="#101318"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="56" y="72" fill="#f7f4ee" font-size="34" font-weight="800">Infinity Proof Window</text>
+    <text x="56" y="108" fill="#aeb5c0" font-size="18">Synthetic evidence report. All rules, prices, dates, charts, and readiness states are placeholders.</text>
+
+    <rect x="56" y="152" width="354" height="480" rx="8" fill="#f7f4ee"/>
+    <text x="88" y="200" fill="#101318" font-size="24" font-weight="800">Proof window A</text>
+    <text x="88" y="244" fill="#343b46" font-size="17">Window: SYN-2026-A</text>
+    <text x="88" y="278" fill="#343b46" font-size="17">Instrument: synthetic index</text>
+    <text x="88" y="312" fill="#343b46" font-size="17">Rule family: masked</text>
+    <text x="88" y="346" fill="#343b46" font-size="17">Expected behavior: bounded</text>
+    <text x="88" y="380" fill="#343b46" font-size="17">Observed behavior: pass</text>
+    <path d="M92 500H366" stroke="#d35d4c" stroke-width="5"/>
+    <path d="M92 500L138 452L184 472L230 416L276 438L322 382L366 402" fill="none" stroke="#3d7ec9" stroke-width="6" stroke-linecap="round"/>
+    <text x="88" y="574" fill="#101318" font-size="18" font-weight="800">Confidence: reviewable</text>
+
+    <rect x="464" y="152" width="354" height="480" rx="8" fill="#f7f4ee"/>
+    <text x="496" y="200" fill="#101318" font-size="24" font-weight="800">Quote audit</text>
+    <text x="496" y="244" fill="#343b46" font-size="17">Bid/ask spread: synthetic pass</text>
+    <text x="496" y="278" fill="#343b46" font-size="17">Missing quotes: none in fake set</text>
+    <text x="496" y="312" fill="#343b46" font-size="17">Replay consistency: pass</text>
+    <text x="496" y="346" fill="#343b46" font-size="17">Slippage model: placeholder</text>
+    <rect x="496" y="398" width="270" height="34" rx="4" fill="#7bbf7a"/>
+    <text x="516" y="421" fill="#071307" font-size="15" font-weight="800">Execution-grade data check</text>
+    <rect x="496" y="456" width="230" height="34" rx="4" fill="#b88a35"/>
+    <text x="516" y="479" fill="#181104" font-size="15" font-weight="800">Needs human review</text>
+    <rect x="496" y="514" width="292" height="34" rx="4" fill="#d35d4c"/>
+    <text x="516" y="537" fill="#160908" font-size="15" font-weight="800">Do not infer real returns</text>
+
+    <rect x="872" y="152" width="352" height="480" rx="8" fill="#d35d4c"/>
+    <text x="904" y="200" fill="#160908" font-size="24" font-weight="800">Readiness checklist</text>
+    <text x="904" y="250" fill="#160908" font-size="18">Research note mapped</text>
+    <text x="904" y="294" fill="#160908" font-size="18">Proof windows reproducible</text>
+    <text x="904" y="338" fill="#160908" font-size="18">Quote audit attached</text>
+    <text x="904" y="382" fill="#160908" font-size="18">Paper path pending</text>
+    <text x="904" y="426" fill="#160908" font-size="18">Live promotion blocked</text>
+    <rect x="904" y="490" width="254" height="50" rx="4" fill="#f7f4ee"/>
+    <text x="928" y="522" fill="#101318" font-size="17" font-weight="800">Gate: not live-ready</text>
+    <text x="904" y="570" fill="#160908" font-size="15">Exact rules, trades, account size,</text>
+    <text x="904" y="596" fill="#160908" font-size="15">broker, and timing-sensitive results</text>
+    <text x="904" y="622" fill="#160908" font-size="15">are hidden.</text>
+
+    <text x="56" y="700" fill="#f7f4ee" font-size="18" font-weight="700">What this proves</text>
+    <text x="56" y="728" fill="#aeb5c0" font-size="16">Evidence quality, quote fidelity, staged promotion, and refusal to confuse promising research with production readiness.</text>
+  </g>
+</svg>

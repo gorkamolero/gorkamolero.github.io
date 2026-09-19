@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paperclip OpenRouter Adapter - Gorka Molero Case Study</title>
+    <meta
+      name="description"
+      content="Case study for Paperclip OpenRouter Adapter, a public developer tool that routes Paperclip agent heartbeats through OpenRouter chat completions while preserving board tools and metadata."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Gorka Molero</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="./index.html#work">Work</a>
+        <a href="./index.html#log">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero agents">
+        <p class="eyebrow">Public · model routing</p>
+        <h1>Paperclip OpenRouter Adapter</h1>
+        <p class="hero-text">
+          A public external adapter that lets Paperclip agents run through OpenRouter chat completions while keeping Paperclip issue tools, comments, status updates, and usage metadata intact.
+        </p>
+        <div class="case-meta">
+          <span>Public repo</span>
+          <span>Model routing</span>
+          <span>Package verified</span>
+        </div>
+      </section>
+
+      <section class="case-body">
+        <article class="case-main">
+          <h2>Problem</h2>
+          <p>
+            Agent platforms need more model routing choices without breaking their own workflow model. The hard part is not calling a model API; it is preserving the host application's issue lifecycle, tool contract, comments, status updates, and runtime accounting.
+          </p>
+
+          <h2>What I Built</h2>
+          <p>
+            Paperclip OpenRouter Adapter registers a new Paperclip adapter type, resolves OpenRouter configuration, turns a Paperclip heartbeat into an issue-aware prompt, runs a chat-completions tool loop, exposes Paperclip board tools to the model, and writes the result back as issue comments and status changes.
+          </p>
+
+          <div class="evidence-grid">
+            <div>
+              <strong>Adapter boundary</strong>
+              <span>External Paperclip adapter registration, server entrypoint, and UI parser export.</span>
+            </div>
+            <div>
+              <strong>Model routing</strong>
+              <span>OpenRouter model catalog support with defaults, model profiles, token limits, transforms, and route configuration.</span>
+            </div>
+            <div>
+              <strong>Tool loop</strong>
+              <span>Issue reads, status updates, comments, sub-issues, agent listing, and usage/cost metadata.</span>
+            </div>
+          </div>
+
+          <figure class="proof-figure">
+            <img src="./assets/paperclip-openrouter-loop.svg" alt="Paperclip OpenRouter adapter architecture diagram showing Paperclip heartbeat, adapter execution, OpenRouter loop, Paperclip tools, board outcome, runtime metadata, and package proof." />
+            <figcaption>
+              Public-safe architecture diagram grounded in the local source. It shows the integration boundary without exposing API keys, private boards, issue data, or live model output.
+            </figcaption>
+          </figure>
+
+          <figure class="proof-figure">
+            <img src="./assets/paperclip-openrouter-demo.svg" alt="Sanitized Paperclip OpenRouter demo transcript showing build, smoke test, fake heartbeat, issue status update, comment tool call, done transition, and usage metadata boundary." />
+            <figcaption>
+              Sanitized demo-board transcript. It shows the intended adapter runtime shape with fake issue ids and redacted provider metadata; no API key, private board URL, real issue data, or model output is exposed.
+            </figcaption>
+          </figure>
+
+          <figure class="proof-figure">
+            <img src="./assets/paperclip-openrouter-board.png" alt="Disposable Paperclip board screenshot showing a fake DEMO-42 issue, OpenRouter heartbeat timeline, tool calls, runtime metrics, and public-safe final comment." />
+            <figcaption>
+              Disposable board screenshot rendered from a public-safe fixture. It shows the product surface the adapter supports while keeping the board data fake, API keys out of frame, provider details bounded, and local/private state absent.
+            </figcaption>
+          </figure>
+
+          <h2>System Architecture</h2>
+
+          <h2>Technical Decisions</h2>
+          <ul class="case-list">
+            <li>Keep the adapter scoped to Paperclip board tools rather than pretending it can edit local files.</li>
+            <li>Support any OpenRouter model id while providing sane defaults and a cheap profile.</li>
+            <li>Return model, provider, token, cost, generation, and turn metadata when OpenRouter reports it.</li>
+            <li>Package the adapter through normal npm exports so the UI parser and server entrypoint can load cleanly.</li>
+          </ul>
+
+          <h2>What This Proves</h2>
+          <p>
+            This is clean developer-tooling proof: adapter contracts, model-provider integration, tool-loop execution, typed API boundaries, and package discipline in a small public repo.
+          </p>
+        </article>
+
+        <aside class="case-aside">
+          <h2>Public Evidence</h2>
+          <ul>
+            <li>README upgraded and pushed.</li>
+            <li><code>npm run build</code> passed.</li>
+            <li><code>npm run smoke</code> passed, including API error-contract tests.</li>
+            <li><code>npm pack --dry-run</code> produced a 42-file package preview.</li>
+            <li>Example agent config fixture — available on request.</li>
+            <li>Sanitized demo-board transcript figure included.</li>
+            <li>Disposable board screenshot captured with fake issue data.</li>
+            <li>Proof transcript — available on request.</li>
+          </ul>
+
+          <a class="button primary full" href="./index.html#case-studies">Back to portfolio</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Gorka Molero</span>
+      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
+    </footer>
+  </body>
+</html>

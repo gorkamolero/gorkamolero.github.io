@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Carvingen canvas workflow</title>
+  <desc id="desc">A public-safe diagram showing Carvingen as a node canvas for carvers, with image, prompt, mesh, viewer, jobs, assets, and SQLite persistence.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f4ee; }
+      .panel { fill: #ffffff; stroke: #101318; stroke-width: 3; }
+      .soft { fill: #ffffff; stroke: #d9d2c6; stroke-width: 2; }
+      .dark { fill: #101318; }
+      .yellow { fill: #ffd400; }
+      .pink { fill: #ff6fa8; }
+      .blue { fill: #3e8cff; }
+      .green { fill: #8cff3e; }
+      .line { stroke: #101318; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .label { font: 800 32px Inter, Arial, sans-serif; letter-spacing: 0; fill: #101318; }
+      .small { font: 700 19px Inter, Arial, sans-serif; letter-spacing: 0; fill: #343b46; }
+      .tiny { font: 700 16px Inter, Arial, sans-serif; letter-spacing: 0; fill: #343b46; }
+      .mono { font: 800 17px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0; fill: #101318; }
+      .white { fill: #f7f4ee; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#101318" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1440" height="900" />
+  <rect x="54" y="46" width="1332" height="808" rx="8" class="soft" />
+
+  <text x="90" y="108" class="label">Carvingen: canvas-based concept-to-3D workflow</text>
+  <text x="90" y="144" class="small">A carver's sketchbook for branching image generation, reference chaining, mesh generation, and VR-ready review.</text>
+
+  <rect x="90" y="202" width="120" height="474" rx="4" class="panel" />
+  <text x="122" y="248" class="mono">Im</text>
+  <rect x="112" y="276" width="76" height="64" rx="3" class="pink" stroke="#101318" stroke-width="3" />
+  <text x="122" y="316" class="mono">Pr</text>
+  <rect x="112" y="368" width="76" height="64" rx="3" class="yellow" stroke="#101318" stroke-width="3" />
+  <text x="122" y="408" class="mono">Me</text>
+  <rect x="112" y="470" width="76" height="64" rx="3" class="blue" stroke="#101318" stroke-width="3" />
+  <text x="122" y="510" class="mono">Vw</text>
+  <rect x="112" y="562" width="76" height="64" rx="3" class="green" stroke="#101318" stroke-width="3" />
+
+  <rect x="288" y="206" width="226" height="190" rx="4" class="panel" />
+  <rect x="288" y="206" width="226" height="48" rx="4" class="pink" />
+  <text x="312" y="238" class="mono">Image node</text>
+  <rect x="320" y="284" width="162" height="70" rx="3" fill="#f7f4ee" stroke="#101318" stroke-width="3" />
+  <text x="340" y="324" class="tiny">upload or drag-in</text>
+  <text x="324" y="376" class="tiny">HEIC to JPEG, asset row</text>
+
+  <rect x="604" y="206" width="266" height="232" rx="4" class="panel" />
+  <rect x="604" y="206" width="266" height="48" rx="4" class="yellow" />
+  <text x="628" y="238" class="mono">Prompt node</text>
+  <rect x="636" y="282" width="202" height="56" rx="3" fill="#f7f4ee" stroke="#101318" stroke-width="3" />
+  <text x="654" y="316" class="tiny">text + model + refs</text>
+  <rect x="636" y="360" width="202" height="46" rx="3" fill="#101318" />
+  <text x="700" y="390" class="white" style="font:800 16px Inter, Arial, sans-serif">Run</text>
+
+  <rect x="956" y="206" width="226" height="190" rx="4" class="panel" />
+  <rect x="956" y="206" width="226" height="48" rx="4" class="blue" />
+  <text x="980" y="238" class="mono">Mesh node</text>
+  <rect x="988" y="284" width="162" height="70" rx="3" fill="#f7f4ee" stroke="#101318" stroke-width="3" />
+  <text x="1012" y="316" class="tiny">Meshy / fal</text>
+  <text x="1006" y="344" class="tiny">GLB + artifacts</text>
+
+  <rect x="288" y="520" width="226" height="156" rx="4" class="panel" />
+  <rect x="288" y="520" width="226" height="48" rx="4" class="green" />
+  <text x="312" y="552" class="mono">Viewer node</text>
+  <rect x="320" y="594" width="162" height="52" rx="3" fill="#101318" />
+  <text x="344" y="626" class="white" style="font:800 16px Inter, Arial, sans-serif">model-viewer</text>
+
+  <rect x="604" y="530" width="266" height="146" rx="4" class="soft" />
+  <text x="636" y="574" class="small">Jobs and assets</text>
+  <text x="636" y="604" class="tiny">fal queue request id</text>
+  <text x="636" y="630" class="tiny">local output persistence</text>
+  <text x="636" y="656" class="tiny">resume after reload</text>
+
+  <rect x="956" y="530" width="266" height="146" rx="4" class="soft" />
+  <text x="988" y="574" class="small">SQLite graph state</text>
+  <text x="988" y="604" class="tiny">projects, nodes, edges</text>
+  <text x="988" y="630" class="tiny">jobs, assets, viewport</text>
+  <text x="988" y="656" class="tiny">undo and redo loop</text>
+
+  <path d="M 514 300 C 560 300 560 300 604 300" class="line" marker-end="url(#arrow)" />
+  <path d="M 870 322 C 914 322 914 322 956 322" class="line" marker-end="url(#arrow)" />
+  <path d="M 1069 396 C 1045 474 616 474 401 520" class="line" marker-end="url(#arrow)" />
+  <path d="M 738 438 L 738 530" class="line" marker-end="url(#arrow)" />
+  <path d="M 870 604 L 956 604" class="line" marker-end="url(#arrow)" />
+
+  <rect x="90" y="744" width="1260" height="74" rx="8" fill="#ffffff" stroke="#d9d2c6" stroke-width="2" />
+  <text x="122" y="780" class="small">Public-safe boundary: no private generated images, prompts, client files, API keys, or live provider outputs are shown.</text>
+  <text x="122" y="806" class="tiny">Verified locally with build and lint; tests currently show 33 passing and 3 failing assertions that need cleanup.</text>
+</svg>

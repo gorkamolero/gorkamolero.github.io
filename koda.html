@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Koda - Gorka Molero Case Study</title>
+    <meta
+      name="description"
+      content="Case study for Koda, a private review-first agent IDE concept with Tauri, React, Rust, Node sidecars, workspaces, checkpoints, and visual diffs."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
+        <span class="brand-mark" aria-hidden="true">GM</span>
+        <span>Gorka Molero</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="./index.html#work">Work</a>
+        <a href="./index.html#log">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero agents">
+        <p class="eyebrow">Case · agent IDE</p>
+        <h1>Koda</h1>
+        <p class="hero-text">
+          A private review-first agent IDE concept for steering multiple coding agents through visible sessions, workspaces, checkpoints, sidecars, and visual diffs.
+        </p>
+        <div class="case-meta">
+          <span>Working desktop build</span>
+          <span>History scrubbed, publication-ready</span>
+          <span>Paused after Claude access change</span>
+        </div>
+      </section>
+
+      <section class="case-body">
+        <article class="case-main">
+          <h2>Problem</h2>
+          <p>
+            Modern coding agents can move quickly, but they often leave reviewers with a terminal transcript, a pile of edits, and weak control over competing attempts. The missing product layer is a workbench where the human can see parallel agent lanes, compare outputs, checkpoint progress, and decide what is allowed into the real codebase.
+          </p>
+
+          <h2>What I Built</h2>
+          <p>
+            Koda is positioned as a desktop review workbench for agent-era development. The private project combines a Tauri desktop shell, React UI, Rust boundary, Node sidecar, agent sessions, PTY management, workspaces, worktrees, SQLite state, checkpoints, and visual diffs.
+          </p>
+          <p>
+            The project was stopped when Claude removed the third-party access path Koda relied on. The useful signal is still the product and systems work: a real attempt to make agent coding reviewable, stateful, and controllable before the platform boundary changed.
+          </p>
+
+          <div class="evidence-grid">
+            <div>
+              <strong>Human control</strong>
+              <span>Review-first workflow instead of invisible agent execution.</span>
+            </div>
+            <div>
+              <strong>Agent lanes</strong>
+              <span>Claude, Codex, Kimi, and similar runners can be treated as inspectable work sessions.</span>
+            </div>
+            <div>
+              <strong>Trust layer</strong>
+              <span>Worktrees, checkpoints, state, visual diffs, and handoff packets make changes reviewable.</span>
+            </div>
+          </div>
+
+          <figure class="proof-figure">
+            <img src="./assets/koda-review-workbench.svg" alt="Koda architecture diagram showing operator surface, Tauri and React core, Node sidecar, SQLite state, agent sessions, checkpoints, worktrees, visual diffs, and handoff packets." />
+            <figcaption>
+              Public-safe architecture diagram grounded in the portfolio migration docs. It intentionally avoids private repository internals, local paths, session transcripts, prompts, and workspace data.
+            </figcaption>
+          </figure>
+
+          <figure class="proof-figure">
+            <img src="./assets/koda-workspace-view.png" alt="Koda desktop app running: workspace sidebar with an active main session, ASCII Koda terminal panel, and a right-side review panel listing three changed files with additions and deletions." />
+            <figcaption>
+              The real Tauri desktop app running against the Koda repo itself: agent chat surface, session tracking, and the right-side review panel showing changed files. Captured from a clean workspace with no private data; the visible shell-connection error is the honest live state at capture time.
+            </figcaption>
+          </figure>
+
+          <figure class="proof-figure">
+            <img src="./assets/koda-initializing-splash.png" alt="Koda initializing splash screen with pixel-art Koda wordmark on a black background." />
+            <figcaption>
+              Startup splash from the Koda renderer. It captures the product tone without exposing private workspace state.
+            </figcaption>
+          </figure>
+
+          <h2>System Architecture</h2>
+
+          <h2>Technical Decisions</h2>
+          <ul class="case-list">
+            <li>Treat agent work as something to inspect, compare, and checkpoint before accepting.</li>
+            <li>Use a desktop shell for local filesystem, PTY, and workspace affordances that browser-only tools struggle to handle cleanly.</li>
+            <li>Separate the UI, desktop boundary, sidecar execution, and durable state so each responsibility stays legible.</li>
+            <li>Make visual diffs and handoff packets the main review surface, not a secondary afterthought.</li>
+          </ul>
+
+          <h2>What This Proves</h2>
+          <p>
+            Koda is evidence for agent-product judgment: understanding where coding agents are heading, what makes them hard to trust, and how to design the operator layer around review, isolation, and control.
+          </p>
+        </article>
+
+        <aside class="case-aside">
+          <h2>Public Evidence</h2>
+          <ul>
+            <li>Full 123-commit history scrubbed and pushed to <code>gorkamolero/koda</code> (2026-07-02).</li>
+            <li>Install, sidecar typecheck, and full monorepo build pass on Node 20 — available on request.</li>
+            <li>Earlier architecture proof note — available on request.</li>
+            <li>Real Tauri desktop app screenshots captured from a clean workspace.</li>
+            <li>Public-safe architecture diagram added.</li>
+            <li>Project paused after Claude removed the third-party access path it depended on.</li>
+          </ul>
+
+          <a class="button primary full" href="https://github.com/gorkamolero/koda">View source</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Gorka Molero</span>
+      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
+    </footer>
+  </body>
+</html>

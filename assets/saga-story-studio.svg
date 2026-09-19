@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Saga agentic story studio</title>
+  <desc id="desc">A public-safe diagram of Saga showing idea intake, writing-room agents, outline, draft, critique, final script, media pipeline, and review cleanup.</desc>
+  <rect width="1200" height="720" fill="#101318"/>
+  <g opacity="0.22" stroke="#f7f4ee" stroke-width="1">
+    <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M0 600H1200"/>
+    <path d="M120 0V720M240 0V720M360 0V720M480 0V720M600 0V720M720 0V720M840 0V720M960 0V720M1080 0V720"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-width="7">
+    <path d="M172 168C322 114 440 194 560 154C712 106 818 190 1026 132" stroke="#b88a35"/>
+    <path d="M172 352C318 292 456 386 604 338C744 294 846 370 1032 306" stroke="#d35d4c"/>
+    <path d="M224 568C374 494 514 590 672 516C812 452 908 528 1042 462" stroke="#5b955a"/>
+  </g>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <g transform="translate(80 88)">
+      <rect width="270" height="132" rx="14" fill="#f7f4ee"/>
+      <text x="24" y="48" font-size="24" font-weight="700" fill="#101318">Idea intake</text>
+      <text x="24" y="82" font-size="18" fill="#343b46">prompt, premise,</text>
+      <text x="24" y="108" font-size="18" fill="#343b46">story constraints</text>
+    </g>
+    <g transform="translate(456 78)">
+      <rect width="288" height="150" rx="14" fill="#b88a35"/>
+      <text x="24" y="50" font-size="24" font-weight="700" fill="#160f05">Writing room</text>
+      <text x="24" y="84" font-size="18" fill="#160f05">agent roles, research,</text>
+      <text x="24" y="110" font-size="18" fill="#160f05">outline, draft</text>
+    </g>
+    <g transform="translate(852 94)">
+      <rect width="260" height="126" rx="14" fill="#f7f4ee"/>
+      <text x="24" y="46" font-size="24" font-weight="700" fill="#101318">Critique pass</text>
+      <text x="24" y="80" font-size="18" fill="#343b46">review, revision,</text>
+      <text x="24" y="106" font-size="18" fill="#343b46">final script</text>
+    </g>
+    <g transform="translate(104 312)">
+      <rect width="286" height="138" rx="14" fill="#d35d4c"/>
+      <text x="24" y="48" font-size="24" font-weight="700" fill="#160908">Product UI</text>
+      <text x="24" y="82" font-size="18" fill="#160908">chat workflow, saved</text>
+      <text x="24" y="108" font-size="18" fill="#160908">ideas, script state</text>
+    </g>
+    <g transform="translate(502 304)">
+      <rect width="284" height="150" rx="14" fill="#f7f4ee"/>
+      <text x="24" y="50" font-size="24" font-weight="700" fill="#101318">Media pipeline</text>
+      <text x="24" y="84" font-size="18" fill="#343b46">visuals, timing,</text>
+      <text x="24" y="110" font-size="18" fill="#343b46">Remotion direction</text>
+    </g>
+    <g transform="translate(860 318)">
+      <rect width="252" height="126" rx="14" fill="#d35d4c"/>
+      <text x="24" y="46" font-size="24" font-weight="700" fill="#160908">Creative output</text>
+      <text x="24" y="80" font-size="18" fill="#160908">script, scenes,</text>
+      <text x="24" y="106" font-size="18" fill="#160908">video package</text>
+    </g>
+    <g transform="translate(270 534)">
+      <rect width="286" height="118" rx="14" fill="#5b955a"/>
+      <text x="24" y="46" font-size="24" font-weight="700" fill="#071307">Public repos</text>
+      <text x="24" y="80" font-size="18" fill="#071307">saga-ai plus</text>
+      <text x="24" y="106" font-size="18" fill="#071307">CrewAI precursor</text>
+    </g>
+    <g transform="translate(668 534)">
+      <rect width="286" height="118" rx="14" fill="#f7f4ee"/>
+      <text x="24" y="46" font-size="24" font-weight="700" fill="#101318">Evidence needed</text>
+      <text x="24" y="80" font-size="18" fill="#343b46">screenshots, saved view,</text>
+      <text x="24" y="106" font-size="18" fill="#343b46">mock-media cleanup</text>
+    </g>
+  </g>
+</svg>
