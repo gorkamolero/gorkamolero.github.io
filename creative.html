@@ -3,70 +3,154 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Creative Work - Gorka Molero</title>
-    <meta
-      name="description"
-      content="AI video, voice and interactive stories by Gorka Molero: the Cybertantra channel, talking wood carvings, The Pulse and a point-and-click adventure, most of it voiced with ElevenLabs."
-    />
+    <title>Gorka Molero · Creative technologist</title>
+    <meta name="description" content="AI video, audio and music, unscripted games and statues you can talk to. Selected work by Gorka Molero." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gorka Molero · Creative technologist" />
+    <meta property="og:description" content="AI video, audio and music, unscripted games and statues you can talk to." />
+    <meta property="og:url" content="https://gorkamolero.github.io/creative.html" />
+    <meta property="og:image" content="https://gorkamolero.github.io/assets/creative/cybertantra-reel-poster.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
     <style>
-      .case-body { grid-template-columns: minmax(0, 1fr); }
-      .work-block { margin-top: 56px; }
-      .work-block .case-meta { margin: 0 0 14px; }
-      .work-block h2 {
-        font-size: clamp(20px, 2.8vw, 28px); letter-spacing: -0.01em; text-transform: none;
-        color: var(--fg); margin: 0 0 14px;
+      /* The CV's sheet: ink on warm paper, one vermilion mark. */
+      :root {
+        --paper: #eee6d5;
+        --ink: #1d1a17;
+        --ink-soft: #4a433b;
+        --rule: #b9ab93;
+        --vermilion: #a7351e;
+        --display: "IM Fell English SC", "IM Fell English", Georgia, serif;
+        --display-italic: "IM Fell English", Georgia, serif;
+        --body: "EB Garamond", Garamond, Georgia, serif;
+        color-scheme: light;
       }
-      .video-wide { position: relative; aspect-ratio: 16 / 9; background: #000; border: 1px solid var(--line-soft); }
-      .video-wide iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-      .shorts-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
-      .shorts-row .short { position: relative; aspect-ratio: 9 / 16; background: #000; border: 1px solid var(--line-soft); }
-      .shorts-row iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-      .slot {
-        display: grid; place-items: center; text-align: center; padding: 24px;
-        aspect-ratio: 16 / 9; border: 1px dashed var(--line-soft); color: var(--body); font-size: 14px;
+      * { box-sizing: border-box; }
+      html { background: var(--paper); }
+      body {
+        margin: 0; background: var(--paper); color: var(--ink);
+        font-family: var(--body); font-size: 1.15rem; line-height: 1.6;
+        font-variant-numeric: oldstyle-nums proportional-nums;
+        padding: 0 max(16px, 5vw) 4rem;
       }
-      .video-wide video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
-      .video-tall { position: relative; aspect-ratio: 9 / 16; max-width: 380px; background: #000; border: 1px solid var(--line-soft); }
-      .video-tall video { position: absolute; inset: 0; width: 100%; height: 100%; }
-      .video-caption { margin: 10px 0 0; color: var(--body); font-size: 14px; }
-      .video-caption + .video-wide { margin-top: 28px; }
-      @media (max-width: 640px) { .shorts-row { grid-template-columns: 1fr 1fr; } }
+      a { color: inherit; }
+      .sheet { max-width: 46rem; margin: 0 auto; }
+
+      .masthead { text-align: center; padding-top: 3.5rem; }
+      .identity { display: inline-flex; flex-direction: column; align-items: stretch; }
+      h1 {
+        font-family: var(--display); font-weight: 400; font-size: clamp(2.1rem, 7.5vw, 3.4rem);
+        letter-spacing: .06em; line-height: 1; margin: 0 -.06em 0 0; position: relative; white-space: nowrap;
+      }
+      h1::before, h1::after {
+        content: ""; position: absolute; top: .4em; width: .26em; height: .26em;
+        border-radius: 50%; background: var(--vermilion);
+      }
+      h1::before { left: -.8em; }
+      h1::after { right: -.74em; }
+      .role {
+        display: flex; justify-content: space-between; margin: .7rem 0 0;
+        font-family: var(--display); font-size: clamp(.82rem, 2.2vw, 1.08rem); color: var(--ink-soft);
+      }
+      .role .sp { width: .45em; }
+      .contact {
+        display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1.5rem;
+        margin-top: 1.6rem; padding-top: .55rem; border-top: 1px solid var(--rule); font-size: 1rem;
+      }
+      .place { font-style: italic; color: var(--ink-soft); }
+      .links a { text-decoration: none; }
+      .links a + a::before { content: "\00b7"; color: var(--vermilion); margin: 0 .55em 0 .2em; }
+      .links a:not(:first-child) { font-family: var(--display); letter-spacing: .05em; }
+      .links a:hover { color: var(--vermilion); }
+
+      .lead { margin-top: 3rem; text-align: center; }
+      .kind { margin: 0; font-family: var(--display); font-size: clamp(1.2rem, 5.1vw, 2.2rem); letter-spacing: .07em; line-height: 1.15; }
+      .scope { margin: .5rem 0 0; font-family: var(--display-italic); font-style: italic; font-size: clamp(1.1rem, 3vw, 1.35rem); color: var(--ink-soft); }
+      .github-cta {
+        display: inline-block; margin-top: 1.6rem; padding: .8rem 1.6rem; text-decoration: none;
+        font-family: var(--display); font-size: clamp(1.05rem, 2.8vw, 1.25rem); letter-spacing: .06em;
+        color: var(--ink); border: 1.5px solid var(--vermilion);
+      }
+      .github-cta span { color: var(--vermilion); margin-left: .4em; }
+      .github-cta:hover { background: var(--vermilion); color: var(--paper); }
+      .github-cta:hover span { color: var(--paper); }
+      .intro { margin: 2.6rem auto 0; max-width: 38rem; text-align: center; font-size: 1.25rem; color: var(--ink-soft); }
+
+      .work { margin-top: 4rem; }
+      .work h2 {
+        font-family: var(--display); font-weight: 400; font-size: 1.55rem; letter-spacing: .08em;
+        margin: 0; padding-bottom: .45rem; border-bottom: 1px solid var(--rule);
+      }
+      .meta {
+        margin: .55rem 0 1rem; font-family: var(--display); font-size: .95rem; letter-spacing: .06em; color: var(--ink-soft);
+      }
+      .meta .dot { color: var(--vermilion); margin: 0 .35em; }
+      .work p { margin: 0 0 1rem; }
+      .video-wide, .video-tall, .short { position: relative; background: #000; border: 1px solid var(--rule); overflow: hidden; }
+      .video-wide { aspect-ratio: 16 / 9; margin-top: 1.4rem; }
+      .video-tall { aspect-ratio: 9 / 16; max-width: 22rem; margin: 1.4rem auto 0; }
+      .video-wide video, .video-wide iframe, .video-tall video, .short iframe {
+        position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #000;
+      }
+      .video-caption { margin: .6rem 0 0 !important; font-style: italic; color: var(--ink-soft); font-size: 1rem; text-align: center; }
+      .shorts-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; margin-top: .9rem; }
+      .short { aspect-ratio: 9 / 16; }
+      .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.4rem !important; }
+      .button {
+        font-family: var(--display); font-size: 1rem; letter-spacing: .06em; text-decoration: none;
+        color: var(--ink); border: 1px solid var(--ink); padding: .4rem 1rem;
+      }
+      .button.primary { color: var(--vermilion); border-color: var(--vermilion); }
+      .button:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+      footer {
+        margin: 5rem auto 0; max-width: 46rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+        text-align: center; color: var(--ink-soft); font-size: .98rem;
+      }
+      footer .mark { display: inline-block; width: .42rem; height: .42rem; border-radius: 50%; background: var(--vermilion); margin: 0 .6rem; vertical-align: middle; }
+      footer a { text-decoration: none; }
+
+      @media (max-width: 640px) {
+        body { font-size: 1.08rem; }
+        .masthead { padding-top: 2.4rem; }
+        .contact { flex-direction: column; align-items: center; }
+        .links { width: 100%; text-align: center; line-height: 1.9; }
+        .intro { font-size: 1.12rem; }
+        .shorts-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .7rem; padding-bottom: .4rem; }
+        .shorts-row .short { flex: 0 0 62%; scroll-snap-align: start; }
+        .work { margin-top: 3rem; }
+      }
     </style>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#games">Games</a>
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>I</span><span>V</span><span>E</span><span class="sp"></span><span>T</span><span>E</span><span>C</span><span>H</span><span>N</span><span>O</span><span>L</span><span>O</span><span>G</span><span>I</span><span>S</span><span>T</span></p>
+        </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a> <a href="https://www.linkedin.com/in/gorkamolero">LinkedIn</a> <a href="https://github.com/gorkamolero">GitHub</a> <a href="./index.html">Engineering</a></span>
+        </div>
+      </header>
 
-    <main>
-      <section class="case-hero">
-        <p class="eyebrow">AI video, voice and interactive stories</p>
-        <h1>Creative work</h1>
-        <p class="hero-text">
-          My name is Gorka Molero. I love writing, music, art, technology, media and spirituality, and I spend my days trying to put all of this together. I like to push AI into places where it looks like it shouldn't work yet, such as long-form video, spirituality, music production, unscripted video games and statues you can talk to. Here's a selection of personal projects.
-        </p>
+      <section class="lead">
+        <p class="kind">Creative technology work</p>
+        <p class="scope">AI video, audio and music, and interactive stories</p>
+        <a class="github-cta" href="https://github.com/gorkamolero">Software projects and more on GitHub <span aria-hidden="true">&rarr;</span></a>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
+      <p class="intro">My name is Gorka Molero. I love writing, music, art, technology, media and spirituality, and I spend my days trying to put all of this together. I like to push AI into places where it looks like it shouldn't work yet, such as long-form video, spirituality, music production, unscripted video games and statues you can talk to. Here's a selection of personal projects.</p>
 
-          <div class="work-block">
-            <h2>Cybertantra</h2>
-            <div class="case-meta"><span>YouTube &middot; 2026</span><span>Long-form and Shorts</span></div>
-            <p>
-              The latest iteration of Saga, my long-running experiment with gen-AI pipelines, and my first attempt at long-form. The art comes from OpenAI image generation, and a virtual camera moves across each image, following whatever the current sentence is about. The narration is Eleven v4, generated in chunks with a warm-up line before each one and stitched back together, so the voice holds for a fifty-minute episode. The score is Eleven Music, and everything is cut in Remotion.
-            </p>
+      <main>
+      <section class="work" id="cybertantra">
+        <h2>Cybertantra</h2>
+        <p class="meta">YouTube &middot; 2026 <span class="dot">&middot;</span> Long-form and Shorts</p>
+        <p>The latest iteration of Saga, my long-running experiment with gen-AI pipelines, and my first attempt at long-form. The art comes from OpenAI image generation, and a virtual camera moves across each image, following whatever the current sentence is about. The narration is Eleven v4, generated in chunks with a warm-up line before each one and stitched back together, so the voice holds for a fifty-minute episode. The score is Eleven Music, and everything is cut in Remotion.</p>
             <div class="video-wide">
               <video controls playsinline preload="metadata" poster="./assets/creative/cybertantra-reel-poster.jpg" src="./assets/creative/cybertantra-reel.mp4"></video>
             </div>
@@ -79,82 +163,69 @@
               <div class="short"><iframe src="https://www.youtube-nocookie.com/embed/GoerPTYSAr4" title="Cybertantra Short: School trained you to stop noticing" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
               <div class="short"><iframe src="https://www.youtube-nocookie.com/embed/NkddlDqdaCE" title="Cybertantra Short: Don't open the third eye unprepared" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
             </div>
-          </div>
+      </section>
 
-          <div class="work-block">
-            <h2>Talking carvings</h2>
-            <div class="case-meta"><span>Prototype &middot; 2026</span><span>Voice agents</span></div>
-            <p>
-              Unconditional Carving, a studio in Missouri, has started an experimental project: carvings you come across in the forest and can actually talk to. The idea is that you wander the woods, find these spirits one by one, and have a conversation with each. I built the first one, a jackalope with a Raspberry Pi, a microphone and speakers inside, connected to an ElevenLabs agent. It's location-aware, and it sleeps until someone wakes it up.
-            </p>
+      <section class="work" id="talking-statues">
+        <h2>Talking Statues</h2>
+        <p class="meta">Prototype &middot; 2026 <span class="dot">&middot;</span> Voice agents</p>
+        <p>Unconditional Carving, a studio in Missouri, has started an experimental project: carvings you come across in the forest and can actually talk to. The idea is that you wander the woods, find these spirits one by one, and have a conversation with each. I built the first one, a jackalope with a Raspberry Pi, a microphone and speakers inside, connected to an ElevenLabs agent. It's location-aware, and it sleeps until someone wakes it up.</p>
             <div class="video-tall">
               <video controls playsinline preload="metadata" poster="./assets/creative/jackalope-poster.jpg" src="./assets/creative/jackalope.mp4"></video>
             </div>
             <p class="video-caption">A visitor asks for a story about stars. The jackalope invents one on the spot.</p>
-          </div>
+      </section>
 
-          <div class="work-block">
-            <h2>Carvingen</h2>
-            <div class="case-meta"><span>Tool &middot; 2026</span><span>AI image to 3D</span></div>
-            <p>
-              For the same studio, a canvas for designing carvings with AI. A carver drops in references, generates image variations, branches from any result, and turns the chosen image into a 3D model to inspect from every side. The images come from fal's models and the 3D from Meshy.
-            </p>
-          </div>
-          <div class="work-block">
-            <h2>The Pulse</h2>
-            <div class="case-meta"><span>Live &middot; 2025&ndash;2026</span><span>Interactive fiction</span></div>
-            <p>
-              A reimagining of narrative. A novel has a timeline of events and a whole world around it. The Pulse keeps the world, the characters and the places, and lets go of the timeline: you can do whatever you want, in any order, and the story follows you. It's very immersive. The narrator for Shadow Over Innsmouth is a clone of Orson Welles, running as an ElevenLabs agent.
-            </p>
+      <section class="work" id="the-pulse">
+        <h2>The Pulse</h2>
+        <p class="meta">Live &middot; 2025&ndash;2026 <span class="dot">&middot;</span> Interactive fiction</p>
+        <p>A reimagining of narrative. A novel has a timeline of events and a whole world around it. The Pulse keeps the world, the characters and the places, and lets go of the timeline: you can do whatever you want, in any order, and the story follows you. It's very immersive. The narrator for Shadow Over Innsmouth is a clone of Orson Welles, running as an ElevenLabs agent.</p>
             <div class="video-wide">
               <video controls playsinline preload="metadata" poster="./assets/creative/the-pulse-innsmouth-poster.jpg" src="./assets/creative/the-pulse-innsmouth.mp4"></video>
             </div>
             <p class="video-caption">In Shadow Over Innsmouth, a player shows the stationmaster a wax seal, and the narrator runs with it.</p>
-            <a class="button primary" href="https://the-pulse.games">Play The Pulse</a>
-            <a class="button" href="https://elevenlabs.io/app/talk-to?agent_id=agent_0801m498yyw3ey2vmx5t6hs8ynat">Talk to the narrator</a>
-          </div>
+            <p class="actions"><a class="button primary" href="https://the-pulse.games">Play The Pulse</a>
+            <a class="button" href="https://elevenlabs.io/app/talk-to?agent_id=agent_0801m498yyw3ey2vmx5t6hs8ynat">Talk to the narrator</a></p>
+      </section>
 
-          <div class="work-block">
-            <h2>Point-and-click, unscripted</h2>
-            <div class="case-meta"><span>Game &middot; 2025</span><span>Open dialogue</span></div>
-            <p>
-              A LucasArts-style adventure with the dialogue tree left open. Type anything to anyone, and they answer in character, in their own voice. Next I want to leave the decisions open too, like in The Pulse, so you make your own way as you go: say you want to go to the bus station, and one is created in the style of the story. I've started on that, and it's on hold for now.
-            </p>
+      <section class="work" id="anima">
+        <h2>Anima</h2>
+        <p class="meta">Game &middot; 2025 <span class="dot">&middot;</span> Open dialogue</p>
+        <p>A LucasArts-style adventure with the dialogue tree left open. Type anything to anyone, and they answer in character, in their own voice. Next I want to leave the decisions open too, like in The Pulse, so you make your own way as you go: say you want to go to the bus station, and one is created in the style of the story. I've started on that, and it's on hold for now.</p>
             <div class="video-wide">
               <video controls playsinline preload="metadata" poster="./assets/creative/point-and-click-bar-poster.jpg" src="./assets/creative/point-and-click-bar.mp4"></video>
             </div>
             <p class="video-caption">In the bar, a player ignores the dialogue menu and types their own lines.</p>
-          </div>
-
-          <div class="work-block">
-            <h2>Solderpunk</h2>
-            <div class="case-meta"><span>Web app &middot; 2026</span><span>Music production</span></div>
-            <p>
-              AI-assisted synth explorers. Hover any control on a synth's panel to learn what it does, follow guided tutorials, drive the real hardware over MIDI, and ask questions of a cited knowledge base for each instrument. It covers seven instruments, from the Moog Minitaur and Grandmother to the DSI Tempest and the Empress ZOIA.
-            </p>
-          </div>
-          <div class="work-block">
-            <h2>Podcast studio</h2>
-            <div class="case-meta"><span>System &middot; 2026</span><span>Remote video podcast</span></div>
-            <p>
-              A studio for a video podcast I co-host remotely. I wanted to build my own software, at feature parity with Riverside and others. One command starts everything: the call, a 4K program feed, every track, and the slides on my co-host's screen. If his connection drops, the studio brings him back and fills the gap from a backup of his own mic. An automated test runs the whole studio and checks the recordings: every voice, frozen frames and missing tracks.
-            </p>
-          </div>
-          <div class="work-block">
-            <h2>The Last Alchemist</h2>
-            <div class="case-meta"><span>YouTube Shorts &middot; 2023&ndash;2024</span><span>Automated pipeline</span></div>
-            <p>
-              The first iteration of Saga, the project that ended up being Cybertantra. I set out to build a completely automated channel where all I'd give it was the editorial line, and I wanted to prove it could grow exponentially. In 34 days it made and uploaded 205 Shorts, gained 1,000 subscribers and drew 135K views, with no paid promotion, at under $1 a Short. It's an old project on old models. Once it had proved the point, I stopped and waited for the models to be ready. The second iteration, in 2024, was a writers' room of agents for long-form scripts: brief, research, outline, draft, critique and final script.
-            </p>
-            <a class="button" href="https://www.youtube.com/channel/UCRF4rUJEc3UYv0wQduOnd3A">See the channel</a>
-          </div>
-        </article>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">Contact</a>
-    </footer>
+      <section class="work" id="saga">
+        <h2>Saga</h2>
+        <p class="meta">YouTube &middot; 2023&ndash;2026 <span class="dot">&middot;</span> Gen-AI pipeline</p>
+        <p>The gen-AI pipeline behind my YouTube channels. Its first iteration was The Last Alchemist: I set out to build a completely automated channel where all I'd give it was the editorial line, and I wanted to prove it could grow exponentially. In 34 days it made and uploaded 205 Shorts, gained 1,000 subscribers and drew 135K views, with no paid promotion, at under $1 a Short. It's an old project on old models. Once it had proved the point, I stopped and waited for the models to be ready. The second iteration, in 2024, was a writers' room of agents for long-form scripts: brief, research, outline, draft, critique and final script. The latest is Cybertantra.</p>
+            <p class="actions"><a class="button" href="https://www.youtube.com/channel/UCRF4rUJEc3UYv0wQduOnd3A">See The Last Alchemist</a></p>
+      </section>
+
+      <section class="work" id="solderpunk">
+        <h2>Solderpunk</h2>
+        <p class="meta">Web app &middot; 2026 <span class="dot">&middot;</span> Music production</p>
+        <p>AI-assisted synth explorers. Hover any control on a synth's panel to learn what it does, follow guided tutorials, drive the real hardware over MIDI, and ask questions of a cited knowledge base for each instrument. It covers seven instruments, from the Moog Minitaur and Grandmother to the DSI Tempest and the Empress ZOIA.</p>
+
+      </section>
+
+      <section class="work" id="carvingen">
+        <h2>Carvingen</h2>
+        <p class="meta">Tool &middot; 2026 <span class="dot">&middot;</span> AI image to 3D</p>
+        <p>For the same studio, a canvas for designing carvings with AI. A carver drops in references, generates image variations, branches from any result, and turns the chosen image into a 3D model to inspect from every side. The images come from fal's models and the 3D from Meshy.</p>
+
+      </section>
+
+      <section class="work" id="podcast-studio">
+        <h2>Podcast studio</h2>
+        <p class="meta">System &middot; 2026 <span class="dot">&middot;</span> Remote video podcast</p>
+        <p>A studio for a video podcast I co-host remotely. I wanted to build my own software, at feature parity with Riverside and others. One command starts everything: the call, a 4K program feed, every track, and the slides on my co-host's screen. If his connection drops, the studio brings him back and fills the gap from a backup of his own mic. An automated test runs the whole studio and checks the recordings: every voice, frozen frames and missing tracks.</p>
+
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
   </body>
 </html>
