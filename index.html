@@ -3,261 +3,262 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gorka Molero - Senior AI Product Engineer</title>
-    <meta
-      name="description"
-      content="Gorka Molero, senior AI product engineer. Full-stack, AI agents, TypeScript/React/Node/Python. Trading infrastructure, publishing tools, AI storytelling, adventure games, music tools."
-    />
+    <title>Gorka Molero · Software engineer</title>
+    <meta name="description" content="Gorka Molero, software engineer. Web products, design systems, editors and creative AI tools, since 2012." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gorka Molero · Software engineer" />
+    <meta property="og:description" content="Web products, design systems, editors and creative AI tools, since 2012." />
+    <meta property="og:url" content="https://gorkamolero.github.io/" />
+    <meta property="og:image" content="https://gorkamolero.github.io/assets/the-pulse-ingame-turn.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <style>
+      /* The CV's sheet: ink on warm paper, one vermilion mark. */
+      :root {
+        --paper: #eee6d5;
+        --ink: #1d1a17;
+        --ink-soft: #4a433b;
+        --rule: #b9ab93;
+        --vermilion: #a7351e;
+        --display: "IM Fell English SC", "IM Fell English", Georgia, serif;
+        --display-italic: "IM Fell English", Georgia, serif;
+        --body: "EB Garamond", Garamond, Georgia, serif;
+        color-scheme: light;
+      }
+      * { box-sizing: border-box; }
+      html { background: var(--paper); }
+      body {
+        margin: 0; background: var(--paper); color: var(--ink);
+        font-family: var(--body); font-size: 1.15rem; line-height: 1.6;
+        font-variant-numeric: oldstyle-nums proportional-nums;
+        padding: 0 max(16px, 5vw) 4rem;
+      }
+      a { color: inherit; }
+      .sheet { max-width: 46rem; margin: 0 auto; }
+
+      .masthead { text-align: center; padding-top: 3.5rem; }
+      .identity { display: inline-flex; flex-direction: column; align-items: stretch; }
+      h1 {
+        font-family: var(--display); font-weight: 400; font-size: clamp(2.1rem, 7.5vw, 3.4rem);
+        letter-spacing: .06em; line-height: 1; margin: 0 -.06em 0 0; position: relative; white-space: nowrap;
+      }
+      h1::before, h1::after {
+        content: ""; position: absolute; top: .4em; width: .26em; height: .26em;
+        border-radius: 50%; background: var(--vermilion);
+      }
+      h1::before { left: -.8em; }
+      h1::after { right: -.74em; }
+      .role {
+        display: flex; justify-content: space-between; margin: .7rem 0 0;
+        font-family: var(--display); font-size: clamp(.82rem, 2.2vw, 1.08rem); color: var(--ink-soft);
+      }
+      .role .sp { width: .45em; }
+      .role [aria-hidden] { user-select: none; }
+      .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+      .contact {
+        display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1.5rem;
+        margin-top: 1.6rem; padding-top: .55rem; border-top: 1px solid var(--rule); font-size: 1rem;
+      }
+      .place { font-style: italic; color: var(--ink-soft); }
+      .links a { text-decoration: none; font-family: var(--display); letter-spacing: .05em; }
+      .links a + a::before { content: "\00b7"; color: var(--vermilion); margin: 0 .55em 0 .2em; }
+      .links a:hover { color: var(--vermilion); }
+
+      .lead { margin-top: 3rem; text-align: center; }
+      .kind { margin: 0; font-family: var(--display); font-size: clamp(1.2rem, 5.1vw, 2.2rem); letter-spacing: .07em; line-height: 1.15; }
+      .scope { margin: .5rem 0 0; font-family: var(--display-italic); font-style: italic; font-size: clamp(1.1rem, 3vw, 1.35rem); color: var(--ink-soft); }
+      .cta-row { display: flex; flex-direction: column; align-items: center; gap: .55rem; margin-top: 1.6rem; }
+      .github-cta {
+        display: inline-block; padding: .4rem 1rem; text-decoration: none;
+        font-family: var(--display); font-size: 1rem; letter-spacing: .06em;
+        color: var(--ink); border: 1px solid var(--vermilion);
+      }
+      .github-cta span { color: var(--vermilion); margin-left: .4em; }
+      .github-cta:hover { background: var(--vermilion); color: var(--paper); }
+      .github-cta:hover span { color: var(--paper); }
+      .intro { margin: 2.6rem auto 0; max-width: 38rem; text-align: center; font-size: 1.25rem; color: var(--ink-soft); }
+
+      .work { margin-top: 4rem; }
+      .work h2 {
+        font-family: var(--display); font-weight: 400; font-size: 1.55rem; letter-spacing: .08em;
+        margin: 0; padding-bottom: .45rem; border-bottom: 1px solid var(--rule);
+      }
+      .meta {
+        margin: .55rem 0 1rem; font-family: var(--display); font-size: .95rem; letter-spacing: .06em; color: var(--ink-soft);
+      }
+      .meta .dot { color: var(--vermilion); margin: 0 .35em; }
+      .work p { margin: 0 0 1rem; }
+      .video-wide, .video-tall, .short { position: relative; background: #000; border: 1px solid var(--rule); overflow: hidden; }
+      .video-wide { aspect-ratio: 16 / 9; margin-top: 1.4rem; }
+      .video-tall { aspect-ratio: 9 / 16; max-width: 22rem; margin: 1.4rem auto 0; }
+      .video-wide video, .video-wide iframe, .video-tall video, .short iframe {
+        position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #000;
+      }
+      .video-caption { margin: .6rem 0 0 !important; font-style: italic; color: var(--ink-soft); font-size: 1rem; text-align: center; }
+      .shorts-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; margin-top: .9rem; }
+      .short { aspect-ratio: 9 / 16; }
+      .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.4rem !important; }
+      .button {
+        font-family: var(--display); font-size: 1rem; letter-spacing: .06em; text-decoration: none;
+        color: var(--ink); border: 1px solid var(--ink); padding: .4rem 1rem;
+      }
+      .button.primary { color: var(--vermilion); border-color: var(--vermilion); }
+      .button:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+      footer {
+        margin: 5rem auto 0; max-width: 46rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+        text-align: center; color: var(--ink-soft); font-size: .98rem;
+      }
+      footer .mark { display: inline-block; width: .42rem; height: .42rem; border-radius: 50%; background: var(--vermilion); margin: 0 .6rem; vertical-align: middle; }
+      footer a { text-decoration: none; }
+
+      @media (max-width: 640px) {
+        body { font-size: 1.08rem; }
+        .masthead { padding-top: 2.4rem; }
+        .contact { flex-direction: column; align-items: center; }
+        .links { width: 100%; text-align: center; line-height: 1.9; font-size: .94rem; }
+        .intro { font-size: 1.12rem; }
+        .github-cta { font-size: .86rem; padding: .4rem .75rem; }
+        .shorts-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .7rem; padding-bottom: .4rem; }
+        .shorts-row .short { flex: 0 0 62%; scroll-snap-align: start; }
+        .work { margin-top: 3rem; }
+      }
+
+      /* Additions for the engineering page */
+      .shot { margin: 1.4rem 0 0; border: 1px solid var(--rule); background: #000; }
+      .shot img, .shot video { display: block; width: 100%; height: auto; }
+      .stack { font-style: italic; color: var(--ink-soft); }
+      .jobs { margin-top: 1rem; }
+      .job { margin: 0 0 1.2rem; }
+      .job h3 { margin: 0; font-family: var(--body); font-size: 1.15rem; font-weight: 600; }
+      .job h3 .at { font-weight: 400; font-style: italic; }
+      .job .when { margin: 0 0 .3rem; font-size: .98rem; color: var(--ink-soft); }
+      .job p { margin: 0; }
+      .index { list-style: none; margin: 1rem 0 0; padding: 0; }
+      .index li { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--rule); }
+      .index li a { font-family: var(--display); letter-spacing: .04em; text-decoration: none; }
+      .index li a:hover { color: var(--vermilion); }
+      .index li span { color: var(--ink-soft); }
+      @media (max-width: 640px) {
+        .index li { grid-template-columns: 1fr; gap: .1rem; }
+      }
+    </style>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Gorka Molero home">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#selected">Work</a>
-        <a href="./workbench.html">Projects</a>
-        <a href="#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title" class="wordmark">GORKA<br />MOLERO</h1>
-        <hr class="rule" />
-        <p class="role">Senior AI Product Engineer</p>
-        <p class="role-meta">Full-stack &middot; AI agents &middot; TypeScript / React / Node / Python &middot; building since 2012</p>
-        <p class="role-meta">Remote, worldwide &middot; previously at Roadie</p>
-        <div class="cta-row" aria-label="Contact routes">
-          <a class="primary" href="https://github.com/gorkamolero">GitHub</a>
-          <a href="./contact.html">Contact</a>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
-        <p class="intro">
-          I build software for complicated workflows: developer platforms, editing tools,
-          and products that put AI to work. My work spans product design, frontend, backend,
-          and the details that make a system usable. Building for the web since 2012,
-          for companies, for clients, and for myself, usually all three at once.
-        </p>
-      </section>
-
-      <section id="selected" class="section selected-work" aria-labelledby="selected-title">
-        <div class="section-heading">
-          <h2 id="selected-title" class="label">Selected work</h2>
-          <p>Three examples of how I build: a tool for developers, an AI product, and production software for people doing their work.</p>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./creative.html">Creative work</a></span>
         </div>
-        <article class="selected-example">
-          <span class="eyebrow">Agent tooling</span>
-          <h3><a href="./claude-on-discord.html">Claude-on-Discord</a></h3>
-          <p>Delegate coding work through Discord threads, with separate worktrees, streamed tool activity, and human review. I built the workflow around the agent so its work stays inspectable.</p>
-          <a class="selected-link" href="./claude-on-discord.html">Explore the workflow &rarr;</a>
-        </article>
-        <article class="selected-example">
-          <span class="eyebrow">AI product</span>
-          <h3><a href="./the-pulse.html">The Pulse</a></h3>
-          <p>An interactive storytelling platform with worlds, narration, and multiplayer lobbies. The case study covers the product and the harness for evaluating narrative behavior.</p>
-          <a class="selected-link" href="./the-pulse.html">Read the case study &rarr;</a>
-        </article>
-        <article class="selected-example">
-          <span class="eyebrow">Professional engineering</span>
-          <h3><a href="#experience">Typeshare &amp; Roadie</a></h3>
-          <p>At Typeshare I shipped Tiptap-based thread and carousel editors. At Roadie I work on developer-platform interfaces. Both demand careful product decisions inside complex existing systems.</p>
-          <a class="selected-link" href="#experience">See my experience &rarr;</a>
-        </article>
-      </section>
+      </header>
 
-      <section id="games" class="section" aria-labelledby="games-title">
-        <div class="section-heading">
-          <h2 id="games-title" class="label">Games &mdash; AI storytelling</h2>
-          <p>The focus here is making AI do something genuinely compelling in a videogame &mdash; real, branching narrative, not a chatbot in a costume. A live storytelling platform, a graphic-adventure engine, and the language it all runs on.</p>
-        </div>
-        <div class="index-table">
-          <div class="index-row">
-            <span class="flag live">Live</span>
-            <span class="name"><a href="./the-pulse.html">the pulse</a></span>
-            <span class="cat">AI storytelling platform &mdash; worlds, narration, multiplayer lobbies, and an evaluation harness that scores narrative quality</span>
-            <a class="proof-link" href="https://the-pulse.games">live &nearr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag case">API</span>
-            <span class="name"><a href="./anima.html">anima</a></span>
-            <span class="cat">graphic-adventure creation system and its first playable game &mdash; write scenes, place hotspots, walk them, with an AI art pipeline</span>
-            <a class="proof-link" href="https://will-api.vercel.app/api/health">live API &nearr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag case">Case</span>
-            <span class="name"><a href="./storyscript.html">storyscript</a></span>
-            <span class="cat">the language &amp; headless engine underneath &mdash; write the story like a screenplay, test it with AI agents before any graphics exist</span>
-            <a class="proof-link" href="./storyscript.html">case &rarr;</a>
-          </div>
+      <section class="lead">
+        <p class="scope">Web products, design systems and creative AI tools, since 2012</p>
+        <div class="cta-row">
+          <a class="github-cta" href="https://github.com/gorkamolero" target="_blank" rel="noopener">Source for most of this on GitHub&nbsp;<span aria-hidden="true">&rarr;</span></a>
         </div>
       </section>
 
-      <section id="work" class="section" aria-labelledby="agents-title">
-        <div class="section-heading">
-          <h2 id="agents-title" class="label">Agents &amp; developer tools</h2>
-          <p>Infrastructure for delegating real work to coding agents, and the tooling around it. All public source.</p>
-        </div>
-        <div class="index-table">
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./claude-on-discord.html">claude-on-discord</a></span>
-            <span class="cat">Claude Code running in Discord threads &mdash; delegate real coding work from anywhere, human review kept in the loop</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/claude-on-discord">source &nearr;</a>
+      <p class="intro">I'm Gorka Molero. I've built for the web for fourteen years. UI and frontend is where I'm strongest, but I take products through the whole stack. I've been the UI lead on a number of products, including Roadie, Pickzen and Typeshare, and I led the design system at Chessable. Outside work I design and build creative AI products end to end, from the look of the page to the agents behind it, and most of them speak with an ElevenLabs voice. Here's a selection.</p>
+
+      <main>
+      <section class="work" id="the-pulse">
+        <h2>The Pulse</h2>
+        <p class="meta">Live &middot; 2025&ndash;now <span class="dot">&middot;</span> Next.js, Shadcn, Framer Motion, Liveblocks</p>
+        <p>Interactive fiction with no fixed timeline. An AI narrator runs the story in real time, alone or in a multiplayer room, and you can do whatever you want, in any order. Narrators run as ElevenLabs agents, and the text lights up word by word in sync with the voice.</p>
+        <p>I test every model and prompt change against simulated players, scored by a separate grader model.</p>
+        <figure class="shot"><img src="./assets/the-pulse-ingame-turn.webp" width="1280" height="800" loading="lazy" alt="A turn in Shadow Over Innsmouth on The Pulse: the narrator's text, the player's move, and the word the voice is reading, highlighted." /></figure>
+        <p class="video-caption">A turn in Shadow Over Innsmouth. The highlighted word is where the narrator's voice is.</p>
+        <p class="actions"><a class="button primary" href="https://the-pulse.games" target="_blank" rel="noopener">Play The Pulse</a>
+          <a class="button" href="./the-pulse.html">Case study</a>
+          <a class="button" href="https://github.com/gorkamolero/the-pulse" target="_blank" rel="noopener">Source</a></p>
+      </section>
+
+      <section class="work" id="anima">
+        <h2>Anima</h2>
+        <p class="meta">Game &middot; 2025 <span class="dot">&middot;</span> Phaser, React, Hono, StoryScript</p>
+        <p>A point-and-click adventure system for the AI age, based on the old SCUMM engine, where you can say anything to anyone and every character answers in its own voice. Scenes and dialogue are written in StoryScript, a language I designed, and an AI art pipeline turns generated video into sprites.</p>
+        <figure class="shot"><video controls playsinline preload="none" poster="./assets/anima-cutscene-poster.webp" src="./assets/anima-cutscene.webm" aria-label="A cutscene from Shadow Over Innsmouth in Anima: two characters talking in the hotel lobby at dusk."></video></figure>
+        <p class="actions"><a class="button" href="./anima.html">Case study</a>
+          <a class="button" href="https://github.com/gorkamolero/anima" target="_blank" rel="noopener">Source</a></p>
+      </section>
+
+      <section class="work" id="creative">
+        <h2>Video, voice and music</h2>
+        <p class="meta">2023&ndash;2026 <span class="dot">&middot;</span> Remotion, Eleven v4, Eleven Music, ElevenLabs Agents</p>
+        <p>Saga is a fully automated video studio that takes a topic and publishes a finished video. In 2023 it published 205 Shorts in 34 days and grew a channel to 1,000 subscribers with zero ads. After a lot of refinement, I now use it for long-form video in a new channel, Cybertantra, with episodes up to fifty minutes long, voiced in Eleven v4, scored with Eleven Music and cut in Remotion. The talking statues are wood carvings in the Missouri woods that you can talk to, each with a Raspberry Pi inside and an ElevenLabs agent behind it.</p>
+        <figure class="shot"><a href="./creative.html"><img src="./assets/creative/cybertantra-reel-poster.jpg" width="1280" height="720" loading="lazy" alt="A frame from the Cybertantra reel." /></a></figure>
+        <p class="actions"><a class="button primary" href="./creative.html">Watch the creative work</a></p>
+      </section>
+
+      <section class="work" id="hotpress">
+        <h2>Hotpress</h2>
+        <p class="meta">Live &middot; 2026 <span class="dot">&middot;</span> Lexical, Liveblocks, Yjs</p>
+        <p>A collaborative writing and publishing app I built to print my translations of old books. Real-time editing on Lexical, Liveblocks and Yjs, a print preview, and export on demand to press-ready PDF and EPUB.</p>
+        <p class="actions"><a class="button" href="https://hotpress.app" target="_blank" rel="noopener">hotpress.app</a>
+          <a class="button" href="./hotpress.html">Case study</a></p>
+      </section>
+
+      <section class="work" id="experience">
+        <h2>At work</h2>
+        <div class="jobs">
+          <div class="job">
+            <h3>Roadie <span class="at">Senior Software Engineer</span></h3>
+            <p class="when">2024&ndash;2026 &middot; Remote</p>
+            <p>Modernized the UI of a Backstage-based developer platform and became its de facto UI and product-design lead. Wrote much of the foundation of Roadie's context layer for AI agents, now open source as <a href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener">OpenRoadie</a>, and designed its interfaces for data-source pipelines, relationship mapping and agent-led onboarding.</p>
           </div>
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./koda.html">koda</a></span>
-            <span class="cat">desktop IDE for agent coding &mdash; review-first workflow, checkpoints, visual diffs, isolated worktrees</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/koda">source &nearr;</a>
+          <div class="job">
+            <h3>Typeshare <span class="at">Senior Contract Software Engineer</span></h3>
+            <p class="when">2022&ndash;2023 &middot; Remote</p>
+            <p>Built the writing experience, the X thread editor and the Instagram carousel editor for a creator-writing product, on Tiptap and ProseMirror.</p>
           </div>
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./maestro.html">maestro</a></span>
-            <span class="cat">headless life manager &mdash; spaces, priorities, and working context that agents can operate</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/maestro">source &nearr;</a>
+          <div class="job">
+            <h3>Maility <span class="at">CTO and co-founder</span></h3>
+            <p class="when">2022&ndash;2023</p>
+            <p>A tool marketing agencies used to send cold email at scale. Built on my own, from the product design and the React frontend to the sending infrastructure and billing. It reached $20K MRR within two months of launch.</p>
           </div>
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./saga.html">saga</a></span>
-            <span class="cat">agentic story studio &mdash; a writers' room of agents drafting long-form fiction</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/saga-ai">source &nearr;</a>
+          <div class="job">
+            <h3>Chessable <span class="at">Senior Software Engineer</span></h3>
+            <p class="when">2020&ndash;2022 &middot; Barcelona and remote</p>
+            <p>Led the design system that moved the product's visual layer into one shared component library, and mentored the junior engineers working on it.</p>
           </div>
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./molter.html">molter</a></span>
-            <span class="cat">agent-to-agent dating experiment &mdash; five levels of progressive-disclosure negotiation between people's agents</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/molter">source &nearr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./paperclip-openrouter.html">paperclip-openrouter</a></span>
-            <span class="cat">Paperclip adapter for OpenRouter &mdash; 300+ models through one chat-completions tool loop, no local CLI</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/paperclip-adapter-openrouter">source &nearr;</a>
+          <div class="job">
+            <h3>Earlier</h3>
+            <p>CTO at Adalab, frontend at Pickzen, Vigilant Software, ING Direct, BBVA and William Hill, from 2012.</p>
           </div>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="products-title">
-        <div class="section-heading">
-          <h2 id="products-title" class="label">Shipped products</h2>
-          <p>Things that are live and used, and the small craft libraries under them.</p>
-        </div>
-        <div class="index-table">
-          <div class="index-row">
-            <span class="flag live">Live</span>
-            <span class="name"><a href="./hotpress.html">hotpress</a></span>
-            <span class="cat">collaborative writing and publishing &mdash; built to print my translations of old books; every save renders a press-ready PDF</span>
-            <a class="proof-link" href="https://hotpress.app">hotpress.app &nearr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag live">Live</span>
-            <span class="name"><a href="./datomania.html">datomania</a></span>
-            <span class="cat">Spanish public data made queryable &mdash; parliament, representatives, exports, a public API</span>
-            <a class="proof-link" href="https://datomania.info">datomania.info &nearr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./streamtui.html">streamtui</a></span>
-            <span class="cat">terminal streaming client in Rust &mdash; search, cast to a screen, automate with JSON</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/streamtui">source &nearr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./lingua-priority.html">lingua-priority</a></span>
-            <span class="cat">language pickers with practical defaults &mdash; small UX library, low dependency surface, polish</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/lingua-priority">source &nearr;</a>
-          </div>
-        </div>
+      <section class="work" id="more">
+        <h2>More projects</h2>
+        <ul class="index">
+          <li><a href="./sidekick.html">Sidekick</a><span>A music producer's copilot in a small desktop panel beside Ableton Live.</span></li>
+          <li><a href="./solderpunk.html">Solderpunk</a><span>Synth explorers with guided tutorials and live MIDI control.</span></li>
+          <li><a href="./koda.html">Koda</a><span>A desktop IDE for coding agents, built around review: checkpoints, visual diffs, isolated worktrees.</span></li>
+          <li><a href="./claude-on-discord.html">Claude-on-Discord</a><span>Claude Code in Discord threads, one worktree per thread, with live tool activity.</span></li>
+          <li><a href="./datomania.html">Datomania</a><span>Spanish public data you can browse, chart and query through a public API.</span></li>
+          <li><a href="./carvingen.html">Carvingen</a><span>A canvas for AI image and video generation, built for a carving studio.</span></li>
+          <li><a href="./lingua-priority.html">lingua-priority</a><span>Language pickers that put the likely languages first.</span></li>
+        </ul>
+        <p class="actions"><a class="button" href="./workbench.html">Everything else</a></p>
       </section>
 
-      <section class="section" aria-labelledby="creative-title">
-        <div class="section-heading">
-          <h2 id="creative-title" class="label">Creative &amp; music tools</h2>
-          <p>Software for making things &mdash; sound, image, and the workflows around them.</p>
-        </div>
-        <div class="index-table">
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./sidekick.html">sidekick</a></span>
-            <span class="cat">desktop companion for music production &mdash; audio analysis and producer workflow in a native app</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/sidekick">source &nearr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./solderpunk.html">solderpunk</a></span>
-            <span class="cat">music tools &mdash; synth explorers, MIDI control, and a working knowledge base for hardware patching</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/solderpunk">source &nearr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag public">Public</span>
-            <span class="name"><a href="./carvingen.html">carvingen</a></span>
-            <span class="cat">canvas for AI image and video generation, built for a real carving business</span>
-            <a class="proof-link" href="https://github.com/gorkamolero/carvingen">source &nearr;</a>
-          </div>
-        </div>
+      <section class="work" id="writing">
+        <h2>Writing</h2>
+        <p>"Responsive Design is Not About Screen Sizes Any More", featured by Hacker News, Awwwards, Codrops and Responsive Design Weekly. "So, You're a Web Designer, right?", for Codrops.</p>
       </section>
-
-      <section id="private" class="section" aria-labelledby="private-title">
-        <div class="section-heading">
-          <h2 id="private-title" class="label">Private systems &mdash; real stakes</h2>
-          <p>Run with real money and real client data, so the code stays closed. I demo them live in interviews &mdash; architecture, tests, post-trade forensics. Everything shown publicly uses synthetic data.</p>
-        </div>
-        <div class="index-table">
-          <div class="index-row">
-            <span class="flag private">Private</span>
-            <span class="name"><a href="./mercurius.html">mercurius</a></span>
-            <span class="cat">futures trading infrastructure &mdash; parity-tested backtest engine, safety gates, a live two-person operation</span>
-            <a class="proof-link" href="./mercurius.html">ask for a demo &rarr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag private">Private</span>
-            <span class="name"><a href="./infinity.html">infinity</a></span>
-            <span class="cat">options research pipeline &mdash; every parameter cited, every claim backed by a regenerable artifact</span>
-            <a class="proof-link" href="./infinity.html">ask for a demo &rarr;</a>
-          </div>
-          <div class="index-row">
-            <span class="flag private">Private</span>
-            <span class="name"><a href="./land.html">land unconditional</a></span>
-            <span class="cat">automated land acquisition &mdash; county scanning, owner research, offer estimation, and a CRM for the operator</span>
-            <a class="proof-link" href="./land.html">ask for a demo &rarr;</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="log" class="section" aria-labelledby="log-title">
-        <div class="section-heading">
-          <h2 id="log-title" class="label">About</h2>
-        </div>
-        <div id="experience">
-          <h3>Professional experience</h3>
-          <p class="hero-text"><strong>Roadie &middot; Senior Software Engineer &middot; 2024&ndash;2026.</strong> Product and interface engineering for a developer platform, with React and TypeScript.</p>
-          <p class="hero-text"><strong>Typeshare &middot; Senior Contract Software Engineer &middot; 2022&ndash;2023.</strong> Shipped thread and carousel editing tools with Tiptap, React, and TypeScript; worked through structured content, media handling, and editor performance.</p>
-          <p class="hero-text"><strong>Earlier:</strong> co-founded Maility and built across its product and engineering stack; worked on design systems at Chessable and internal tools at Adalab. Building for the web since 2012.</p>
-        </div>
-        <p class="hero-text">
-          I started in UI because I cared how tools felt, and kept following the work down the stack:
-          full-stack products, startups, internal tools, agents. The pattern is stable &mdash; hand me
-          a messy domain with real stakes and I'll turn the workflow into software that can be used,
-          inspected, and improved.
-        </p>
-        <p class="hero-text">
-          The full project atlas, including archive and paused work, lives in the
-          <a class="inline-link" href="./workbench.html">workbench</a>.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="./contact.html">Contact</a>
-          <a class="button secondary" href="./workbench.html">Full atlas</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
+    <elevenlabs-convai agent-id="agent_7401m49y0k32e83v9197gqssyz0r"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
   </body>
 </html>
