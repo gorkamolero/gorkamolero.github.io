@@ -70,18 +70,10 @@
       .kind { margin: 0; font-family: var(--display); font-size: clamp(1.2rem, 5.1vw, 2.2rem); letter-spacing: .07em; line-height: 1.15; }
       .scope { margin: .5rem 0 0; font-family: var(--display-italic); font-style: italic; font-size: clamp(1.1rem, 3vw, 1.35rem); color: var(--ink-soft); }
       .cta-row { display: flex; flex-direction: column; align-items: center; gap: .55rem; margin-top: 1.6rem; }
-      .talk-cta {
-        display: inline-block; padding: .8rem 1.6rem; text-decoration: none;
-        font-family: var(--display); font-size: clamp(1.05rem, 2.8vw, 1.25rem); letter-spacing: .06em;
-        color: var(--paper); background: var(--vermilion); border: 1.5px solid var(--vermilion);
-      }
-      .talk-cta::before { content: ""; display: inline-block; width: .5em; height: .5em; border-radius: 50%; background: var(--paper); margin-right: .55em; vertical-align: .08em; }
-      .talk-cta:hover { background: var(--ink); border-color: var(--ink); }
-      .cta-note { margin: 0 0 .9rem; font-style: italic; font-size: .98rem; color: var(--ink-soft); }
       .github-cta {
-        display: inline-block; padding: .8rem 1.6rem; text-decoration: none;
-        font-family: var(--display); font-size: clamp(1.05rem, 2.8vw, 1.25rem); letter-spacing: .06em;
-        color: var(--ink); border: 1.5px solid var(--vermilion);
+        display: inline-block; padding: .4rem 1rem; text-decoration: none;
+        font-family: var(--display); font-size: 1rem; letter-spacing: .06em;
+        color: var(--ink); border: 1px solid var(--vermilion);
       }
       .github-cta span { color: var(--vermilion); margin-left: .4em; }
       .github-cta:hover { background: var(--vermilion); color: var(--paper); }
@@ -128,6 +120,7 @@
         .contact { flex-direction: column; align-items: center; }
         .links { width: 100%; text-align: center; line-height: 1.9; }
         .intro { font-size: 1.12rem; }
+        .github-cta { font-size: .86rem; padding: .4rem .75rem; }
         .shorts-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .7rem; padding-bottom: .4rem; }
         .shorts-row .short { flex: 0 0 62%; scroll-snap-align: start; }
         .work { margin-top: 3rem; }
@@ -151,9 +144,7 @@
         <p class="kind">Creative technology work</p>
         <p class="scope">AI video, audio and music, and interactive stories</p>
         <div class="cta-row">
-          <a class="talk-cta" href="https://elevenlabs.io/app/talk-to?agent_id=agent_7401m49y0k32e83v9197gqssyz0r" target="_blank" rel="noopener">Talk to my portfolio</a>
-          <p class="cta-note">A voice agent built with ElevenLabs that knows my work.</p>
-          <a class="github-cta" href="https://github.com/gorkamolero" target="_blank" rel="noopener">Software projects and more on GitHub <span aria-hidden="true">&rarr;</span></a>
+          <a class="github-cta" href="https://github.com/gorkamolero" target="_blank" rel="noopener">Software projects and more on GitHub&nbsp;<span aria-hidden="true">&rarr;</span></a>
         </div>
       </section>
 
@@ -219,5 +210,7 @@
       </main>
     </div>
     <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
+    <elevenlabs-convai agent-id="agent_7401m49y0k32e83v9197gqssyz0r"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
   </body>
 </html>
