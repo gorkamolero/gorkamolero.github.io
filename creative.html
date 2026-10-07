@@ -94,17 +94,9 @@
       .video-wide, .video-tall, .short { position: relative; background: #000; border: 1px solid var(--rule); overflow: hidden; }
       .video-wide { aspect-ratio: 16 / 9; margin-top: 1.4rem; }
       .video-tall { aspect-ratio: 9 / 16; max-width: 22rem; margin: 1.4rem auto 0; }
-      .video-wide video, .video-wide iframe, .video-tall iframe, .short iframe {
+      .video-wide video, .video-wide iframe, .video-tall video, .short iframe {
         position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #000;
       }
-      .yt { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: #000; cursor: pointer; }
-      .yt img { width: 100%; height: 100%; object-fit: cover; display: block; }
-      .yt::after {
-        content: ""; position: absolute; left: 50%; top: 50%; width: 4.2rem; height: 4.2rem; margin: -2.1rem 0 0 -2.1rem;
-        border-radius: 50%; box-shadow: 0 4px 18px rgb(0 0 0 / .35); transition: transform .15s, background-color .15s;
-        background: var(--vermilion) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Cpath d='M0 0l10 6-10 6z' fill='%23eee6d5'/%3E%3C/svg%3E") no-repeat 58% 50% / 34%;
-      }
-      .yt:hover::after, .yt:focus-visible::after { transform: scale(1.08); background-color: var(--ink); }
       .video-caption { margin: .6rem 0 0 !important; font-style: italic; color: var(--ink-soft); font-size: 1rem; text-align: center; }
       .shorts-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; margin-top: .9rem; }
       .short { aspect-ratio: 9 / 16; }
@@ -165,7 +157,7 @@
         <p class="meta">YouTube &middot; 2026 <span class="dot">&middot;</span> Long-form and Shorts</p>
         <p>The latest iteration of Saga, my long-running experiment with gen-AI pipelines, and my first attempt at long-form. The art comes from OpenAI image generation, and a virtual camera moves across each image, following whatever the current sentence is about. The narration is Eleven v4, generated in chunks with a warm-up line before each one and stitched back together, so the voice holds for a fifty-minute episode. The score is Eleven Music, and everything is cut in Remotion.</p>
             <div class="video-wide">
-              <video controls playsinline preload="metadata" poster="./assets/creative/cybertantra-reel-poster.jpg" src="./assets/creative/cybertantra-reel.mp4"></video>
+              <video controls playsinline preload="metadata" poster="./assets/creative/cybertantra-reel-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/cybertantra-reel.mp4"></video>
             </div>
             <p class="video-caption">Here's a short version. You'll find the full episode and the Shorts below.</p>
             <div class="video-wide">
@@ -183,7 +175,7 @@
         <p class="meta">Prototype &middot; 2026 <span class="dot">&middot;</span> Voice agents</p>
         <p>Unconditional Carving, a studio in Missouri, has started an experimental project: carvings you come across in the forest and can actually talk to. The idea is that you wander the woods, find these spirits one by one, and have a conversation with each. I built the first one, a jackalope with a Raspberry Pi, a microphone and speakers inside, connected to an ElevenLabs agent. It's location-aware, and it sleeps until someone wakes it up.</p>
             <div class="video-tall">
-              <button class="yt" type="button" data-yt="pxWu1yCTqSw" data-title="Talking Statues · The Jackalope" aria-label="Play Talking Statues · The Jackalope"><img src="./assets/creative/jackalope-poster.jpg" alt="" loading="lazy" /></button>
+              <video controls playsinline preload="metadata" poster="./assets/creative/jackalope-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/jackalope.mp4"></video>
             </div>
       </section>
 
@@ -192,7 +184,7 @@
         <p class="meta">Live &middot; 2025&ndash;2026 <span class="dot">&middot;</span> Interactive fiction</p>
         <p>A reimagining of narrative. A novel has a timeline of events and a whole world around it. The Pulse keeps the world, the characters and the places, and lets go of the timeline: you can do whatever you want, in any order, and the story follows you. It's very immersive. The narrator for Shadow Over Innsmouth is a clone of Orson Welles, running as an ElevenLabs agent.</p>
             <div class="video-wide">
-              <button class="yt" type="button" data-yt="8dWmRoM2BkE" data-title="The Pulse · Shadow Over Innsmouth" aria-label="Play The Pulse · Shadow Over Innsmouth"><img src="./assets/creative/the-pulse-innsmouth-poster.jpg" alt="" loading="lazy" /></button>
+              <video controls playsinline preload="metadata" poster="./assets/creative/the-pulse-innsmouth-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/the-pulse-innsmouth.mp4"></video>
             </div>
             <p class="actions"><a class="button primary" href="https://the-pulse.games" target="_blank" rel="noopener">Play The Pulse</a>
             <a class="button" href="https://elevenlabs.io/app/talk-to?agent_id=agent_0801m498yyw3ey2vmx5t6hs8ynat" target="_blank" rel="noopener">Talk to the narrator</a></p>
@@ -203,7 +195,7 @@
         <p class="meta">Game &middot; 2025 <span class="dot">&middot;</span> Open dialogue</p>
         <p>A LucasArts-style adventure with the dialogue tree left open. Type anything to anyone, and they answer in character, in their own voice. Next I want to leave the decisions open too, like in The Pulse, so you make your own way as you go: say you want to go to the bus station, and one is created in the style of the story. I've started on that, and it's on hold for now.</p>
             <div class="video-wide">
-              <button class="yt" type="button" data-yt="8Ix7DVGQR_M" data-title="Anima · Open dialogue" aria-label="Play Anima · Open dialogue"><img src="./assets/creative/point-and-click-bar-poster.jpg" alt="" loading="lazy" /></button>
+              <video controls playsinline preload="metadata" poster="./assets/creative/point-and-click-bar-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/point-and-click-bar.mp4"></video>
             </div>
       </section>
 
@@ -221,18 +213,5 @@
     <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
     <elevenlabs-convai agent-id="agent_7401m49y0k32e83v9197gqssyz0r"></elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-    <script>
-      // Each video is its poster until it's played: YouTube loads only then, and starts at once.
-      document.querySelectorAll(".yt").forEach((button) => {
-        button.addEventListener("click", () => {
-          const frame = document.createElement("iframe");
-          frame.src = `https://www.youtube-nocookie.com/embed/${button.dataset.yt}?autoplay=1&rel=0&playsinline=1`;
-          frame.title = button.dataset.title;
-          frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
-          frame.allowFullscreen = true;
-          button.replaceWith(frame);
-        });
-      });
-    </script>
   </body>
 </html>
