@@ -120,6 +120,9 @@
         .masthead { padding-top: 2.4rem; }
         .contact { flex-direction: column; align-items: center; }
         .links { width: 100%; text-align: center; line-height: 1.9; font-size: .94rem; }
+        .links a { white-space: nowrap; }
+        .links a + a::before { content: none; }
+        .links a:not(:last-child)::after { content: "\00b7"; color: var(--vermilion); margin: 0 .2em 0 .55em; }
         .intro { font-size: 1.12rem; }
         .github-cta { font-size: .86rem; padding: .4rem .75rem; }
         .shorts-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .7rem; padding-bottom: .4rem; }
@@ -156,7 +159,7 @@
         </div>
         <div class="contact">
           <span class="place">Remote, location-independent</span>
-          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./creative.html">Creative work</a></span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
         </div>
       </header>
 

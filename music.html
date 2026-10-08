@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gorka Molero · Music</title>
+    <meta name="description" content="Gorka Molero produces the band Gitano de Palo and releases his own music as Gorka." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gorka Molero · Music" />
+    <meta property="og:description" content="Gorka Molero produces the band Gitano de Palo and releases his own music as Gorka." />
+    <meta property="og:url" content="https://gorkamolero.github.io/music.html" />
+    <meta property="og:image" content="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb315dc13e2c147595b68d2871" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <style>
+      /* The CV's sheet: ink on warm paper, one vermilion mark. */
+      :root {
+        --paper: #eee6d5;
+        --ink: #1d1a17;
+        --ink-soft: #4a433b;
+        --rule: #b9ab93;
+        --vermilion: #a7351e;
+        --display: "IM Fell English SC", "IM Fell English", Georgia, serif;
+        --display-italic: "IM Fell English", Georgia, serif;
+        --body: "EB Garamond", Garamond, Georgia, serif;
+        color-scheme: light;
+      }
+      * { box-sizing: border-box; }
+      html { background: var(--paper); }
+      body {
+        margin: 0; background: var(--paper); color: var(--ink);
+        font-family: var(--body); font-size: 1.15rem; line-height: 1.6;
+        font-variant-numeric: oldstyle-nums proportional-nums;
+        padding: 0 max(16px, 5vw) 4rem;
+      }
+      a { color: inherit; }
+      .sheet { max-width: 46rem; margin: 0 auto; }
+
+      .masthead { text-align: center; padding-top: 3.5rem; }
+      .identity { display: inline-flex; flex-direction: column; align-items: stretch; }
+      h1 {
+        font-family: var(--display); font-weight: 400; font-size: clamp(2.1rem, 7.5vw, 3.4rem);
+        letter-spacing: .06em; line-height: 1; margin: 0 -.06em 0 0; position: relative; white-space: nowrap;
+      }
+      h1::before, h1::after {
+        content: ""; position: absolute; top: .4em; width: .26em; height: .26em;
+        border-radius: 50%; background: var(--vermilion);
+      }
+      h1::before { left: -.8em; }
+      h1::after { right: -.74em; }
+      .role {
+        display: flex; justify-content: space-between; margin: .7rem 0 0;
+        font-family: var(--display); font-size: clamp(.82rem, 2.2vw, 1.08rem); color: var(--ink-soft);
+      }
+      .role .sp { width: .45em; }
+      .role [aria-hidden] { user-select: none; }
+      .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+      .contact {
+        display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1.5rem;
+        margin-top: 1.6rem; padding-top: .55rem; border-top: 1px solid var(--rule); font-size: 1rem;
+      }
+      .place { font-style: italic; color: var(--ink-soft); }
+      .links a { text-decoration: none; font-family: var(--display); letter-spacing: .05em; }
+      .links a + a::before { content: "\00b7"; color: var(--vermilion); margin: 0 .55em 0 .2em; }
+      .links a:hover { color: var(--vermilion); }
+
+      .intro { margin: 2.6rem auto 0; max-width: 38rem; text-align: center; font-size: 1.25rem; color: var(--ink-soft); }
+
+      .work { margin-top: 4.5rem; }
+      .work h2 {
+        font-family: var(--display); font-weight: 400; font-size: clamp(1.8rem, 6vw, 2.3rem); letter-spacing: .08em;
+        line-height: 1.1; margin: 0; padding-bottom: .45rem; border-bottom: 1px solid var(--rule);
+      }
+      .section-head {
+        display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+        padding-bottom: .45rem; border-bottom: 1px solid var(--rule);
+      }
+      .section-head h2 { padding-bottom: 0; border-bottom: 0; }
+      .out { font-family: var(--display); font-size: 1.02rem; letter-spacing: .06em; color: var(--vermilion); text-decoration: none; white-space: nowrap; }
+      .out::after { content: "\2009\2197"; }
+      .out:hover { text-decoration: underline; text-underline-offset: .2em; }
+      .meta {
+        margin: .55rem 0 0; font-family: var(--display); font-size: .95rem; letter-spacing: .06em; color: var(--ink-soft);
+      }
+      .meta .dot { color: var(--vermilion); margin: 0 .35em; }
+
+      .player { margin-top: 1.4rem; }
+      .player iframe { display: block; width: 100%; border: 0; border-radius: 12px; background: #121212; }
+
+      .discography { margin-top: 1.2rem; }
+      .release {
+        display: grid; grid-template-columns: 11.5rem minmax(0, 1fr); gap: 1.6rem; align-items: center;
+        padding: 1.5rem 0;
+      }
+      .release + .release { border-top: 1px solid rgba(185, 171, 147, .55); }
+      .release.tall { align-items: start; }
+      .release h3 { font-family: var(--display); font-weight: 400; font-size: 1.45rem; letter-spacing: .07em; line-height: 1.15; margin: 0; }
+      .release .meta { margin-top: .35rem; font-size: .88rem; }
+      .release .player { margin-top: 0; }
+
+      footer {
+        margin: 5rem auto 0; max-width: 46rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+        text-align: center; color: var(--ink-soft); font-size: .98rem;
+      }
+      footer .mark { display: inline-block; width: .42rem; height: .42rem; border-radius: 50%; background: var(--vermilion); margin: 0 .6rem; vertical-align: middle; }
+      footer a { text-decoration: none; }
+
+      @media (max-width: 640px) {
+        body { font-size: 1.08rem; }
+        .masthead { padding-top: 2.4rem; }
+        .contact { flex-direction: column; align-items: center; }
+        .links { width: 100%; text-align: center; line-height: 1.9; font-size: .94rem; }
+        .links a { white-space: nowrap; }
+        .links a + a::before { content: none; }
+        .links a:not(:last-child)::after { content: "\00b7"; color: var(--vermilion); margin: 0 .2em 0 .55em; }
+        .intro { font-size: 1.12rem; }
+        .work { margin-top: 3.5rem; }
+        .release { grid-template-columns: 1fr; gap: .9rem; padding: 1.3rem 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Music producer</span><span aria-hidden="true">M</span><span aria-hidden="true">U</span><span aria-hidden="true">S</span><span aria-hidden="true">I</span><span aria-hidden="true">C</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">P</span><span aria-hidden="true">R</span><span aria-hidden="true">O</span><span aria-hidden="true">D</span><span aria-hidden="true">U</span><span aria-hidden="true">C</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
+        </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://open.spotify.com/artist/6kPHDVsuzYXW2oTAZ80QJj" target="_blank" rel="noopener">Spotify</a> <a href="./creative.html">Creative</a> <a href="./index.html">Engineering</a></span>
+        </div>
+      </header>
+
+      <p class="intro">I produce the band Gitano de Palo, and I release my own music as Gorka.</p>
+
+      <main>
+        <section class="work" id="gitano-de-palo">
+          <div class="section-head">
+            <h2>Gitano de Palo</h2>
+            <a class="out" href="https://open.spotify.com/artist/4rO0P2RVElJ04AbXxSgViI" target="_blank" rel="noopener">Spotify</a>
+          </div>
+          <p class="meta">Arrangement, production, mixing and mastering</p>
+          <div class="player"><iframe src="https://open.spotify.com/embed/artist/4rO0P2RVElJ04AbXxSgViI?utm_source=generator&amp;theme=0" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Gitano de Palo on Spotify"></iframe></div>
+        </section>
+
+        <section class="work" id="gorka">
+          <h2>Gorka</h2>
+          <p class="meta">Solo work</p>
+          <div class="discography">
+          <article class="release" id="thumos">
+            <div>
+              <h3>Thumos</h3>
+              <p class="meta">Single</p>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/track/7DY57dKpH4SXpoHuN62htI?utm_source=generator&amp;theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Thumos on Spotify"></iframe></div>
+          </article>
+          <article class="release" id="elohim">
+            <div>
+              <h3>Elohim</h3>
+              <p class="meta">Single</p>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/track/0myIFClne0a4z8R29FoAl6?utm_source=generator&amp;theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Elohim on Spotify"></iframe></div>
+          </article>
+          <article class="release" id="regret">
+            <div>
+              <h3>Regret</h3>
+              <p class="meta">Piano work</p>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/track/5Bfy5N803xh3djfhGX7Z7G?utm_source=generator&amp;theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Regret on Spotify"></iframe></div>
+          </article>
+          <article class="release tall" id="descent">
+            <div>
+              <h3>Descent</h3>
+              <p class="meta">EP</p>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/album/5AEHNm9UfatuBqrT0hGIfI?utm_source=generator&amp;theme=0" height="432" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Descent on Spotify"></iframe></div>
+          </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
