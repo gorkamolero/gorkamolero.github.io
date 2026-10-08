@@ -1,0 +1,235 @@
+/* Shared stylesheet for the case-study pages.
+   Derived from the inline styles of index.html, creative.html and music.html:
+   ink on warm paper, one vermilion mark. Tokens and patterns are copied as is;
+   everything below "Case pages" is what the case studies add. */
+
+:root {
+  --paper: #eee6d5;
+  --ink: #1d1a17;
+  --ink-soft: #4a433b;
+  --rule: #b9ab93;
+  --vermilion: #a7351e;
+  --display: "IM Fell English SC", "IM Fell English", Georgia, serif;
+  --display-italic: "IM Fell English", Georgia, serif;
+  --body: "EB Garamond", Garamond, Georgia, serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: 1.15rem; line-height: 1.6;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  padding: 0 max(16px, 5vw) 4rem;
+}
+a { color: inherit; }
+.sheet { max-width: 46rem; margin: 0 auto; }
+
+.masthead { text-align: center; padding-top: 3.5rem; }
+.identity { display: inline-flex; flex-direction: column; align-items: stretch; }
+h1 {
+  font-family: var(--display); font-weight: 400; font-size: clamp(2.1rem, 7.5vw, 3.4rem);
+  letter-spacing: .06em; line-height: 1; margin: 0 -.06em 0 0; position: relative; white-space: nowrap;
+}
+h1::before, h1::after {
+  content: ""; position: absolute; top: .4em; width: .26em; height: .26em;
+  border-radius: 50%; background: var(--vermilion);
+}
+h1::before { left: -.8em; }
+h1::after { right: -.74em; }
+.role {
+  display: flex; justify-content: space-between; margin: .7rem 0 0;
+  font-family: var(--display); font-size: clamp(.82rem, 2.2vw, 1.08rem); color: var(--ink-soft);
+}
+.role .sp { width: .45em; }
+.role [aria-hidden] { user-select: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.contact {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1.5rem;
+  margin-top: 1.6rem; padding-top: .55rem; border-top: 1px solid var(--rule); font-size: 1rem;
+}
+.place { font-style: italic; color: var(--ink-soft); }
+.links a { text-decoration: none; font-family: var(--display); letter-spacing: .05em; }
+.links a + a::before { content: "\00b7"; color: var(--vermilion); margin: 0 .55em 0 .2em; }
+.links a:hover { color: var(--vermilion); }
+
+.lead { margin-top: 3rem; text-align: center; }
+.scope { margin: .5rem 0 0; font-family: var(--display-italic); font-style: italic; font-size: clamp(1.1rem, 3vw, 1.35rem); color: var(--ink-soft); }
+.intro { margin: 2.6rem auto 0; max-width: 38rem; text-align: center; font-size: 1.25rem; color: var(--ink-soft); }
+
+.work { margin-top: 4rem; }
+.work h2 {
+  font-family: var(--display); font-weight: 400; font-size: 1.55rem; letter-spacing: .08em;
+  margin: 0; padding-bottom: .45rem; border-bottom: 1px solid var(--rule);
+}
+.meta {
+  margin: .55rem 0 1rem; font-family: var(--display); font-size: .95rem; letter-spacing: .06em; color: var(--ink-soft);
+}
+.meta .dot { color: var(--vermilion); margin: 0 .35em; }
+.work p { margin: 0 0 1rem; }
+.video-caption { margin: .6rem 0 0 !important; font-style: italic; color: var(--ink-soft); font-size: 1rem; text-align: center; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.4rem !important; }
+.button {
+  font-family: var(--display); font-size: 1rem; letter-spacing: .06em; text-decoration: none;
+  color: var(--ink); border: 1px solid var(--ink); padding: .4rem 1rem;
+}
+.button.primary { color: var(--vermilion); border-color: var(--vermilion); }
+.button:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+footer {
+  margin: 5rem auto 0; max-width: 46rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+  text-align: center; color: var(--ink-soft); font-size: .98rem;
+}
+footer .mark { display: inline-block; width: .42rem; height: .42rem; border-radius: 50%; background: var(--vermilion); margin: 0 .6rem; vertical-align: middle; }
+footer a { text-decoration: none; }
+
+@media (max-width: 640px) {
+  body { font-size: 1.08rem; }
+  .masthead { padding-top: 2.4rem; }
+  .contact { flex-direction: column; align-items: center; }
+  .links { width: 100%; text-align: center; line-height: 1.9; font-size: .94rem; }
+  .links a { white-space: nowrap; }
+  .links a + a::before { content: none; }
+  .links a:not(:last-child)::after { content: "\00b7"; color: var(--vermilion); margin: 0 .2em 0 .55em; }
+  .intro { font-size: 1.12rem; }
+  .work { margin-top: 3rem; }
+}
+
+/* Shot frame, as on the engineering page */
+.shot { margin: 1.4rem 0 0; border: 1px solid var(--rule); background: #000; }
+.shot img, .shot video { display: block; width: 100%; height: auto; }
+.index { list-style: none; margin: 1rem 0 0; padding: 0; }
+.index li { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--rule); }
+.index li a { font-family: var(--display); letter-spacing: .04em; text-decoration: none; }
+.index li a:hover { color: var(--vermilion); }
+.index li span { color: var(--ink-soft); }
+@media (max-width: 640px) {
+  .index li { grid-template-columns: 1fr; gap: .1rem; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Case pages                                                          */
+/* ------------------------------------------------------------------ */
+
+/* Lead block: eyebrow, title, intro, chips */
+.lead .meta { margin: 0; text-align: center; }
+.lead .eyebrow { margin-bottom: .6rem; }
+.case-title {
+  margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(1.9rem, 6.4vw, 2.9rem);
+  letter-spacing: .06em; line-height: 1.1; overflow-wrap: break-word;
+}
+.case-title.long { font-size: clamp(1.45rem, 5vw, 2.2rem); letter-spacing: .05em; line-height: 1.2; }
+.lead .intro { margin-top: 1.4rem; }
+.lead .chips { margin-top: 1.4rem; }
+
+/* Sections */
+.work { overflow-wrap: break-word; }
+.work.open { margin-top: 2.6rem; }
+.work h2 { line-height: 1.25; }
+.work h2 + p { margin-top: 1rem; }
+.work > :last-child { margin-bottom: 0; }
+.work .eyebrow { margin: 0 0 .3rem; }
+.work h3 {
+  margin: 1.8rem 0 .5rem; font-family: var(--display); font-weight: 400;
+  font-size: 1.2rem; letter-spacing: .06em;
+}
+.work a:not(.button):hover { color: var(--vermilion); }
+
+/* Inline code and code blocks, in ink on paper */
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-variant-numeric: normal;
+  font-size: .8em; background: rgba(29, 26, 23, .07); padding: .08em .35em; border-radius: 2px;
+  overflow-wrap: anywhere;
+}
+pre {
+  margin: 1.2rem 0; padding: .9rem 1rem; border: 1px solid var(--rule);
+  background: rgba(29, 26, 23, .05); overflow-x: auto;
+}
+pre code {
+  display: block; padding: 0; background: none; border-radius: 0; font-size: .84rem; line-height: 1.55;
+  white-space: pre; overflow-wrap: normal;
+}
+pre .kw { color: var(--vermilion); }
+pre .str { color: var(--ink-soft); font-style: italic; }
+pre .cmt { color: var(--ink-soft); font-style: italic; }
+
+/* Figures: a .shot frame with an italic centred caption under it */
+.plate { margin: 1.6rem 0 0; }
+.plate .shot { margin: 0; }
+.plate figcaption { margin: .6rem 0 0; font-style: italic; color: var(--ink-soft); font-size: 1rem; text-align: center; }
+.plate.narrow { max-width: 340px; margin-left: auto; margin-right: auto; }
+.plate.portrait { max-width: 24rem; margin-left: auto; margin-right: auto; }
+.plate + p, .plate + h3 { margin-top: 1.4rem; }
+
+/* Evidence items: bold label beside its text */
+.facts { list-style: none; margin: 1.2rem 0 0; padding: 0; }
+.facts li { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid var(--rule); }
+.facts strong { font-weight: 600; }
+.facts span { color: var(--ink-soft); }
+.facts + p, .facts + .plate { margin-top: 1.4rem; }
+
+/* Bullets with a vermilion dot */
+.points { list-style: none; margin: 1rem 0 0; padding: 0; }
+.points li { position: relative; padding: .3rem 0 .3rem 1.3rem; }
+.points li::before {
+  content: ""; position: absolute; left: .2rem; top: calc(.3rem + .64em);
+  width: .32em; height: .32em; border-radius: 50%; background: var(--vermilion);
+}
+.points + p, .points + .actions { margin-top: 1.2rem; }
+
+/* The Pulse: the narrator's prose, and the audio clip */
+.narration { margin: 1.6rem 0 0; padding: .2rem 0 .2rem 1.2rem; border-left: 2px solid var(--vermilion); }
+.narration blockquote { margin: 0; font-family: var(--display-italic); font-style: italic; font-size: 1.2rem; line-height: 1.55; }
+.narration .src { display: block; margin-top: .7rem; font-size: 1rem; font-style: italic; color: var(--ink-soft); }
+.audio-embed { margin: 1.6rem 0 0; }
+.audio-embed .audio-label {
+  margin-bottom: .5rem; font-family: var(--display); font-size: .95rem; letter-spacing: .06em; color: var(--ink-soft);
+}
+.audio-embed audio { display: block; width: 100%; }
+.audio-embed .note { margin: .6rem 0 0; font-style: italic; color: var(--ink-soft); font-size: 1rem; text-align: center; }
+.audio-embed + .plate { margin-top: 1.6rem; }
+
+/* Workbench: the project atlas */
+.archive-table { margin-top: 1.4rem; }
+.archive-row {
+  display: grid; grid-template-columns: 8.5rem 7.5rem 9.5rem minmax(0, 1fr); gap: 0 1rem;
+  padding: .7rem 0; border-bottom: 1px solid var(--rule); font-size: .98rem; line-height: 1.5;
+}
+.archive-row strong { font-family: var(--display); font-weight: 400; font-size: 1.05rem; letter-spacing: .04em; line-height: 1.35; }
+.archive-row span { color: var(--ink-soft); }
+.archive-head { padding-top: 0; font-family: var(--display); font-size: .9rem; letter-spacing: .06em; }
+.archive-head span { color: var(--ink-soft); }
+
+/* Contact */
+.cards { margin-top: 1.2rem; }
+.card { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+.card h3 { margin: 0; }
+.card p { margin: 0 0 .5rem; }
+.card .points { margin-top: .2rem; }
+.work h2.statement {
+  font-family: var(--display-italic); font-style: italic; font-size: 1.35rem; letter-spacing: .02em; line-height: 1.4;
+}
+.routes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 1.4rem; }
+.route { padding-top: .2rem; }
+.route .label { display: block; font-family: var(--display); font-size: .95rem; letter-spacing: .06em; color: var(--ink-soft); }
+.route h3 { margin: .2rem 0 .5rem; }
+.route p { margin: 0 0 1rem; }
+.route .actions { margin-top: 1.1rem !important; }
+
+@media (max-width: 640px) {
+  .case-title { font-size: clamp(1.7rem, 8.4vw, 2.4rem); }
+  .case-title.long { font-size: clamp(1.4rem, 6.4vw, 1.9rem); }
+  .facts li, .card { grid-template-columns: 1fr; gap: .1rem; }
+  .card { gap: .4rem; }
+  .routes { grid-template-columns: 1fr; gap: 1.4rem; }
+  .archive-head {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  .archive-row { display: block; padding: .8rem 0; }
+  .archive-row span { display: block; }
+  .archive-row strong { display: block; margin-bottom: .1rem; }
+  .archive-row span:nth-child(2) { font-family: var(--display); font-size: .9rem; letter-spacing: .06em; }
+  .archive-row span:nth-child(3) { font-style: italic; }
+  .archive-row span:nth-child(4) { margin-top: .25rem; color: var(--ink); }
+}

@@ -4,131 +4,99 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Carvingen - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for Carvingen, a canvas-based AI media and 3D workflow, with branching image generation, reference chaining, Meshy/fal integration, and local asset persistence."
-    />
+    <meta name="description" content="Case study for Carvingen, a canvas-based AI media and 3D workflow, with branching image generation, reference chaining, Meshy/fal integration, and local asset persistence." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
+        </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
 
-    <main>
-      <section class="case-hero land">
-        <p class="eyebrow">Case · generation canvas</p>
-        <h1>Carvingen</h1>
-        <p class="hero-text">
-          A node-based canvas to branch image concepts, carry references forward, generate 3D meshes, and review VR-ready outputs.
-        </p>
-          <div class="case-meta">
-            <span>Public repo</span>
-            <span>Build, lint, unit, and e2e tests pass</span>
-            <span>Fixture demo captured</span>
-          </div>
+      <section class="lead">
+        <p class="meta eyebrow">Case · generation canvas</p>
+        <h2 class="case-title">Carvingen</h2>
+        <p class="intro">A node-based canvas to branch image concepts, carry references forward, generate 3D meshes, and review VR-ready outputs.</p>
+        <p class="meta chips">Public repo <span class="dot">&middot;</span> Build, lint, unit, and e2e tests pass <span class="dot">&middot;</span> Fixture demo captured</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            Creative iteration for carving concepts often happens in linear chat: prompt, image, revision, another image, then a separate jump into 3D tooling. The lineage gets lost, references are awkward to reuse, and the workflow does not match how a craftsperson compares branches of an idea.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            Carvingen turns that into a spatial canvas. Image, Prompt, Mesh, and Viewer nodes let you drag in references, generate variations, branch from any output, send a chosen image into Meshy/fal image-to-3D, persist assets locally, and inspect the resulting GLB through a model viewer.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Canvas workflow</strong>
-              <span>React Flow graph with prompt, image, mesh, and viewer nodes.</span>
-            </div>
-            <div>
-              <strong>Provider boundary</strong>
-              <span>fal image models, Meshy image-to-3D, local job records, and persisted assets.</span>
-            </div>
-            <div>
-              <strong>Operator fit</strong>
-              <span>Built for branching craft decisions rather than generic image generation.</span>
-            </div>
-          </div>
-
-          <figure class="proof-figure">
-            <img src="./assets/carvingen-workflow.svg" alt="Carvingen workflow diagram showing image, prompt, mesh, viewer, jobs, assets, SQLite graph state, and public-safe boundaries." />
-            <figcaption>
-              Sanitized workflow diagram grounded in the local source and docs. It shows the product architecture without exposing private generated images, prompts, provider keys, client files, or live outputs.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/carvingen-fake-canvas.png" alt="Carvingen runtime canvas with fake public-demo image, prompt, mesh, and viewer nodes on an isolated temporary database." />
-            <figcaption>
-              Runtime canvas proof captured from an isolated temporary database. The workflow uses fake public-demo text and a placeholder reference image so the screenshot proves the product surface without exposing private generated media or client prompts.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/carvingen-portfolio-demo.png" alt="Carvingen static portfolio demo route showing image, prompt, mesh, and viewer nodes with read-only, no-provider, and fake-data badges." />
-            <figcaption>
-              Static <code>/portfolio-demo</code> proof captured from the source app. The route renders typed fixture data, disables generation controls, and makes no project, job, fal, or asset-persistence API requests.
-            </figcaption>
-          </figure>
-
-          <h2>System Architecture</h2>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Use a graph canvas so iteration history becomes visible and branchable.</li>
-            <li>Separate graph state from jobs and assets so reloads do not lose provider work.</li>
-            <li>Make generation explicit-run to avoid quietly spending money on model calls.</li>
-            <li>Persist provider output locally because remote result URLs are not the durable source of truth.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            Carvingen is transformation evidence: domain taste, AI media integration, workflow design, local persistence, and practical product engineering for a real creative business process.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>Local source inspected; public transcript records only sanitized implementation evidence.</li>
-            <li><code>pnpm build</code> passed.</li>
-            <li><code>pnpm lint</code> passed.</li>
-            <li><code>pnpm test</code> passed with 44 tests across 10 files.</li>
-            <li><code>pnpm test:e2e:local</code> passed, including the portfolio demo route.</li>
-            <li>Fake-data runtime canvas captured from an isolated temporary database.</li>
-            <li>Static fixture demo captured from <code>/portfolio-demo</code> with no API requests.</li>
-            <li>Proof transcript — available on request.</li>
-          </ul>
-
-          <h2>Privacy Boundary</h2>
-          <p>
-            Generated images, craft prompts, provider keys, database contents, and unreleased media stay private. The demo route runs on fixture data; a full walkthrough is available on request.
-          </p>
-
-          <a class="button primary full" href="https://github.com/gorkamolero/carvingen">View source</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>Creative iteration with AI models often happens in linear chat: prompt, image, revision, another image, then a separate jump into 3D tooling. The lineage gets lost, references are awkward to reuse, and the workflow does not match how people compare branches of an idea.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>Carvingen turns that into a spatial canvas. Image, Prompt, Mesh, and Viewer nodes let you drag in references, generate variations, branch from any output, send a chosen image into Meshy/fal image-to-3D, persist assets locally, and inspect the resulting GLB through a model viewer.</p>
+        <ul class="facts">
+          <li><strong>Canvas workflow</strong><span>React Flow graph with prompt, image, mesh, and viewer nodes.</span></li>
+          <li><strong>Provider boundary</strong><span>fal image models, Meshy image-to-3D, local job records, and persisted assets.</span></li>
+          <li><strong>Operator fit</strong><span>Built for branching creative decisions rather than one-shot generation.</span></li>
+        </ul>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/carvingen-workflow.svg" alt="Carvingen workflow diagram showing image, prompt, mesh, viewer, jobs, assets, SQLite graph state, and public-safe boundaries." loading="lazy" /></div>
+          <figcaption>Sanitized workflow diagram grounded in the local source and docs. It shows the product architecture without exposing private generated images, prompts, provider keys, client files, or live outputs.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/carvingen-fake-canvas.png" alt="Carvingen runtime canvas with fake public-demo image, prompt, mesh, and viewer nodes on an isolated temporary database." loading="lazy" /></div>
+          <figcaption>Runtime canvas proof captured from an isolated temporary database. The workflow uses fake public-demo text and a placeholder reference image so the screenshot proves the product surface without exposing private generated media or client prompts.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/carvingen-portfolio-demo.png" alt="Carvingen static portfolio demo route showing image, prompt, mesh, and viewer nodes with read-only, no-provider, and fake-data badges." loading="lazy" /></div>
+          <figcaption>Static <code>/portfolio-demo</code> proof captured from the source app. The route renders typed fixture data, disables generation controls, and makes no project, job, fal, or asset-persistence API requests.</figcaption>
+        </figure>
+      </section>
+
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Use a graph canvas so iteration history becomes visible and branchable.</li>
+          <li>Separate graph state from jobs and assets so reloads do not lose provider work.</li>
+          <li>Make generation explicit-run to avoid quietly spending money on model calls.</li>
+          <li>Persist provider output locally because remote result URLs are not the durable source of truth.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>Carvingen is transformation evidence: domain taste, AI media integration, workflow design, local persistence, and practical product engineering for a real creative business process.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>Local source inspected; public transcript records only sanitized implementation evidence.</li>
+          <li><code>pnpm build</code> passed.</li>
+          <li><code>pnpm lint</code> passed.</li>
+          <li><code>pnpm test</code> passed with 44 tests across 10 files.</li>
+          <li><code>pnpm test:e2e:local</code> passed, including the portfolio demo route.</li>
+          <li>Fake-data runtime canvas captured from an isolated temporary database.</li>
+          <li>Static fixture demo captured from <code>/portfolio-demo</code> with no API requests.</li>
+          <li>Proof transcript — available on request.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Privacy Boundary</h2>
+        <p>Generated images, prompts, provider keys, database contents, and unreleased media stay private. The demo route runs on fixture data; a full walkthrough is available on request.</p>
+        <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/carvingen" target="_blank" rel="noopener">View source</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

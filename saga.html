@@ -4,145 +4,111 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Saga - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for Saga, an agentic story and video creation workflow spanning saga-ai and saga-agentic-ai with writing-room agents, script workflow, product UI, and media pipeline direction."
-    />
+    <meta name="description" content="Case study for Saga, an agentic story and video creation workflow spanning saga-ai and saga-agentic-ai with writing-room agents, script workflow, product UI, and media pipeline direction." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero pulse">
-        <p class="eyebrow">Case · story studio</p>
-        <h1>Saga</h1>
-        <p class="hero-text">
-          An agentic story and video creation workflow that combines structured generation, product UI, writing-room agents, script outputs, and media-pipeline direction.
-        </p>
-        <div class="case-meta">
-          <span>Public on gorkamolero</span>
-          <span>Agentic story studio</span>
-          <span>Two-repo product line</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Case · story studio</p>
+        <h2 class="case-title">Saga</h2>
+        <p class="intro">An agentic story and video creation workflow that combines structured generation, product UI, writing-room agents, script outputs, and media-pipeline direction.</p>
+        <p class="meta chips">Public on gorkamolero <span class="dot">&middot;</span> Agentic story studio <span class="dot">&middot;</span> Two-repo product line</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            AI story tools often stop at one-shot generation. A useful creative studio needs a repeatable workflow: brief, research, outline, draft, critique, final script, saved ideas, product state, and a path toward media output.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            Saga combines two public repos under <code>gorkamolero</code>. <code>saga-ai</code> is the canonical product direction for an agentic video-story creation studio with workflow, AI functions, media pipeline, and product framing. <code>saga-agentic-ai</code> is the earlier CrewAI writing-room prototype: brief, research, outline, draft, critique, final script, and archive flow.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Agent workflow</strong>
-              <span>Writing-room roles, structured generation, critique, revision, and final script output.</span>
-            </div>
-            <div>
-              <strong>Product surface</strong>
-              <span>Chat workflow, saved scripts or ideas, product UI, and stateful creative work.</span>
-            </div>
-            <div>
-              <strong>Media direction</strong>
-              <span>Video-story product framing, media pipeline, and Remotion/editor direction.</span>
-            </div>
-          </div>
-
-          <h2>System Architecture</h2>
-          <figure class="proof-figure">
-            <img src="./assets/saga-story-studio.svg" alt="Saga story studio diagram with idea intake, writing-room agents, critique pass, product UI, media pipeline, creative output, public repos, and evidence needs." />
-            <figcaption>
-              Public-safe story-studio diagram. It shows the agentic workflow while keeping the screenshot and mock-media cleanup gaps visible.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/saga-prototype-proof.svg" alt="Saga proof diagram showing the saga-ai product repo, saga-agentic-ai prototype repo, output shape, verification status, and review boundary." />
-            <figcaption>
-              Proof artifact from the local repos. It records the product architecture, the CrewAI prototype outputs, and the current build boundary without overclaiming a clean runtime capture.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/saga-workflow-screen.svg" alt="Source-grounded Saga mock workflow screen showing chat, saved idea, saved script, voiceover, visual asset map, and editor direction." />
-            <figcaption>
-              Source-grounded workflow screen. It is a public-safe mock based on the app's chat, idea, script, voiceover, visual-asset, and editor components; real runtime screenshots still need env/auth/database cleanup.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/saga-runtime-demo.png" alt="Saga local public-safe runtime demo route showing brief intake, research, outline, draft, generated structure, critique pass, and proof boundary." />
-            <figcaption>
-              Runtime capture from <code>/portfolio-demo</code>. It is a deterministic local route with fake story data, zero provider calls, no auth, no database rows, and no private customer material; provider-backed screenshots remain a separate disposable-environment task.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/saga-agent-output-proof.svg" alt="Saga agent prototype output proof showing the writing-room flow from brief to research, outline, generated script, critique loop, and archived markdown artifacts." />
-            <figcaption>
-              Prototype-output proof from <code>saga-agentic-ai</code>. It shows that the earlier CrewAI writing room produced dated, inspectable script artifacts and a critique loop before the fuller product UI, while avoiding provider keys, account data, or private runtime state.
-            </figcaption>
-          </figure>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Represent creative work as a staged workflow instead of a single prompt response.</li>
-            <li>Use the CrewAI prototype as a precursor to the productized Saga application.</li>
-            <li>Make agent roles legible so the output can be inspected, revised, and defended.</li>
-            <li>Tie story generation to product UI and media pipeline direction instead of leaving it as raw text.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            Saga shows agentic product thinking in a creative domain: structured multi-step generation, user-facing workflow, reusable story artifacts, and the judgment to turn an agent prototype into a product direction.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>Public repos: <code>gorkamolero/saga-ai</code> and <code>gorkamolero/saga-agentic-ai</code>.</li>
-            <li>Both READMEs upgraded and pushed.</li>
-            <li>Bullet bank and profile data include Saga as creative AI proof.</li>
-            <li>Product repo now reaches a successful warning-free production build with dummy non-secret provider values after closing the <code>NOVITA_API_KEY</code> env schema drift.</li>
-            <li>Deterministic public-safe runtime route captured from <code>/portfolio-demo</code> with fake story data and no provider, auth, or database dependency.</li>
-            <li>Agent prototype output proof added from dated markdown script artifacts and callback-log evidence.</li>
-            <li>Active prototype files pass Python compile; dead-code folder has known syntax debt.</li>
-            <li>Source-grounded mock workflow screen added from product components and prototype outputs.</li>
-            <li>Proof transcript — available on request.</li>
-          </ul>
-
-          <h2>Review Boundary</h2>
-          <p>
-            Review generated scripts, mock media, prompt examples, third-party assets, and stale demo content before using Saga as a heavy public pin.
-          </p>
-
-          <a class="button primary full" href="https://github.com/gorkamolero/saga-ai">Open repo</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>AI story tools often stop at one-shot generation. A useful creative studio needs a repeatable workflow: brief, research, outline, draft, critique, final script, saved ideas, product state, and a path toward media output.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>Saga combines two public repos under <code>gorkamolero</code>. <code>saga-ai</code> is the canonical product direction for an agentic video-story creation studio with workflow, AI functions, media pipeline, and product framing. <code>saga-agentic-ai</code> is the earlier CrewAI writing-room prototype: brief, research, outline, draft, critique, final script, and archive flow.</p>
+        <ul class="facts">
+          <li><strong>Agent workflow</strong><span>Writing-room roles, structured generation, critique, revision, and final script output.</span></li>
+          <li><strong>Product surface</strong><span>Chat workflow, saved scripts or ideas, product UI, and stateful creative work.</span></li>
+          <li><strong>Media direction</strong><span>Video-story product framing, media pipeline, and Remotion/editor direction.</span></li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>System Architecture</h2>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/saga-story-studio.svg" alt="Saga story studio diagram with idea intake, writing-room agents, critique pass, product UI, media pipeline, creative output, public repos, and evidence needs." loading="lazy" /></div>
+          <figcaption>Public-safe story-studio diagram. It shows the agentic workflow while keeping the screenshot and mock-media cleanup gaps visible.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/saga-prototype-proof.svg" alt="Saga proof diagram showing the saga-ai product repo, saga-agentic-ai prototype repo, output shape, verification status, and review boundary." loading="lazy" /></div>
+          <figcaption>Proof artifact from the local repos. It records the product architecture, the CrewAI prototype outputs, and the current build boundary without overclaiming a clean runtime capture.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/saga-workflow-screen.svg" alt="Source-grounded Saga mock workflow screen showing chat, saved idea, saved script, voiceover, visual asset map, and editor direction." loading="lazy" /></div>
+          <figcaption>Source-grounded workflow screen. It is a public-safe mock based on the app's chat, idea, script, voiceover, visual-asset, and editor components; real runtime screenshots still need env/auth/database cleanup.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/saga-runtime-demo.png" alt="Saga local public-safe runtime demo route showing brief intake, research, outline, draft, generated structure, critique pass, and proof boundary." loading="lazy" /></div>
+          <figcaption>Runtime capture from <code>/portfolio-demo</code>. It is a deterministic local route with fake story data, zero provider calls, no auth, no database rows, and no private customer material; provider-backed screenshots remain a separate disposable-environment task.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/saga-agent-output-proof.svg" alt="Saga agent prototype output proof showing the writing-room flow from brief to research, outline, generated script, critique loop, and archived markdown artifacts." loading="lazy" /></div>
+          <figcaption>Prototype-output proof from <code>saga-agentic-ai</code>. It shows that the earlier CrewAI writing room produced dated, inspectable script artifacts and a critique loop before the fuller product UI, while avoiding provider keys, account data, or private runtime state.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Represent creative work as a staged workflow instead of a single prompt response.</li>
+          <li>Use the CrewAI prototype as a precursor to the productized Saga application.</li>
+          <li>Make agent roles legible so the output can be inspected, revised, and defended.</li>
+          <li>Tie story generation to product UI and media pipeline direction instead of leaving it as raw text.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>Saga shows agentic product thinking in a creative domain: structured multi-step generation, user-facing workflow, reusable story artifacts, and the judgment to turn an agent prototype into a product direction.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>Public repos: <code>gorkamolero/saga-ai</code> and <code>gorkamolero/saga-agentic-ai</code>.</li>
+          <li>Both READMEs upgraded and pushed.</li>
+          <li>Bullet bank and profile data include Saga as creative AI proof.</li>
+          <li>Product repo now reaches a successful warning-free production build with dummy non-secret provider values after closing the <code>NOVITA_API_KEY</code> env schema drift.</li>
+          <li>Deterministic public-safe runtime route captured from <code>/portfolio-demo</code> with fake story data and no provider, auth, or database dependency.</li>
+          <li>Agent prototype output proof added from dated markdown script artifacts and callback-log evidence.</li>
+          <li>Active prototype files pass Python compile; dead-code folder has known syntax debt.</li>
+          <li>Source-grounded mock workflow screen added from product components and prototype outputs.</li>
+          <li>Proof transcript — available on request.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Review Boundary</h2>
+        <p>Review generated scripts, mock media, prompt examples, third-party assets, and stale demo content before using Saga as a heavy public pin.</p>
+        <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/saga-ai" target="_blank" rel="noopener">Open repo</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

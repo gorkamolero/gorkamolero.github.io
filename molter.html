@@ -4,116 +4,92 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Molter - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for Molter, an agent-to-agent dating experiment: sandboxed agents negotiate compatibility through a five-level progressive disclosure protocol on a Hono/Cloudflare API with Neon, Drizzle, Zod, and tweetnacl encryption."
-    />
+    <meta name="description" content="Case study for Molter, an agent-to-agent dating experiment: sandboxed agents negotiate compatibility through a five-level progressive disclosure protocol on a Hono/Cloudflare API with Neon, Drizzle, Zod, and tweetnacl encryption." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero agents">
-        <p class="eyebrow">Case · agent protocol</p>
-        <h1>Molter</h1>
-        <p class="hero-text">
-          An agent-to-agent dating experiment: your agent knows the real you, negotiates privately with other agents through structured signals, and only surfaces genuine matches. Dating without the performance.
-        </p>
-        <div class="case-meta">
-          <span>Experiment</span>
-          <span>History scrubbed, publication-ready</span>
-          <span>MVP stage</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Case · agent protocol</p>
+        <h2 class="case-title">Molter</h2>
+        <p class="intro">On apps like Tinder, people present a tailored version of themselves, and that almost guarantees bad matches. In Molter, your agent gets to know the real you through a series of questions, then negotiates with another person's agent, fully anonymously. The conversation is ephemeral, and the agent has to discover the secrets of your personality to make a real match. It works with the personal agent you already use, like OpenClaw, Hermes or a Grok bot, and because it's agents talking to agents, they can go on far more dates than a person ever could.</p>
+        <p class="meta chips">Experiment <span class="dot">&middot;</span> Public repo <span class="dot">&middot;</span> MVP stage</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            Dating apps fail because humans perform for each other: curated photos, rehearsed bios, calculated responses. You are not meeting a person — you are meeting their marketing. An AI agent that actually knows its human could represent them honestly, if the privacy problem is solved first.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            Molter is a protocol and network where sandboxed agents negotiate compatibility on behalf of their humans. Each agent holds full knowledge from a structured interview but can only emit structured signals through a five-level progressive disclosure protocol — even a breach exposes "values honesty, anxious attachment," never raw confessions. The monorepo spans a Hono REST API on Cloudflare Workers, a Next.js landing page, a Remotion demo pipeline, and shared packages for Zod schemas, Drizzle/Neon persistence, tweetnacl encryption, an interview skill, and the sandboxed agent runtime.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Privacy architecture</strong>
-              <span>Full knowledge inside, structured output only: sandboxed sub-agents with a single allowed tool.</span>
-            </div>
-            <div>
-              <strong>Negotiation protocol</strong>
-              <span>Five-level progressive disclosure with consent gates instead of algorithmic pre-filtering.</span>
-            </div>
-            <div>
-              <strong>Production tech from day one</strong>
-              <span>Edge API, serverless Postgres, typed schemas end to end, E2E-encrypted agent comms, expiring tokens.</span>
-            </div>
-          </div>
-
-          <figure class="proof-figure">
-            <img src="./assets/molter-landing.png" alt="Molter landing page: large headline reading 'You're not meeting a person — you're meeting their marketing', subline about curated photos and rehearsed bios, and a 'Be part of the experiment' call to action." />
-            <figcaption>
-              The live-built landing page rendered from the repo (Next.js dev server, local capture). Waitlist flow and copy are real; no user data is involved.
-            </figcaption>
-          </figure>
-
-          <h2>System Architecture</h2>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>No algorithmic pre-filter: every agent can negotiate with every agent, and cheap protocol levels do the filtering.</li>
-            <li>Sandbox constraints as the privacy boundary — the agent runtime allows one tool (API fetch) and denies everything else.</li>
-            <li>Structured signals as the only output format, validated with Zod at every boundary.</li>
-            <li>Deterministic, resumable negotiation workflows with explicit consent gates at deeper disclosure levels.</li>
-            <li>Ephemeral conversations, expiring tokens, and tweetnacl end-to-end encryption as defaults, not add-ons.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            Molter is evidence of protocol design and agent-systems thinking: privacy-preserving multi-agent negotiation, monorepo product engineering across API, web, and video pipelines, and the judgment to build a speculative consumer idea on production infrastructure from the first commit.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>Full 154-commit history scrubbed and pushed to <code>gorkamolero/molter</code> (2026-07-02).</li>
-            <li>Web, API, and agent-runtime packages build clean on Node 20 — available on request.</li>
-            <li>Landing page screenshot captured from a local build.</li>
-            <li>Fake-data protocol probe: health and both agent registrations pass in the no-database path.</li>
-          </ul>
-
-          <h2>Known Boundaries</h2>
-          <ul>
-            <li>MVP stage: the interview-skill package has typecheck errors and the Remotion demo build is currently broken.</li>
-            <li>The search-to-match happy path needs a real database; the in-process probe stops at search.</li>
-            <li>Honest failures are recorded in the build proof rather than edited out.</li>
-          </ul>
-
-          <a class="button primary full" href="./workbench.html">Back to workbench</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>Dating apps fail because humans perform for each other: curated photos, rehearsed bios, calculated responses. You are not meeting a person — you are meeting their marketing. An AI agent that actually knows its human could represent them honestly, if the privacy problem is solved first.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>Molter is a protocol and network where sandboxed agents negotiate compatibility on behalf of their humans. Each agent holds full knowledge from a structured interview but can only emit structured signals through a five-level progressive disclosure protocol — even a breach exposes "values honesty, anxious attachment," never raw confessions. The monorepo spans a Hono REST API on Cloudflare Workers, a Next.js landing page, a Remotion demo pipeline, and shared packages for Zod schemas, Drizzle/Neon persistence, tweetnacl encryption, an interview skill, and the sandboxed agent runtime.</p>
+        <ul class="facts">
+          <li><strong>Privacy architecture</strong><span>Full knowledge inside, structured output only: sandboxed sub-agents with a single allowed tool.</span></li>
+          <li><strong>Negotiation protocol</strong><span>Five-level progressive disclosure with consent gates instead of algorithmic pre-filtering.</span></li>
+          <li><strong>Production tech from day one</strong><span>Edge API, serverless Postgres, typed schemas end to end, E2E-encrypted agent comms, expiring tokens.</span></li>
+        </ul>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/molter-landing.png" alt="Molter landing page: large headline reading 'You're not meeting a person — you're meeting their marketing', subline about curated photos and rehearsed bios, and a 'Be part of the experiment' call to action." loading="lazy" /></div>
+          <figcaption>The live-built landing page rendered from the repo (Next.js dev server, local capture). Waitlist flow and copy are real; no user data is involved.</figcaption>
+        </figure>
+      </section>
+
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>No algorithmic pre-filter: every agent can negotiate with every agent, and cheap protocol levels do the filtering.</li>
+          <li>Sandbox constraints as the privacy boundary — the agent runtime allows one tool (API fetch) and denies everything else.</li>
+          <li>Structured signals as the only output format, validated with Zod at every boundary.</li>
+          <li>Deterministic, resumable negotiation workflows with explicit consent gates at deeper disclosure levels.</li>
+          <li>Ephemeral conversations, expiring tokens, and tweetnacl end-to-end encryption as defaults, not add-ons.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>Molter is evidence of protocol design and agent-systems thinking: privacy-preserving multi-agent negotiation, monorepo product engineering across API, web, and video pipelines, and the judgment to build a speculative consumer idea on production infrastructure from the first commit.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>Full 154-commit history public at <code>gorkamolero/molter</code>.</li>
+          <li>Web, API, and agent-runtime packages build clean on Node 20 — available on request.</li>
+          <li>Landing page screenshot captured from a local build.</li>
+          <li>Fake-data protocol probe: health and both agent registrations pass in the no-database path.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Known Boundaries</h2>
+        <ul class="points">
+          <li>MVP stage: the interview-skill package has typecheck errors and the Remotion demo build is currently broken.</li>
+          <li>The search-to-match happy path needs a real database; the in-process probe stops at search.</li>
+          <li>Honest failures are recorded in the build proof rather than edited out.</li>
+        </ul>
+        <p class="actions"><a class="button primary" href="./workbench.html">Back to workbench</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

@@ -4,138 +4,107 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sidekick - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for Sidekick, a creative AI desktop product for producers with a Tauri panel, React chat, Mastra sidecar, generation adapters, audio analysis, and Ableton direction."
-    />
+    <meta name="description" content="Case study for Sidekick, a creative AI desktop product for producers with a Tauri panel, React chat, Mastra sidecar, generation adapters, audio analysis, and Ableton direction." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero pulse">
-        <p class="eyebrow">Public · creative AI</p>
-        <h1>Sidekick</h1>
-        <p class="hero-text">
-          A music producer's copilot that bridges a desktop panel, AI chat, generation adapters, audio-analysis direction, and Ableton-oriented creative workflows.
-        </p>
-        <div class="case-meta">
-          <span>Public on gorkamolero</span>
-          <span>Tauri desktop</span>
-          <span>Music AI workflow</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Public · creative AI</p>
+        <h2 class="case-title">Sidekick</h2>
+        <p class="intro">A music producer's copilot that bridges a desktop panel, AI chat, generation adapters, audio-analysis direction, and Ableton-oriented creative workflows.</p>
+        <p class="meta chips">Public on gorkamolero <span class="dot">&middot;</span> Tauri desktop <span class="dot">&middot;</span> Music AI workflow</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            Music producers do not need another generic chatbot. They need assistance that understands the shape of production work: prompts, generation modes, audio context, arrangement decisions, and the way a desktop tool needs to sit beside a DAW without taking over the session.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            Sidekick is documented as a creative AI desktop product for producers: a Tauri panel with a React chat surface, Mastra sidecar, generation adapters, audio-analysis direction, Ableton OSC hooks, and portfolio-facing README. It is public under `gorkamolero` and acts as a bridge between technical AI systems, creative taste, and music-domain tooling.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Desktop product</strong>
-              <span>Tauri panel and React chat designed for a compact producer workflow.</span>
-            </div>
-            <div>
-              <strong>AI system</strong>
-              <span>Mastra sidecar, generation adapters, modes, and creative tool boundaries.</span>
-            </div>
-            <div>
-              <strong>Domain bridge</strong>
-              <span>Audio-analysis direction and Ableton hooks connect AI output to production work.</span>
-            </div>
-          </div>
-
-          <h2>System Architecture</h2>
-          <figure class="proof-figure">
-            <img src="./assets/sidekick-producer-flow.svg" alt="Sidekick workflow diagram with producer panel, React chat, Mastra sidecar, generation adapters, audio analysis, Ableton hooks, creative loop, and evidence needs." />
-            <figcaption>
-              Public-safe workflow diagram. It shows the product direction while keeping sidecar, provider, and Ableton integration claims separate from renderer proof.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/sidekick-panel.png" alt="Sidekick renderer screenshot showing compact producer panel, project controls, conversation tabs, suggestions, mode selector, prompt input, and status bar." />
-            <figcaption>
-              Renderer screenshot from the local Vite app. It shows the compact producer panel, prompt suggestions, generation-mode affordance, and always-on workflow shape.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/sidekick-audio-boundary.svg" alt="Sidekick source-grounded audio analysis and DAW handoff proof with fake metrics, generation modes, Mastra sidecar, provider layer, and Ableton boundary." />
-            <figcaption>
-              Source-grounded audio and DAW boundary proof. It uses fake metrics and source inspection to show the audio-analysis, generation-mode, sidecar, provider, and Ableton handoff shape without claiming a live Tauri or DAW session.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/sidekick-tauri-sidecar-boundary.svg" alt="Sidekick Tauri shell boundary showing React renderer, Rust command layer, bundled sidecar, music tools, verification status, and unclaimed runtime boundaries." />
-            <figcaption>
-              Source-grounded desktop shell proof. The Tauri/Rust shell passed <code>cargo check</code>; the sidecar/provider/DAW runtime remains explicitly outside the claim until cleaned up and captured with disposable media.
-            </figcaption>
-          </figure>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Frame the product around producer workflow instead of a generic assistant surface.</li>
-            <li>Use a desktop shell so the tool can live beside creative software.</li>
-            <li>Separate chat/product UI from agent/tool orchestration through the sidecar shape.</li>
-            <li>Keep music-domain hooks visible so the AI work points toward real production, not only text generation.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            Sidekick shows creative AI product judgment: turning domain taste into software shape, working across desktop UI and agent tooling, and designing for a workflow where feel and timing matter as much as raw model output.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>Public repo: <code>gorkamolero/sidekick</code>.</li>
-            <li>Root README added and pushed.</li>
-            <li>Portfolio framing exists in the README upgrade log and bullet bank.</li>
-            <li>Renderer build passed locally.</li>
-            <li>Tauri/Rust shell <code>cargo check</code> passed locally.</li>
-            <li>Compact panel screenshot captured in <code>portfolio/assets/sidekick-panel.png</code>.</li>
-            <li>Source-grounded audio-analysis and DAW-boundary proof added with fake metrics.</li>
-            <li>Source-grounded Tauri shell and sidecar-boundary proof added.</li>
-            <li>Proof transcript — available on request.</li>
-          </ul>
-
-          <h2>Review Boundary</h2>
-          <p>
-            Check generated audio, local project names, DAW session paths, model/provider config, and any sample material before publishing deeper demos.
-          </p>
-
-          <a class="button primary full" href="https://github.com/gorkamolero/sidekick">Open repo</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>Music producers do not need another generic chatbot. They need assistance that understands the shape of production work: prompts, generation modes, audio context, arrangement decisions, and the way a desktop tool needs to sit beside a DAW without taking over the session.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>Sidekick is documented as a creative AI desktop product for producers: a Tauri panel with a React chat surface, Mastra sidecar, generation adapters, audio-analysis direction, Ableton OSC hooks, and portfolio-facing README. It is public under `gorkamolero` and acts as a bridge between technical AI systems, creative taste, and music-domain tooling.</p>
+        <ul class="facts">
+          <li><strong>Desktop product</strong><span>Tauri panel and React chat designed for a compact producer workflow.</span></li>
+          <li><strong>AI system</strong><span>Mastra sidecar, generation adapters, modes, and creative tool boundaries.</span></li>
+          <li><strong>Domain bridge</strong><span>Audio-analysis direction and Ableton hooks connect AI output to production work.</span></li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>System Architecture</h2>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/sidekick-producer-flow.svg" alt="Sidekick workflow diagram with producer panel, React chat, Mastra sidecar, generation adapters, audio analysis, Ableton hooks, creative loop, and evidence needs." loading="lazy" /></div>
+          <figcaption>Public-safe workflow diagram. It shows the product direction while keeping sidecar, provider, and Ableton integration claims separate from renderer proof.</figcaption>
+        </figure>
+        <figure class="plate portrait">
+          <div class="shot"><img src="./assets/sidekick-panel.png" alt="Sidekick renderer screenshot showing compact producer panel, project controls, conversation tabs, suggestions, mode selector, prompt input, and status bar." loading="lazy" /></div>
+          <figcaption>Renderer screenshot from the local Vite app. It shows the compact producer panel, prompt suggestions, generation-mode affordance, and always-on workflow shape.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/sidekick-audio-boundary.svg" alt="Sidekick source-grounded audio analysis and DAW handoff proof with fake metrics, generation modes, Mastra sidecar, provider layer, and Ableton boundary." loading="lazy" /></div>
+          <figcaption>Source-grounded audio and DAW boundary proof. It uses fake metrics and source inspection to show the audio-analysis, generation-mode, sidecar, provider, and Ableton handoff shape without claiming a live Tauri or DAW session.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/sidekick-tauri-sidecar-boundary.svg" alt="Sidekick Tauri shell boundary showing React renderer, Rust command layer, bundled sidecar, music tools, verification status, and unclaimed runtime boundaries." loading="lazy" /></div>
+          <figcaption>Source-grounded desktop shell proof. The Tauri/Rust shell passed <code>cargo check</code>; the sidecar/provider/DAW runtime remains explicitly outside the claim until cleaned up and captured with disposable media.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Frame the product around producer workflow instead of a generic assistant surface.</li>
+          <li>Use a desktop shell so the tool can live beside creative software.</li>
+          <li>Separate chat/product UI from agent/tool orchestration through the sidecar shape.</li>
+          <li>Keep music-domain hooks visible so the AI work points toward real production, not only text generation.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>Sidekick shows creative AI product judgment: turning domain taste into software shape, working across desktop UI and agent tooling, and designing for a workflow where feel and timing matter as much as raw model output.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>Public repo: <code>gorkamolero/sidekick</code>.</li>
+          <li>Root README added and pushed.</li>
+          <li>Portfolio framing exists in the README upgrade log and bullet bank.</li>
+          <li>Renderer build passed locally.</li>
+          <li>Tauri/Rust shell <code>cargo check</code> passed locally.</li>
+          <li>Compact panel screenshot captured in <code>portfolio/assets/sidekick-panel.png</code>.</li>
+          <li>Source-grounded audio-analysis and DAW-boundary proof added with fake metrics.</li>
+          <li>Source-grounded Tauri shell and sidecar-boundary proof added.</li>
+          <li>Proof transcript — available on request.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Review Boundary</h2>
+        <p>Check generated audio, local project names, DAW session paths, model/provider config, and any sample material before publishing deeper demos.</p>
+        <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/sidekick" target="_blank" rel="noopener">Open repo</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

@@ -4,127 +4,92 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Koda - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for Koda, a desktop app where a team and its coding agents work on the same code together. Tauri, React, Rust and a Node sidecar."
-    />
+    <meta name="description" content="Case study for Koda, a desktop app where a team and its coding agents work on the same code together. Tauri, React, Rust and a Node sidecar." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero agents">
-        <p class="eyebrow">Case · agent workspace</p>
-        <h1>Koda</h1>
-        <p class="hero-text">
-          A desktop app for working collaboratively with coding agents, where a team and its agents work on the same code together.
-        </p>
-        <div class="case-meta">
-          <span>Working desktop build</span>
-          <span>History scrubbed, publication-ready</span>
-          <span>Paused after Claude access change</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Case · agent workspace</p>
+        <h2 class="case-title">Koda</h2>
+        <p class="intro">A desktop app for working collaboratively with coding agents, where a team and its agents work on the same code together.</p>
+        <p class="meta chips">Working desktop build <span class="dot">&middot;</span> Codex and Claude <span class="dot">&middot;</span> Live collaboration on Liveblocks</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            Coding agents are built for one person at a time: each session lives in one developer's terminal, and the rest of the team only sees the result. Koda is built for a team and its agents working on the same code together, with sessions, workspaces and checkpoints everyone can follow.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            Koda is a desktop app for working collaboratively with coding agents. The private project combines a Tauri desktop shell, React UI, Rust boundary, Node sidecar, agent sessions, PTY management, workspaces, worktrees, SQLite state, checkpoints, and visual diffs.
-          </p>
-          <p>
-            The project was stopped when Claude removed the third-party access path Koda relied on. The useful signal is still the product and systems work: a real attempt to make agent coding collaborative, stateful and controllable before the platform boundary changed.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Human control</strong>
-              <span>Review-first workflow instead of invisible agent execution.</span>
-            </div>
-            <div>
-              <strong>Agent lanes</strong>
-              <span>Claude, Codex, Kimi, and similar runners can be treated as inspectable work sessions.</span>
-            </div>
-            <div>
-              <strong>Trust layer</strong>
-              <span>Worktrees, checkpoints, state, visual diffs, and handoff packets make changes reviewable.</span>
-            </div>
-          </div>
-
-          <figure class="proof-figure">
-            <img src="./assets/koda-review-workbench.svg" alt="Koda architecture diagram showing operator surface, Tauri and React core, Node sidecar, SQLite state, agent sessions, checkpoints, worktrees, visual diffs, and handoff packets." />
-            <figcaption>
-              Public-safe architecture diagram grounded in the portfolio migration docs. It intentionally avoids private repository internals, local paths, session transcripts, prompts, and workspace data.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/koda-workspace-view.png" alt="Koda desktop app running: workspace sidebar with an active main session, ASCII Koda terminal panel, and a right-side review panel listing three changed files with additions and deletions." />
-            <figcaption>
-              The real Tauri desktop app running against the Koda repo itself: agent chat surface, session tracking, and the right-side review panel showing changed files. Captured from a clean workspace with no private data; the visible shell-connection error is the honest live state at capture time.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/koda-initializing-splash.png" alt="Koda initializing splash screen with pixel-art Koda wordmark on a black background." />
-            <figcaption>
-              Startup splash from the Koda renderer. It captures the product tone without exposing private workspace state.
-            </figcaption>
-          </figure>
-
-          <h2>System Architecture</h2>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Treat agent work as something to inspect, compare, and checkpoint before accepting.</li>
-            <li>Use a desktop shell for local filesystem, PTY, and workspace affordances that browser-only tools struggle to handle cleanly.</li>
-            <li>Separate the UI, desktop boundary, sidecar execution, and durable state so each responsibility stays legible.</li>
-            <li>Make visual diffs and handoff packets the main review surface, not a secondary afterthought.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            Koda is evidence for agent-product judgment: understanding where coding agents are heading, what makes them hard to trust, and how to design the layer where people and agents work together.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>Full 123-commit history scrubbed and pushed to <code>gorkamolero/koda</code> (2026-07-02).</li>
-            <li>Install, sidecar typecheck, and full monorepo build pass on Node 20 — available on request.</li>
-            <li>Earlier architecture proof note — available on request.</li>
-            <li>Real Tauri desktop app screenshots captured from a clean workspace.</li>
-            <li>Public-safe architecture diagram added.</li>
-            <li>Project paused after Claude removed the third-party access path it depended on.</li>
-          </ul>
-
-          <a class="button primary full" href="https://github.com/gorkamolero/koda">View source</a>
-        </aside>
+      <main>
+      <section class="work open">
+        <figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/koda/koda-poster.jpg" src="./assets/koda/koda-collaboration.mp4" aria-label="Koda on two Macs: Gorka asks Claude for a change, both screens update live, and Alex's follow-up lands in the same session."></video></div>
+          <figcaption>Recorded live: Claude running on one Mac, a collaborator on another, in the same agent session.</figcaption>
+        </figure>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>Coding agents are built for one person at a time: each session lives in one developer's terminal, and the rest of the team only sees the result. Koda is built for a team and its agents working on the same code together, with sessions, workspaces and checkpoints everyone can follow.</p>
+      </section>
+
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>Koda is a desktop app for working collaboratively with coding agents. It's a Tauri shell with a React UI and a Node sidecar that runs Codex and Claude sessions in isolated git worktrees, with diffs, checkpoints, terminals and SQLite state.</p>
+        <p>Collaboration runs on Liveblocks. The host shares a workspace with a view or a control invitation, and the other person joins from their own Koda. Both see the same transcript and tool calls live. With control, the collaborator's messages go to the host's agent session, signed with their name. With view, they can only watch, and the host enforces it.</p>
+        <p>Koda paused when Claude removed the third-party access path it relied on. I brought it back on the installed Codex and Claude CLIs, and every flow now passes against the real services.</p>
+        <ul class="facts">
+          <li><strong>Shared sessions</strong><span>A teammate joins the agent session live, with view or control.</span></li>
+          <li><strong>Two agents</strong><span>Codex and Claude, each with its own models, permissions and saved sessions.</span></li>
+          <li><strong>Approvals</strong><span>Approve once or deny in the host chat. Bypass is a visible per-chat choice.</span></li>
+        </ul>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/koda-initializing-splash.png" alt="Koda initializing splash screen with pixel-art Koda wordmark on a black background." loading="lazy" /></div>
+          <figcaption>Startup splash from the Koda renderer. It captures the product tone without exposing private workspace state.</figcaption>
+        </figure>
+      </section>
+
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Run the agents through their installed CLIs, Codex's app-server and the official Claude Agent SDK, so sign-in stays with each provider.</li>
+          <li>Keep the Liveblocks secret on the sidecar and enforce view and control permissions on the host, not only in the UI.</li>
+          <li>Use a desktop shell for local filesystem, PTY, and workspace affordances that browser-only tools struggle to handle cleanly.</li>
+          <li>Separate the UI, desktop boundary, sidecar execution, and durable state so each responsibility stays legible.</li>
+          <li>Prove every flow against the real services with Playwright, from a clean clone, never with a mocked agent.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>Koda is evidence for agent-product judgment: understanding where coding agents are heading, what makes them hard to trust, and how to design the layer where people and agents work together.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>Public repo, <code>gorkamolero/koda</code>, with 156 commits.</li>
+          <li>Real-service Playwright proofs for Codex, Claude, approvals and two-instance collaboration, with a screenshot of each step.</li>
+          <li><code>pnpm verify:clean</code> reruns every proof from a clean clone.</li>
+          <li>A live two-Mac recording of one shared Claude session (above).</li>
+        </ul>
+        <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/koda" target="_blank" rel="noopener">View source</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

@@ -4,137 +4,106 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Solderpunk - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for Solderpunk, interactive synth explorers with Web MIDI control, cited instrument corpora, local Q&A, and creative product tooling."
-    />
+    <meta name="description" content="Case study for Solderpunk, interactive synth explorers with Web MIDI control, cited instrument corpora, local Q&amp;A, and creative product tooling." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero pulse">
-        <p class="eyebrow">Case · music tools</p>
-        <h1>Solderpunk</h1>
-        <p class="hero-text">
-          Interactive synth explorers that connect sound design, browser UI, Web MIDI hardware control, cited instrument research, and local agent Q&A.
-        </p>
-        <div class="case-meta">
-          <span>Release candidate</span>
-          <span>Creative tooling</span>
-          <span>Public source</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Case · music tools</p>
+        <h2 class="case-title">Solderpunk</h2>
+        <p class="intro">Interactive synth explorers that connect sound design, browser UI, Web MIDI hardware control, cited instrument research, and local agent Q&amp;A.</p>
+        <p class="meta chips">Release candidate <span class="dot">&middot;</span> Creative tooling <span class="dot">&middot;</span> Public source</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            Synth research and sound design often sit in separate worlds: manuals, videos, hardware intuition, scattered references, and browser demos that do not feel like instruments. Solderpunk turns that material into explorable software for learning, tweaking, and playing.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            I built Solderpunk as interactive AI-assisted synth explorers with Web MIDI hardware control, cited instrument corpora, local QMD/agent Q&A, and no environment-variable dependency. I rewrote the README to frame it around supported instruments, quick start, live MIDI control, corpus search, architecture, and public-release needs.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Instrument UX</strong>
-              <span>Explorable browser surfaces for parameters, presets, synthesis concepts, and live feedback.</span>
-            </div>
-            <div>
-              <strong>Hardware control</strong>
-              <span>Web MIDI turns the project from static explanation into a playable tool.</span>
-            </div>
-            <div>
-              <strong>Research loop</strong>
-              <span>Cited corpora and local Q&A connect sound design decisions back to source material.</span>
-            </div>
-          </div>
-
-          <h2>System Architecture</h2>
-          <figure class="proof-figure">
-            <img src="./assets/solderpunk-studio.svg" alt="Solderpunk system diagram with synth explorer, Web MIDI, sound engine, instrument corpus, local Q&A, learning loop, creative product, and public release boundary." />
-            <figcaption>
-              Public-safe product diagram. It shows the creative tooling shape, including synth explorers, Web MIDI, cited research, and local Q&A.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/solderpunk-home.png" alt="Solderpunk landing page showing synth explorer cards and a four-step interaction model." />
-            <figcaption>
-              Runtime screenshot from the local app. The landing page presents the product model: pick a synth, hover to learn, follow tutorials, and connect MIDI or ask the corpus.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/solderpunk-minitaur-explorer.png" alt="Solderpunk Moog Minitaur explorer showing panel render, MIDI bar, tutorial sidebar, and hotspot categories." />
-            <figcaption>
-              Minitaur explorer screenshot. It shows the real instrument panel, MIDI output affordance, tutorial sidebar, and hotspot categories.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/solderpunk-corpus-qa.svg" alt="Public-safe Solderpunk corpus Q&amp;A proof showing a Reese bass question, local source files, a paraphrased answer, and publication boundaries." />
-            <figcaption>
-              Corpus Q&amp;A proof. The example is paraphrased from the local Minitaur research and app lesson files, then bounded so it can be shared without manuals, paid preset data, private screenshots, or hardware claims.
-            </figcaption>
-          </figure>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Make synthesis concepts interactive instead of burying them in prose.</li>
-            <li>Use Web MIDI so hardware control and UI exploration stay connected.</li>
-            <li>Keep cited instrument research close to the interface through corpus search and local Q&A.</li>
-            <li>Keep it legible and tasteful enough to publish as-is &mdash; the source is public.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            Solderpunk shows creative tooling with real technical product taste: browser UI, musical domain judgment, hardware integration, local knowledge workflows, and a project shape that engineers can inspect without needing private business context.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>README rewritten around portfolio signal.</li>
-            <li>Public-safe system diagram included.</li>
-            <li>Runtime screenshots captured for the landing page and two synth explorer routes.</li>
-            <li>Corpus Q&amp;A example captured with public-safe citations and paraphrasing.</li>
-            <li>Web build passed; Tempest tests passed; lint completed with one existing image optimization warning.</li>
-            <li>Proof transcript — available on request.</li>
-            <li>Corpus proof — available on request.</li>
-            <li>The source is public on GitHub.</li>
-          </ul>
-
-          <h2>Release Boundary</h2>
-          <p>
-            Check source citations, generated text, third-party assets, local file paths, and hardware assumptions before approving public visibility, profile pinning, or stronger CTAs for the existing <code>gorkamolero/solderpunk</code> repo.
-          </p>
-
-          <a class="button primary full" href="https://github.com/gorkamolero/solderpunk">View source</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>Synth research and sound design often sit in separate worlds: manuals, videos, hardware intuition, scattered references, and browser demos that do not feel like instruments. Solderpunk turns that material into explorable software for learning, tweaking, and playing.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>I built Solderpunk as interactive AI-assisted synth explorers with Web MIDI hardware control, cited instrument corpora, local QMD/agent Q&amp;A, and no environment-variable dependency. I rewrote the README to frame it around supported instruments, quick start, live MIDI control, corpus search, architecture, and public-release needs.</p>
+        <ul class="facts">
+          <li><strong>Instrument UX</strong><span>Explorable browser surfaces for parameters, presets, synthesis concepts, and live feedback.</span></li>
+          <li><strong>Hardware control</strong><span>Web MIDI turns the project from static explanation into a playable tool.</span></li>
+          <li><strong>Research loop</strong><span>Cited corpora and local Q&amp;A connect sound design decisions back to source material.</span></li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>System Architecture</h2>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/solderpunk-studio.svg" alt="Solderpunk system diagram with synth explorer, Web MIDI, sound engine, instrument corpus, local Q&amp;A, learning loop, creative product, and public release boundary." loading="lazy" /></div>
+          <figcaption>Public-safe product diagram. It shows the creative tooling shape, including synth explorers, Web MIDI, cited research, and local Q&amp;A.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/solderpunk-home.png" alt="Solderpunk landing page showing synth explorer cards and a four-step interaction model." loading="lazy" /></div>
+          <figcaption>Runtime screenshot from the local app. The landing page presents the product model: pick a synth, hover to learn, follow tutorials, and connect MIDI or ask the corpus.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/solderpunk-minitaur-explorer.png" alt="Solderpunk Moog Minitaur explorer showing panel render, MIDI bar, tutorial sidebar, and hotspot categories." loading="lazy" /></div>
+          <figcaption>Minitaur explorer screenshot. It shows the real instrument panel, MIDI output affordance, tutorial sidebar, and hotspot categories.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/solderpunk-corpus-qa.svg" alt="Public-safe Solderpunk corpus Q&amp;A proof showing a Reese bass question, local source files, a paraphrased answer, and publication boundaries." loading="lazy" /></div>
+          <figcaption>Corpus Q&amp;A proof. The example is paraphrased from the local Minitaur research and app lesson files, then bounded so it can be shared without manuals, paid preset data, private screenshots, or hardware claims.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Make synthesis concepts interactive instead of burying them in prose.</li>
+          <li>Use Web MIDI so hardware control and UI exploration stay connected.</li>
+          <li>Keep cited instrument research close to the interface through corpus search and local Q&amp;A.</li>
+          <li>Keep it legible and tasteful enough to publish as-is — the source is public.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>Solderpunk shows creative tooling with real technical product taste: browser UI, musical domain judgment, hardware integration, local knowledge workflows, and a project shape that engineers can inspect without needing private business context.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>README rewritten around portfolio signal.</li>
+          <li>Public-safe system diagram included.</li>
+          <li>Runtime screenshots captured for the landing page and two synth explorer routes.</li>
+          <li>Corpus Q&amp;A example captured with public-safe citations and paraphrasing.</li>
+          <li>Web build passed; Tempest tests passed; lint completed with one existing image optimization warning.</li>
+          <li>Proof transcript — available on request.</li>
+          <li>Corpus proof — available on request.</li>
+          <li>The source is public on GitHub.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Release Boundary</h2>
+        <p>Check source citations, generated text, third-party assets, local file paths, and hardware assumptions before approving public visibility, profile pinning, or stronger CTAs for the existing <code>gorkamolero/solderpunk</code> repo.</p>
+        <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/solderpunk" target="_blank" rel="noopener">View source</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

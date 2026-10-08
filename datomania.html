@@ -4,136 +4,105 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Datomania - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for Datomania, a civic-data product around public-interest datasets, provenance modeling, Representantes records, API/export routes, and methodology."
-    />
+    <meta name="description" content="Case study for Datomania, a civic-data product around public-interest datasets, provenance modeling, Representantes records, API/export routes, and methodology." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero land">
-        <p class="eyebrow">Live · data product</p>
-        <h1>Datomania</h1>
-        <p class="hero-text">
-          A public-data product around information that should be easier to access: provenance modeling, Representantes records, API/export routes, and methodology.
-        </p>
-        <div class="case-meta">
-          <span>Public on gorkamolero</span>
-          <span>1,257 records</span>
-          <span>API / export surfaces</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Live · data product</p>
+        <h2 class="case-title">Datomania</h2>
+        <p class="intro">A public-data product around information that should be easier to access: provenance modeling, Representantes records, API/export routes, and methodology.</p>
+        <p class="meta chips">Public on gorkamolero <span class="dot">&middot;</span> 1,257 records <span class="dot">&middot;</span> API / export surfaces</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            Public-interest data often technically exists, but is hard to browse, verify, export, or use in software. A useful civic-data product needs more than a table: it needs provenance, methodology, API access, and a product surface that makes the data understandable.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            Datomania is documented as a public-data project around information that should exist in Spain. The rewritten README frames it around the Representantes dataset, 1,257 parliamentarians, provenance modeling, public API/export routes, architecture, methodology, status, and portfolio context.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Data product</strong>
-              <span>Public-interest dataset, browsing surface, methodology, and usability framing.</span>
-            </div>
-            <div>
-              <strong>Provenance</strong>
-              <span>Source-aware modeling so records can be inspected rather than blindly trusted.</span>
-            </div>
-            <div>
-              <strong>Developer surface</strong>
-              <span>API/export routes make the data useful beyond the UI.</span>
-            </div>
-          </div>
-
-          <h2>System Architecture</h2>
-          <figure class="proof-figure">
-            <img src="./assets/datomania-data-product.svg" alt="Datomania civic data product diagram with public sources, provenance model, Representantes records, product surface, API routes, methodology, verification, and evidence needs." />
-            <figcaption>
-              Public-safe product diagram. It captures the data-product shape: public sources, provenance modeling, records, UI, API routes, methodology, and verification.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/datomania-representantes-home.png" alt="Datomania Representantes dashboard showing 642 parliamentarians, chamber counts, education summary, and a hemicycle visualization." />
-            <figcaption>
-              Local product screenshot from the Representantes dashboard. It shows the civic-data surface, metrics, legislature switcher, and visualization layer.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/datomania-api-docs.png" alt="Datomania API documentation showing public endpoints, available datasets, base URL, and query parameters." />
-            <figcaption>
-              API documentation screenshot. Datomania exposes the dataset through public endpoints and export routes rather than keeping the data trapped in the UI.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/datomania-live-site.png" alt="Live Datomania homepage showing the DATOMANIA title, open-source status, auditable code, JSON CSV API data, MIT license, and GitHub link." />
-            <figcaption>
-              Live-site screenshot from <code>https://datomania.info</code>. It proves the public product is reachable, open-source positioned, and linked to inspectable code and data surfaces.
-            </figcaption>
-          </figure>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Frame the project around public usefulness instead of only data collection.</li>
-            <li>Make provenance and methodology part of the product surface.</li>
-            <li>Expose API/export routes so the dataset can support downstream workflows.</li>
-            <li>Keep the README explicit about architecture and verification, not just a product description.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            Datomania shows product judgment in a less glamorous but highly practical domain: turning messy public information into a browsable, inspectable, reusable data product with clear provenance and engineering discipline.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>Public repo: <code>gorkamolero/datomania</code>.</li>
-            <li>Live public site: <code>https://datomania.info</code>.</li>
-            <li>README rewritten and pushed.</li>
-            <li><code>pnpm lint</code>, <code>pnpm test:run</code>, and <code>pnpm build</code> passed.</li>
-            <li>Product, table, API-doc, and live public-site screenshots captured.</li>
-            <li>Stats/export proof — available on request.</li>
-          </ul>
-
-          <h2>Review Boundary</h2>
-          <p>
-            Confirm source terms, methodology notes, and exported fields before using live-site screenshots in public application materials.
-          </p>
-
-          <a class="button primary full" href="https://datomania.info">Open live site</a>
-          <a class="button primary full" href="https://github.com/gorkamolero/datomania">Open repo</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>Public-interest data often technically exists, but is hard to browse, verify, export, or use in software. A useful civic-data product needs more than a table: it needs provenance, methodology, API access, and a product surface that makes the data understandable.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>Datomania is documented as a public-data project around information that should exist in Spain. The rewritten README frames it around the Representantes dataset, 1,257 parliamentarians, provenance modeling, public API/export routes, architecture, methodology, status, and portfolio context.</p>
+        <ul class="facts">
+          <li><strong>Data product</strong><span>Public-interest dataset, browsing surface, methodology, and usability framing.</span></li>
+          <li><strong>Provenance</strong><span>Source-aware modeling so records can be inspected rather than blindly trusted.</span></li>
+          <li><strong>Developer surface</strong><span>API/export routes make the data useful beyond the UI.</span></li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>System Architecture</h2>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/datomania-data-product.svg" alt="Datomania civic data product diagram with public sources, provenance model, Representantes records, product surface, API routes, methodology, verification, and evidence needs." loading="lazy" /></div>
+          <figcaption>Public-safe product diagram. It captures the data-product shape: public sources, provenance modeling, records, UI, API routes, methodology, and verification.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/datomania-representantes-home.png" alt="Datomania Representantes dashboard showing 642 parliamentarians, chamber counts, education summary, and a hemicycle visualization." loading="lazy" /></div>
+          <figcaption>Local product screenshot from the Representantes dashboard. It shows the civic-data surface, metrics, legislature switcher, and visualization layer.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/datomania-api-docs.png" alt="Datomania API documentation showing public endpoints, available datasets, base URL, and query parameters." loading="lazy" /></div>
+          <figcaption>API documentation screenshot. Datomania exposes the dataset through public endpoints and export routes rather than keeping the data trapped in the UI.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/datomania-live-site.png" alt="Live Datomania homepage showing the DATOMANIA title, open-source status, auditable code, JSON CSV API data, MIT license, and GitHub link." loading="lazy" /></div>
+          <figcaption>Live-site screenshot from <code>https://datomania.info</code>. It proves the public product is reachable, open-source positioned, and linked to inspectable code and data surfaces.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Frame the project around public usefulness instead of only data collection.</li>
+          <li>Make provenance and methodology part of the product surface.</li>
+          <li>Expose API/export routes so the dataset can support downstream workflows.</li>
+          <li>Keep the README explicit about architecture and verification, not just a product description.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>Datomania shows product judgment in a less glamorous but highly practical domain: turning messy public information into a browsable, inspectable, reusable data product with clear provenance and engineering discipline.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>Public repo: <code>gorkamolero/datomania</code>.</li>
+          <li>Live public site: <code>https://datomania.info</code>.</li>
+          <li>README rewritten and pushed.</li>
+          <li><code>pnpm lint</code>, <code>pnpm test:run</code>, and <code>pnpm build</code> passed.</li>
+          <li>Product, table, API-doc, and live public-site screenshots captured.</li>
+          <li>Stats/export proof — available on request.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Review Boundary</h2>
+        <p>Confirm source terms, methodology notes, and exported fields before using live-site screenshots in public application materials.</p>
+        <p class="actions"><a class="button primary" href="https://datomania.info" target="_blank" rel="noopener">Open live site</a>
+          <a class="button primary" href="https://github.com/gorkamolero/datomania" target="_blank" rel="noopener">Open repo</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

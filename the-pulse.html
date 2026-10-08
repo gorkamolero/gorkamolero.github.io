@@ -4,174 +4,136 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Pulse - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="The Pulse: a live AI interactive-fiction platform with an AI narrator, multiplayer rooms, and an automated playtest harness that simulates player groups and scores narration quality and cost."
-    />
+    <meta name="description" content="The Pulse: a live AI interactive-fiction platform with an AI narrator, multiplayer rooms, and an automated playtest harness that simulates player groups and scores narration quality and cost." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#games">Games</a>
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero pulse">
-        <p class="eyebrow">Live · AI storytelling</p>
-        <h1>The Pulse</h1>
-        <p class="hero-text">
-          A live interactive-fiction platform where an AI narrator runs a story for a group in real time &mdash; text, voice, images, and atmosphere. The part I care about most is underneath: an automated harness that plays the game with simulated groups so I can tell whether the narration is any good, and what it costs.
-        </p>
-        <div class="case-meta">
-          <span>Live &middot; public repo</span>
-          <span>AI narrator + multiplayer</span>
-          <span>Evaluation harness</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Live · AI storytelling</p>
+        <h2 class="case-title">The Pulse</h2>
+        <p class="intro">A live interactive-fiction platform where an AI narrator runs a story for a group in real time — text, voice, images, and atmosphere. The part I care about most is underneath: an automated harness that plays the game with simulated groups so I can tell whether the narration is any good, and what it costs.</p>
+        <p class="meta chips">Live · public repo <span class="dot">&middot;</span> AI narrator + multiplayer <span class="dot">&middot;</span> Evaluation harness</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            Most AI storytelling stops at a prompt and a chat box. A real product needs curated worlds, player flow, multiplayer coordination, a narrator with constraints, and generated media &mdash; but the hard, unglamorous problem is quality. "Is this narrator any good?" is not a vibe; it needs to be measured across models, prompts, and stories, or every change is a guess.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            The Pulse started from the Vercel AI chatbot template and grew into a story-game platform: a curated world selector, solo and multiplayer sessions with invite rooms and a spokesperson flow, an AI narrator with story guides and agency-preserving constraints, model/provider routing, and multimodal output &mdash; voice narration, image generation, and ambient audio tied to the story. It is live and the repo is public.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Product</strong>
-              <span>World selector, solo/multiplayer, invite rooms, lobby, spokesperson flow.</span>
-            </div>
-            <div>
-              <strong>Narrator system</strong>
-              <span>Story guides, agency constraints, model routing, voice, images, ambience.</span>
-            </div>
-            <div>
-              <strong>Evaluation</strong>
-              <span>Simulated player groups, quality metrics, per-role cost, model comparison.</span>
-            </div>
-          </div>
-
-          <h2>The story, playing</h2>
-          <p>
-            This is a real session, played live on the site. The narrator sets the scene, you type what you do in plain language, and it responds to that specific choice &mdash; then keeps the world consistent across turns. Below is one full turn of Shadow Over Innsmouth: the opening, my action, and the narrator answering it.
-          </p>
-          <figure class="proof-figure">
-            <img src="./assets/the-pulse-ingame-turn.webp" alt="A live in-game turn of The Pulse: the narrator's opening about a letter and a cipher, the player's typed action 'I approach the hunched figure, keeping the letter hidden,' and the narrator's response introducing a hunched figure who rasps 'You're the one. The one with the letter.'" />
-            <figcaption>
-              One turn, captured live in a real session. It shows the loop that matters: the narrator sets a scene, the player types a free-form action, and the narrator answers that exact choice &mdash; a figure rasps "You're the one&hellip; the one with the letter." Not a menu of canned options.
-            </figcaption>
-          </figure>
-          <div class="narration">
-            <blockquote>
-              "The February fog rolls thick over the Massachusetts coastline as your bus groans to a halt at the edge of a world that seems to have forgotten the twentieth century exists. The driver &mdash; a gaunt man with darting eyes &mdash; doesn't look at you when he mutters, 'End of the line.'&hellip; The letter you carry feels heavier in your coat pocket. Its message remains legible: 'Come to Innsmouth. The sea remembers what the land forgets.'"
-            </blockquote>
-            <span class="src">The narrator's actual prose, verbatim from the session above &mdash; the AI writing, not a scripted line.</span>
-          </div>
-          <div class="audio-embed">
-            <div class="audio-label">Hear the narrator</div>
-            <audio controls preload="metadata" src="./assets/the-pulse-narrator.mp3"></audio>
-            <p class="note">
-              This is the actual narration audio, pulled straight from a live session &mdash; the game generating the voice as it plays. Each world is cast with its own voice through ElevenLabs, tuned for theatricality and compared across TTS providers; the voice is a design choice per story, not a default read-aloud.
-            </p>
-          </div>
-          <figure class="proof-figure">
-            <img src="./assets/the-pulse-generated-scene.webp" alt="A generated Innsmouth scene: a foggy cobblestone street at dusk, gas-lamp light, sagging clapboard houses, a fishing boat at the misty dock, cloaked figures in the street." />
-            <figcaption>
-              The kind of scene art the game generates to accompany a turn &mdash; a decaying seaport at dusk. This shows the atmosphere the story renders around the narration, not decoration bolted on afterward.
-            </figcaption>
-          </figure>
-
-          <h2>The Product</h2>
-          <figure class="proof-figure">
-            <img src="./assets/the-pulse-worlds.webp" alt="The Pulse live homepage: a serif THE PULSE wordmark over curated interactive-fiction worlds, Shadow Over Innsmouth and The Hollow Choir, each with a premise and an epigraph." />
-            <figcaption>
-              The live homepage at <code>the-pulse.games</code>. It shows the product as curated interactive fiction &mdash; each world has a premise and an epigraph, and you begin in one tap &mdash; not a raw chat prompt.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/the-pulse-lobby-flow.png" alt="The Pulse multiplayer lobby: a traveler list, host and voice controls, a summon-others action, and room-ready state." />
-            <figcaption>
-              The multiplayer lobby. It shows the room state, traveler list, host controls, and summon flow &mdash; the coordination layer that makes a shared AI-narrated session work.
-            </figcaption>
-          </figure>
-
-          <h2>The Playtest Harness</h2>
-          <p>
-            This is the piece that makes The Pulse an engineering project and not a demo. The harness spins up a whole session with no humans: it simulates a group of AI players, runs the narrator against them turn by turn, saves checkpoints, and produces a report. It measures narration quality with real signals &mdash; did players go off on tangents, did private character moments pay off, how did the session end &mdash; and it accounts for cost per role (narrator vs. players vs. classification tokens). Swap the narrator model or prompt style and the harness tells you whether it got better, worse, or cheaper.
-          </p>
-          <figure class="proof-figure">
-            <img src="./assets/the-pulse-harness-report.webp" alt="A Test Harness Session Report: session ID, story Shadow Over Innsmouth, outcome timeout, 92s duration, key metrics (final turn, tangents, private moments paid off), and a cost breakdown of narrator, player, and classification tokens totalling $0.0175." />
-            <figcaption>
-              A real session report from the harness. It records the story, outcome, and turn count; scores narrative-quality signals (tangents, private moments paid off); and breaks token cost down by role &mdash; here 27,692 tokens for $0.0175. This run hit the configured turn limit (timeout).
-            </figcaption>
-          </figure>
-          <figure class="proof-figure">
-            <img src="./assets/the-pulse-evaluation-loop.svg" alt="Public-safe evaluation loop: story guides feed simulated players and a narrator model, a comparison runner records sessions to checkpoints, and reports aggregate turn and quality metrics." />
-            <figcaption>
-              This diagram shows how the evaluation loop fits together: a story and a narrator model/prompt drive a simulated group, each session is captured to checkpoints, and reports aggregate the results so narrators can be compared head to head.
-            </figcaption>
-          </figure>
-
-          <h2>One world, three ways in</h2>
-          <p>
-            Shadow Over Innsmouth shows up across my interactive-fiction work: here in The Pulse as a live multiplayer AI narration, in <a class="inline-link" href="./anima.html">Anima</a> as a hand-drawn graphic adventure, and authored underneath both in <a class="inline-link" href="./storyscript.html">StoryScript</a>. The same story, taken three different ways, is how I pressure-test what "AI storytelling" can actually be.
-          </p>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Treat the narrator as a product surface with rules, tone, pacing, and agency constraints &mdash; not a freeform chatbot.</li>
-            <li>Separate story guides from prompt styles so a world can be run against several narrator models.</li>
-            <li>Build a harness that simulates player groups, so quality is measured instead of vibed &mdash; with cost accounted per role.</li>
-            <li>Tie voice, images, and ambience to the story beat rather than bolting media on as decoration.</li>
-            <li>Coordinate multiplayer through rooms and a spokesperson action, so a group shares one coherent narration.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            The Pulse is product taste and AI-system rigor in one project: a live, multimodal, multiplayer story game, and the evaluation discipline to know whether the AI at its center is actually good. The harness is the tell &mdash; I treat narrative quality as something to measure, not assert.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>Live at <code>the-pulse.games</code> &mdash; homepage and worlds load without auth.</li>
-            <li>Public repo with the story-game platform and the test harness.</li>
-            <li>The multiplayer lobby and room flow, shown above.</li>
-            <li>A real harness session report with quality metrics and per-role token cost.</li>
-            <li>Six recorded harness sessions aggregated by the metrics CLI; full harness and transcripts on request.</li>
-          </ul>
-
-          <h2>Boundary</h2>
-          <p>
-            Worlds and epigraphs shown are original or public-domain. Provider keys, raw transcripts, generated media, and deployment internals stay private; the running product, repo, and harness reports are public.
-          </p>
-
-          <a class="button primary full" href="https://the-pulse.games">Play it live</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>Most AI storytelling stops at a prompt and a chat box. A real product needs curated worlds, player flow, multiplayer coordination, a narrator with constraints, and generated media — but the hard, unglamorous problem is quality. "Is this narrator any good?" is not a vibe; it needs to be measured across models, prompts, and stories, or every change is a guess.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>The Pulse started from the Vercel AI chatbot template and grew into a story-game platform: a curated world selector, solo and multiplayer sessions with invite rooms and a spokesperson flow, an AI narrator with story guides and agency-preserving constraints, model/provider routing, and multimodal output — voice narration, image generation, and ambient audio tied to the story. It is live and the repo is public.</p>
+        <ul class="facts">
+          <li><strong>Product</strong><span>World selector, solo/multiplayer, invite rooms, lobby, spokesperson flow.</span></li>
+          <li><strong>Narrator system</strong><span>Story guides, agency constraints, model routing, voice, images, ambience.</span></li>
+          <li><strong>Evaluation</strong><span>Simulated player groups, quality metrics, per-role cost, model comparison.</span></li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>The story, playing</h2>
+        <p>This is a real session, played live on the site. The narrator sets the scene, you type what you do in plain language, and it responds to that specific choice — then keeps the world consistent across turns. Below is one full turn of Shadow Over Innsmouth: the opening, my action, and the narrator answering it.</p>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/the-pulse-ingame-turn.webp" alt="A live in-game turn of The Pulse: the narrator's opening about a letter and a cipher, the player's typed action 'I approach the hunched figure, keeping the letter hidden,' and the narrator's response introducing a hunched figure who rasps 'You're the one. The one with the letter.'" loading="lazy" /></div>
+          <figcaption>One turn, captured live in a real session. It shows the loop that matters: the narrator sets a scene, the player types a free-form action, and the narrator answers that exact choice — a figure rasps "You're the one… the one with the letter." Not a menu of canned options.</figcaption>
+        </figure>
+        <div class="narration">
+          <blockquote>"The February fog rolls thick over the Massachusetts coastline as your bus groans to a halt at the edge of a world that seems to have forgotten the twentieth century exists. The driver — a gaunt man with darting eyes — doesn't look at you when he mutters, 'End of the line.'… The letter you carry feels heavier in your coat pocket. Its message remains legible: 'Come to Innsmouth. The sea remembers what the land forgets.'"</blockquote>
+          <span class="src">The narrator's actual prose, verbatim from the session above — the AI writing, not a scripted line.</span>
+        </div>
+        <div class="audio-embed">
+          <div class="audio-label">Hear the narrator</div>
+          <audio controls preload="metadata" src="./assets/the-pulse-narrator.mp3"></audio>
+          <p class="note">This is the actual narration audio, pulled straight from a live session — the game generating the voice as it plays. Each world is cast with its own voice through ElevenLabs, tuned for theatricality and compared across TTS providers; the voice is a design choice per story, not a default read-aloud.</p>
+        </div>
+        <figure class="plate portrait">
+          <div class="shot"><img src="./assets/the-pulse-generated-scene.webp" alt="A generated Innsmouth scene: a foggy cobblestone street at dusk, gas-lamp light, sagging clapboard houses, a fishing boat at the misty dock, cloaked figures in the street." loading="lazy" /></div>
+          <figcaption>The kind of scene art the game generates to accompany a turn — a decaying seaport at dusk. This shows the atmosphere the story renders around the narration, not decoration bolted on afterward.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>The Product</h2>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/the-pulse-worlds.webp" alt="The Pulse live homepage: a serif THE PULSE wordmark over curated interactive-fiction worlds, Shadow Over Innsmouth and The Hollow Choir, each with a premise and an epigraph." loading="lazy" /></div>
+          <figcaption>The live homepage at <code>the-pulse.games</code>. It shows the product as curated interactive fiction — each world has a premise and an epigraph, and you begin in one tap — not a raw chat prompt.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/the-pulse-lobby-flow.png" alt="The Pulse multiplayer lobby: a traveler list, host and voice controls, a summon-others action, and room-ready state." loading="lazy" /></div>
+          <figcaption>The multiplayer lobby. It shows the room state, traveler list, host controls, and summon flow — the coordination layer that makes a shared AI-narrated session work.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>The Playtest Harness</h2>
+        <p>This is the piece that makes The Pulse an engineering project and not a demo. The harness spins up a whole session with no humans: it simulates a group of AI players, runs the narrator against them turn by turn, saves checkpoints, and produces a report. It measures narration quality with real signals — did players go off on tangents, did private character moments pay off, how did the session end — and it accounts for cost per role (narrator vs. players vs. classification tokens). Swap the narrator model or prompt style and the harness tells you whether it got better, worse, or cheaper.</p>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/the-pulse-harness-report.webp" alt="A Test Harness Session Report: session ID, story Shadow Over Innsmouth, outcome timeout, 92s duration, key metrics (final turn, tangents, private moments paid off), and a cost breakdown of narrator, player, and classification tokens totalling $0.0175." loading="lazy" /></div>
+          <figcaption>A real session report from the harness. It records the story, outcome, and turn count; scores narrative-quality signals (tangents, private moments paid off); and breaks token cost down by role — here 27,692 tokens for $0.0175. This run hit the configured turn limit (timeout).</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/the-pulse-evaluation-loop.svg" alt="Public-safe evaluation loop: story guides feed simulated players and a narrator model, a comparison runner records sessions to checkpoints, and reports aggregate turn and quality metrics." loading="lazy" /></div>
+          <figcaption>This diagram shows how the evaluation loop fits together: a story and a narrator model/prompt drive a simulated group, each session is captured to checkpoints, and reports aggregate the results so narrators can be compared head to head.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>One world, three ways in</h2>
+        <p>Shadow Over Innsmouth shows up across my interactive-fiction work: here in The Pulse as a live multiplayer AI narration, in <a class="inline-link" href="./anima.html">Anima</a> as a point-and-click game with AI-generated art, and authored underneath both in <a class="inline-link" href="./storyscript.html">StoryScript</a>. The same story, taken three different ways, is how I pressure-test what "AI storytelling" can actually be.</p>
+      </section>
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Treat the narrator as a product surface with rules, tone, pacing, and agency constraints — not a freeform chatbot.</li>
+          <li>Separate story guides from prompt styles so a world can be run against several narrator models.</li>
+          <li>Build a harness that simulates player groups, so quality is measured instead of vibed — with cost accounted per role.</li>
+          <li>Tie voice, images, and ambience to the story beat rather than bolting media on as decoration.</li>
+          <li>Coordinate multiplayer through rooms and a spokesperson action, so a group shares one coherent narration.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>The Pulse is product taste and AI-system rigor in one project: a live, multimodal, multiplayer story game, and the evaluation discipline to know whether the AI at its center is actually good. The harness is the tell — I treat narrative quality as something to measure, not assert.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>Live at <code>the-pulse.games</code> — homepage and worlds load without auth.</li>
+          <li>Public repo with the story-game platform and the test harness.</li>
+          <li>The multiplayer lobby and room flow, shown above.</li>
+          <li>A real harness session report with quality metrics and per-role token cost.</li>
+          <li>Six recorded harness sessions aggregated by the metrics CLI; full harness and transcripts on request.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Boundary</h2>
+        <p>Worlds and epigraphs shown are original or public-domain. Provider keys, raw transcripts, generated media, and deployment internals stay private; the running product, repo, and harness reports are public.</p>
+        <p class="actions"><a class="button primary" href="https://the-pulse.games" target="_blank" rel="noopener">Play it live</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

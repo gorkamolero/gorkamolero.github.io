@@ -4,190 +4,122 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Anima - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for Anima, a graphic-adventure creation system: author scenes and hotspots, generate the art pipeline, and walk the result as a playable point-and-click game. Demoed with Shadow Over Innsmouth."
-    />
+    <meta name="description" content="Case study for Anima, a graphic-adventure creation system: author scenes and hotspots, generate the art pipeline, and walk the result as a playable point-and-click game. Demoed with Shadow Over Innsmouth." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero pulse">
-        <p class="eyebrow">Live · adventure engine</p>
-        <h1>Anima</h1>
-        <p class="hero-text">
-          A graphic-adventure creation system: write scenes and dialogue, place hotspots, run the AI art pipeline, and walk the result as a playable point-and-click game. I proved it by building a real game on it &mdash; a Lovecraft adventure, Shadow Over Innsmouth.
-        </p>
-        <div class="case-meta">
-          <span>Creative AI toolchain</span>
-          <span>Phaser + React</span>
-          <span>Playable demo on request</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Live · adventure engine</p>
+        <h2 class="case-title">Anima</h2>
+        <p class="intro">A graphic-adventure creation system: write scenes and dialogue, place hotspots, run the AI art pipeline, and walk the result as a playable point-and-click game. I proved it by building a real game on it — a Lovecraft adventure, Shadow Over Innsmouth.</p>
+        <p class="meta chips">Creative AI toolchain <span class="dot">&middot;</span> Phaser + React <span class="dot">&middot;</span> Playable demo on request</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            A point-and-click adventure splits across writing, scene logic, character art, dialogue, inventory, runtime code, and testing &mdash; usually seven tools and a lot of glue. Anima collapses that into one system: author the story and interactions, generate the art, and get a scene you can actually play, with a review layer that catches placement and perspective bugs before they ship.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            Anima is built on StoryScript, a language I designed for point-and-click adventures, wrapped in a Phaser runtime, React tooling, a Hono API, Turso persistence, and an AI asset pipeline that produces characters, backgrounds, and spritesheets. The authoring side defines scenes, hotspots, dialogue, and inventory in StoryScript; the runtime turns them into a walkable point-and-click scene. Shadow Over Innsmouth is the game I built on top to prove the whole loop end to end.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Language</strong>
-              <span>StoryScript &mdash; my own DSL for scenes, hotspots, branching dialogue, and inventory.</span>
-            </div>
-            <div>
-              <strong>Runtime</strong>
-              <span>Phaser scenes, walkable characters, hotspot interaction, scene transitions.</span>
-            </div>
-            <div>
-              <strong>Art pipeline</strong>
-              <span>AI-generated characters and backgrounds, chroma-keyed and QC'd into spritesheets.</span>
-            </div>
-          </div>
-
-          <h2>Built on StoryScript</h2>
-          <p>
-            The authoring layer runs on StoryScript, a plain-text language I designed for point-and-click adventures &mdash; scenes, hotspots, dialogue, and inventory written like a screenplay, with a headless engine that runs and validates the story before any art exists. Every scene in Shadow Over Innsmouth is authored in it (about 6,500 lines across four acts), and Anima is one UI drawing what that engine emits. It is its own project: <a class="inline-link" href="./storyscript.html">see the StoryScript case study</a>.
-          </p>
-
-          <h2>System Shape</h2>
-          <figure class="proof-figure">
-            <video
-              src="./assets/anima-cutscene.webm"
-              poster="./assets/anima-cutscene-poster.webp"
-              controls
-              muted
-              loop
-              playsinline
-              preload="none"
-              width="1280"
-              aria-label="Animated cutscene from Shadow Over Innsmouth: two characters talking in the Innsmouth hotel lobby at dusk."
-            ></video>
-            <figcaption>
-              An animated cutscene from Shadow Over Innsmouth &mdash; Kat and Hermes in the hotel lobby. This shows the production bar the system renders at: full scenes, lighting, and character animation, not placeholder art.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/anima-depot-interior.webp" alt="Anima editor showing the Arkham Bus Depot interior scene: two characters, a departures board, and the Scene Review panel that lets you switch and inspect scenes." />
-            <figcaption>
-              The authoring layer: the Arkham Bus Depot interior running in Anima with the Scene Review panel (top right). It shows how you switch scenes, toggle playable hotspots, and inspect what the runtime is doing over the live game.
-            </figcaption>
-          </figure>
-
-          <h2>The Art Pipeline</h2>
-          <p>
-            Characters start as AI-generated motion, then get processed into game-ready spritesheets. Nothing is hand-placeholdered &mdash; the pipeline is the production line.
-          </p>
-          <figure class="proof-figure proof-figure-narrow">
-            <video
-              src="./assets/anima-skyler-source.webm"
-              poster="./assets/anima-skyler-source-poster.webp"
-              controls
-              muted
-              loop
-              playsinline
-              preload="none"
-              width="480"
-              aria-label="Raw generated walk-cycle source video of Skyler, a rubberhose-style cartoon character, before pipeline processing."
-            ></video>
-            <figcaption>
-              Step one: a raw generated walk cycle (Skyler). This is the source material the pipeline captures before any processing &mdash; original character design, generated as video.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <video
-              src="./assets/anima-sprite-pipeline.webm"
-              poster="./assets/anima-sprite-pipeline-poster.webp"
-              controls
-              muted
-              loop
-              playsinline
-              preload="none"
-              width="1080"
-              aria-label="Three-way comparison of a walk-cycle sprite (Ashley) processed through different pipeline variants, chroma-keyed for spritesheet extraction."
-            ></video>
-            <figcaption>
-              Step two: the same kind of source (Ashley) run through the pipeline &mdash; three processing variants compared side by side, chroma-keyed so the walk cycle can be sliced into a clean spritesheet. This shows the QC that keeps sprites consistent.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/anima-pipeline.svg" alt="Public-safe Anima pipeline: authoring, dialogue logic, editor tools, asset pipeline, API and data, runtime, playable output, and review boundary." />
-            <figcaption>
-              This diagram shows how the pieces connect: authoring and dialogue feed the editor, the art pipeline feeds spritesheets, and the runtime composes both into playable output behind a review gate.
-            </figcaption>
-          </figure>
-
-          <h3>How the cutout actually works</h3>
-          <p>
-            Getting a clean transparent sprite out of AI video is the hard part, and the interesting decision is how. A generated walk cycle sits on a flat backdrop; the naive approach is background removal, but that fights skin tones against grey and leaves halos. So the pipeline uses a difference matte instead: it re-renders each frame twice with an image model &mdash; once on pure white, once on pure black &mdash; then reads the two side by side. A pixel that looks identical on both is the character (keep it opaque); a pixel that swings all the way from white to black is background (make it transparent). Because the model separates character from background semantically before the math runs, the alpha is pixel-perfect where a chroma-key would smear.
-          </p>
-          <p>
-            From there it is local tooling: decode the transparent video with the VP9 alpha decoder (the default one silently flattens it), scan for the frame where the walk loops seamlessly, trim every frame to one global bounding box so the character does not jitter, and pack the result into a Phaser spritesheet with JSON metadata the runtime loads directly. The magenta and blue backgrounds in the clips above are just that transparency previewed against a colour that makes stray pixels obvious.
-          </p>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Design a purpose-built language (StoryScript) instead of a JSON schema or an off-the-shelf engine &mdash; plain text that an LLM can write, a human can read, and the runtime executes directly with no compile step.</li>
-            <li>Separate authoring primitives from runtime behavior, so a scene can be edited and played from the same source of truth.</li>
-            <li>React for tooling, Phaser for execution &mdash; each framework does the job it is good at instead of one doing both badly.</li>
-            <li>Treat AI as a production pipeline, not a chat box bolted onto the game &mdash; and extract alpha with a white/black difference matte instead of background removal, so skin tones on a grey backdrop come out clean.</li>
-            <li>Build a real game (Shadow Over Innsmouth) to validate the system, rather than shipping an abstract engine with no proof it holds up.</li>
-            <li>Verify scenes in a local browser harness &mdash; movement, perspective scale, hotspot coverage, and door transitions get checked against the running game.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            Anima is the part of the portfolio that is hardest to fake: taste and system design in one place. It joins creative direction, authoring UX, full-stack implementation, runtime engineering, and an AI art pipeline into something you can sit down and play.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>Two authored scenes shown running in the Anima editor.</li>
-            <li>The art pipeline's chroma-key/QC step on an original character sprite.</li>
-            <li>StoryScript parser and scene verifier pass locally.</li>
-            <li>Shadow Over Innsmouth builds and runs; the scene verifier checks movement, scale, and transitions.</li>
-            <li>Full playable walkthrough and the authoring tools available on request.</li>
-          </ul>
-
-          <h2>Review Boundary</h2>
-          <p>
-            Characters, art, and setting shown here are original or public-domain. Unreleased story text, generated voices, provider configuration, and API keys stay private until the underlying repo is published.
-          </p>
-
-          <a class="button primary full" href="./contact.html">Ask for a demo</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>A point-and-click adventure splits across writing, scene logic, character art, dialogue, inventory, runtime code, and testing — usually seven tools and a lot of glue. Anima collapses that into one system: author the story and interactions, generate the art, and get a scene you can actually play, with a review layer that catches placement and perspective bugs before they ship.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>Anima is built on StoryScript, a language I designed for point-and-click adventures, wrapped in a Phaser runtime, React tooling, a Hono API, Turso persistence, and an AI asset pipeline that produces characters, backgrounds, and spritesheets. The authoring side defines scenes, hotspots, dialogue, and inventory in StoryScript; the runtime turns them into a walkable point-and-click scene. Shadow Over Innsmouth is the game I built on top to prove the whole loop end to end.</p>
+        <ul class="facts">
+          <li><strong>Language</strong><span>StoryScript — my own DSL for scenes, hotspots, branching dialogue, and inventory.</span></li>
+          <li><strong>Runtime</strong><span>Phaser scenes, walkable characters, hotspot interaction, scene transitions.</span></li>
+          <li><strong>Art pipeline</strong><span>AI-generated characters and backgrounds, cut out with a difference matte and QC'd into spritesheets.</span></li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Built on StoryScript</h2>
+        <p>The authoring layer runs on StoryScript, a plain-text language I designed for point-and-click adventures — scenes, hotspots, dialogue, and inventory written like a screenplay, with a headless engine that runs and validates the story before any art exists. Every scene in Shadow Over Innsmouth is authored in it (about 6,500 lines across four acts), and Anima is one UI drawing what that engine emits. It is its own project: <a class="inline-link" href="./storyscript.html">see the StoryScript case study</a>.</p>
+      </section>
+
+      <section class="work">
+        <h2>System Shape</h2>
+        <figure class="plate">
+          <div class="shot"><video src="./assets/anima-cutscene.webm" poster="./assets/anima-cutscene-poster.webp" controls muted loop playsinline preload="none" width="1280" aria-label="Animated cutscene from Shadow Over Innsmouth: two characters talking in the Innsmouth hotel lobby at dusk."></video></div>
+          <figcaption>An animated cutscene from Shadow Over Innsmouth — Kat and Hermes in the hotel lobby. This shows the production bar the system renders at: full scenes, lighting, and character animation, not placeholder art.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/anima-depot-interior.webp" alt="Anima editor showing the Arkham Bus Depot interior scene: two characters, a departures board, and the Scene Review panel that lets you switch and inspect scenes." loading="lazy" /></div>
+          <figcaption>The authoring layer: the Arkham Bus Depot interior running in Anima with the Scene Review panel (top right). It shows how you switch scenes, toggle playable hotspots, and inspect what the runtime is doing over the live game.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>The Art Pipeline</h2>
+        <p>Characters start as AI-generated motion, then get processed into game-ready spritesheets. Nothing is hand-placeholdered — the pipeline is the production line.</p>
+        <figure class="plate narrow">
+          <div class="shot"><video src="./assets/anima-skyler-source.webm" poster="./assets/anima-skyler-source-poster.webp" controls muted loop playsinline preload="none" width="480" aria-label="Raw generated walk-cycle source video of Skyler, a rubberhose-style cartoon character, before pipeline processing."></video></div>
+          <figcaption>Step one: a raw generated walk cycle (Skyler). This is the source material the pipeline captures before any processing — original character design, generated as video.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><video src="./assets/anima-sprite-pipeline.webm" poster="./assets/anima-sprite-pipeline-poster.webp" controls muted loop playsinline preload="none" width="1080" aria-label="Three-way comparison of a walk-cycle sprite (Ashley) processed through different pipeline variants and cut out with a difference matte for spritesheet extraction."></video></div>
+          <figcaption>Step two: the same kind of source (Ashley) run through the pipeline — three processing variants compared side by side, cut out with a difference matte so the walk cycle can be sliced into a clean spritesheet. This shows the QC that keeps sprites consistent.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/anima-pipeline.svg" alt="Public-safe Anima pipeline: authoring, dialogue logic, editor tools, asset pipeline, API and data, runtime, playable output, and review boundary." loading="lazy" /></div>
+          <figcaption>This diagram shows how the pieces connect: authoring and dialogue feed the editor, the art pipeline feeds spritesheets, and the runtime composes both into playable output behind a review gate.</figcaption>
+        </figure>
+        <h3>How the cutout actually works</h3>
+        <p>Getting a clean transparent sprite out of AI video is the hard part, and the interesting decision is how. A generated walk cycle sits on a flat backdrop; the naive approach is background removal, but that fights skin tones against grey and leaves halos. So the pipeline uses a difference matte instead: it re-renders each frame twice with an image model — once on pure white, once on pure black — then reads the two side by side. A pixel that looks identical on both is the character (keep it opaque); a pixel that swings all the way from white to black is background (make it transparent). Because the model separates character from background semantically before the math runs, the alpha is pixel-perfect where a chroma-key would smear.</p>
+        <p>From there it is local tooling: decode the transparent video with the VP9 alpha decoder (the default one silently flattens it), scan for the frame where the walk loops seamlessly, trim every frame to one global bounding box so the character does not jitter, and pack the result into a Phaser spritesheet with JSON metadata the runtime loads directly. The magenta and blue backgrounds in the clips above are just that transparency previewed against a colour that makes stray pixels obvious.</p>
+      </section>
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Design a purpose-built language (StoryScript) instead of a JSON schema or an off-the-shelf engine — plain text that an LLM can write, a human can read, and the runtime executes directly with no compile step.</li>
+          <li>Separate authoring primitives from runtime behavior, so a scene can be edited and played from the same source of truth.</li>
+          <li>React for tooling, Phaser for execution — each framework does the job it is good at instead of one doing both badly.</li>
+          <li>Treat AI as a production pipeline, not a chat box bolted onto the game — and extract alpha with a white/black difference matte instead of background removal, so skin tones on a grey backdrop come out clean.</li>
+          <li>Build a real game (Shadow Over Innsmouth) to validate the system, rather than shipping an abstract engine with no proof it holds up.</li>
+          <li>Verify scenes in a local browser harness — movement, perspective scale, hotspot coverage, and door transitions get checked against the running game.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>Anima is the part of the portfolio that is hardest to fake: taste and system design in one place. It joins creative direction, authoring UX, full-stack implementation, runtime engineering, and an AI art pipeline into something you can sit down and play.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>Two authored scenes shown running in the Anima editor.</li>
+          <li>The art pipeline's difference-matte and QC step on an original character sprite.</li>
+          <li>StoryScript parser and scene verifier pass locally.</li>
+          <li>Shadow Over Innsmouth builds and runs; the scene verifier checks movement, scale, and transitions.</li>
+          <li>Full playable walkthrough and the authoring tools available on request.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Review Boundary</h2>
+        <p>Characters, art, and setting shown here are original or public-domain. Unreleased story text, generated voices, provider configuration, and API keys stay private.</p>
+        <p class="actions"><a class="button primary" href="./contact.html">Ask for a demo</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

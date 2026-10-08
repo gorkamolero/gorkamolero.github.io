@@ -4,127 +4,95 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Claude-on-Discord - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for Claude-on-Discord, an agentic developer workflow that turns Discord threads into Claude Code coding lanes with worktrees, sessions, and reviewable execution."
-    />
+    <meta name="description" content="Case study for Claude-on-Discord, an agentic developer workflow that turns Discord threads into Claude Code coding lanes with worktrees, sessions, and reviewable execution." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero agents">
-        <p class="eyebrow">Public · agent workflow</p>
-        <h1>Claude-on-Discord</h1>
-        <p class="hero-text">
-          A full developer-agent workspace that runs Claude Code from Discord threads, keeps work isolated in coding lanes, and makes agent activity reviewable.
-        </p>
-        <div class="case-meta">
-          <span>Public repo</span>
-          <span>Discord agent workflow</span>
-          <span>README upgraded</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Public · agent workflow</p>
+        <h2 class="case-title">Claude-on-Discord</h2>
+        <p class="intro">A full developer-agent workspace that runs Claude Code from Discord threads, keeps work isolated in coding lanes, and makes agent activity reviewable.</p>
+        <p class="meta chips">Public repo <span class="dot">&middot;</span> Discord agent workflow <span class="dot">&middot;</span> README upgraded</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            Coding agents are powerful but awkward when their work is hidden in a local terminal. A team needs clear lanes, visible tool events, branch/worktree separation, and a way to request work from the same collaboration surface where decisions happen.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            Claude-on-Discord turns Discord into an agent operations layer. Threads become scoped work sessions, commands start or continue Claude Code runs, tool events stream back to the channel, and repository work is organized around branches and worktrees.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Interaction surface</strong>
-              <span>Discord threads, commands, progress messages, and tool-event streaming.</span>
-            </div>
-            <div>
-              <strong>Execution model</strong>
-              <span>Claude Code sessions, repository selection, isolated worktrees, and branch-aware actions.</span>
-            </div>
-            <div>
-              <strong>Review loop</strong>
-              <span>Agent output stays visible enough for inspection, handoff, and PR-oriented follow-through.</span>
-            </div>
-          </div>
-
-          <figure class="proof-figure">
-            <img src="./assets/claude-on-discord-ops-loop.svg" alt="Claude-on-Discord architecture diagram showing Discord surface, session router, work lane, Claude Code run, review stream, human handoff, and guardian supervisor." />
-            <figcaption>
-              Public-safe operations diagram grounded in the local source and architecture docs. It shows the agent workflow without exposing Discord server data, tokens, channel IDs, private messages, or local paths.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/claude-on-discord-demo-thread.svg" alt="Sanitized Claude-on-Discord disposable thread transcript showing fork command, worktree lane, live tool stream, diff handoff, PR handoff, typecheck, tests, and distribution check." />
-            <figcaption>
-              Sanitized disposable-thread transcript. It shows the runtime shape for thread branching, worktree handoff, tool-event streaming, diff review, and PR flow without exposing Discord ids, bot tokens, server names, private prompts, local paths, or live repo output.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/claude-on-discord-tool-stream-contract.svg" alt="Public-safe Claude-on-Discord live tool stream contract grounded in source modules and integration tests." />
-            <figcaption>
-              Source-grounded tool-stream contract. It maps the Discord request, queued Claude Code run, stream events, live tool trace, review card, and expand/collapse controls covered by the local integration tests.
-            </figcaption>
-          </figure>
-
-          <h2>System Architecture</h2>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Use Discord threads as durable, human-readable session containers.</li>
-            <li>Keep agent execution tied to explicit repository and worktree state.</li>
-            <li>Surface progress and tool events instead of treating the agent as a black box.</li>
-            <li>Preserve a path from request to implementation to review instead of stopping at chat.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            This is practical agentic tooling: not a demo chatbot, but infrastructure for delegating real coding tasks, managing concurrent work, and keeping a human reviewer in the loop.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>README upgraded and pushed.</li>
-            <li>Typecheck passed during README upgrade.</li>
-            <li><code>bun test</code> passed with 187 tests across 36 files.</li>
-            <li><code>bun run dist:check</code> reports the package is publish-ready.</li>
-            <li>Public-safe architecture diagram captured.</li>
-            <li>Source-grounded live tool stream contract captured.</li>
-            <li>Sanitized disposable-thread transcript — available on request.</li>
-            <li>Proof transcript — available on request.</li>
-            <li>Public repo is now under <code>gorkamolero/claude-on-discord</code>.</li>
-          </ul>
-
-          <a class="button primary full" href="./index.html#case-studies">Back to portfolio</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>Coding agents are powerful but awkward when their work is hidden in a local terminal. A team needs clear lanes, visible tool events, branch/worktree separation, and a way to request work from the same collaboration surface where decisions happen.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>Claude-on-Discord turns Discord into an agent operations layer. Threads become scoped work sessions, commands start or continue Claude Code runs, tool events stream back to the channel, and repository work is organized around branches and worktrees.</p>
+        <ul class="facts">
+          <li><strong>Interaction surface</strong><span>Discord threads, commands, progress messages, and tool-event streaming.</span></li>
+          <li><strong>Execution model</strong><span>Claude Code sessions, repository selection, isolated worktrees, and branch-aware actions.</span></li>
+          <li><strong>Review loop</strong><span>Agent output stays visible enough for inspection, handoff, and PR-oriented follow-through.</span></li>
+        </ul>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/claude-on-discord-ops-loop.svg" alt="Claude-on-Discord architecture diagram showing Discord surface, session router, work lane, Claude Code run, review stream, human handoff, and guardian supervisor." loading="lazy" /></div>
+          <figcaption>Public-safe operations diagram grounded in the local source and architecture docs. It shows the agent workflow without exposing Discord server data, tokens, channel IDs, private messages, or local paths.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/claude-on-discord-demo-thread.svg" alt="Sanitized Claude-on-Discord disposable thread transcript showing fork command, worktree lane, live tool stream, diff handoff, PR handoff, typecheck, tests, and distribution check." loading="lazy" /></div>
+          <figcaption>Sanitized disposable-thread transcript. It shows the runtime shape for thread branching, worktree handoff, tool-event streaming, diff review, and PR flow without exposing Discord ids, bot tokens, server names, private prompts, local paths, or live repo output.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/claude-on-discord-tool-stream-contract.svg" alt="Public-safe Claude-on-Discord live tool stream contract grounded in source modules and integration tests." loading="lazy" /></div>
+          <figcaption>Source-grounded tool-stream contract. It maps the Discord request, queued Claude Code run, stream events, live tool trace, review card, and expand/collapse controls covered by the local integration tests.</figcaption>
+        </figure>
+      </section>
+
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Use Discord threads as durable, human-readable session containers.</li>
+          <li>Keep agent execution tied to explicit repository and worktree state.</li>
+          <li>Surface progress and tool events instead of treating the agent as a black box.</li>
+          <li>Preserve a path from request to implementation to review instead of stopping at chat.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>This is practical agentic tooling: not a demo chatbot, but infrastructure for delegating real coding tasks, managing concurrent work, and keeping a human reviewer in the loop.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>README upgraded and pushed.</li>
+          <li>Typecheck passed during README upgrade.</li>
+          <li><code>bun test</code> passed with 187 tests across 36 files.</li>
+          <li><code>bun run dist:check</code> reports the package is publish-ready.</li>
+          <li>Public-safe architecture diagram captured.</li>
+          <li>Source-grounded live tool stream contract captured.</li>
+          <li>Sanitized disposable-thread transcript — available on request.</li>
+          <li>Proof transcript — available on request.</li>
+          <li>Public repo is now under <code>gorkamolero/claude-on-discord</code>.</li>
+        </ul>
+        <p class="actions"><a class="button primary" href="./index.html">Back to portfolio</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

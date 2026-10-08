@@ -4,135 +4,104 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>StreamTUI - Gorka Molero Case Study</title>
-    <meta
-      name="description"
-      content="Case study for StreamTUI, a terminal media search, streaming, subtitles, Chromecast, JSON automation, and agent-friendly CLI/TUI project."
-    />
+    <meta name="description" content="Case study for StreamTUI, a terminal media search, streaming, subtitles, Chromecast, JSON automation, and agent-friendly CLI/TUI project." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero agents">
-        <p class="eyebrow">Public · rust CLI/TUI</p>
-        <h1>StreamTUI</h1>
-        <p class="hero-text">
-          A terminal streaming/search product with keyboard-first TUI flows, CLI automation, JSON output, subtitles, VLC handoff, and Chromecast-oriented device gates.
-        </p>
-        <div class="case-meta">
-          <span>Public branch</span>
-          <span>CLI / TUI</span>
-          <span>Agent-safe automation</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Public · rust CLI/TUI</p>
+        <h2 class="case-title">StreamTUI</h2>
+        <p class="intro">A terminal streaming/search product with keyboard-first TUI flows, CLI automation, JSON output, subtitles, VLC handoff, and Chromecast-oriented device gates.</p>
+        <p class="meta chips">Public branch <span class="dot">&middot;</span> CLI / TUI <span class="dot">&middot;</span> Agent-safe automation</p>
       </section>
 
-      <section class="case-body">
-        <article class="case-main">
-          <h2>Problem</h2>
-          <p>
-            Media search and streaming workflows are usually trapped in GUIs, brittle scripts, or app-specific state. StreamTUI packages that workflow as a terminal product: searchable, keyboard-friendly, automatable, and inspectable by both humans and agents.
-          </p>
-
-          <h2>What I Built</h2>
-          <p>
-            I built StreamTUI as a fully usable TUI and CLI version of a Stremio/Popcorn Time style workflow: search, stream selection, subtitles, Chromecast casting, JSON automation, and agent-friendly control. I rewrote the README and pushed a Go rewrite branch with tests and build verification, with the original Rust test suite passing.
-          </p>
-
-          <div class="evidence-grid">
-            <div>
-              <strong>Terminal product</strong>
-              <span>Search, stream choice, subtitles, keyboard navigation, and player handoff.</span>
-            </div>
-            <div>
-              <strong>Automation surface</strong>
-              <span>CLI commands and JSON output designed for scripts and agent workflows.</span>
-            </div>
-            <div>
-              <strong>Rewrite proof</strong>
-              <span>Go branch pushed and verified with formatting, tests, build, and Rust regression tests.</span>
-            </div>
-          </div>
-
-          <h2>System Architecture</h2>
-          <figure class="proof-figure">
-            <img src="./assets/streamtui-terminal-flow.svg" alt="StreamTUI workflow diagram with search, terminal UI, subtitles, CLI mode, playback, Chromecast gate, Go rewrite, and agent workflow." />
-            <figcaption>
-              Public-safe workflow diagram. It shows the terminal product shape while marking Chromecast device evidence as a remaining hardware-dependent gate.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/streamtui-json-contract.svg" alt="Sanitized StreamTUI terminal proof showing JSON search output, redacted device discovery, and passing Go tests." />
-            <figcaption>
-              Sanitized terminal proof from the local Go rewrite. It demonstrates the v1 JSON envelope, public search command shape, redacted local Chromecast discovery, and passing Go package tests.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/streamtui-cli-session.svg" alt="Sanitized StreamTUI CLI session showing Go tests passing, VLC playback success JSON, and redacted Chromecast device discovery." />
-            <figcaption>
-              Current local proof capture. The Go tests pass, the agent-first VLC path returns a success envelope, and Chromecast discovery is proven with device names, LAN IPs, magnets, and cache paths redacted.
-            </figcaption>
-          </figure>
-
-          <figure class="proof-figure">
-            <img src="./assets/streamtui-interactive-tui.png" alt="Controlled StreamTUI interactive terminal capture showing the search box, StreamTUI header, trending panel, loading state, and keybindings." />
-            <figcaption>
-              Controlled initial TUI capture from the Rust binary. It proves the interactive terminal surface, search affordance, loading/trending panel, and keybindings without exposing device names, LAN IPs, magnet links, subtitles, or media windows.
-            </figcaption>
-          </figure>
-
-          <h2>Technical Decisions</h2>
-          <ul class="case-list">
-            <li>Keep the workflow useful as both a human TUI and a scriptable CLI.</li>
-            <li>Expose JSON output so agents can inspect state instead of scraping terminal text.</li>
-            <li>Preserve the original Rust proof while pushing a coherent Go rewrite branch.</li>
-            <li>Treat Chromecast as a device-gated integration, not as a claim until hardware evidence is captured.</li>
-          </ul>
-
-          <h2>What This Proves</h2>
-          <p>
-            StreamTUI is engineer-volume proof: terminal UX, CLI design, automation-friendly interfaces, media workflow pragmatism, and the ability to package a tool so both engineers and agents can operate it.
-          </p>
-        </article>
-
-        <aside class="case-aside">
-          <h2>Public Evidence</h2>
-          <ul>
-            <li>README rewritten around terminal product signal.</li>
-            <li>Go rewrite branch pushed and documented.</li>
-            <li><code>go test ./...</code>, Go build, <code>cargo test</code>, and formatting checks recorded.</li>
-            <li>Local VLC JSON playback proof and Chromecast discovery proof captured with sensitive fields redacted.</li>
-            <li>Controlled interactive TUI screenshot captured from the Rust binary.</li>
-            <li>Sanitized JSON command proof — available on request.</li>
-          </ul>
-
-          <h2>Release Boundary</h2>
-          <p>
-            Decide whether the Go rewrite branch becomes canonical, update the stale Rust-only agent instructions, then approve the existing <code>gorkamolero/streamtui</code> repo for profile pinning or a stronger public CTA.
-          </p>
-
-          <a class="button primary full" href="./workbench.html">Open workbench</a>
-        </aside>
+      <main>
+      <section class="work">
+        <h2>Problem</h2>
+        <p>Media search and streaming workflows are usually trapped in GUIs, brittle scripts, or app-specific state. StreamTUI packages that workflow as a terminal product: searchable, keyboard-friendly, automatable, and inspectable by both humans and agents.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">private systems: sanitized demo or code walkthrough on request</a>
-    </footer>
+      <section class="work">
+        <h2>What I Built</h2>
+        <p>I built StreamTUI as a fully usable TUI and CLI version of a Stremio/Popcorn Time style workflow: search, stream selection, subtitles, Chromecast casting, JSON automation, and agent-friendly control. I rewrote the README and pushed a Go rewrite branch with tests and build verification, with the original Rust test suite passing.</p>
+        <ul class="facts">
+          <li><strong>Terminal product</strong><span>Search, stream choice, subtitles, keyboard navigation, and player handoff.</span></li>
+          <li><strong>Automation surface</strong><span>CLI commands and JSON output designed for scripts and agent workflows.</span></li>
+          <li><strong>Rewrite proof</strong><span>Go branch pushed and verified with formatting, tests, build, and Rust regression tests.</span></li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>System Architecture</h2>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/streamtui-terminal-flow.svg" alt="StreamTUI workflow diagram with search, terminal UI, subtitles, CLI mode, playback, Chromecast gate, Go rewrite, and agent workflow." loading="lazy" /></div>
+          <figcaption>Public-safe workflow diagram. It shows the terminal product shape while marking Chromecast device evidence as a remaining hardware-dependent gate.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/streamtui-json-contract.svg" alt="Sanitized StreamTUI terminal proof showing JSON search output, redacted device discovery, and passing Go tests." loading="lazy" /></div>
+          <figcaption>Sanitized terminal proof from the local Go rewrite. It demonstrates the v1 JSON envelope, public search command shape, redacted local Chromecast discovery, and passing Go package tests.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/streamtui-cli-session.svg" alt="Sanitized StreamTUI CLI session showing Go tests passing, VLC playback success JSON, and redacted Chromecast device discovery." loading="lazy" /></div>
+          <figcaption>Current local proof capture. The Go tests pass, the agent-first VLC path returns a success envelope, and Chromecast discovery is proven with device names, LAN IPs, magnets, and cache paths redacted.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/streamtui-interactive-tui.png" alt="Controlled StreamTUI interactive terminal capture showing the search box, StreamTUI header, trending panel, loading state, and keybindings." loading="lazy" /></div>
+          <figcaption>Controlled initial TUI capture from the Rust binary. It proves the interactive terminal surface, search affordance, loading/trending panel, and keybindings without exposing device names, LAN IPs, magnet links, subtitles, or media windows.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>Technical Decisions</h2>
+        <ul class="points">
+          <li>Keep the workflow useful as both a human TUI and a scriptable CLI.</li>
+          <li>Expose JSON output so agents can inspect state instead of scraping terminal text.</li>
+          <li>Preserve the original Rust proof while pushing a coherent Go rewrite branch.</li>
+          <li>Treat Chromecast as a device-gated integration, not as a claim until hardware evidence is captured.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>What This Proves</h2>
+        <p>StreamTUI is engineer-volume proof: terminal UX, CLI design, automation-friendly interfaces, media workflow pragmatism, and the ability to package a tool so both engineers and agents can operate it.</p>
+      </section>
+
+      <section class="work">
+        <h2>Public Evidence</h2>
+        <ul class="points">
+          <li>README rewritten around terminal product signal.</li>
+          <li>Go rewrite branch pushed and documented.</li>
+          <li><code>go test ./...</code>, Go build, <code>cargo test</code>, and formatting checks recorded.</li>
+          <li>Local VLC JSON playback proof and Chromecast discovery proof captured with sensitive fields redacted.</li>
+          <li>Controlled interactive TUI screenshot captured from the Rust binary.</li>
+          <li>Sanitized JSON command proof — available on request.</li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Release Boundary</h2>
+        <p>The source is public at <code>gorkamolero/streamtui</code>.</p>
+        <p class="actions"><a class="button primary" href="./workbench.html">Open workbench</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>

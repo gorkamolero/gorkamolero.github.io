@@ -4,179 +4,64 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Project Workbench - Gorka Molero</title>
-    <meta
-      name="description"
-      content="Dense project atlas for Gorka Molero: agentic tools, operational systems, creative engines, UI craft, data products, and workflow transformation."
-    />
+    <meta name="description" content="Dense project atlas for Gorka Molero: agentic tools, operational systems, creative engines, UI craft, data products, and workflow transformation." />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Back to Gorka Molero portfolio">
-        <span class="brand-mark" aria-hidden="true">GM</span>
-        <span>Gorka Molero</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="./index.html#work">Work</a>
-        <a href="./index.html#log">About</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="case-hero archive">
-        <p class="eyebrow">Full atlas</p>
-        <h1>Everything, including the archive.</h1>
-        <p class="hero-text">
-          The homepage index lists the 18 documented systems. This page adds the rest: paused work, experiments, and projects still under review. Every row states what exists and what its boundary is.
-        </p>
-        <div class="case-meta">
-          <span>Public repos</span>
-          <span>Private systems</span>
-          <span>Archive and paused work</span>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Full atlas</p>
+        <h2 class="case-title long">Everything, including the archive.</h2>
+        <p class="intro">The homepage index lists the 18 documented systems. This page adds the rest: experiments and smaller projects. Every row states what exists and what its boundary is.</p>
+        <p class="meta chips">Public repos <span class="dot">&middot;</span> Private systems <span class="dot">&middot;</span> Archive and paused work</p>
       </section>
 
-      <section class="section archive-section" aria-labelledby="archive-title">
-        <div class="section-heading">
-          <p class="eyebrow">How to read this</p>
-          <h2 id="archive-title">Atlas — one row per project</h2>
-          <p>
-            Agents, operations, creative products, UI craft, data, and transformation systems. Status column tells you what you can verify and how.
-          </p>
-        </div>
-
+      <main>
+      <section class="work" aria-labelledby="archive-title">
+        <p class="meta eyebrow">How to read this</p>
+        <h2 id="archive-title">Atlas — one row per project</h2>
+        <p>Agents, operations, creative products, UI craft, data, and transformation systems. Status column tells you what you can verify and how.</p>
         <div class="archive-table" role="table" aria-label="Portfolio project workbench">
-          <div class="archive-row archive-head" role="row">
-            <span role="columnheader">Project</span>
-            <span role="columnheader">Category</span>
-            <span role="columnheader">Visibility</span>
-            <span role="columnheader">Hiring signal</span>
-          </div>
-
-          <div class="archive-row" role="row">
-            <strong role="cell">Mercurius</strong>
-            <span role="cell">Trading infrastructure</span>
-            <span role="cell">Private case study</span>
-            <span role="cell">Operational systems, risk boundaries, forensics, real economic relevance.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Infinity</strong>
-            <span role="cell">Research system</span>
-            <span role="cell">Private case study</span>
-            <span role="cell">Strategy lab thinking, quote audit, readiness gates, capital-aware systems.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Land Unconditional</strong>
-            <span role="cell">Business transformation</span>
-            <span role="cell">Sanitized case study</span>
-            <span role="cell">County data, deal operations, CRM workflow, AI due-diligence surfaces.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Claude-on-Discord</strong>
-            <span role="cell">Agentic tools</span>
-            <span role="cell"><a class="inline-link" href="./claude-on-discord.html">Case study added</a>; public on gorkamolero</span>
-            <span role="cell">Agent sessions, Discord coding lanes, worktrees, reviewable tool events.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Paperclip OpenRouter</strong>
-            <span role="cell">Developer tools</span>
-            <span role="cell"><a class="inline-link" href="./paperclip-openrouter.html">Case study added</a>; public on gorkamolero</span>
-            <span role="cell">Model routing, adapter design, tool-loop integration, clean package proof.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Koda</strong>
-            <span role="cell">Agent IDE</span>
-            <span role="cell"><a class="inline-link" href="./koda.html">Case study added</a>; publish after scrub</span>
-            <span role="cell">Review-first agent workflows, sidecars, checkpoints, visual diffs.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Hotpress</strong>
-            <span role="cell">Publishing product</span>
-            <span role="cell"><a class="inline-link" href="./hotpress.html">Case study added</a>; live at hotpress.app</span>
-            <span role="cell">Collaborative editor, export pipeline, storage, billing, and product UX.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Maestro</strong>
-            <span role="cell">Headless life manager</span>
-            <span role="cell"><a class="inline-link" href="./maestro.html">Case study added</a>; security cleanup required</span>
-            <span role="cell">Agent skills, orchestration, personal operations, context management.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">The Pulse</strong>
-            <span role="cell">AI game platform</span>
-            <span role="cell">Public repo, deployment review pending</span>
-            <span role="cell">Narrator systems, multiplayer AI UX, multimodal product, harness evaluation.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Anima / Will</strong>
-            <span role="cell">Creative engine</span>
-            <span role="cell"><a class="inline-link" href="./anima.html">Case study added</a>; publish after review</span>
-            <span role="cell">StoryScript, Phaser runtime, graphic adventure creation, AI asset pipeline.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Solderpunk</strong>
-            <span role="cell">Music systems</span>
-            <span role="cell"><a class="inline-link" href="./solderpunk.html">Case study added</a>; release candidate</span>
-            <span role="cell">Synth explorers, MIDI control, corpus Q&A, creative technical taste.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">StreamTUI</strong>
-            <span role="cell">CLI / TUI</span>
-            <span role="cell"><a class="inline-link" href="./streamtui.html">Case study added</a>; rewrite branch pushed</span>
-            <span role="cell">Terminal product craft, automation-friendly JSON, streaming/casting workflows.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Sidekick</strong>
-            <span role="cell">Creative AI product</span>
-            <span role="cell"><a class="inline-link" href="./sidekick.html">Case study added</a>; public on gorkamolero</span>
-            <span role="cell">Tauri panel, producer workflow, generation adapters, audio-analysis direction.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Saga AI</strong>
-            <span role="cell">Agentic story studio</span>
-            <span role="cell"><a class="inline-link" href="./saga.html">Case study added</a>; public on gorkamolero</span>
-            <span role="cell">Writing-room agents, script workflow, media pipeline, creative product judgment.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Datomania</strong>
-            <span role="cell">Civic data product</span>
-            <span role="cell"><a class="inline-link" href="./datomania.html">Case study added</a>; public on gorkamolero</span>
-            <span role="cell">Public-interest data modeling, provenance, API/export surfaces, methodology.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Lingua Priority</strong>
-            <span role="cell">Frontend craft</span>
-            <span role="cell"><a class="inline-link" href="./lingua-priority.html">Case study added</a>; public on gorkamolero</span>
-            <span role="cell">Small UX library with practical defaults, low dependency surface, polish.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Carvingen</strong>
-            <span role="cell">Canvas AI media</span>
-            <span role="cell"><a class="inline-link" href="./carvingen.html">Case study added</a>; publish after demo/polish</span>
-            <span role="cell">Image, video, mesh, and node-graph generation workflows.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Tarot Study</strong>
-            <span role="cell">Creative learning product</span>
-            <span role="cell">Source/content gated; public app reachability noted</span>
-            <span role="cell">Potential learning product for tarot study; needs source, content originality, and rights review before a case page, screenshots, or repo promotion.</span>
-          </div>
-          <div class="archive-row" role="row">
-            <strong role="cell">Molter</strong>
-            <span role="cell">Agent-to-agent experiment</span>
-            <span role="cell">Scrubbed and publication-ready; MVP stage</span>
-            <span role="cell">Agent-to-agent dating and matching protocol with five-level progressive disclosure negotiation. <a href="./molter.html">Case study</a> with build proof and honest MVP boundaries.</span>
-          </div>
+          <div class="archive-row archive-head" role="row"><span role="columnheader">Project</span><span role="columnheader">Category</span><span role="columnheader">Visibility</span><span role="columnheader">Hiring signal</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Mercurius</strong><span role="cell">Trading infrastructure</span><span role="cell">Private case study</span><span role="cell">Operational systems, risk boundaries, forensics, real economic relevance.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Infinity</strong><span role="cell">Research system</span><span role="cell">Private case study</span><span role="cell">Strategy lab thinking, quote audit, readiness gates, capital-aware systems.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Land Unconditional</strong><span role="cell">Business transformation</span><span role="cell">Sanitized case study</span><span role="cell">County data, deal operations, CRM workflow, AI due-diligence surfaces.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Claude-on-Discord</strong><span role="cell">Agentic tools</span><span role="cell"><a class="inline-link" href="./claude-on-discord.html">Case study added</a>; public on gorkamolero</span><span role="cell">Agent sessions, Discord coding lanes, worktrees, reviewable tool events.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Paperclip OpenRouter</strong><span role="cell">Developer tools</span><span role="cell"><a class="inline-link" href="./paperclip-openrouter.html">Case study added</a>; public on gorkamolero</span><span role="cell">Model routing, adapter design, tool-loop integration, clean package proof.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Koda</strong><span role="cell">Agent IDE</span><span role="cell"><a class="inline-link" href="./koda.html">Case study added</a>; public on gorkamolero</span><span role="cell">Review-first agent workflows, sidecars, checkpoints, visual diffs.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Hotpress</strong><span role="cell">Publishing product</span><span role="cell"><a class="inline-link" href="./hotpress.html">Case study added</a>; live at hotpress.app</span><span role="cell">Collaborative editor, export pipeline, storage, billing, and product UX.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Maestro</strong><span role="cell">Headless life manager</span><span role="cell"><a class="inline-link" href="./maestro.html">Case study added</a>; public on gorkamolero</span><span role="cell">Agent skills, orchestration, personal operations, context management.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">The Pulse</strong><span role="cell">AI game platform</span><span role="cell">Public repo, deployment review pending</span><span role="cell">Narrator systems, multiplayer AI UX, multimodal product, harness evaluation.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Anima / Will</strong><span role="cell">Creative engine</span><span role="cell"><a class="inline-link" href="./anima.html">Case study added</a>; public on gorkamolero</span><span role="cell">StoryScript, Phaser runtime, graphic adventure creation, AI asset pipeline.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Solderpunk</strong><span role="cell">Music systems</span><span role="cell"><a class="inline-link" href="./solderpunk.html">Case study added</a>; release candidate</span><span role="cell">Synth explorers, MIDI control, corpus Q&amp;A, creative technical taste.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">StreamTUI</strong><span role="cell">CLI / TUI</span><span role="cell"><a class="inline-link" href="./streamtui.html">Case study added</a>; public on gorkamolero</span><span role="cell">Terminal product craft, automation-friendly JSON, streaming/casting workflows.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Sidekick</strong><span role="cell">Creative AI product</span><span role="cell"><a class="inline-link" href="./sidekick.html">Case study added</a>; public on gorkamolero</span><span role="cell">Tauri panel, producer workflow, generation adapters, audio-analysis direction.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Saga AI</strong><span role="cell">Agentic story studio</span><span role="cell"><a class="inline-link" href="./saga.html">Case study added</a>; public on gorkamolero</span><span role="cell">Writing-room agents, script workflow, media pipeline, creative product judgment.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Datomania</strong><span role="cell">Civic data product</span><span role="cell"><a class="inline-link" href="./datomania.html">Case study added</a>; public on gorkamolero</span><span role="cell">Public-interest data modeling, provenance, API/export surfaces, methodology.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Lingua Priority</strong><span role="cell">Frontend craft</span><span role="cell"><a class="inline-link" href="./lingua-priority.html">Case study added</a>; public on gorkamolero</span><span role="cell">Small UX library with practical defaults, low dependency surface, polish.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Carvingen</strong><span role="cell">Canvas AI media</span><span role="cell"><a class="inline-link" href="./carvingen.html">Case study added</a>; public on gorkamolero</span><span role="cell">Image, video, mesh, and node-graph generation workflows.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Tarot Study</strong><span role="cell">Creative learning product</span><span role="cell">Source/content gated; public app reachability noted</span><span role="cell">Potential learning product for tarot study; needs source, content originality, and rights review before a case page, screenshots, or repo promotion.</span></div>
+          <div class="archive-row" role="row"><strong role="cell">Molter</strong><span role="cell">Agent-to-agent experiment</span><span role="cell">Public on gorkamolero; MVP stage</span><span role="cell">Agent-to-agent dating and matching protocol with five-level progressive disclosure negotiation. <a href="./molter.html">Case study</a> with build proof and honest MVP boundaries.</span></div>
         </div>
       </section>
-    </main>
-
-    <footer class="footer">
-      <span>Gorka Molero</span>
-      <a href="./contact.html">Ask for a demo</a>
-    </footer>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
       <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>
