@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agents - Gorka Molero</title>
+    <meta name="description" content="Gorka Molero's work with AI agents: Claude-on-Discord, Koda, OpenRoadie, Saga, The Pulse, Molter and smaller agent tools." />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
+  </head>
+  <body>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
+        </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./creative.html">Creative work</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">2023&ndash;now &middot; Working with AI agents</p>
+        <h2 class="case-title">Agents</h2>
+        <p class="intro">I work with AI agents as teammates every day, and I build the tools that let people do the same: hand an agent work in a chat, share its session with a colleague, give it a company's context, and test it before it ships.</p>
+      </section>
+
+      <main>
+      <section class="work" id="claude-on-discord">
+        <h2>Claude-on-Discord</h2>
+        <p class="meta">2026 <span class="dot">&middot;</span> Claude Code, Discord, Bun, SQLite</p>
+        <p>Claude Code run from Discord. Each channel is a working lane with its own repo, model, session and system prompt, and each thread can branch into its own git worktree. The agent's replies, thinking, tool calls and cost stream live into the conversation, with buttons to interrupt or stop it, and a supervisor keeps the bridge alive and recovers it after a crash.</p>
+        <!-- VIDEO PLACEHOLDER: when the Claude-on-Discord video is ready, put it at ./assets/claude-on-discord/claude-on-discord.mp4 with a poster at ./assets/claude-on-discord/claude-on-discord-poster.jpg, and replace the <img> below with
+             <video controls playsinline preload="none" poster="./assets/claude-on-discord/claude-on-discord-poster.jpg" src="./assets/claude-on-discord/claude-on-discord.mp4" aria-label="Claude-on-Discord: handing Claude Code a task in a Discord thread and watching it work."></video> -->
+        <figure class="plate" id="claude-on-discord-video">
+          <div class="shot"><img src="./assets/claude-on-discord-demo-thread.svg" alt="A Discord thread where Claude Code works on a task, with its tool calls and status streaming into the conversation." loading="lazy" /></div>
+          <figcaption>A coding lane in Discord: the agent's work streams into the thread as it happens.</figcaption>
+        </figure>
+        <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/claude-on-discord" target="_blank" rel="noopener">Source</a>
+          <a class="button" href="./claude-on-discord.html">Case study</a></p>
+      </section>
+
+      <section class="work" id="koda">
+        <h2>Koda</h2>
+        <p class="meta">2026 <span class="dot">&middot;</span> Tauri, React, Node, Liveblocks, Codex, Claude</p>
+        <p>A desktop app for working collaboratively with coding agents. A Codex or Claude session runs on your machine, and a teammate opens it from their own Koda with view or control access. They see the same transcript and tool calls live, and with control they can message the agent too. Any action that needs approval stops for Approve once or Deny right in the chat. Every flow is proven against the real services with Playwright, from a clean clone.</p>
+        <figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/koda/koda-poster.jpg" src="./assets/koda/koda-collaboration.mp4" aria-label="Koda on two Macs: one Claude session shared live between two people."></video></div>
+          <figcaption>Recorded live: Claude on one Mac, a collaborator on another.</figcaption>
+        </figure>
+        <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/koda" target="_blank" rel="noopener">Source</a>
+          <a class="button" href="./koda.html">Case study</a></p>
+      </section>
+
+      <section class="work" id="openroadie">
+        <h2>OpenRoadie</h2>
+        <p class="meta">Roadie &middot; 2024&ndash;2026 <span class="dot">&middot;</span> Node, Postgres, MCP, React Flow</p>
+        <p>The open-source version of Roadie's context layer for AI agents, which I wrote much of. It builds a graph of an organisation from the tools it already uses, about 40 integrations from GitHub and Jira to PagerDuty and Okta, and serves it to agents over MCP, limited to the actions you define. I designed and built its interfaces for data-source pipelines, relationship mapping and agent-led onboarding. At Roadie I also built the AI assistant, on the Vercel AI SDK with RAG on LangChain and tracing in Langfuse, and worked on its MCP server.</p>
+        <p class="actions"><a class="button" href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener">Source</a></p>
+      </section>
+
+      <section class="work" id="saga">
+        <h2>Saga</h2>
+        <p class="meta">2023&ndash;now <span class="dot">&middot;</span> Codex agent teams, ElevenLabs, Remotion</p>
+        <p>My own video studio, run by a team of agents: a researcher and writer, a narrator, an art director and illustrators, a composer, and an editor who checks everything. They hand their work to each other through files, so nothing depends on chat memory, and every correction I give becomes a rule or an automatic check. Its first version, in late 2023, grew a YouTube channel to 1,000 subscribers in 34 days with no ads. It has since run on three generations of agent tooling, from OpenAI's Assistants to CrewAI to teams of Codex agents, and now makes fifty-minute episodes.</p>
+        <p class="actions"><a class="button" href="./creative.html#saga">Watch</a></p>
+      </section>
+
+      <section class="work" id="the-pulse">
+        <h2>The Pulse</h2>
+        <p class="meta">Live &middot; 2025&ndash;now <span class="dot">&middot;</span> ElevenLabs Agents, Next.js, Liveblocks</p>
+        <p>Live interactive fiction run by AI narrators, solo or multiplayer, where the story follows whatever the players do. The narrators are ElevenLabs agents. To test an agent that improvises, I built simulated players that play whole sessions, a grader model that scores each run on twelve criteria, and A/B runs with the cost per turn.</p>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/the-pulse-harness-report.webp" alt="The Pulse's test harness report for one simulated session of Shadow Over Innsmouth: turns, outcome, and the cost of the narrator, the simulated players and classification." loading="lazy" /></div>
+          <figcaption>The test harness's report on one simulated session, down to what each part of it cost.</figcaption>
+        </figure>
+        <p class="actions"><a class="button primary" href="https://the-pulse.games" target="_blank" rel="noopener">Play The Pulse</a>
+          <a class="button" href="./the-pulse.html">Case study</a></p>
+      </section>
+
+      <section class="work" id="molter">
+        <h2>Molter</h2>
+        <p class="meta">2026 <span class="dot">&middot;</span> Agent-to-agent protocol, Hono, Postgres</p>
+        <p>A dating protocol for personal AI agents. Your own agent, the one you already work with, like OpenClaw, Hermes or a Grok bot, gets to know the real you through a series of questions. Then it negotiates anonymously with other people's agents in ephemeral conversations, revealing details step by step, until both agents agree on a match.</p>
+        <p class="actions"><a class="button" href="./molter.html">Case study</a>
+          <a class="button" href="https://github.com/gorkamolero/molter" target="_blank" rel="noopener">Source</a></p>
+      </section>
+
+      <section class="work" id="more">
+        <h2>Smaller agent tools</h2>
+        <ul class="facts">
+          <li><strong>StoryScript</strong><span>The language behind Anima's games. Its engine runs without graphics, so swarms of agents can playtest every path of a story before any art exists.</span></li>
+          <li><strong>Paperclip OpenRouter adapter</strong><span>Runs Paperclip agents on any OpenRouter model through a direct tool loop against Paperclip's board, published on npm.</span></li>
+          <li><strong>Maestro</strong><span>A Claude Code skill that organises work into spaces, tasks and documents, so Claude can read your state and tell you what matters right now.</span></li>
+          <li><strong>Talking statue</strong><span>A carved jackalope with a Raspberry Pi inside, connected to an ElevenLabs agent. It's location-aware, and it sleeps until someone wakes it up.</span></li>
+          <li><strong>Every day</strong><span>Claude Code and Codex for building, OpenClaw through Discord and Telegram, a Grok bot and Block's Buzz, and Hermes Agent set up for other people.</span></li>
+        </ul>
+        <p class="actions"><a class="button primary" href="./index.html">Full portfolio</a>
+          <a class="button" href="./creative.html">Creative portfolio</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
+      <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
