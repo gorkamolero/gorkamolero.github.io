@@ -34,11 +34,9 @@
         <h2>Claude-on-Discord</h2>
         <p class="meta">2026 <span class="dot">&middot;</span> Claude Code, Discord, Bun, SQLite</p>
         <p>Claude Code run from Discord. Each channel is a working lane with its own repo, model, session and system prompt, and each thread can branch into its own git worktree. The agent's replies, thinking, tool calls and cost stream live into the conversation, with buttons to interrupt or stop it, and a supervisor keeps the bridge alive and recovers it after a crash.</p>
-        <!-- VIDEO PLACEHOLDER: when the Claude-on-Discord video is ready, put it at ./assets/claude-on-discord/claude-on-discord.mp4 with a poster at ./assets/claude-on-discord/claude-on-discord-poster.jpg, and replace the <img> below with
-             <video controls playsinline preload="none" poster="./assets/claude-on-discord/claude-on-discord-poster.jpg" src="./assets/claude-on-discord/claude-on-discord.mp4" aria-label="Claude-on-Discord: handing Claude Code a task in a Discord thread and watching it work."></video> -->
         <figure class="plate" id="claude-on-discord-video">
-          <div class="shot"><img src="./assets/claude-on-discord-demo-thread.svg" alt="A Discord thread where Claude Code works on a task, with its tool calls and status streaming into the conversation." loading="lazy" /></div>
-          <figcaption>A coding lane in Discord: the agent's work streams into the thread as it happens.</figcaption>
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/claude-on-discord/claude-on-discord-poster.jpg" src="./assets/claude-on-discord/claude-on-discord.mp4" aria-label="Claude Code as Merlin in Discord: a task in the channel, its tool calls streaming in, a thread working in its own git worktree, and the merge back."></video></div>
+          <figcaption>A task in the channel streams its tool calls live, a thread takes a second change in its own git worktree, and the work merges back.</figcaption>
         </figure>
         <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/claude-on-discord" target="_blank" rel="noopener">Source</a>
           <a class="button" href="./claude-on-discord.html">Case study</a></p>
