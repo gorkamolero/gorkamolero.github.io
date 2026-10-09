@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Agents - Gorka Molero</title>
-    <meta name="description" content="Gorka Molero's work with AI agents: Claude-on-Discord, Koda, OpenRoadie, Saga, The Pulse, Molter and smaller agent tools." />
+    <meta name="description" content="Gorka Molero's work with AI agents: Claude-on-Discord, Koda, OpenRoadie, Saga and Cybertantra, The Pulse, Anima and Molter." />
     <link rel="icon" href="data:," />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,10 +64,14 @@
       </section>
 
       <section class="work" id="saga">
-        <h2>Saga</h2>
+        <h2>Saga and Cybertantra</h2>
         <p class="meta">2023&ndash;now <span class="dot">&middot;</span> Codex agent teams, ElevenLabs, Remotion</p>
-        <p>My own video studio, run by a team of agents: a researcher and writer, a narrator, an art director and illustrators, a composer, and an editor who checks everything. They hand their work to each other through files, so nothing depends on chat memory, and every correction I give becomes a rule or an automatic check. Its first version, in late 2023, grew a YouTube channel to 1,000 subscribers in 34 days with no ads. It has since run on three generations of agent tooling, from OpenAI's Assistants to CrewAI to teams of Codex agents, and now makes fifty-minute episodes.</p>
-        <p class="actions"><a class="button" href="./creative.html#saga">Watch</a></p>
+        <p>Saga is my own video studio, run by a team of agents: a researcher and writer, a narrator, an art director and illustrators, a composer, and an editor who checks everything. They hand their work to each other through files, so nothing depends on chat memory, and every correction I give becomes a rule or an automatic check. Its first version, in late 2023, grew a YouTube channel to 1,000 subscribers in 34 days with no ads. It has since run on three generations of agent tooling, from OpenAI's Assistants to CrewAI to teams of Codex agents, and today it makes the fifty-minute episodes of my channel Cybertantra.</p>
+        <figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/creative/cybertantra-reel-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/cybertantra-reel.mp4" aria-label="A short reel from Cybertantra, made with Saga."></video></div>
+          <figcaption>A short reel from Cybertantra. The full episodes are on the creative portfolio.</figcaption>
+        </figure>
+        <p class="actions"><a class="button" href="./creative.html#cybertantra">Watch the episodes</a></p>
       </section>
 
       <section class="work" id="the-pulse">
@@ -75,11 +79,23 @@
         <p class="meta">Live &middot; 2025&ndash;now <span class="dot">&middot;</span> ElevenLabs Agents, Next.js, Liveblocks</p>
         <p>Live interactive fiction run by AI narrators, solo or multiplayer, where the story follows whatever the players do. The narrators are ElevenLabs agents. To test an agent that improvises, I built simulated players that play whole sessions, a grader model that scores each run on twelve criteria, and A/B runs with the cost per turn.</p>
         <figure class="plate">
-          <div class="shot"><img src="./assets/the-pulse-harness-report.webp" alt="The Pulse's test harness report for one simulated session of Shadow Over Innsmouth: turns, outcome, and the cost of the narrator, the simulated players and classification." loading="lazy" /></div>
-          <figcaption>The test harness's report on one simulated session, down to what each part of it cost.</figcaption>
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/creative/the-pulse-innsmouth-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/the-pulse-innsmouth.mp4" aria-label="A session of Shadow Over Innsmouth on The Pulse, with the AI narrator running the story."></video></div>
         </figure>
         <p class="actions"><a class="button primary" href="https://the-pulse.games" target="_blank" rel="noopener">Play The Pulse</a>
           <a class="button" href="./the-pulse.html">Case study</a></p>
+      </section>
+      <section class="work" id="anima">
+        <h2>Anima</h2>
+        <p class="meta">2025 <span class="dot">&middot;</span> StoryScript, Phaser, React, Veo 3.1</p>
+        <p>A system for creating point-and-click games, built on the old SCUMM model, where you can say anything to anyone and every character answers in its own voice. Its stories are written in StoryScript, a language I designed, and the engine runs without graphics, so swarms of agents can playtest every path of a story before any art exists. Characters are generated as video with Veo 3.1, cut out with a difference matte and packed into spritesheets. The game built on it is Shadow Over Innsmouth.</p>
+        <figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/creative/point-and-click-bar-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/point-and-click-bar.mp4" aria-label="Anima: a conversation in the bar of Shadow Over Innsmouth."></video></div>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/anima-cutscene-poster.webp" src="./assets/anima-cutscene.webm" aria-label="A cutscene from Shadow Over Innsmouth in Anima."></video></div>
+        </figure>
+        <p class="actions"><a class="button" href="./anima.html">Case study</a>
+          <a class="button" href="https://github.com/gorkamolero/anima" target="_blank" rel="noopener">Source</a></p>
       </section>
 
       <section class="work" id="molter">
@@ -91,14 +107,6 @@
       </section>
 
       <section class="work" id="more">
-        <h2>Smaller agent tools</h2>
-        <ul class="facts">
-          <li><strong>StoryScript</strong><span>The language behind Anima's games. Its engine runs without graphics, so swarms of agents can playtest every path of a story before any art exists.</span></li>
-          <li><strong>Paperclip OpenRouter adapter</strong><span>Runs Paperclip agents on any OpenRouter model through a direct tool loop against Paperclip's board, published on npm.</span></li>
-          <li><strong>Maestro</strong><span>A Claude Code skill that organises work into spaces, tasks and documents, so Claude can read your state and tell you what matters right now.</span></li>
-          <li><strong>Talking statue</strong><span>A carved jackalope with a Raspberry Pi inside, connected to an ElevenLabs agent. It's location-aware, and it sleeps until someone wakes it up.</span></li>
-          <li><strong>Every day</strong><span>Claude Code and Codex for building, OpenClaw through Discord and Telegram, a Grok bot and Block's Buzz, and Hermes Agent set up for other people.</span></li>
-        </ul>
         <p class="actions"><a class="button primary" href="./index.html">Full portfolio</a>
           <a class="button" href="./creative.html">Creative portfolio</a></p>
       </section>
