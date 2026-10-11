@@ -67,6 +67,11 @@
       .links a + a::before { content: "\00b7"; color: var(--vermilion); margin: 0 .55em 0 .2em; }
       .links a:hover { color: var(--vermilion); }
 
+      .masthead.has-photo { display: grid; grid-template-columns: 1fr auto; column-gap: 2rem; text-align: left; }
+      .masthead.has-photo .identity { grid-column: 1; grid-row: 1; justify-self: start; align-self: end; }
+      .masthead.has-photo .contact { grid-column: 1 / -1; grid-row: 2; }
+      .portrait-round { grid-column: 2; grid-row: 1; align-self: end; width: 6.4rem; height: 6.4rem; margin-bottom: .2rem; padding: 2px; border: 1px solid var(--rule); border-radius: 50%; background: #f1e9dc; object-fit: cover; }
+      @media (max-width: 640px) { .portrait-round { width: 3.8rem; height: 3.8rem; } .masthead.has-photo { column-gap: 1.1rem; } .masthead.has-photo h1 { font-size: 1.8rem; } .masthead.has-photo .identity { margin-left: .9rem; } .masthead.has-photo .contact { align-items: flex-start; } .masthead.has-photo .links { text-align: left; } }
       .lead { margin-top: 3rem; text-align: center; }
       .kind { margin: 0; font-family: var(--display); font-size: clamp(1.2rem, 5.1vw, 2.2rem); letter-spacing: .07em; line-height: 1.15; }
       .scope { margin: .5rem 0 0; font-family: var(--display-italic); font-style: italic; font-size: clamp(1.1rem, 3vw, 1.35rem); color: var(--ink-soft); }
@@ -80,8 +85,6 @@
       .github-cta:hover { background: var(--vermilion); color: var(--paper); }
       .github-cta:hover span { color: var(--paper); }
       .intro { margin: 2.6rem auto 0; max-width: 38rem; text-align: center; font-size: 1.25rem; color: var(--ink-soft); }
-      .portrait { margin: 2.6rem auto 0; max-width: 20rem; }
-      .portrait img { display: block; width: 100%; height: auto; border-radius: 4px; box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
 
       .work { margin-top: 4rem; }
       .work h2 {
@@ -154,11 +157,12 @@
   </head>
   <body>
     <div class="sheet">
-      <header class="masthead">
+      <header class="masthead has-photo">
         <div class="identity">
           <h1>Gorka Molero</h1>
           <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
         </div>
+        <img class="portrait-round" src="./assets/gorka-portrait-round.jpg" width="600" height="600" alt="Gorka Molero" />
         <div class="contact">
           <span class="place">Remote, location-independent</span>
           <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./agents.html">Agents</a> <a href="./creative.html">Creative work</a> <a href="./pre-ai.html">Before AI</a> <a href="./music.html">Music</a></span>
@@ -171,8 +175,6 @@
           <a class="github-cta" href="https://github.com/gorkamolero" target="_blank" rel="noopener">Source for most of this on GitHub&nbsp;<span aria-hidden="true">&rarr;</span></a>
         </div>
       </section>
-
-      <figure class="portrait"><img src="./assets/gorka-portrait.jpg" width="1000" height="1000" alt="Gorka Molero working on a laptop with studio headphones, on a terrace above a beach." /></figure>
 
       <p class="intro">I'm Gorka Molero. I've built for the web for fourteen years. UI and frontend is where I'm strongest, but I take products through the whole stack. I've been the UI lead on a number of products, including Roadie, Pickzen and Typeshare, and I led the design system at Chessable. Outside work I design and build creative AI products end to end, from the look of the page to the agents behind it, and most of them speak with an ElevenLabs voice. Here's a selection.</p>
 
