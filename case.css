@@ -252,3 +252,7 @@ pre .cmt { color: var(--ink-soft); font-style: italic; }
 
 /* Italic names in headings (openroadie) keep their lowercase: use the serif's true italic, not the small caps face. */
 h2 em, h3 em { font-family: var(--display-italic); font-style: italic; text-transform: none; font-variant: normal; letter-spacing: 0.01em; }
+
+/* Project names in section headings link to the project */
+.work h2 a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; text-decoration-color: var(--rule); }
+.work h2 a:hover { text-decoration-color: currentColor; }
