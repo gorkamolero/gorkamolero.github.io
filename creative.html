@@ -1,10 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gorka Molero · Creative technologist</title>
-    <meta name="description" content="AI video, audio and music, unscripted games and statues you can talk to. Selected work by Gorka Molero." />
+    <meta name="description" content="AI video, audio and music, unscripted games and statues you can talk to. Selected work by Gorka Molero.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Gorka Molero · Creative technologist" />
     <meta property="og:description" content="AI video, audio and music, unscripted games and statues you can talk to." />
@@ -12,144 +15,24 @@
     <meta property="og:image" content="https://gorkamolero.github.io/assets/creative/cybertantra-reel-poster.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="data:," />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
-    <style>
-      /* The CV's sheet: ink on warm paper, one vermilion mark. */
-      :root {
-        --paper: #eee6d5;
-        --ink: #1d1a17;
-        --ink-soft: #4a433b;
-        --rule: #b9ab93;
-        --vermilion: #a7351e;
-        --display: "IM Fell English SC", "IM Fell English", Georgia, serif;
-        --display-italic: "IM Fell English", Georgia, serif;
-        --body: "EB Garamond", Garamond, Georgia, serif;
-        color-scheme: light;
-      }
-      * { box-sizing: border-box; }
-      html { background: var(--paper); }
-      body {
-        margin: 0; background: var(--paper); color: var(--ink);
-        font-family: var(--body); font-size: 1.15rem; line-height: 1.6;
-        font-variant-numeric: oldstyle-nums proportional-nums;
-        padding: 0 max(16px, 5vw) 4rem;
-      }
-      a { color: inherit; }
-      .sheet { max-width: 46rem; margin: 0 auto; }
-
-      .masthead { text-align: center; padding-top: 3.5rem; }
-      .identity { display: inline-flex; flex-direction: column; align-items: stretch; }
-      h1 {
-        font-family: var(--display); font-weight: 400; font-size: clamp(2.1rem, 7.5vw, 3.4rem);
-        letter-spacing: .06em; line-height: 1; margin: 0 -.06em 0 0; position: relative; white-space: nowrap;
-      }
-      h1::before, h1::after {
-        content: ""; position: absolute; top: .4em; width: .26em; height: .26em;
-        border-radius: 50%; background: var(--vermilion);
-      }
-      h1::before { left: -.8em; }
-      h1::after { right: -.74em; }
-      .role {
-        display: flex; justify-content: space-between; margin: .7rem 0 0;
-        font-family: var(--display); font-size: clamp(.82rem, 2.2vw, 1.08rem); color: var(--ink-soft);
-      }
-      .role .sp { width: .45em; }
-      .role [aria-hidden] { user-select: none; }
-      .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-      .contact {
-        display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1.5rem;
-        margin-top: 1.6rem; padding-top: .55rem; border-top: 1px solid var(--rule); font-size: 1rem;
-      }
-      .place { font-style: italic; color: var(--ink-soft); }
-      .links a { text-decoration: none; font-family: var(--display); letter-spacing: .05em; }
-      .links a + a::before { content: "\00b7"; color: var(--vermilion); margin: 0 .55em 0 .2em; }
-      .links a:hover { color: var(--vermilion); }
-
-      .lead { margin-top: 3rem; text-align: center; }
-      .kind { margin: 0; font-family: var(--display); font-size: clamp(1.2rem, 5.1vw, 2.2rem); letter-spacing: .07em; line-height: 1.15; }
-      .scope { margin: .5rem 0 0; font-family: var(--display-italic); font-style: italic; font-size: clamp(1.1rem, 3vw, 1.35rem); color: var(--ink-soft); }
-      .cta-row { display: flex; flex-direction: column; align-items: center; gap: .55rem; margin-top: 1.6rem; }
-      .github-cta {
-        display: inline-block; padding: .4rem 1rem; text-decoration: none;
-        font-family: var(--display); font-size: 1rem; letter-spacing: .06em;
-        color: var(--ink); border: 1px solid var(--vermilion);
-      }
-      .github-cta span { color: var(--vermilion); margin-left: .4em; }
-      .github-cta:hover { background: var(--vermilion); color: var(--paper); }
-      .github-cta:hover span { color: var(--paper); }
-      .intro { margin: 2.6rem auto 0; max-width: 38rem; text-align: center; font-size: 1.25rem; color: var(--ink-soft); }
-
-      .work { margin-top: 4rem; }
-      .work h2 {
-        font-family: var(--display); font-weight: 400; font-size: 1.55rem; letter-spacing: .08em;
-        margin: 0; padding-bottom: .45rem; border-bottom: 1px solid var(--rule);
-      }
-      .meta {
-        margin: .55rem 0 1rem; font-family: var(--display); font-size: .95rem; letter-spacing: .06em; color: var(--ink-soft);
-      }
-      .meta .dot { color: var(--vermilion); margin: 0 .35em; }
-      .work p { margin: 0 0 1rem; }
-      .video-wide, .video-tall, .short { position: relative; background: #000; border: 1px solid var(--rule); overflow: hidden; }
-      .video-wide { aspect-ratio: 16 / 9; margin-top: 1.4rem; }
-      .video-tall { aspect-ratio: 9 / 16; max-width: 22rem; margin: 1.4rem auto 0; }
-      .video-wide video, .video-wide iframe, .video-tall video, .short iframe {
-        position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #000;
-      }
-      .video-caption { margin: .6rem 0 0 !important; font-style: italic; color: var(--ink-soft); font-size: 1rem; text-align: center; }
-      .shorts-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; margin-top: .9rem; }
-      .short { aspect-ratio: 9 / 16; }
-      .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.4rem !important; }
-      .button {
-        font-family: var(--display); font-size: 1rem; letter-spacing: .06em; text-decoration: none;
-        color: var(--ink); border: 1px solid var(--ink); padding: .4rem 1rem;
-      }
-      .button.primary { color: var(--vermilion); border-color: var(--vermilion); }
-      .button:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-
-      footer {
-        margin: 5rem auto 0; max-width: 46rem; padding-top: 1rem; border-top: 1px solid var(--rule);
-        text-align: center; color: var(--ink-soft); font-size: .98rem;
-      }
-      footer .mark { display: inline-block; width: .42rem; height: .42rem; border-radius: 50%; background: var(--vermilion); margin: 0 .6rem; vertical-align: middle; }
-      footer a { text-decoration: none; }
-
-      @media (max-width: 640px) {
-        body { font-size: 1.08rem; }
-        .masthead { padding-top: 2.4rem; }
-        .contact { flex-direction: column; align-items: center; }
-        .links { width: 100%; text-align: center; line-height: 1.9; font-size: .94rem; }
-        .links a { white-space: nowrap; }
-        .links a + a::before { content: none; }
-        .links a:not(:last-child)::after { content: "\00b7"; color: var(--vermilion); margin: 0 .2em 0 .55em; }
-        .intro { font-size: 1.12rem; }
-        .github-cta { font-size: .86rem; padding: .4rem .75rem; }
-        .shorts-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .7rem; padding-bottom: .4rem; }
-        .shorts-row .short { flex: 0 0 62%; scroll-snap-align: start; }
-        .work { margin-top: 3rem; }
-      }
-      .masthead.has-photo { display: grid; grid-template-columns: 1fr auto; column-gap: 2rem; text-align: left; }
-      .masthead.has-photo .identity { grid-column: 1; grid-row: 1; justify-self: start; align-self: end; }
-      .masthead.has-photo .contact { grid-column: 1 / -1; grid-row: 2; flex-wrap: nowrap; column-gap: 1rem; font-size: .95rem; }
-      .masthead.has-photo .links a + a::before { margin: 0 .45em 0 .15em; }
-      .portrait-round { grid-column: 2; grid-row: 1; align-self: end; width: 6.4rem; height: 6.4rem; margin-bottom: .2rem; padding: 2px; border: 1px solid var(--rule); border-radius: 50%; background: #f1e9dc; object-fit: cover; }
-      @media (max-width: 640px) { .portrait-round { width: 3.8rem; height: 3.8rem; } .masthead.has-photo { column-gap: 1.1rem; } .masthead.has-photo h1 { font-size: 1.8rem; } .masthead.has-photo .identity { margin-left: .9rem; } .masthead.has-photo .contact { align-items: flex-start; } .masthead.has-photo .links { text-align: left; } }
-    </style>
-  </head>
-  <body>
-    <div class="sheet">
-      <header class="masthead has-photo">
-        <div class="identity">
-          <h1>Gorka Molero</h1>
-          <p class="role"><span class="sr-only">Creative technologist</span><span aria-hidden="true">C</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span aria-hidden="true">A</span><span aria-hidden="true">T</span><span aria-hidden="true">I</span><span aria-hidden="true">V</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">T</span><span aria-hidden="true">E</span><span aria-hidden="true">C</span><span aria-hidden="true">H</span><span aria-hidden="true">N</span><span aria-hidden="true">O</span><span aria-hidden="true">L</span><span aria-hidden="true">O</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">S</span><span aria-hidden="true">T</span></p>
-        </div>
-        <img class="portrait-round" src="./assets/gorka-portrait-round.jpg" width="600" height="600" alt="Gorka Molero" />
-        <div class="contact">
-          <span class="place">Remote, location-independent</span>
-          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html" target="_blank" rel="noopener">Engineering</a> <a href="./agents.html">Agents</a> <a href="./pre-ai.html">Before AI</a> <a href="./music.html">Music</a></span>
-        </div>
-      </header>
+  <link rel="stylesheet" href="/_astro/Masthead.COjZotvI.css">
+<link rel="stylesheet" href="/_astro/creative.CwzuILvb.css"></head>
+  <body data-page="creative">
+    
+  
+  <div class="sheet">
+    <header class="masthead has-photo" data-astro-cid-v3lsk6py>
+  <a class="identity" href="/" aria-label="Gorka Molero, home" data-astro-cid-v3lsk6py>
+    <h1 data-astro-cid-v3lsk6py>Gorka Molero</h1>
+    <p class="role" data-astro-cid-v3lsk6py><span class="sr-only" data-astro-cid-v3lsk6py>Creative technologist</span><span aria-hidden="true" data-astro-cid-v3lsk6py>C</span><span aria-hidden="true" data-astro-cid-v3lsk6py>R</span><span aria-hidden="true" data-astro-cid-v3lsk6py>E</span><span aria-hidden="true" data-astro-cid-v3lsk6py>A</span><span aria-hidden="true" data-astro-cid-v3lsk6py>T</span><span aria-hidden="true" data-astro-cid-v3lsk6py>I</span><span aria-hidden="true" data-astro-cid-v3lsk6py>V</span><span aria-hidden="true" data-astro-cid-v3lsk6py>E</span><span class="sp" aria-hidden="true" data-astro-cid-v3lsk6py></span><span aria-hidden="true" data-astro-cid-v3lsk6py>T</span><span aria-hidden="true" data-astro-cid-v3lsk6py>E</span><span aria-hidden="true" data-astro-cid-v3lsk6py>C</span><span aria-hidden="true" data-astro-cid-v3lsk6py>H</span><span aria-hidden="true" data-astro-cid-v3lsk6py>N</span><span aria-hidden="true" data-astro-cid-v3lsk6py>O</span><span aria-hidden="true" data-astro-cid-v3lsk6py>L</span><span aria-hidden="true" data-astro-cid-v3lsk6py>O</span><span aria-hidden="true" data-astro-cid-v3lsk6py>G</span><span aria-hidden="true" data-astro-cid-v3lsk6py>I</span><span aria-hidden="true" data-astro-cid-v3lsk6py>S</span><span aria-hidden="true" data-astro-cid-v3lsk6py>T</span></p>
+  </a>
+  <a class="portrait-link" href="/" tabindex="-1" aria-hidden="true" data-astro-cid-v3lsk6py><img class="portrait-round" src="./assets/gorka-portrait-round.jpg" width="600" height="600" alt="" data-astro-cid-v3lsk6py></a>
+  <div class="contact" data-astro-cid-v3lsk6py>
+    <span class="place" data-astro-cid-v3lsk6py>Remote, location-independent</span>
+    <span class="links" data-astro-cid-v3lsk6py><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com" data-astro-cid-v3lsk6py>Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener" data-astro-cid-v3lsk6py>LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener" data-astro-cid-v3lsk6py>GitHub</a> <a href="./index.html" data-astro-cid-v3lsk6py>Engineering</a> <a href="./agents.html" data-astro-cid-v3lsk6py>Agents</a> <a href="./creative.html" aria-current="page" data-astro-cid-v3lsk6py>Creative work</a> <a href="./pre-ai.html" data-astro-cid-v3lsk6py>Before AI</a> <a href="./music.html" data-astro-cid-v3lsk6py>Music</a></span>
+  </div>
+</header>
+    
 
       <section class="lead">
         <p class="kind">Creative technology work</p>
@@ -222,10 +105,12 @@
 
 
       </main>
-    </div>
-    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
+  </div>
+  
+
+    <footer data-astro-cid-jo6i4kqk>Gorka Molero<span class="mark" data-astro-cid-jo6i4kqk></span><a href="mailto:gorka.molero@gmail.com" data-astro-cid-jo6i4kqk>gorka.molero@gmail.com</a></footer>
     <elevenlabs-convai agent-id="agent_7401m49y0k32e83v9197gqssyz0r"></elevenlabs-convai>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-      <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>
