@@ -234,12 +234,18 @@ pre .cmt { color: var(--ink-soft); font-style: italic; }
   .archive-row span:nth-child(4) { margin-top: .25rem; color: var(--ink); }
 }
 
-/* Galleries: a two-column grid of framed screenshots, one column on phones */
-.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; margin: 1.6rem 0 0; }
-.gallery figure { margin: 0; }
-.gallery .shot { margin: 0; aspect-ratio: 16 / 11; background: #f8f8f8; display: flex; align-items: center; justify-content: center; }
-.gallery .shot.dark { background: #141414; }
-.gallery .shot img { width: 100%; height: 100%; object-fit: contain; }
-.gallery figcaption { margin: .45rem 0 0; font-style: italic; color: var(--ink-soft); font-size: .95rem; text-align: center; }
-.gallery + p, .plate + .gallery { margin-top: 1.4rem; }
-@media (max-width: 640px) { .gallery { grid-template-columns: 1fr; } }
+
+/* Carousel: one framed screenshot at a time, swipe or arrows */
+.carousel { margin: 1.6rem 0 0; }
+.carousel-track { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel .slide { flex: 0 0 100%; margin: 0; scroll-snap-align: start; }
+.carousel .shot { margin: 0; height: 21rem; background: #f8f8f8; display: flex; align-items: center; justify-content: center; }
+.carousel .shot.dark { background: #141414; }
+.carousel .shot img { max-width: 100%; max-height: 100%; width: auto; height: auto; }
+.carousel figcaption { margin: .6rem 0 0; font-style: italic; color: var(--ink-soft); font-size: 1rem; text-align: center; }
+.carousel-nav { display: flex; justify-content: center; align-items: center; gap: 1.1rem; margin-top: .5rem; }
+.carousel-nav button { font: inherit; font-size: 1.1rem; line-height: 1; background: none; border: 1px solid var(--rule); color: var(--ink); padding: .3rem .8rem; cursor: pointer; }
+.carousel-nav button:disabled { opacity: .35; cursor: default; }
+.carousel-count { font-variant-numeric: tabular-nums; color: var(--ink-soft); min-width: 4rem; text-align: center; }
+@media (max-width: 640px) { .carousel .shot { height: 14rem; } }
