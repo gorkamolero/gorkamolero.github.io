@@ -249,3 +249,6 @@ pre .cmt { color: var(--ink-soft); font-style: italic; }
 .carousel-nav button:disabled { opacity: .35; cursor: default; }
 .carousel-count { font-variant-numeric: tabular-nums; color: var(--ink-soft); min-width: 4rem; text-align: center; }
 @media (max-width: 640px) { .carousel .shot { height: 14rem; } }
+
+/* Italic names in headings (openroadie) keep their lowercase: use the serif's true italic, not the small caps face. */
+h2 em, h3 em { font-family: var(--display-italic); font-style: italic; text-transform: none; font-variant: normal; letter-spacing: 0.01em; }
