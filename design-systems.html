@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Design systems - Gorka Molero</title>
-    <meta name="description" content="Design systems and component libraries Gorka Molero has built: Chessable Edge, openroadie's design system and earlier work." />
+    <meta name="description" content="Design systems and component libraries Gorka Molero has built: Chessable Edge, openroadie's design system, Koda's design system and earlier work." />
     <link rel="icon" href="data:," />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,6 +66,32 @@
           <div class="carousel-nav"><button type="button" class="carousel-prev" aria-label="Previous screenshot">&larr;</button><span class="carousel-count">1 / 10</span><button type="button" class="carousel-next" aria-label="Next screenshot">&rarr;</button></div>
         </div>
         <p class="actions"><a class="button" href="https://github.com/RoadieHQ/openroadie/tree/main/packages/ui" target="_blank" rel="noopener">The design system on GitHub</a></p>
+      </section>
+
+      <section class="work" id="koda">
+        <h2>Koda</h2>
+        <p class="meta">Own project &middot; 2026 <span class="dot">&middot;</span> React, Radix, Tailwind, Storybook</p>
+        <p>Koda's interface runs on <code>@koda/ui</code>, the design system I built for it. It has forty components documented in Storybook, from buttons, dialogs and file trees to the parts of an agent session: tool calls, approval and question cards, the composer and the badge that shows who shared a session. Its tokens cover color for four themes, type, spacing, radius, motion and z-index, and a lint rule rejects hardcoded colors and sizes anywhere in the app. Every story also runs as a test in all four themes, with accessibility checks.</p>
+        <figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/koda-ui-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/koda-ui.mp4" aria-label="A tour of @koda/ui in Storybook: the introduction, the color tokens, the animated KODA logo, an approval card in all four themes, a tool call, a question card, and the host and collaborator app screens."></video></div>
+          <figcaption>A tour of the design system in Storybook, from the color tokens and brand pieces to the agent patterns, the four themes and the two app screens.</figcaption>
+        </figure>
+        <div class="carousel" aria-label="Components from @koda/ui">
+          <div class="carousel-track">
+            <figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/collaborator-workspace.webp" loading="lazy" alt="A collaborator's view of a shared Koda workspace, built from @koda/ui." /></div><figcaption>A collaborator's view of a shared workspace</figcaption></figure>
+            <figure class="slide"><div class="shot"><img src="./assets/koda-ui/host-workspace-light.webp" loading="lazy" alt="The host's Koda workspace in the Light theme." /></div><figcaption>The host's workspace, in the Light theme</figcaption></figure>
+            <figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/approval-card.webp" loading="lazy" alt="Approval card component from @koda/ui." /></div><figcaption>Approval card, for a collaborator with control</figcaption></figure>
+            <figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/question-card.webp" loading="lazy" alt="Question card component from @koda/ui." /></div><figcaption>Question card, in the Dim theme</figcaption></figure>
+            <figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/tool-block.webp" loading="lazy" alt="Tool call component from @koda/ui." /></div><figcaption>Tool call, with its result</figcaption></figure>
+            <figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/composer.webp" loading="lazy" alt="Composer component from @koda/ui." /></div><figcaption>Composer, in someone else's shared session</figcaption></figure>
+            <figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/terminal-frame.webp" loading="lazy" alt="Terminal frame component from @koda/ui." /></div><figcaption>Terminal, as a read-only mirror</figcaption></figure>
+            <figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/colors.webp" loading="lazy" alt="Color tokens from @koda/ui." /></div><figcaption>Color tokens</figcaption></figure>
+            <figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/koda-logo.webp" loading="lazy" alt="The KODA logo from @koda/ui." /></div><figcaption>The KODA mark</figcaption></figure>
+          </div>
+          <div class="carousel-nav"><button type="button" class="carousel-prev" aria-label="Previous screenshot">&larr;</button><span class="carousel-count">1 / 9</span><button type="button" class="carousel-next" aria-label="Next screenshot">&rarr;</button></div>
+        </div>
+        <p class="actions"><a class="button" href="https://koda-storybook.pages.dev" target="_blank" rel="noopener">The Storybook</a>
+          <a class="button" href="https://github.com/gorkamolero/koda/tree/main/packages/ui" target="_blank" rel="noopener">The design system on GitHub</a></p>
       </section>
 
       <section class="work" id="earlier">
