@@ -58,6 +58,8 @@ h1::after { right: -.74em; }
 .intro { margin: 2.6rem auto 0; max-width: 38rem; text-align: center; font-size: 1.25rem; color: var(--ink-soft); }
 
 .work { margin-top: 4rem; }
+/* Design systems: each system is a long section with media, so give them more room. */
+.systems .work + .work { margin-top: 7rem; }
 .work h2 {
   font-family: var(--display); font-weight: 400; font-size: 1.55rem; letter-spacing: .08em;
   margin: 0; padding-bottom: .45rem; border-bottom: 1px solid var(--rule);
@@ -93,6 +95,7 @@ footer a { text-decoration: none; }
   .links a:not(:last-child)::after { content: "\00b7"; color: var(--vermilion); margin: 0 .2em 0 .55em; }
   .intro { font-size: 1.12rem; }
   .work { margin-top: 3rem; }
+  .systems .work + .work { margin-top: 5rem; }
 }
 
 /* Shot frame, as on the engineering page */
