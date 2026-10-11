@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Design systems - Gorka Molero</title>
+    <meta name="description" content="Design systems and component libraries Gorka Molero has built: Chessable Edge, the token themes in The Pulse, Koda, Roadie and earlier work." />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <link rel="stylesheet" href="./case.css" />
+  </head>
+  <body>
+    <div class="sheet">
+      <header class="masthead">
+        <div class="identity">
+          <h1>Gorka Molero</h1>
+          <p class="role"><span class="sr-only">Software engineer</span><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">F</span><span aria-hidden="true">T</span><span aria-hidden="true">W</span><span aria-hidden="true">A</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
+        </div>
+        <div class="contact">
+          <span class="place">Remote, location-independent</span>
+          <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://www.linkedin.com/in/gorkamolero" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <a href="./index.html">Engineering</a> <a href="./agents.html">Agents</a> <a href="./creative.html">Creative work</a> <a href="./pre-ai.html">Before AI</a> <a href="./music.html">Music</a></span>
+        </div>
+      </header>
+
+      <section class="lead">
+        <p class="meta eyebrow">2012&ndash;2026 &middot; Components, tokens and themes</p>
+        <h2 class="case-title">Design systems</h2>
+        <p class="intro">Shared components and tokens I've built, for product teams and for my own products.</p>
+      </section>
+
+      <main>
+      <section class="work" id="chessable-edge">
+        <h2>Chessable Edge</h2>
+        <p class="meta">Frontend engineer, Chessable &middot; 2020&ndash;2022 <span class="dot">&middot;</span> React, Clutch, npm, Storybook</p>
+        <p>Chessable Edge was Chessable's design system and UI component library. We built it in React with Clutch, a visual builder for React, and published it to npm as <code>@chessable/edge</code>, with its core split into a package of its own. Three teams were using it in production.</p>
+        <p>The video is the guide for developers I made for the teams adopting it. It covers what Edge is, how Clutch works, how to get started, and where the system was going next: a shared process, a public roadmap and documentation generated with Storybook.</p>
+        <figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/chessable-edge-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/chessable-edge.mp4" aria-label="Chessable Edge, a guide for developers: what the design system is, how it is built with Clutch, and where it stood."></video></div>
+          <figcaption>Chessable Edge, the guide for developers I made for the teams adopting it.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work" id="the-pulse">
+        <h2>The Pulse</h2>
+        <p class="meta">Own product &middot; 2025&ndash;now <span class="dot">&middot;</span> Shadcn, Radix, Tailwind, Framer Motion</p>
+        <p>The Pulse runs on 33 components built on Shadcn and Radix, with its colors and type set as tokens. Each story world has its own accent color: sea green for Shadow Over Innsmouth, deep purple for Hollow Choir, Mars rust for Red Dust. The narrated text has its own type tokens for font, size, line height and letter spacing. A few components are its own, like the fog layer and the orb.</p>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/the-pulse-worlds.webp" width="1280" height="900" loading="lazy" alt="The Pulse homepage, with its story worlds." /></div>
+          <figcaption>The Pulse's story worlds, each with its own accent color.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work" id="koda">
+        <h2>Koda</h2>
+        <p class="meta">Own product &middot; 2026 <span class="dot">&middot;</span> Tauri, React, Shadcn, Radix</p>
+        <p>Koda shares the same base, 25 components on Shadcn and Radix, in a desktop app built with Tauri. Its main screen shows a coding agent's run as it happens, with its messages, tool calls and diffs, and a teammate can follow it live from their own machine.</p>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/koda-workspace-view.png" width="2800" height="1800" loading="lazy" alt="Koda's workspace view." /></div>
+          <figcaption>Koda's workspace view.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work" id="roadie">
+        <h2>Roadie</h2>
+        <p class="meta">Senior software engineer &middot; 2024&ndash;2026 <span class="dot">&middot;</span> React, Backstage</p>
+        <p>I was the de facto UI and product-design lead at Roadie, and I modernized the interface of its Backstage-based developer platform end to end.</p>
+      </section>
+
+      <section class="work" id="earlier">
+        <h2>Earlier</h2>
+        <ul class="facts">
+          <li><strong>BBVA Cells</strong><span>UI engineer on Cells, a framework for BBVA's mobile apps built on Polymer and web components, shown at Google I/O 2016. 2015&ndash;2016.</span></li>
+          <li><strong>ING Direct</strong><span>UI engineer on the new mobile app, built on Polymer. 2016.</span></li>
+          <li><strong>William Hill</strong><span>Prototyped and built parts of the sportsbook redesign with the in-house designers. 2012&ndash;2014.</span></li>
+        </ul>
+        <p class="actions"><a class="button primary" href="./index.html">Engineering portfolio</a>
+          <a class="button" href="./pre-ai.html">Before AI</a></p>
+      </section>
+      </main>
+    </div>
+    <footer>Gorka Molero<span class="mark"></span><a href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a></footer>
+      <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
