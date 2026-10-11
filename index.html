@@ -44,6 +44,28 @@
       <p class="intro">I'm Gorka Molero. I've built for the web for fourteen years. UI and frontend is where I'm strongest, but I take products through the whole stack. I've been the UI lead on a number of products, including Roadie, Pickzen and Typeshare, and I led the design system at Chessable. Outside work I design and build creative AI products end to end, from the look of the page to the agents behind it, and most of them speak with an ElevenLabs voice. Here's a selection.</p>
 
       <main>
+      <section class="work" id="openroadie">
+        <h2><em>openroadie</em></h2>
+        <p class="meta">Roadie &middot; 2026 <span class="dot">&middot;</span> TypeScript, React, React Flow, Postgres, MCP</p>
+        <p>The open-source context layer that came out of Roadie. It builds a graph of an organisation from the tools it already uses, around forty of them from GitHub and Jira to PagerDuty and Slack, and serves it to AI agents over MCP. Agents can only act through deterministic actions an admin has defined, with every call scoped to the caller.</p>
+        <p>I wrote much of its foundation and designed and built its interfaces, from the data-source pipelines and the relationship maps in React Flow to agent-led onboarding. Its design system, <code>@roadiehq/ui</code>, which I co-led, has about sixty components in Storybook, including the AI elements for agent conversations.</p>
+        <figure class="shot"><video controls playsinline preload="none" poster="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/openroadie-ui-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/openroadie-ui.mp4" aria-label="A tour of the openroadie design system in Storybook, from the basic components to the AI elements, switching from light to dark."></video></figure>
+        <p class="video-caption">A 45-second tour of the design system in Storybook, from the basic components to the AI elements.</p>
+        <p class="actions"><a class="button primary" href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener">Source</a>
+          <a class="button" href="./design-systems.html#openroadie">Design system</a></p>
+      </section>
+
+      <section class="work" id="koda">
+        <h2>Koda</h2>
+        <p class="meta">Desktop app &middot; 2026 <span class="dot">&middot;</span> Tauri, React, Node, Liveblocks</p>
+        <p>A desktop app for working collaboratively with coding agents. A Codex or Claude session runs on your machine, and a teammate opens your workspace from their own Koda. They see the same transcript and tool calls live, and with control they can message the agent too. Their message lands in your session, signed with their name.</p>
+        <p>Every flow is proven against the real services, from Codex and Claude sessions and approvals to restarts and two-instance collaboration, with Playwright runs from a clean clone.</p>
+        <figure class="shot"><video controls playsinline preload="none" poster="./assets/koda/koda-poster.jpg" src="./assets/koda/koda-collaboration.mp4" aria-label="Koda on two Macs: Gorka asks Claude for a change, both screens update live, and Alex's follow-up lands in the same session."></video></figure>
+        <p class="video-caption">Recorded live: Claude on one Mac, a collaborator on another.</p>
+        <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/koda" target="_blank" rel="noopener">Source</a>
+          <a class="button" href="./koda.html">Case study</a></p>
+      </section>
+
       <section class="work" id="the-pulse">
         <h2>The Pulse</h2>
         <p class="meta">Live &middot; 2025&ndash;now <span class="dot">&middot;</span> Next.js, Shadcn, Framer Motion, Liveblocks</p>
@@ -63,28 +85,6 @@
         <figure class="shot"><video controls playsinline preload="none" poster="./assets/anima-cutscene-poster.webp" src="./assets/anima-cutscene.webm" aria-label="A cutscene from Shadow Over Innsmouth in Anima: two characters talking in the hotel lobby at dusk."></video></figure>
         <p class="actions"><a class="button" href="./anima.html">Case study</a>
           <a class="button" href="https://github.com/gorkamolero/anima" target="_blank" rel="noopener">Source</a></p>
-      </section>
-
-      <section class="work" id="koda">
-        <h2>Koda</h2>
-        <p class="meta">Desktop app &middot; 2026 <span class="dot">&middot;</span> Tauri, React, Node, Liveblocks</p>
-        <p>A desktop app for working collaboratively with coding agents. A Codex or Claude session runs on your machine, and a teammate opens your workspace from their own Koda. They see the same transcript and tool calls live, and with control they can message the agent too. Their message lands in your session, signed with their name.</p>
-        <p>Every flow is proven against the real services, from Codex and Claude sessions and approvals to restarts and two-instance collaboration, with Playwright runs from a clean clone.</p>
-        <figure class="shot"><video controls playsinline preload="none" poster="./assets/koda/koda-poster.jpg" src="./assets/koda/koda-collaboration.mp4" aria-label="Koda on two Macs: Gorka asks Claude for a change, both screens update live, and Alex's follow-up lands in the same session."></video></figure>
-        <p class="video-caption">Recorded live: Claude on one Mac, a collaborator on another.</p>
-        <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/koda" target="_blank" rel="noopener">Source</a>
-          <a class="button" href="./koda.html">Case study</a></p>
-      </section>
-
-      <section class="work" id="openroadie">
-        <h2><em>openroadie</em></h2>
-        <p class="meta">Roadie &middot; 2026 <span class="dot">&middot;</span> TypeScript, React, React Flow, Postgres, MCP</p>
-        <p>The open-source context layer that came out of Roadie. It builds a graph of an organisation from the tools it already uses, around forty of them from GitHub and Jira to PagerDuty and Slack, and serves it to AI agents over MCP. Agents can only act through deterministic actions an admin has defined, with every call scoped to the caller.</p>
-        <p>I wrote much of its foundation and designed and built its interfaces, from the data-source pipelines and the relationship maps in React Flow to agent-led onboarding. Its design system, <code>@roadiehq/ui</code>, which I co-led, has about sixty components in Storybook, including the AI elements for agent conversations.</p>
-        <figure class="shot"><video controls playsinline preload="none" poster="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/openroadie-ui-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/openroadie-ui.mp4" aria-label="A tour of the openroadie design system in Storybook, from the basic components to the AI elements, switching from light to dark."></video></figure>
-        <p class="video-caption">A 45-second tour of the design system in Storybook, from the basic components to the AI elements.</p>
-        <p class="actions"><a class="button primary" href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener">Source</a>
-          <a class="button" href="./design-systems.html#openroadie">Design system</a></p>
       </section>
 
       <section class="work" id="creative">
