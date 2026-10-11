@@ -233,3 +233,13 @@ pre .cmt { color: var(--ink-soft); font-style: italic; }
   .archive-row span:nth-child(3) { font-style: italic; }
   .archive-row span:nth-child(4) { margin-top: .25rem; color: var(--ink); }
 }
+
+/* Galleries: a two-column grid of framed screenshots, one column on phones */
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; margin: 1.6rem 0 0; }
+.gallery figure { margin: 0; }
+.gallery .shot { margin: 0; aspect-ratio: 16 / 11; background: #f8f8f8; display: flex; align-items: center; justify-content: center; }
+.gallery .shot.dark { background: #141414; }
+.gallery .shot img { width: 100%; height: 100%; object-fit: contain; }
+.gallery figcaption { margin: .45rem 0 0; font-style: italic; color: var(--ink-soft); font-size: .95rem; text-align: center; }
+.gallery + p, .plate + .gallery { margin-top: 1.4rem; }
+@media (max-width: 640px) { .gallery { grid-template-columns: 1fr; } }
