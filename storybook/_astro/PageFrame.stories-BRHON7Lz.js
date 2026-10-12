@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{n as t,r as n}from"./iframe-C887upMK.js";var r,i,a;function o(){return(o=e((()=>{n(),r={title:`Components/PageFrame`,component:t},i={args:{slots:{default:`<p>Gorka Molero</p>`}}},a=[`Default`]})))()}o();export{i as Default,a as __namedExportsOrder,r as default};

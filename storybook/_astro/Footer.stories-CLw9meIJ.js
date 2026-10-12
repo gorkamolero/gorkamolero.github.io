@@ -1,1 +1,0 @@
-import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{O as t,k as n}from"./iframe-Ciuwu5JX.js";var r,i,a,o;function s(){return(s=e((()=>{n(),r={title:`Components/Footer`,component:t},i={},a={parameters:{phone:!0},globals:{viewport:{value:`phone`,isRotated:!1}}},o=[`Desktop`,`Phone`]})))()}s();export{i as Desktop,a as Phone,o as __namedExportsOrder,r as default};

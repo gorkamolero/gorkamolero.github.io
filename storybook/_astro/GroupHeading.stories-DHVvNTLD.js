@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{T as t,w as n}from"./iframe-C887upMK.js";var r,i,a;function o(){return(o=e((()=>{t(),r={title:`Components/GroupHeading`,component:n,parameters:{page:`index`}},i={args:{class:`group`,slots:{default:`Agents`}}},a=[`Default`]})))()}o();export{i as Default,a as __namedExportsOrder,r as default};

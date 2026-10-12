@@ -1,0 +1,83 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import Figure from './Figure.astro';
+// A daily series drawn at build time: a line (or filled area) with an optional strip of bars underneath.
+// Shapes are SVG stretched to the box; every label is HTML, so text stays readable at any width.
+type Point = { date: string; value: number; bar?: number };
+type Props = HTMLAttributes<'figure'> & {
+  points: Point[];
+  yTicks: number[];
+  xTicks: string[];
+  label: string;
+  caption?: string;
+  area?: boolean;
+  barLabel?: string;
+  marker?: { date: string; label: string; place?: 'top' | 'bottom' };
+};
+const { points, yTicks, xTicks, label, caption, area = false, barLabel, marker, class: className = 'plate', ...attributes } = Astro.props;
+const n = points.length;
+const index = new Map(points.map((p, i) => [p.date, i]));
+const x = (i: number) => ((i + 0.5) / n) * 100;
+const xOf = (date: string) => x(index.get(date) ?? 0);
+const yMax = Math.max(...yTicks, ...points.map(p => p.value)) * 1.06;
+const y = (v: number) => 100 - (v / yMax) * 100;
+const line = points.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(3)} ${y(p.value).toFixed(3)}`).join(' ');
+const fill = `${line} L${x(n - 1).toFixed(3)} 100 L${x(0).toFixed(3)} 100 Z`;
+const bars = points.some(p => p.bar !== undefined);
+const barMax = Math.max(...points.map(p => p.bar ?? 0));
+const barWidth = (100 / n) * 0.62;
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const day = (date: string) => { const [, m, d] = date.split('-').map(Number); return `${d} ${months[m - 1]}`; };
+const edge = (pct: number) => (pct < 8 ? 'start' : pct > 92 ? 'end' : 'mid');
+---
+<Figure class={`${className} trend`} caption={caption} {...attributes}>
+  <div class="trend-chart" role="img" aria-label={label}>
+    <div class="trend-plot">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        {yTicks.map(t => <line class="trend-grid" x1="0" x2="100" y1={y(t)} y2={y(t)} />)}
+        {marker && <line class="trend-mark" x1={xOf(marker.date)} x2={xOf(marker.date)} y1="0" y2="100" />}
+        {area && <path class="trend-area" d={fill} />}
+        <path class="trend-line" d={line} />
+      </svg>
+      {yTicks.map(t => <span class="trend-y" style={`top:${y(t)}%`}>{t.toLocaleString('en-US')}</span>)}
+      {marker && <span class={`trend-note ${marker.place ?? 'top'}`} style={`left:${xOf(marker.date)}%`}>{marker.label}</span>}
+    </div>
+    {bars && (
+      <div class="trend-bars">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          {points.map((p, i) => p.bar ? <rect class="trend-bar" x={x(i) - barWidth / 2} width={barWidth} y={100 - (p.bar / barMax) * 100} height={(p.bar / barMax) * 100} /> : null)}
+        </svg>
+        {barLabel && <span class="trend-bars-label">{barLabel}</span>}
+      </div>
+    )}
+    <div class="trend-x">{xTicks.map(d => <span class={edge(xOf(d))} style={`left:${xOf(d)}%`}>{day(d)}</span>)}</div>
+  </div>
+</Figure>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+.trend-chart { margin: 0; padding: var(--dimension-0-6-rem) 0 0; font-family: var(--body); color: var(--ink-soft); font-size: var(--dimension-0-82-rem); line-height: 1; }
+.trend-plot { position: relative; height: var(--dimension-14-rem); }
+.trend-chart svg { display: block; width: calc(var(--relative-100-percent) * 1%); height: calc(var(--relative-100-percent) * 1%); overflow: visible; }
+.trend-grid { stroke: var(--rule); stroke-width: var(--dimension-1-px); vector-effect: non-scaling-stroke; }
+.trend-mark { stroke: var(--ink-soft); stroke-width: var(--dimension-1-px); stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
+.trend-line { fill: none; stroke: var(--vermilion); stroke-width: var(--dimension-2-px); stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.trend-area { fill: color-mix(in srgb, var(--vermilion) 16%, transparent); }
+.trend-y { position: absolute; left: 0; transform: translateY(calc(var(--relative-negative-1-2-em) * 1em)); background: var(--color-paper); padding-right: var(--dimension-0-3-rem); font-variant-numeric: tabular-nums; }
+.trend-note { position: absolute; padding-left: var(--dimension-0-4-rem); white-space: nowrap; font-style: italic; color: var(--ink); }
+.trend-note.top { top: 0; }
+.trend-note.bottom { bottom: var(--dimension-0-3-rem); }
+.trend-bars { position: relative; height: var(--dimension-3-rem); margin-top: var(--dimension-0-6-rem); border-bottom: var(--dimension-1-px) solid var(--rule); }
+.trend-bar { fill: var(--ink-soft); }
+.trend-bars-label { position: absolute; top: 0; right: 0; font-style: italic; background: var(--color-paper); padding-left: var(--dimension-0-3-rem); }
+.trend-x { position: relative; height: var(--dimension-1-4-rem); margin-top: var(--dimension-0-4-rem); }
+.trend-x span { position: absolute; top: 0; white-space: nowrap; transform: translateX(calc(var(--relative-50-percent) * -1%)); }
+.trend-x span.start { transform: none; }
+.trend-x span.end { transform: translateX(calc(var(--relative-100-percent) * -1%)); }
+@media (max-width: 640px) {
+  .trend-plot { height: var(--dimension-11-rem); }
+  .trend-chart { font-size: var(--dimension-0-78-rem); }
+}
+}
+</style>

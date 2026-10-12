@@ -1,4 +1,4 @@
-import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{A as t,a as n,i as r,j as i}from"./iframe-Ciuwu5JX.js";var a,o,s,c;function l(){return(l=e((()=>{n(),i(),a={title:`Components/WorkSection`,component:r,parameters:{page:`index`}},o={args:{class:`work`,slots:{default:`
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{A as t,a as n,i as r,j as i}from"./iframe-C887upMK.js";var a,o,s,c;function l(){return(l=e((()=>{n(),i(),a={title:`Components/WorkSection`,component:r,parameters:{page:`index`}},o={args:{class:`work`,slots:{default:`
         <h2><em>openroadie</em></h2>
         <p class="meta">Roadie · 2026 <span class="dot">·</span> TypeScript, React, Vite, Tailwind, React Flow, TanStack Query, Node, Express, Postgres, Redis, Vercel AI SDK, MCP, Storybook, Vitest, Playwright, Docker</p>
         <p>The open-source context layer that came out of Roadie. It builds a graph of an organisation from the tools it already uses, around forty of them from GitHub and Jira to PagerDuty and Slack, and serves it to AI agents over MCP. Agents can only act through deterministic actions an admin has defined, with every call scoped to the caller.</p>

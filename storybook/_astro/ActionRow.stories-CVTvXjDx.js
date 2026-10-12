@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{G as t,W as n}from"./iframe-C887upMK.js";var r,i,a;function o(){return(o=e((()=>{t(),r={title:`Components/ActionRow`,component:n,parameters:{page:`index`}},i={args:{class:`actions`,slots:{default:`<a class="button primary" href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener">Source</a>
+          <a class="button" href="./design-systems.html#openroadie">Design system</a>`}}},a=[`Default`]})))()}o();export{i as Default,a as __namedExportsOrder,r as default};
