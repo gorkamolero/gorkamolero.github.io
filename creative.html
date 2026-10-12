@@ -15,7 +15,7 @@
     <meta property="og:image" content="https://gorkamolero.github.io/assets/creative/cybertantra-reel-poster.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="data:," />
-  <link rel="stylesheet" href="/_astro/Masthead.GPv18HdU.css">
+  <link rel="stylesheet" href="/_astro/Masthead.CW933XwU.css">
 <link rel="stylesheet" href="/_astro/creative.CwzuILvb.css"></head>
   <body data-page="creative">
     
@@ -36,7 +36,7 @@
   </div>
 </header>
 
-<script type="module">for(let e of document.querySelectorAll(`[data-portfolios]`)){let t=e.querySelector(`.trigger`),n=n=>{e.classList.toggle(`open`,n),t.setAttribute(`aria-expanded`,String(n))};t.addEventListener(`click`,()=>n(!e.classList.contains(`open`))),matchMedia(`(hover: hover) and (min-width: 641px)`).matches&&(e.addEventListener(`mouseenter`,()=>t.setAttribute(`aria-expanded`,`true`)),e.addEventListener(`mouseleave`,()=>{e.classList.contains(`open`)||t.setAttribute(`aria-expanded`,`false`)})),document.addEventListener(`click`,t=>{e.contains(t.target)||n(!1)}),e.addEventListener(`keydown`,e=>{e.key===`Escape`&&(n(!1),t.focus())})}</script>
+<script type="module">for(let e of document.querySelectorAll(`[data-portfolios]`)){let t=e.querySelector(`.trigger`),n=matchMedia(`(hover: hover) and (min-width: 641px)`),r,i=()=>t.setAttribute(`aria-expanded`,String(e.classList.contains(`open`)||e.classList.contains(`hover`))),a=t=>{e.classList.toggle(`open`,t),i()};t.addEventListener(`click`,()=>a(!e.classList.contains(`open`))),e.addEventListener(`pointerenter`,t=>{t.pointerType===`mouse`&&n.matches&&(clearTimeout(r),e.classList.add(`hover`),i())}),e.addEventListener(`pointerleave`,t=>{t.pointerType===`mouse`&&(clearTimeout(r),r=window.setTimeout(()=>{e.classList.remove(`hover`),i()},450))}),document.addEventListener(`click`,t=>{e.contains(t.target)||(e.classList.remove(`hover`),a(!1))}),e.addEventListener(`keydown`,n=>{n.key===`Escape`&&(e.classList.remove(`hover`),a(!1),t.focus())})}</script>
     
 
       <section class="lead">

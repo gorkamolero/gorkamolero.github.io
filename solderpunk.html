@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
     <link rel="icon" href="data:," />
-  <link rel="stylesheet" href="/_astro/Masthead.GPv18HdU.css">
+  <link rel="stylesheet" href="/_astro/Masthead.CW933XwU.css">
 <link rel="stylesheet" href="/_astro/case.C1gQd5Pp.css"></head>
   <body data-page="solderpunk">
     
@@ -30,7 +30,7 @@
   </div>
 </header>
 
-<script type="module">for(let e of document.querySelectorAll(`[data-portfolios]`)){let t=e.querySelector(`.trigger`),n=n=>{e.classList.toggle(`open`,n),t.setAttribute(`aria-expanded`,String(n))};t.addEventListener(`click`,()=>n(!e.classList.contains(`open`))),matchMedia(`(hover: hover) and (min-width: 641px)`).matches&&(e.addEventListener(`mouseenter`,()=>t.setAttribute(`aria-expanded`,`true`)),e.addEventListener(`mouseleave`,()=>{e.classList.contains(`open`)||t.setAttribute(`aria-expanded`,`false`)})),document.addEventListener(`click`,t=>{e.contains(t.target)||n(!1)}),e.addEventListener(`keydown`,e=>{e.key===`Escape`&&(n(!1),t.focus())})}</script>
+<script type="module">for(let e of document.querySelectorAll(`[data-portfolios]`)){let t=e.querySelector(`.trigger`),n=matchMedia(`(hover: hover) and (min-width: 641px)`),r,i=()=>t.setAttribute(`aria-expanded`,String(e.classList.contains(`open`)||e.classList.contains(`hover`))),a=t=>{e.classList.toggle(`open`,t),i()};t.addEventListener(`click`,()=>a(!e.classList.contains(`open`))),e.addEventListener(`pointerenter`,t=>{t.pointerType===`mouse`&&n.matches&&(clearTimeout(r),e.classList.add(`hover`),i())}),e.addEventListener(`pointerleave`,t=>{t.pointerType===`mouse`&&(clearTimeout(r),r=window.setTimeout(()=>{e.classList.remove(`hover`),i()},450))}),document.addEventListener(`click`,t=>{e.contains(t.target)||(e.classList.remove(`hover`),a(!1))}),e.addEventListener(`keydown`,n=>{n.key===`Escape`&&(e.classList.remove(`hover`),a(!1),t.focus())})}</script>
     
 
       <section class="lead">
