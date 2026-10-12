@@ -1,0 +1,471 @@
+{
+ "channel": "The Last Alchemist",
+ "channelUrl": "https://www.youtube.com/channel/UCRF4rUJEc3UYv0wQduOnd3A",
+ "source": "YouTube Studio, Advanced mode (Date) and Content list, read 2026-10-12",
+ "lifetime": {
+  "views": 144755,
+  "watchHours": 1191.0,
+  "subscribersNet": 1098
+ },
+ "run": {
+  "start": "2023-12-14",
+  "end": "2024-01-16",
+  "days": 34,
+  "shorts": 205,
+  "views": 135845,
+  "watchHours": 1101.8,
+  "subscribersNet": 1000
+ },
+ "days": [
+  {
+   "date": "2023-12-14",
+   "views": 551,
+   "watchHours": 5.0,
+   "subscribersNet": 11,
+   "subscribersTotal": 11,
+   "shortsPublished": 4,
+   "shortsTotal": 4
+  },
+  {
+   "date": "2023-12-15",
+   "views": 236,
+   "watchHours": 2.1,
+   "subscribersNet": 2,
+   "subscribersTotal": 13,
+   "shortsPublished": 9,
+   "shortsTotal": 13
+  },
+  {
+   "date": "2023-12-16",
+   "views": 30,
+   "watchHours": 0.2,
+   "subscribersNet": 2,
+   "subscribersTotal": 15,
+   "shortsPublished": 0,
+   "shortsTotal": 13
+  },
+  {
+   "date": "2023-12-17",
+   "views": 34,
+   "watchHours": 0.1,
+   "subscribersNet": 0,
+   "subscribersTotal": 15,
+   "shortsPublished": 4,
+   "shortsTotal": 17
+  },
+  {
+   "date": "2023-12-18",
+   "views": 375,
+   "watchHours": 2.1,
+   "subscribersNet": 2,
+   "subscribersTotal": 17,
+   "shortsPublished": 0,
+   "shortsTotal": 17
+  },
+  {
+   "date": "2023-12-19",
+   "views": 364,
+   "watchHours": 2.3,
+   "subscribersNet": 4,
+   "subscribersTotal": 21,
+   "shortsPublished": 4,
+   "shortsTotal": 21
+  },
+  {
+   "date": "2023-12-20",
+   "views": 5005,
+   "watchHours": 36.4,
+   "subscribersNet": 20,
+   "subscribersTotal": 41,
+   "shortsPublished": 3,
+   "shortsTotal": 24
+  },
+  {
+   "date": "2023-12-21",
+   "views": 1332,
+   "watchHours": 7.8,
+   "subscribersNet": 8,
+   "subscribersTotal": 49,
+   "shortsPublished": 13,
+   "shortsTotal": 37
+  },
+  {
+   "date": "2023-12-22",
+   "views": 1920,
+   "watchHours": 10.8,
+   "subscribersNet": 11,
+   "subscribersTotal": 60,
+   "shortsPublished": 5,
+   "shortsTotal": 42
+  },
+  {
+   "date": "2023-12-23",
+   "views": 220,
+   "watchHours": 1.2,
+   "subscribersNet": 0,
+   "subscribersTotal": 60,
+   "shortsPublished": 0,
+   "shortsTotal": 42
+  },
+  {
+   "date": "2023-12-24",
+   "views": 1262,
+   "watchHours": 12.0,
+   "subscribersNet": 19,
+   "subscribersTotal": 79,
+   "shortsPublished": 6,
+   "shortsTotal": 48
+  },
+  {
+   "date": "2023-12-25",
+   "views": 7021,
+   "watchHours": 50.3,
+   "subscribersNet": 49,
+   "subscribersTotal": 128,
+   "shortsPublished": 9,
+   "shortsTotal": 57
+  },
+  {
+   "date": "2023-12-26",
+   "views": 11190,
+   "watchHours": 82.4,
+   "subscribersNet": 71,
+   "subscribersTotal": 199,
+   "shortsPublished": 9,
+   "shortsTotal": 66
+  },
+  {
+   "date": "2023-12-27",
+   "views": 5597,
+   "watchHours": 51.8,
+   "subscribersNet": 62,
+   "subscribersTotal": 261,
+   "shortsPublished": 10,
+   "shortsTotal": 76
+  },
+  {
+   "date": "2023-12-28",
+   "views": 5974,
+   "watchHours": 50.2,
+   "subscribersNet": 42,
+   "subscribersTotal": 303,
+   "shortsPublished": 6,
+   "shortsTotal": 82
+  },
+  {
+   "date": "2023-12-29",
+   "views": 6300,
+   "watchHours": 50.2,
+   "subscribersNet": 49,
+   "subscribersTotal": 352,
+   "shortsPublished": 6,
+   "shortsTotal": 88
+  },
+  {
+   "date": "2023-12-30",
+   "views": 5681,
+   "watchHours": 36.2,
+   "subscribersNet": 35,
+   "subscribersTotal": 387,
+   "shortsPublished": 6,
+   "shortsTotal": 94
+  },
+  {
+   "date": "2023-12-31",
+   "views": 9102,
+   "watchHours": 82.4,
+   "subscribersNet": 74,
+   "subscribersTotal": 461,
+   "shortsPublished": 10,
+   "shortsTotal": 104
+  },
+  {
+   "date": "2024-01-01",
+   "views": 542,
+   "watchHours": 4.4,
+   "subscribersNet": 5,
+   "subscribersTotal": 466,
+   "shortsPublished": 0,
+   "shortsTotal": 104
+  },
+  {
+   "date": "2024-01-02",
+   "views": 11054,
+   "watchHours": 89.2,
+   "subscribersNet": 70,
+   "subscribersTotal": 536,
+   "shortsPublished": 10,
+   "shortsTotal": 114
+  },
+  {
+   "date": "2024-01-03",
+   "views": 4432,
+   "watchHours": 43.1,
+   "subscribersNet": 46,
+   "subscribersTotal": 582,
+   "shortsPublished": 10,
+   "shortsTotal": 124
+  },
+  {
+   "date": "2024-01-04",
+   "views": 9607,
+   "watchHours": 86.9,
+   "subscribersNet": 75,
+   "subscribersTotal": 657,
+   "shortsPublished": 6,
+   "shortsTotal": 130
+  },
+  {
+   "date": "2024-01-05",
+   "views": 6948,
+   "watchHours": 55.4,
+   "subscribersNet": 58,
+   "subscribersTotal": 715,
+   "shortsPublished": 6,
+   "shortsTotal": 136
+  },
+  {
+   "date": "2024-01-06",
+   "views": 11450,
+   "watchHours": 99.5,
+   "subscribersNet": 84,
+   "subscribersTotal": 799,
+   "shortsPublished": 5,
+   "shortsTotal": 141
+  },
+  {
+   "date": "2024-01-07",
+   "views": 8720,
+   "watchHours": 71.4,
+   "subscribersNet": 68,
+   "subscribersTotal": 867,
+   "shortsPublished": 5,
+   "shortsTotal": 146
+  },
+  {
+   "date": "2024-01-08",
+   "views": 4725,
+   "watchHours": 36.5,
+   "subscribersNet": 26,
+   "subscribersTotal": 893,
+   "shortsPublished": 5,
+   "shortsTotal": 151
+  },
+  {
+   "date": "2024-01-09",
+   "views": 2616,
+   "watchHours": 21.6,
+   "subscribersNet": 15,
+   "subscribersTotal": 908,
+   "shortsPublished": 5,
+   "shortsTotal": 156
+  },
+  {
+   "date": "2024-01-10",
+   "views": 1192,
+   "watchHours": 9.6,
+   "subscribersNet": 6,
+   "subscribersTotal": 914,
+   "shortsPublished": 0,
+   "shortsTotal": 156
+  },
+  {
+   "date": "2024-01-11",
+   "views": 1662,
+   "watchHours": 15.2,
+   "subscribersNet": 8,
+   "subscribersTotal": 922,
+   "shortsPublished": 5,
+   "shortsTotal": 161
+  },
+  {
+   "date": "2024-01-12",
+   "views": 2769,
+   "watchHours": 23.2,
+   "subscribersNet": 23,
+   "subscribersTotal": 945,
+   "shortsPublished": 8,
+   "shortsTotal": 169
+  },
+  {
+   "date": "2024-01-13",
+   "views": 2104,
+   "watchHours": 14.8,
+   "subscribersNet": 15,
+   "subscribersTotal": 960,
+   "shortsPublished": 6,
+   "shortsTotal": 175
+  },
+  {
+   "date": "2024-01-14",
+   "views": 2395,
+   "watchHours": 19.7,
+   "subscribersNet": 10,
+   "subscribersTotal": 970,
+   "shortsPublished": 8,
+   "shortsTotal": 183
+  },
+  {
+   "date": "2024-01-15",
+   "views": 1123,
+   "watchHours": 7.5,
+   "subscribersNet": 7,
+   "subscribersTotal": 977,
+   "shortsPublished": 16,
+   "shortsTotal": 199
+  },
+  {
+   "date": "2024-01-16",
+   "views": 2312,
+   "watchHours": 20.3,
+   "subscribersNet": 23,
+   "subscribersTotal": 1000,
+   "shortsPublished": 6,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-17",
+   "views": 162,
+   "watchHours": 1.4,
+   "subscribersNet": 2,
+   "subscribersTotal": 1002,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-18",
+   "views": 320,
+   "watchHours": 2.3,
+   "subscribersNet": 2,
+   "subscribersTotal": 1004,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-19",
+   "views": 132,
+   "watchHours": 1.0,
+   "subscribersNet": 0,
+   "subscribersTotal": 1004,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-20",
+   "views": 70,
+   "watchHours": 0.6,
+   "subscribersNet": 1,
+   "subscribersTotal": 1005,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-21",
+   "views": 96,
+   "watchHours": 1.3,
+   "subscribersNet": 2,
+   "subscribersTotal": 1007,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-22",
+   "views": 49,
+   "watchHours": 1.5,
+   "subscribersNet": 0,
+   "subscribersTotal": 1007,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-23",
+   "views": 47,
+   "watchHours": 0.5,
+   "subscribersNet": 1,
+   "subscribersTotal": 1008,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-24",
+   "views": 21,
+   "watchHours": 0.2,
+   "subscribersNet": 0,
+   "subscribersTotal": 1008,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-25",
+   "views": 33,
+   "watchHours": 0.2,
+   "subscribersNet": 0,
+   "subscribersTotal": 1008,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-26",
+   "views": 20,
+   "watchHours": 0.1,
+   "subscribersNet": 0,
+   "subscribersTotal": 1008,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-27",
+   "views": 25,
+   "watchHours": 0.2,
+   "subscribersNet": 0,
+   "subscribersTotal": 1008,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-28",
+   "views": 19,
+   "watchHours": 0.2,
+   "subscribersNet": 0,
+   "subscribersTotal": 1008,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-29",
+   "views": 11,
+   "watchHours": 0.1,
+   "subscribersNet": 1,
+   "subscribersTotal": 1009,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-30",
+   "views": 18,
+   "watchHours": 0.1,
+   "subscribersNet": -2,
+   "subscribersTotal": 1007,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-01-31",
+   "views": 12,
+   "watchHours": 0.1,
+   "subscribersNet": -1,
+   "subscribersTotal": 1006,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  },
+  {
+   "date": "2024-02-01",
+   "views": 2,
+   "watchHours": 0.0,
+   "subscribersNet": 0,
+   "subscribersTotal": 1006,
+   "shortsPublished": 0,
+   "shortsTotal": 205
+  }
+ ]
+}
