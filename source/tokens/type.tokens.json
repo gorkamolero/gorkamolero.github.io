@@ -1,0 +1,30 @@
+{
+  "type": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": [
+        "IM Fell English SC",
+        "IM Fell English",
+        "Georgia",
+        "serif"
+      ]
+    },
+    "display-italic": {
+      "$type": "fontFamily",
+      "$value": [
+        "IM Fell English",
+        "Georgia",
+        "serif"
+      ]
+    },
+    "body": {
+      "$type": "fontFamily",
+      "$value": [
+        "EB Garamond",
+        "Garamond",
+        "Georgia",
+        "serif"
+      ]
+    }
+  }
+}

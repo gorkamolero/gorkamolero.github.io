@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'div'>;
+const { class: className = 'job', ...attributes } = Astro.props;
+---
+<div class={className} {...attributes}><slot /></div>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+:where(body[data-page="index"]) .jobs { margin-top: var(--dimension-1-rem); }
+:where(body[data-page="index"]) .job { margin: 0 0 var(--dimension-1-2-rem); }
+:where(body[data-page="index"]) .job h3 { margin: 0; font-family: var(--body); font-size: var(--dimension-1-15-rem); font-weight: var(--number-font-weight-600); }
+:where(body[data-page="index"]) .job h3 .at { font-weight: var(--number-font-weight-400); @apply italic; }
+:where(body[data-page="index"]) .job .when { margin: 0 0 var(--dimension-0-3-rem); font-size: var(--dimension-0-98-rem); color: var(--ink-soft); }
+:where(body[data-page="index"]) .job p { margin: 0; }
+}
+</style>

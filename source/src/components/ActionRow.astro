@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'p'>;
+const { class: className = 'actions', ...attributes } = Astro.props;
+---
+<p class={className} {...attributes}><slot /></p>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+:where(body[data-page="index"]) .actions { @apply flex; @apply flex-wrap; @apply items-baseline; gap: var(--dimension-0-55-rem) var(--dimension-1-7-rem); margin-top: var(--dimension-1-3-rem) !important; }
+:where(body[data-page="creative"]) .actions { @apply flex; @apply flex-wrap; @apply items-baseline; gap: var(--dimension-0-55-rem) var(--dimension-1-7-rem); margin-top: var(--dimension-1-3-rem) !important; }
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.actions { @apply flex; @apply flex-wrap; @apply items-baseline; gap: var(--dimension-0-55-rem) var(--dimension-1-7-rem); margin-top: var(--dimension-1-3-rem) !important; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.route .actions { margin-top: var(--dimension-1-1-rem) !important; }
+}
+}
+</style>

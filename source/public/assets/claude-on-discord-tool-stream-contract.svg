@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Claude-on-Discord live tool stream contract</title>
+  <desc id="desc">Public-safe diagram showing how a Discord prompt becomes a queued Claude Code run, live tool trace, reviewable Discord card, expand collapse control, and final handoff.</desc>
+  <rect width="1200" height="720" fill="#f7f3eb"/>
+  <rect x="48" y="44" width="1104" height="632" rx="8" fill="#111418"/>
+  <text x="84" y="104" fill="#f7f3eb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Live Tool Stream Contract</text>
+  <text x="84" y="138" fill="#bfc6cf" font-family="Inter, Arial, sans-serif" font-size="16">Source-grounded from live-tools modules, button parsers, queued dispatch,</text>
+  <text x="84" y="160" fill="#bfc6cf" font-family="Inter, Arial, sans-serif" font-size="16">and app.tools integration tests.</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="15">
+    <rect x="84" y="190" width="190" height="104" rx="8" fill="#20252c" stroke="#4b5563"/>
+    <text x="108" y="224" fill="#f7f3eb" font-weight="700">Discord request</text>
+    <text x="108" y="252" fill="#bfc6cf">Thread/channel message</text>
+    <text x="108" y="276" fill="#bfc6cf">Scoped session state</text>
+
+    <rect x="334" y="190" width="190" height="104" rx="8" fill="#20252c" stroke="#4b5563"/>
+    <text x="358" y="224" fill="#f7f3eb" font-weight="700">Queued run</text>
+    <text x="358" y="252" fill="#bfc6cf">One worker per lane</text>
+    <text x="358" y="276" fill="#bfc6cf">Abort and status guard</text>
+
+    <rect x="584" y="190" width="190" height="104" rx="8" fill="#20252c" stroke="#4b5563"/>
+    <text x="608" y="224" fill="#f7f3eb" font-weight="700">Claude stream</text>
+    <text x="608" y="252" fill="#bfc6cf">Text deltas</text>
+    <text x="608" y="276" fill="#bfc6cf">Tool use events</text>
+
+    <rect x="834" y="190" width="248" height="104" rx="8" fill="#20252c" stroke="#4b5563"/>
+    <text x="858" y="224" fill="#f7f3eb" font-weight="700">Review card</text>
+    <text x="858" y="252" fill="#bfc6cf">Compact live tool summary</text>
+    <text x="858" y="276" fill="#bfc6cf">Expandable details</text>
+  </g>
+
+  <g stroke="#d6a23a" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M278 242H330"/>
+    <path d="M528 242H580"/>
+    <path d="M778 242H830"/>
+  </g>
+  <g fill="#d6a23a">
+    <path d="M330 242l-13-8v16z"/>
+    <path d="M580 242l-13-8v16z"/>
+    <path d="M830 242l-13-8v16z"/>
+  </g>
+
+  <rect x="84" y="354" width="492" height="222" rx="8" fill="#f7f3eb" stroke="#d8d0c4"/>
+  <text x="112" y="394" fill="#111418" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">What is proven</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#303640">
+    <text x="112" y="430">1. Tool events update a live message in the channel.</text>
+    <text x="112" y="462">2. Generated files surface as review artifacts.</text>
+    <text x="112" y="494">3. Expand/collapse buttons round-trip through parsed IDs.</text>
+    <text x="112" y="526">4. Queueing prevents concurrent lane corruption.</text>
+  </g>
+
+  <rect x="626" y="354" width="456" height="222" rx="8" fill="#f7f3eb" stroke="#d8d0c4"/>
+  <text x="654" y="394" fill="#111418" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Public boundary</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#303640">
+    <text x="654" y="430">Uses synthetic channel names and work labels.</text>
+    <text x="654" y="462">No server IDs, bot tokens, prompts, or live output.</text>
+    <text x="654" y="494">Real Discord screenshot remains optional evidence.</text>
+    <text x="654" y="526">Backed by local source and test contracts.</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="14">
+    <rect x="84" y="614" width="984" height="34" rx="6" fill="#20252c" stroke="#4b5563"/>
+    <text x="104" y="637" fill="#bfc6cf">Reference modules: live-tools-render, live-tools-trace, live-tool-message-controller, buttons, queued dispatch, app.tools test</text>
+  </g>
+</svg>

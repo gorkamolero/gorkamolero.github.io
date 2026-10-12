@@ -1,0 +1,15 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'span'> & { variant?: 'meta' | 'separator' | 'leading' | 'name' };
+const { variant = 'meta', class: className = variant === 'meta' ? 'dot' : `dot-${variant}`, ...attributes } = Astro.props;
+---
+<span class={className} {...attributes}><slot /></span>
+
+<style is:global>
+@layer components {
+  .dot-separator, .dot-leading, .dot-name { display: inline-block; position: relative; background: var(--color-vermilion); border-radius: calc(var(--relative-50-percent) * 1%); }
+  .dot-separator { width: calc(var(--dots-separator) * 1em); height: calc(var(--dots-separator) * 1em); top: calc(var(--dots-separator-raise) * -1em); }
+  .dot-leading { width: calc(var(--dots-leading) * 1em); height: calc(var(--dots-leading) * 1em); top: calc(var(--dots-leading-raise) * -1em); }
+  .dot-name { width: calc(var(--dots-name) * 1em); height: calc(var(--dots-name) * 1em); }
+}
+</style>

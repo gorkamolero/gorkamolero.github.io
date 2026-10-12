@@ -1,0 +1,64 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'div'>;
+const { class: className = 'carousel', ...attributes } = Astro.props;
+---
+<div class={className} {...attributes}><slot /></div>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel { margin: var(--dimension-1-6-rem) 0 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel-track { @apply flex; gap: var(--dimension-1-rem); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel-track::-webkit-scrollbar { display: none; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel .slide { flex: 0 0 calc(var(--relative-100-percent) * 1%); margin: 0; scroll-snap-align: start; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel .shot { margin: 0; height: var(--dimension-21-rem); background: var(--color-surface-13); @apply flex; @apply items-center; @apply justify-center; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel .shot.dark { background: var(--color-surface-14); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel .shot img { max-width: calc(var(--relative-100-percent) * 1%); max-height: calc(var(--relative-100-percent) * 1%); width: auto; height: auto; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel figcaption { margin: var(--dimension-0-6-rem) 0 0; @apply italic; color: var(--ink-soft); font-size: var(--dimension-1-rem); @apply text-center; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel-nav { @apply flex; @apply justify-center; @apply items-center; gap: var(--dimension-1-1-rem); margin-top: var(--dimension-0-5-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel-nav button { font: inherit; font-size: var(--dimension-1-1-rem); line-height: var(--number-line-height-1); background: none; border: var(--dimension-1-px) solid var(--rule); color: var(--ink); padding: var(--dimension-0-3-rem) var(--dimension-0-8-rem); cursor: pointer; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel-nav button:disabled { opacity: .35; cursor: default; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.carousel-count { font-variant-numeric: tabular-nums; color: var(--ink-soft); min-width: var(--dimension-4-rem); @apply text-center; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) { @media (max-width: 640px) { .carousel .shot { height: var(--dimension-14-rem); } }
+}
+}
+</style>
+
+<script is:inline>
+      document.querySelectorAll('.carousel').forEach(function (c) {
+        var track = c.querySelector('.carousel-track'), slides = track.children, count = c.querySelector('.carousel-count');
+        var prev = c.querySelector('.carousel-prev'), next = c.querySelector('.carousel-next');
+        function step() { var s = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : 0; return s > 0 ? s : track.clientWidth || 1; }
+        function index() { return Math.round(track.scrollLeft / step()); }
+        function update() { var i = index(); count.textContent = (i + 1) + ' / ' + slides.length; prev.disabled = i === 0; next.disabled = i === slides.length - 1; }
+        prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+        next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+        track.addEventListener('scroll', function () { window.requestAnimationFrame(update); });
+        update();
+      });
+    </script>

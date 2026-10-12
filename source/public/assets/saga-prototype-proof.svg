@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Saga prototype proof</title>
+  <desc id="desc">Public-safe proof artifact for Saga showing the product app structure, CrewAI prototype workflow, generated script artifacts, and current verification state.</desc>
+  <rect width="1200" height="760" fill="#f6f1e8"/>
+  <rect x="44" y="44" width="1112" height="672" rx="8" fill="#11151b"/>
+  <text x="84" y="104" fill="#f8f5ee" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Saga: product app plus writing-room prototype</text>
+  <text x="84" y="136" fill="#d9d1c3" font-family="Inter, Arial, sans-serif" font-size="17">Two public repos show the arc from multi-agent script production to a fuller video-story studio.</text>
+
+  <defs>
+    <style>
+      .box { fill: #f8f5ee; stroke: #d8cbb8; stroke-width: 2; }
+      .box-dark { fill: #1c232c; stroke: #667085; stroke-width: 2; }
+      .label { fill: #11151b; font: 800 20px Inter, Arial, sans-serif; }
+      .text { fill: #374151; font: 15px Inter, Arial, sans-serif; }
+      .small { fill: #374151; font: 14px Inter, Arial, sans-serif; }
+      .dark-label { fill: #f8f5ee; font: 800 20px Inter, Arial, sans-serif; }
+      .dark-text { fill: #d9d1c3; font: 15px Inter, Arial, sans-serif; }
+      .tiny { fill: #d9d1c3; font: 13px Inter, Arial, sans-serif; }
+      .tag { fill: #5aa897; font: 800 13px Inter, Arial, sans-serif; letter-spacing: .08em; }
+    </style>
+  </defs>
+
+  <rect class="box" x="84" y="190" width="320" height="188" rx="8"/>
+  <text class="tag" x="108" y="224">PRODUCT REPO</text>
+  <text class="label" x="108" y="258">saga-ai</text>
+  <text class="text" x="108" y="292">Next.js creative studio</text>
+  <text class="text" x="108" y="318">Chat, ideas, scripts, voiceover</text>
+  <text class="text" x="108" y="344">Transcript-aware visual assets</text>
+  <text class="text" x="108" y="370">Remotion editor shell</text>
+
+  <rect class="box" x="440" y="190" width="320" height="188" rx="8"/>
+  <text class="tag" x="464" y="224">PROTOTYPE REPO</text>
+  <text class="label" x="464" y="258">saga-agentic-ai</text>
+  <text class="text" x="464" y="292">CrewAI writing room</text>
+  <text class="text" x="464" y="318">Brief, research, outline</text>
+  <text class="text" x="464" y="344">Draft, critique, final script</text>
+  <text class="text" x="464" y="370">Dated generated markdown outputs</text>
+
+  <rect class="box" x="796" y="190" width="320" height="188" rx="8"/>
+  <text class="tag" x="820" y="224">OUTPUT SHAPE</text>
+  <text class="label" x="820" y="258">Narrative video scripts</text>
+  <text class="text" x="820" y="292">Scene cues and narrator voice</text>
+  <text class="text" x="820" y="318">Visual direction per beat</text>
+  <text class="text" x="820" y="344">Pacing, tone, and ending hook</text>
+  <text class="text" x="820" y="370">Ready for media pipeline work</text>
+
+  <rect class="box" x="84" y="430" width="486" height="142" rx="8"/>
+  <text class="label" x="108" y="468">Active verification</text>
+  <text class="text" x="108" y="502">saga-ai: optimized bundle compiled.</text>
+  <text class="text" x="108" y="526">Typecheck then failed on env schema drift.</text>
+  <text class="text" x="108" y="550">saga-agentic-ai: active files compile.</text>
+
+  <rect class="box" x="606" y="430" width="510" height="142" rx="8"/>
+  <text class="label" x="630" y="468">Public-safe review boundary</text>
+  <text class="text" x="630" y="502">Use architecture and prototype output for now.</text>
+  <text class="text" x="630" y="526">Do not overclaim a clean local app build.</text>
+  <text class="small" x="630" y="550">Media, provider keys, and mock outputs still need cleanup.</text>
+
+  <rect class="box-dark" x="84" y="622" width="1032" height="58" rx="8"/>
+  <text class="dark-label" x="108" y="658">Hiring signal</text>
+  <text class="dark-text" x="272" y="658">creative workflow decomposition</text>
+  <text class="dark-text" x="542" y="658">agent roles</text>
+  <text class="dark-text" x="670" y="658">media-product architecture</text>
+  <text class="dark-text" x="918" y="658">honest readiness boundary</text>
+
+  <text class="tiny" x="84" y="704">Proof basis: local source, README architecture, generated markdown outputs, skipped-env Next build attempt, and active Python py_compile.</text>
+</svg>

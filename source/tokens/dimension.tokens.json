@@ -1,0 +1,676 @@
+{
+  "dimension": {
+    "0-98-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.98,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .98rem"
+    },
+    "0-95-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.95,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .95rem"
+    },
+    "2-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 2px"
+    },
+    "3-5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 3.5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 3.5rem"
+    },
+    "0-7-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.7,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .7rem"
+    },
+    "0-82-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.82,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .82rem"
+    },
+    "1-08-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.08,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.08rem"
+    },
+    "1-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 1px"
+    },
+    "negative-1-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": -1,
+        "unit": "px"
+      },
+      "$description": "Original CSS: -1px"
+    },
+    "0-3-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.3,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .3rem"
+    },
+    "1-5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.5rem"
+    },
+    "1-6-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.6,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.6rem"
+    },
+    "0-55-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.55,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .55rem"
+    },
+    "1-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1rem"
+    },
+    "2-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 2rem"
+    },
+    "2-1-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2.1,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 2.1rem"
+    },
+    "3-4-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 3.4,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 3.4rem"
+    },
+    "0-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 0px"
+    },
+    "6-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 6,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 6px"
+    },
+    "16-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 16px"
+    },
+    "46-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 46,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 46rem"
+    },
+    "0-2-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.2,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .2rem"
+    },
+    "6-4-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 6.4,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 6.4rem"
+    },
+    "640-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 640,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 640px"
+    },
+    "3-8-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 3.8,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 3.8rem"
+    },
+    "1-1-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.1,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.1rem"
+    },
+    "1-8-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.8,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.8rem"
+    },
+    "2-4-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2.4,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 2.4rem"
+    },
+    "0-94-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.94,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .94rem"
+    },
+    "641-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 641,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 641px"
+    },
+    "0-72-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.72,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .72rem"
+    },
+    "4-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 4,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 4px"
+    },
+    "1-5-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.5,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 1.5px"
+    },
+    "0-78-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.78,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .78rem"
+    },
+    "0-35-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.35,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .35rem"
+    },
+    "5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 5rem"
+    },
+    "0-42-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.42,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .42rem"
+    },
+    "0-6-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.6,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .6rem"
+    },
+    "8-5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 8.5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 8.5rem"
+    },
+    "1-15-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.15,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.15rem"
+    },
+    "4-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 4,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 4rem"
+    },
+    "3-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 3,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 3rem"
+    },
+    "0-5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .5rem"
+    },
+    "1-35-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.35,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.35rem"
+    },
+    "2-6-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2.6,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 2.6rem"
+    },
+    "38-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 38,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 38rem"
+    },
+    "1-25-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.25,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.25rem"
+    },
+    "7-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 7,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 7rem"
+    },
+    "1-55-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.55,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.55rem"
+    },
+    "0-45-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.45,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .45rem"
+    },
+    "1-7-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.7,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.7rem"
+    },
+    "1-3-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.3,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.3rem"
+    },
+    "1-12-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.12,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.12rem"
+    },
+    "1-4-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.4,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.4rem"
+    },
+    "9-5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 9.5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 9.5rem"
+    },
+    "0-1-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.1,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .1rem"
+    },
+    "1-9-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.9,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.9rem"
+    },
+    "2-9-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2.9,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 2.9rem"
+    },
+    "1-45-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.45,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.45rem"
+    },
+    "2-2-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2.2,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 2.2rem"
+    },
+    "1-2-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.2,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.2rem"
+    },
+    "0-9-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.9,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .9rem"
+    },
+    "0-84-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.84,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .84rem"
+    },
+    "340-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 340,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 340px"
+    },
+    "24-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 24,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 24rem"
+    },
+    "11-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 11,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 11rem"
+    },
+    "7-5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 7.5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 7.5rem"
+    },
+    "1-05-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.05,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.05rem"
+    },
+    "0-4-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.4,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .4rem"
+    },
+    "0-8-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.8,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .8rem"
+    },
+    "0-25-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.25,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .25rem"
+    },
+    "21-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 21,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 21rem"
+    },
+    "14-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 14,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 14rem"
+    },
+    "22-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 22,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 22rem"
+    },
+    "4-2-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 4.2,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 4.2rem"
+    },
+    "5-5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 5.5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 5.5rem"
+    },
+    "0-92-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.92,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .92rem"
+    },
+    "3-2-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 3.2,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 3.2rem"
+    },
+    "4-5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 4.5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 4.5rem"
+    },
+    "2-3-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2.3,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 2.3rem"
+    },
+    "1-02-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.02,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 1.02rem"
+    },
+    "12-px": {
+      "$type": "dimension",
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      },
+      "$description": "Original CSS: 12px"
+    },
+    "11-5-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 11.5,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: 11.5rem"
+    },
+    "0-88-rem": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.88,
+        "unit": "rem"
+      },
+      "$description": "Original CSS: .88rem"
+    }
+  }
+}

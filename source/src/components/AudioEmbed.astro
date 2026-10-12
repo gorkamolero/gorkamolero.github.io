@@ -1,0 +1,29 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'div'>;
+const { class: className = 'audio-embed', ...attributes } = Astro.props;
+---
+<div class={className} {...attributes}><slot /></div>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.audio-embed { margin: var(--dimension-1-6-rem) 0 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.audio-embed .audio-label {
+  margin-bottom: var(--dimension-0-5-rem); font-family: var(--display); font-size: var(--dimension-0-95-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); color: var(--ink-soft);
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.audio-embed audio { @apply block; width: calc(var(--relative-100-percent) * 1%); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.audio-embed .note { margin: var(--dimension-0-6-rem) 0 0; @apply italic; color: var(--ink-soft); font-size: var(--dimension-1-rem); @apply text-center; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.audio-embed + .plate { margin-top: var(--dimension-1-6-rem); }
+}
+}
+</style>

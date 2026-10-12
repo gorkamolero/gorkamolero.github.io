@@ -1,0 +1,15 @@
+<footer><span class="item">Gorka Molero</span><span class="mark"><span class="sep">&nbsp;·&nbsp;</span></span><a class="item" href="mailto:gorka.molero@gmail.com">gorka.molero@gmail.com</a><span class="mark last"><span class="sep">&nbsp;·&nbsp;</span></span><span class="item built">Built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a></span></footer>
+<style>
+footer {
+        margin: var(--dimension-5-rem) auto 0; max-width: var(--dimension-46-rem); padding-top: var(--dimension-1-rem); border-top: var(--dimension-1-px) solid var(--rule);
+        text-align: center; color: var(--ink-soft); font-size: var(--dimension-0-98-rem);
+      }
+      footer .mark { display: inline-block; width: var(--dimension-0-42-rem); height: var(--dimension-0-42-rem); border-radius: calc(var(--relative-50-percent) * 1%); background: var(--vermilion); margin: 0 var(--dimension-0-6-rem); vertical-align: middle; position: relative; top: calc(var(--relative-negative-0-12-em) * 1em); }
+      footer a { text-decoration: none; }
+      footer .item { white-space: nowrap; }
+      @media (max-width: 640px) { footer .mark.last { display: none; } footer .built { display: block; margin-top: var(--dimension-0-3-rem); } }
+      /* Pages with the "Talk to my portfolio" widget: leave room under the footer so the floating widget never covers it. */
+      :global(body:has(elevenlabs-convai)) footer { margin-bottom: var(--dimension-8-5-rem); }
+      /* A real separator inside each dot, so copied text and screen readers read "Gorka Molero · gorka.molero@gmail.com". */
+      footer .sep { position: absolute; width: var(--dimension-1-px); height: var(--dimension-1-px); overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>

@@ -1,0 +1,43 @@
+---
+import colors from '../../tokens/color.tokens.json';
+import type from '../../tokens/type.tokens.json';
+import dimensions from '../../tokens/dimension.tokens.json';
+import dots from '../../tokens/dots.tokens.json';
+import motion from '../../tokens/motion.tokens.json';
+import numbers from '../../tokens/number.tokens.json';
+import relative from '../../tokens/relative.tokens.json';
+import Dot from '../components/Dot.astro';
+const colorCSS = (v) => `oklch(${v.components.join(' ')} / ${v.alpha})`;
+---
+<main class="tokens-catalog">
+<h1>Portfolio tokens</h1>
+<p>Generated directly from the DTCG source files.</p>
+<h2>Colour</h2>
+<div class="token-grid">{Object.entries(colors.color).map(([name,token])=><div><span class="swatch" style={{background:colorCSS(token.$value)}}></span><strong>{name}</strong><code>{colorCSS(token.$value)}</code></div>)}</div>
+<h2>Type</h2>
+{Object.entries(type.type).map(([name,token])=><p style={{fontFamily:`var(--type-${name})`}}><strong>{name}</strong> — Gorka Molero · {token.$value.join(', ')}</p>)}
+<h2>Dimensions and spacing</h2>
+<div class="token-grid">{Object.entries(dimensions.dimension).map(([name,token])=><div><strong>{name}</strong><code>{token.$value.value}{token.$value.unit}</code><span class="space-sample" style={{width:`clamp(0px, ${token.$value.value}${token.$value.unit}, 100%)`}}></span></div>)}</div>
+<h2>Type metrics</h2>
+<div class="token-grid">{Object.entries(numbers.number).map(([name,token]) => <div><strong>{name}</strong><code>{token.$value}</code></div>)}</div>
+<h2>Relative measures</h2>
+<p>DTCG dimensions use px or rem. These number tokens carry the em, viewport or percentage unit in their names and are multiplied by that unit in CSS.</p>
+<div class="token-grid">{Object.entries(relative.relative).map(([name,token]) => <div><strong>{name}</strong><code>{token.$value}</code></div>)}</div>
+<h2>Dots</h2>
+<p class="dot-samples">CAPITALS <Dot variant="separator" /> Separator · CAPITALS <Dot variant="leading" /> Leading · <Dot variant="name" /> Name</p>
+<div class="token-grid">{Object.entries(dots.dots).map(([name,token]) => <div><strong>{name}</strong><code>{token.$value}em</code></div>)}</div>
+<h2>Motion</h2>
+<p>Hover or focus a duration sample to see it move. The menu uses the sweep easing and allows the hover-grace duration before closing.</p>
+<div class="token-grid">{Object.entries(motion.motion).map(([name,token]) => <div class="motion-sample" tabindex="0" style={token.$type === 'duration' ? {'--sample-duration': `${token.$value.value}${token.$value.unit}`} : {}}><strong>{name}</strong><code>{token.$type === 'duration' ? `${token.$value.value}${token.$value.unit}` : `cubic-bezier(${token.$value.join(', ')})`}</code><span class="motion-dot"><Dot variant="leading" /></span></div>)}</div>
+</main>
+<style>
+.motion-dot { display: block; transition: transform var(--sample-duration, var(--motion-sweep)) var(--motion-sweep-easing); }
+.motion-sample:hover .motion-dot, .motion-sample:focus .motion-dot { transform: translateX(var(--dimension-3-rem)); }
+@media (prefers-reduced-motion: reduce) { .motion-dot { transition: none; } }
+.tokens-catalog { padding: var(--dimension-2-rem) 0; }
+.token-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--dimension-1-rem); }
+.token-grid code { display:block;overflow-wrap:anywhere; }
+.swatch { display:block;height:var(--dimension-3-rem);border:var(--dimension-1-px) solid var(--color-rule); }
+.space-sample { display:block;height:var(--dimension-0-5-rem);background:var(--color-vermilion); }
+@media(max-width:640px) { .token-grid {grid-template-columns:1fr;} }
+</style>

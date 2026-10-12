@@ -1,0 +1,329 @@
+{
+  "_iframe-87OOkp_v.css": {
+    "file": "_astro/iframe-87OOkp_v.css",
+    "src": "_iframe-87OOkp_v.css"
+  },
+  "_iframe-Ciuwu5JX.js": {
+    "file": "_astro/iframe-Ciuwu5JX.js",
+    "name": "iframe",
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_preload-helper-_1ZBrL1G.js"
+    ],
+    "dynamicImports": [
+      "src/stories/ActionRow.stories.js",
+      "src/stories/ArchiveTable.stories.js",
+      "src/stories/AudioEmbed.stories.js",
+      "src/stories/Carousel.stories.js",
+      "src/stories/CaseLead.stories.js",
+      "src/stories/Dot.stories.js",
+      "src/stories/FactsList.stories.js",
+      "src/stories/Figure.stories.js",
+      "src/stories/Footer.stories.js",
+      "src/stories/GitHubLink.stories.js",
+      "src/stories/GroupHeading.stories.js",
+      "src/stories/IntroNotes.stories.js",
+      "src/stories/Job.stories.js",
+      "src/stories/Masthead.stories.js",
+      "src/stories/MetaLine.stories.js",
+      "src/stories/Narration.stories.js",
+      "src/stories/PageFrame.stories.js",
+      "src/stories/PointsList.stories.js",
+      "src/stories/PortfoliosMenu.stories.js",
+      "src/stories/ProjectIndex.stories.js",
+      "src/stories/Release.stories.js",
+      "src/stories/TextLink.stories.js",
+      "src/stories/Tokens.stories.js",
+      "src/stories/WorkSection.stories.js"
+    ],
+    "css": [
+      "_astro/iframe-87OOkp_v.css"
+    ]
+  },
+  "_preload-helper-_1ZBrL1G.js": {
+    "file": "_astro/preload-helper-_1ZBrL1G.js",
+    "name": "preload-helper",
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js"
+    ]
+  },
+  "_rolldown-runtime-Dh6celcD.js": {
+    "file": "_astro/rolldown-runtime-Dh6celcD.js",
+    "name": "rolldown-runtime"
+  },
+  "iframe.html": {
+    "file": "_astro/iframe-zeyuK-dz.js",
+    "name": "iframe",
+    "src": "iframe.html",
+    "isEntry": true,
+    "imports": [
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "node_modules/.pnpm/storybook@10.6.2_react@19.3.0/node_modules/storybook/dist/mocking-utils/mocker-runtime.js": {
+    "file": "vite-inject-mocker-entry.js",
+    "name": "mocker-runtime",
+    "src": "node_modules/.pnpm/storybook@10.6.2_react@19.3.0/node_modules/storybook/dist/mocking-utils/mocker-runtime.js",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_preload-helper-_1ZBrL1G.js"
+    ]
+  },
+  "src/stories/ActionRow.stories.js": {
+    "file": "_astro/ActionRow.stories-BfA2eP8s.js",
+    "name": "ActionRow.stories",
+    "src": "src/stories/ActionRow.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/ArchiveTable.stories.js": {
+    "file": "_astro/ArchiveTable.stories-Dpufxl0e.js",
+    "name": "ArchiveTable.stories",
+    "src": "src/stories/ArchiveTable.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/AudioEmbed.stories.js": {
+    "file": "_astro/AudioEmbed.stories-deSALen1.js",
+    "name": "AudioEmbed.stories",
+    "src": "src/stories/AudioEmbed.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/Carousel.stories.js": {
+    "file": "_astro/Carousel.stories-DJStmQLY.js",
+    "name": "Carousel.stories",
+    "src": "src/stories/Carousel.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/CaseLead.stories.js": {
+    "file": "_astro/CaseLead.stories-CeiqD451.js",
+    "name": "CaseLead.stories",
+    "src": "src/stories/CaseLead.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/Dot.stories.js": {
+    "file": "_astro/Dot.stories-Bk5T9sBD.js",
+    "name": "Dot.stories",
+    "src": "src/stories/Dot.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/FactsList.stories.js": {
+    "file": "_astro/FactsList.stories-TBGk_Hnj.js",
+    "name": "FactsList.stories",
+    "src": "src/stories/FactsList.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/Figure.stories.js": {
+    "file": "_astro/Figure.stories-CTY7zimU.js",
+    "name": "Figure.stories",
+    "src": "src/stories/Figure.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/Footer.stories.js": {
+    "file": "_astro/Footer.stories-CLw9meIJ.js",
+    "name": "Footer.stories",
+    "src": "src/stories/Footer.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/GitHubLink.stories.js": {
+    "file": "_astro/GitHubLink.stories-8Fywc7TP.js",
+    "name": "GitHubLink.stories",
+    "src": "src/stories/GitHubLink.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/GroupHeading.stories.js": {
+    "file": "_astro/GroupHeading.stories-D05ctyI2.js",
+    "name": "GroupHeading.stories",
+    "src": "src/stories/GroupHeading.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/IntroNotes.stories.js": {
+    "file": "_astro/IntroNotes.stories-XJfxaN0s.js",
+    "name": "IntroNotes.stories",
+    "src": "src/stories/IntroNotes.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/Job.stories.js": {
+    "file": "_astro/Job.stories-DQWCZkX9.js",
+    "name": "Job.stories",
+    "src": "src/stories/Job.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/Masthead.stories.js": {
+    "file": "_astro/Masthead.stories-zA2PVOwe.js",
+    "name": "Masthead.stories",
+    "src": "src/stories/Masthead.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/MetaLine.stories.js": {
+    "file": "_astro/MetaLine.stories-B3M5Cajm.js",
+    "name": "MetaLine.stories",
+    "src": "src/stories/MetaLine.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/Narration.stories.js": {
+    "file": "_astro/Narration.stories-DQ2xTUwp.js",
+    "name": "Narration.stories",
+    "src": "src/stories/Narration.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/PageFrame.stories.js": {
+    "file": "_astro/PageFrame.stories-C0xXf0hB.js",
+    "name": "PageFrame.stories",
+    "src": "src/stories/PageFrame.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/PointsList.stories.js": {
+    "file": "_astro/PointsList.stories-Bk7ftaO-.js",
+    "name": "PointsList.stories",
+    "src": "src/stories/PointsList.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/PortfoliosMenu.stories.js": {
+    "file": "_astro/PortfoliosMenu.stories-BpsSNgLB.js",
+    "name": "PortfoliosMenu.stories",
+    "src": "src/stories/PortfoliosMenu.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js"
+    ]
+  },
+  "src/stories/ProjectIndex.stories.js": {
+    "file": "_astro/ProjectIndex.stories-CNcxupwW.js",
+    "name": "ProjectIndex.stories",
+    "src": "src/stories/ProjectIndex.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/Release.stories.js": {
+    "file": "_astro/Release.stories-CIhiEXZr.js",
+    "name": "Release.stories",
+    "src": "src/stories/Release.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/TextLink.stories.js": {
+    "file": "_astro/TextLink.stories-C_PinJ95.js",
+    "name": "TextLink.stories",
+    "src": "src/stories/TextLink.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "src/stories/Tokens.stories.js": {
+    "file": "_astro/Tokens.stories-WHtiSeAm.js",
+    "name": "Tokens.stories",
+    "src": "src/stories/Tokens.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js"
+    ]
+  },
+  "src/stories/WorkSection.stories.js": {
+    "file": "_astro/WorkSection.stories-2ZKzfx5G.js",
+    "name": "WorkSection.stories",
+    "src": "src/stories/WorkSection.stories.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js",
+      "_iframe-Ciuwu5JX.js"
+    ]
+  },
+  "virtual:astro-static-module/astro%3Ascripts%2Fbefore-hydration.js": {
+    "file": "_astro/astro_scripts/before-hydration_js-37665b80-BcvWH6eA.js",
+    "name": "astro_scripts/before-hydration_js-37665b80",
+    "src": "virtual:astro-static-module/astro%3Ascripts%2Fbefore-hydration.js",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js"
+    ]
+  },
+  "virtual:astro-static-module/astro%3Ascripts%2Fpage.js": {
+    "file": "_astro/astro_scripts/page_js-c45b4fb8-BcvWH6eA.js",
+    "name": "astro_scripts/page_js-c45b4fb8",
+    "src": "virtual:astro-static-module/astro%3Ascripts%2Fpage.js",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-Dh6celcD.js"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'div'>;
+const { class: className = 'archive-table', ...attributes } = Astro.props;
+---
+<div class={className} {...attributes}><slot /></div>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.archive-table { margin-top: var(--dimension-1-4-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.archive-row {
+  @apply grid; grid-template-columns: var(--dimension-8-5-rem) var(--dimension-7-5-rem) var(--dimension-9-5-rem) minmax(0, 1fr); gap: 0 var(--dimension-1-rem);
+  padding: var(--dimension-0-7-rem) 0; border-bottom: var(--dimension-1-px) solid var(--rule); font-size: var(--dimension-0-98-rem); line-height: var(--number-line-height-1-5);
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.archive-row strong { font-family: var(--display); font-weight: var(--number-font-weight-400); font-size: var(--dimension-1-05-rem); letter-spacing: calc(var(--relative-0-04-em) * 1em); line-height: var(--number-line-height-1-35); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.archive-row span { color: var(--ink-soft); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.archive-head { padding-top: 0; font-family: var(--display); font-size: var(--dimension-0-9-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.archive-head span { color: var(--ink-soft); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .archive-head {
+    @apply absolute; width: var(--dimension-1-px); height: var(--dimension-1-px); margin: var(--dimension-negative-1-px); padding: 0; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .archive-row { @apply block; padding: var(--dimension-0-8-rem) 0; } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .archive-row span { @apply block; } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .archive-row strong { @apply block; margin-bottom: var(--dimension-0-1-rem); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .archive-row span:nth-child(2) { font-family: var(--display); font-size: var(--dimension-0-9-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .archive-row span:nth-child(3) { @apply italic; } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .archive-row span:nth-child(4) { margin-top: var(--dimension-0-25-rem); color: var(--ink); } }
+}
+}
+</style>

@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+interface Props { title: string; description: string; page: string; }
+const { title, description, page } = Astro.props;
+const analytics = "<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{\"token\": \"30140c96917e488999cc0fc45ca9a785\"}'></script><!-- End Cloudflare Web Analytics -->";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
+    <slot name="head" />
+  </head>
+  <body data-page={page}>
+    <slot />
+    <Footer />
+    <slot name="after-footer" />
+    <Fragment set:html={analytics} />
+  </body>
+</html>
+

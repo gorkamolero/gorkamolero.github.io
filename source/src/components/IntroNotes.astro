@@ -1,0 +1,26 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'div'>;
+const { class: className = 'intro', ...attributes } = Astro.props;
+---
+<div class={className} {...attributes}><slot /></div>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+:where(body[data-page="index"]) .intro { @apply grid; grid-template-columns: var(--dimension-9-5-rem) 1fr; column-gap: var(--dimension-1-6-rem); row-gap: var(--dimension-1-8-rem); margin-top: var(--dimension-4-2-rem); font-size: var(--dimension-1-15-rem); line-height: var(--number-line-height-1-6); color: var(--ink-soft); }
+:where(body[data-page="index"]) .intro p { margin: 0; }
+:where(body[data-page="index"]) .intro .note { padding-top: var(--dimension-0-3-rem); border-top: var(--dimension-1-px) solid var(--vermilion); font-family: var(--display); font-size: var(--dimension-0-95-rem); letter-spacing: calc(var(--relative-0-05-em) * 1em); line-height: var(--number-line-height-1-35); color: var(--vermilion); }
+:where(body[data-page="index"]) .intro .note span { @apply block; font-family: var(--display-italic); @apply italic; font-size: var(--dimension-1-rem); letter-spacing: 0; color: var(--ink-soft); }
+:where(body[data-page="index"]) .intro-cta { grid-column: 2; margin-top: var(--dimension-0-6-rem) !important; text-align: right; }
+@media (max-width: 640px) {
+        :where(body[data-page="index"]) .intro { grid-template-columns: 1fr; row-gap: var(--dimension-0-4-rem); margin-top: var(--dimension-3-2-rem); font-size: var(--dimension-1-08-rem); }
+}
+@media (max-width: 640px) {
+        :where(body[data-page="index"]) .intro .note ~ .note { margin-top: var(--dimension-1-4-rem); }
+}
+@media (max-width: 640px) {
+        :where(body[data-page="index"]) .intro-cta { grid-column: 1; margin-top: var(--dimension-1-4-rem) !important; }
+}
+}
+</style>

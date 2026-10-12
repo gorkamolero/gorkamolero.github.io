@@ -1,0 +1,243 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'div'>;
+const {class: className = 'sheet', ...attributes} = Astro.props;
+---
+<div class={className} {...attributes}><slot /></div>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+:root {
+        --paper: var(--color-paper);
+        --ink: var(--color-ink);
+        --ink-soft: var(--color-ink-soft);
+        --rule: var(--color-rule);
+        --vermilion: var(--color-vermilion);
+        --display: var(--type-display);
+        --display-italic: var(--type-display-italic);
+        --body: var(--type-body);
+        color-scheme: light;
+      }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-variant-numeric: normal; font-size: calc(var(--relative-0-8-em) * 1em); background: var(--color-surface-9); padding: calc(var(--relative-0-08-em) * 1em) calc(var(--relative-0-35-em) * 1em); border-radius: var(--dimension-2-px); overflow-wrap: anywhere; }
+h2 em, h3 em { font-family: var(--display-italic); @apply italic; text-transform: none; font-variant: normal; letter-spacing: calc(var(--relative-0-01-em) * 1em); }
+:where(body[data-page="index"]) * { box-sizing: border-box; }
+html:where(:has(body[data-page="index"])) { background: var(--paper); }
+body:where([data-page="index"]) {
+        margin: 0; background: var(--paper); color: var(--ink);
+        font-family: var(--body); font-size: var(--dimension-1-15-rem); line-height: var(--number-line-height-1-6);
+        font-variant-numeric: oldstyle-nums proportional-nums;
+        padding: 0 max(var(--dimension-16-px), calc(var(--relative-5-vw) * 1vw)) var(--dimension-4-rem);
+      }
+:where(body[data-page="index"]) a { color: inherit; }
+:where(body[data-page="index"]) .sheet { max-width: var(--dimension-46-rem); margin: 0 auto; }
+:where(body[data-page="index"]) .kind { margin: 0; font-family: var(--display); font-size: clamp(var(--dimension-1-2-rem), calc(var(--relative-5-1-vw) * 1vw), var(--dimension-2-2-rem)); letter-spacing: calc(var(--relative-0-07-em) * 1em); line-height: var(--number-line-height-1-15); }
+:where(body[data-page="index"]) .video-wide, :where(body[data-page="index"]) .video-tall, :where(body[data-page="index"]) .short { @apply relative; background: var(--color-surface-11); border: var(--dimension-1-px) solid var(--rule); overflow: hidden; }
+:where(body[data-page="index"]) .video-wide { aspect-ratio: 16 / 9; margin-top: var(--dimension-1-4-rem); }
+:where(body[data-page="index"]) .video-tall { aspect-ratio: 9 / 16; max-width: var(--dimension-22-rem); margin: var(--dimension-1-4-rem) auto 0; }
+:where(body[data-page="index"]) .video-wide video, :where(body[data-page="index"]) .video-wide iframe, :where(body[data-page="index"]) .video-tall video, :where(body[data-page="index"]) .short iframe {
+        @apply absolute; inset: 0; width: calc(var(--relative-100-percent) * 1%); height: calc(var(--relative-100-percent) * 1%); border: 0; @apply block; background: var(--color-surface-11);
+      }
+:where(body[data-page="index"]) .video-caption { margin: var(--dimension-0-6-rem) 0 0 !important; @apply italic; color: var(--ink-soft); font-size: var(--dimension-1-rem); @apply text-center; }
+:where(body[data-page="index"]) .shorts-row { @apply grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dimension-0-9-rem); margin-top: var(--dimension-0-9-rem); }
+:where(body[data-page="index"]) .short { aspect-ratio: 9 / 16; }
+@media (max-width: 640px) {
+        body:where([data-page="index"]) { font-size: var(--dimension-1-08-rem); }
+}
+@media (max-width: 640px) {
+        :where(body[data-page="index"]) .shorts-row { @apply flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: var(--dimension-0-7-rem); padding-bottom: var(--dimension-0-4-rem); }
+}
+@media (max-width: 640px) {
+        :where(body[data-page="index"]) .shorts-row .short { flex: 0 0 calc(var(--relative-62-percent) * 1%); scroll-snap-align: start; }
+}
+:where(body[data-page="index"]) .stack { @apply italic; color: var(--ink-soft); }
+:where(body[data-page="creative"]) * { box-sizing: border-box; }
+html:where(:has(body[data-page="creative"])) { background: var(--paper); }
+body:where([data-page="creative"]) {
+        margin: 0; background: var(--paper); color: var(--ink);
+        font-family: var(--body); font-size: var(--dimension-1-15-rem); line-height: var(--number-line-height-1-6);
+        font-variant-numeric: oldstyle-nums proportional-nums;
+        padding: 0 max(var(--dimension-16-px), calc(var(--relative-5-vw) * 1vw)) var(--dimension-4-rem);
+      }
+:where(body[data-page="creative"]) a { color: inherit; }
+:where(body[data-page="creative"]) .sheet { max-width: var(--dimension-46-rem); margin: 0 auto; }
+:where(body[data-page="creative"]) .lead { margin-top: var(--dimension-3-rem); @apply text-center; }
+:where(body[data-page="creative"]) .kind { margin: 0; font-family: var(--display); font-size: clamp(var(--dimension-1-2-rem), calc(var(--relative-5-1-vw) * 1vw), var(--dimension-2-2-rem)); letter-spacing: calc(var(--relative-0-07-em) * 1em); line-height: var(--number-line-height-1-15); }
+:where(body[data-page="creative"]) .scope { margin: var(--dimension-0-5-rem) 0 0; font-family: var(--display-italic); @apply italic; font-size: clamp(var(--dimension-1-1-rem), calc(var(--relative-3-vw) * 1vw), var(--dimension-1-35-rem)); color: var(--ink-soft); }
+:where(body[data-page="creative"]) .cta-row { @apply flex; flex-direction: column; @apply items-center; gap: var(--dimension-0-55-rem); margin-top: var(--dimension-1-6-rem); }
+:where(body[data-page="creative"]) .intro { margin: var(--dimension-2-6-rem) auto 0; max-width: var(--dimension-38-rem); @apply text-center; font-size: var(--dimension-1-25-rem); color: var(--ink-soft); }
+:where(body[data-page="creative"]) .video-wide, :where(body[data-page="creative"]) .video-tall, :where(body[data-page="creative"]) .short { @apply relative; background: var(--color-surface-11); border: var(--dimension-1-px) solid var(--rule); overflow: hidden; }
+:where(body[data-page="creative"]) .video-wide { aspect-ratio: 16 / 9; margin-top: var(--dimension-1-4-rem); }
+:where(body[data-page="creative"]) .video-tall { aspect-ratio: 9 / 16; max-width: var(--dimension-22-rem); margin: var(--dimension-1-4-rem) auto 0; }
+:where(body[data-page="creative"]) .video-wide video, :where(body[data-page="creative"]) .video-wide iframe, :where(body[data-page="creative"]) .video-tall video, :where(body[data-page="creative"]) .short iframe {
+        @apply absolute; inset: 0; width: calc(var(--relative-100-percent) * 1%); height: calc(var(--relative-100-percent) * 1%); border: 0; @apply block; background: var(--color-surface-11);
+      }
+:where(body[data-page="creative"]) .video-caption { margin: var(--dimension-0-6-rem) 0 0 !important; @apply italic; color: var(--ink-soft); font-size: var(--dimension-1-rem); @apply text-center; }
+:where(body[data-page="creative"]) .shorts-row { @apply grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dimension-0-9-rem); margin-top: var(--dimension-0-9-rem); }
+:where(body[data-page="creative"]) .short { aspect-ratio: 9 / 16; }
+@media (max-width: 640px) {
+        body:where([data-page="creative"]) { font-size: var(--dimension-1-08-rem); }
+}
+@media (max-width: 640px) {
+        :where(body[data-page="creative"]) .intro { font-size: var(--dimension-1-12-rem); }
+}
+@media (max-width: 640px) {
+        :where(body[data-page="creative"]) .shorts-row { @apply flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: var(--dimension-0-7-rem); padding-bottom: var(--dimension-0-4-rem); }
+}
+@media (max-width: 640px) {
+        :where(body[data-page="creative"]) .shorts-row .short { flex: 0 0 calc(var(--relative-62-percent) * 1%); scroll-snap-align: start; }
+}
+:where(body[data-page="music"]) * { box-sizing: border-box; }
+html:where(:has(body[data-page="music"])) { background: var(--paper); }
+body:where([data-page="music"]) {
+        margin: 0; background: var(--paper); color: var(--ink);
+        font-family: var(--body); font-size: var(--dimension-1-15-rem); line-height: var(--number-line-height-1-6);
+        font-variant-numeric: oldstyle-nums proportional-nums;
+        padding: 0 max(var(--dimension-16-px), calc(var(--relative-5-vw) * 1vw)) var(--dimension-4-rem);
+      }
+:where(body[data-page="music"]) a { color: inherit; }
+:where(body[data-page="music"]) .sheet { max-width: var(--dimension-46-rem); margin: 0 auto; }
+:where(body[data-page="music"]) .intro { margin: var(--dimension-2-6-rem) auto 0; max-width: var(--dimension-38-rem); @apply text-center; font-size: var(--dimension-1-25-rem); color: var(--ink-soft); }
+:where(body[data-page="music"]) .section-head {
+        @apply flex; justify-content: space-between; @apply items-baseline; gap: var(--dimension-1-rem);
+        padding-bottom: var(--dimension-0-45-rem); border-bottom: var(--dimension-1-px) solid var(--rule);
+      }
+:where(body[data-page="music"]) .work .section-head h2 { padding-bottom: 0; border-bottom: 0; }
+:where(body[data-page="music"]) .out { font-family: var(--display); font-size: var(--dimension-1-02-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); color: var(--vermilion); text-decoration: none; white-space: nowrap; }
+:where(body[data-page="music"]) .out::after { content: "\2009\2197"; }
+:where(body[data-page="music"]) .out:hover { text-decoration: underline; text-underline-offset: calc(var(--relative-0-2-em) * 1em); }
+:where(body[data-page="music"]) .player { margin-top: var(--dimension-1-4-rem); }
+:where(body[data-page="music"]) .player iframe { @apply block; width: calc(var(--relative-100-percent) * 1%); border: 0; border-radius: var(--dimension-12-px); background: var(--color-surface-15); }
+:where(body[data-page="music"]) .discography { margin-top: var(--dimension-1-2-rem); }
+@media (max-width: 640px) {
+        body:where([data-page="music"]) { font-size: var(--dimension-1-08-rem); }
+}
+@media (max-width: 640px) {
+        :where(body[data-page="music"]) .intro { font-size: var(--dimension-1-12-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+* { box-sizing: border-box; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+:scope { background: var(--paper); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: var(--dimension-1-15-rem); line-height: var(--number-line-height-1-6);
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  padding: 0 max(var(--dimension-16-px), calc(var(--relative-5-vw) * 1vw)) var(--dimension-4-rem);
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+a { color: inherit; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.sheet { max-width: var(--dimension-46-rem); margin: 0 auto; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+
+.lead { margin-top: var(--dimension-3-rem); @apply text-center; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.scope { margin: var(--dimension-0-5-rem) 0 0; font-family: var(--display-italic); @apply italic; font-size: clamp(var(--dimension-1-1-rem), calc(var(--relative-3-vw) * 1vw), var(--dimension-1-35-rem)); color: var(--ink-soft); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.intro { margin: var(--dimension-2-6-rem) auto 0; max-width: var(--dimension-38-rem); @apply text-center; font-size: var(--dimension-1-25-rem); color: var(--ink-soft); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.video-caption { margin: var(--dimension-0-6-rem) 0 0 !important; @apply italic; color: var(--ink-soft); font-size: var(--dimension-1-rem); @apply text-center; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  body { font-size: var(--dimension-1-08-rem); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .intro { font-size: var(--dimension-1-12-rem); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.lead .meta.eyebrow { margin-bottom: var(--dimension-0-6-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.case-title {
+  margin: 0; font-family: var(--display); font-weight: var(--number-font-weight-400); font-size: clamp(var(--dimension-1-9-rem), calc(var(--relative-6-4-vw) * 1vw), var(--dimension-2-9-rem));
+  letter-spacing: calc(var(--relative-0-06-em) * 1em); line-height: var(--number-line-height-1-1); overflow-wrap: break-word;
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.case-title.long { font-size: clamp(var(--dimension-1-45-rem), calc(var(--relative-5-vw) * 1vw), var(--dimension-2-2-rem)); letter-spacing: calc(var(--relative-0-05-em) * 1em); line-height: var(--number-line-height-1-2); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.lead .intro { margin-top: var(--dimension-1-4-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.lead .meta.chips { margin-top: var(--dimension-1-4-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+pre {
+  margin: var(--dimension-1-2-rem) 0; padding: var(--dimension-0-9-rem) var(--dimension-1-rem); border: var(--dimension-1-px) solid var(--rule);
+  background: var(--color-surface-12); overflow-x: auto;
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+pre code {
+  @apply block; padding: 0; background: none; border-radius: 0; font-size: var(--dimension-0-84-rem); line-height: var(--number-line-height-1-55);
+  white-space: pre; overflow-wrap: normal;
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+pre .kw { color: var(--vermilion); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+pre .str { color: var(--ink-soft); @apply italic; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+pre .cmt { color: var(--ink-soft); @apply italic; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.cards { margin-top: var(--dimension-1-2-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.card { @apply grid; grid-template-columns: var(--dimension-11-rem) 1fr; gap: var(--dimension-1-rem); padding: var(--dimension-1-rem) 0; border-bottom: var(--dimension-1-px) solid var(--rule); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work .card h3 { margin: 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work .card p { margin: 0 0 var(--dimension-0-5-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.routes { @apply grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dimension-2-rem); margin-top: var(--dimension-1-4-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.route { padding-top: var(--dimension-0-2-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.route .label { @apply block; font-family: var(--display); font-size: var(--dimension-0-95-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); color: var(--ink-soft); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work .route h3 { margin: var(--dimension-0-2-rem) 0 var(--dimension-0-5-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work .route p { margin: 0 0 var(--dimension-1-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .case-title { font-size: clamp(var(--dimension-1-7-rem), calc(var(--relative-8-4-vw) * 1vw), var(--dimension-2-4-rem)); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .case-title.long { font-size: clamp(var(--dimension-1-4-rem), calc(var(--relative-6-4-vw) * 1vw), var(--dimension-1-9-rem)); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .card { gap: var(--dimension-0-4-rem); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .routes { grid-template-columns: 1fr; gap: var(--dimension-1-4-rem); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) { @media (max-width: 640px) { .card { grid-template-columns: 1fr; } } }
+}
+</style>

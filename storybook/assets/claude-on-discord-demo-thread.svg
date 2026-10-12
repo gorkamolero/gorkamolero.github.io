@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Claude-on-Discord disposable thread proof</title>
+  <desc id="desc">A sanitized Discord thread transcript showing slash commands, a disposable worktree lane, live tool events, diff and PR handoff, and package verification without server IDs, tokens, private messages, or local paths.</desc>
+  <rect width="1200" height="820" fill="#111318"/>
+  <rect x="54" y="44" width="1092" height="732" rx="20" fill="#20242d"/>
+  <rect x="54" y="44" width="254" height="732" rx="20" fill="#171a21"/>
+  <rect x="86" y="92" width="62" height="62" rx="16" fill="#5865f2"/>
+  <text x="170" y="128" fill="#f7f4ee" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800">agent-lane</text>
+  <text x="86" y="210" fill="#aeb7c6" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18"># repo-demo</text>
+  <text x="86" y="250" fill="#aeb7c6" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18"># thread-branch</text>
+  <text x="86" y="290" fill="#aeb7c6" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18"># guardian</text>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+    <text x="342" y="100" fill="#f7f4ee" font-size="28" font-weight="800">thread: DEMO-42 disposable repo</text>
+    <text x="342" y="132" fill="#aeb7c6" font-size="17">Public-safe transcript. All ids, paths, server data, prompts, and outputs are fake or redacted.</text>
+
+    <g transform="translate(342 174)">
+      <rect width="718" height="76" rx="14" fill="#2c313c"/>
+      <text x="22" y="32" fill="#f7f4ee" font-size="18" font-weight="800">Gorka</text>
+      <text x="22" y="58" fill="#dbe5f1" font-size="18">/fork title: isolate README cleanup</text>
+    </g>
+
+    <g transform="translate(342 272)">
+      <rect width="718" height="128" rx="14" fill="#12151b"/>
+      <text x="22" y="32" fill="#78d38b" font-size="18" font-weight="800">Claude bot</text>
+      <text x="22" y="62" fill="#dbe5f1" font-size="17">Created thread branch and inherited parent context.</text>
+      <text x="22" y="92" fill="#dbe5f1" font-size="17">/worktree thread -&gt; created disposable worktree lane.</text>
+      <text x="22" y="118" fill="#9fb0c8" font-size="15">workingDir: REDACTED_PATH - branch: demo/readme-cleanup</text>
+    </g>
+
+    <g transform="translate(342 422)">
+      <rect width="718" height="134" rx="14" fill="#2c313c"/>
+      <text x="22" y="32" fill="#6bb2ff" font-size="18" font-weight="800">live tool stream</text>
+      <text x="22" y="62" fill="#dbe5f1" font-size="17">Read(repo files) -&gt; Edit(README.md) -&gt; Bash(bun test)</text>
+      <text x="22" y="92" fill="#dbe5f1" font-size="17">tool events update in-place; Interrupt and Abort buttons stay visible.</text>
+      <text x="22" y="118" fill="#9fb0c8" font-size="15">final output hidden here; public artifact shows shape, not private content.</text>
+    </g>
+
+    <g transform="translate(342 578)">
+      <rect width="718" height="118" rx="14" fill="#12151b"/>
+      <text x="22" y="32" fill="#78d38b" font-size="18" font-weight="800">handoff</text>
+      <text x="22" y="62" fill="#dbe5f1" font-size="17">/diff returns patch attachment. /pr draft prepares review handoff.</text>
+      <text x="22" y="92" fill="#dbe5f1" font-size="17">Verified locally: typecheck passed, 187 tests passed, dist:check publish-ready.</text>
+    </g>
+
+    <rect x="342" y="714" width="718" height="46" rx="8" fill="#f7f4ee"/>
+    <text x="364" y="734" fill="#101318" font-size="14" font-weight="800">Boundary: no Discord ids, bot tokens, server names, private prompts,</text>
+    <text x="364" y="752" fill="#101318" font-size="14" font-weight="800">local paths, or live repo output.</text>
+  </g>
+</svg>

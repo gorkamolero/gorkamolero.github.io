@@ -1,0 +1,309 @@
+{
+  "relative": {
+    "0-4-em": {
+      "$type": "number",
+      "$value": 0.4,
+      "$description": "Original CSS: .4em"
+    },
+    "0-05-em": {
+      "$type": "number",
+      "$value": 0.05,
+      "$description": "Original CSS: .05em"
+    },
+    "0-18-em": {
+      "$type": "number",
+      "$value": 0.18,
+      "$description": "Original CSS: .18em"
+    },
+    "0-12-em": {
+      "$type": "number",
+      "$value": 0.12,
+      "$description": "Original CSS: .12em"
+    },
+    "negative-0-12-em": {
+      "$type": "number",
+      "$value": -0.12,
+      "$description": "Original CSS: -.12em"
+    },
+    "50-percent": {
+      "$type": "number",
+      "$value": 50,
+      "$description": "Original CSS: 50%"
+    },
+    "0-42-em": {
+      "$type": "number",
+      "$value": 0.42,
+      "$description": "Original CSS: .42em"
+    },
+    "0-1-em": {
+      "$type": "number",
+      "$value": 0.1,
+      "$description": "Original CSS: .1em"
+    },
+    "0-25-em": {
+      "$type": "number",
+      "$value": 0.25,
+      "$description": "Original CSS: .25em"
+    },
+    "0-2-em": {
+      "$type": "number",
+      "$value": 0.2,
+      "$description": "Original CSS: .2em"
+    },
+    "0-8-em": {
+      "$type": "number",
+      "$value": 0.8,
+      "$description": "Original CSS: .8em"
+    },
+    "0-08-em": {
+      "$type": "number",
+      "$value": 0.08,
+      "$description": "Original CSS: .08em"
+    },
+    "0-35-em": {
+      "$type": "number",
+      "$value": 0.35,
+      "$description": "Original CSS: .35em"
+    },
+    "0-01-em": {
+      "$type": "number",
+      "$value": 0.01,
+      "$description": "Original CSS: .01em"
+    },
+    "0-06-em": {
+      "$type": "number",
+      "$value": 0.06,
+      "$description": "Original CSS: .06em"
+    },
+    "negative-0-06-em": {
+      "$type": "number",
+      "$value": -0.06,
+      "$description": "Original CSS: -.06em"
+    },
+    "0-26-em": {
+      "$type": "number",
+      "$value": 0.26,
+      "$description": "Original CSS: .26em"
+    },
+    "negative-0-8-em": {
+      "$type": "number",
+      "$value": -0.8,
+      "$description": "Original CSS: -.8em"
+    },
+    "negative-0-74-em": {
+      "$type": "number",
+      "$value": -0.74,
+      "$description": "Original CSS: -.74em"
+    },
+    "2-2-vw": {
+      "$type": "number",
+      "$value": 2.2,
+      "$description": "Original CSS: 2.2vw"
+    },
+    "0-45-em": {
+      "$type": "number",
+      "$value": 0.45,
+      "$description": "Original CSS: .45em"
+    },
+    "0-3-em": {
+      "$type": "number",
+      "$value": 0.3,
+      "$description": "Original CSS: .3em"
+    },
+    "negative-0-18-em": {
+      "$type": "number",
+      "$value": -0.18,
+      "$description": "Original CSS: -.18em"
+    },
+    "0-55-em": {
+      "$type": "number",
+      "$value": 0.55,
+      "$description": "Original CSS: .55em"
+    },
+    "7-5-vw": {
+      "$type": "number",
+      "$value": 7.5,
+      "$description": "Original CSS: 7.5vw"
+    },
+    "5-vw": {
+      "$type": "number",
+      "$value": 5,
+      "$description": "Original CSS: 5vw"
+    },
+    "100-vw": {
+      "$type": "number",
+      "$value": 100,
+      "$description": "Original CSS: 100vw"
+    },
+    "0-5-em": {
+      "$type": "number",
+      "$value": 0.5,
+      "$description": "Original CSS: .5em"
+    },
+    "100-percent": {
+      "$type": "number",
+      "$value": 100,
+      "$description": "Original CSS: 100%"
+    },
+    "1-8-vw": {
+      "$type": "number",
+      "$value": 1.8,
+      "$description": "Original CSS: 1.8vw"
+    },
+    "0-025-em": {
+      "$type": "number",
+      "$value": 0.025,
+      "$description": "Original CSS: .025em"
+    },
+    "0-9-em": {
+      "$type": "number",
+      "$value": 0.9,
+      "$description": "Original CSS: .9em"
+    },
+    "1-em": {
+      "$type": "number",
+      "$value": 1,
+      "$description": "Original CSS: 1em"
+    },
+    "0-33-em": {
+      "$type": "number",
+      "$value": 0.33,
+      "$description": "Original CSS: .33em"
+    },
+    "0-6-em": {
+      "$type": "number",
+      "$value": 0.6,
+      "$description": "Original CSS: .6em"
+    },
+    "negative-0-25-em": {
+      "$type": "number",
+      "$value": -0.25,
+      "$description": "Original CSS: -.25em"
+    },
+    "0-15-em": {
+      "$type": "number",
+      "$value": 0.15,
+      "$description": "Original CSS: .15em"
+    },
+    "negative-1-3-em": {
+      "$type": "number",
+      "$value": -1.3,
+      "$description": "Original CSS: -1.3em"
+    },
+    "negative-0-55-em": {
+      "$type": "number",
+      "$value": -0.55,
+      "$description": "Original CSS: -.55em"
+    },
+    "0-03-em": {
+      "$type": "number",
+      "$value": 0.03,
+      "$description": "Original CSS: .03em"
+    },
+    "negative-0-7-em": {
+      "$type": "number",
+      "$value": -0.7,
+      "$description": "Original CSS: -.7em"
+    },
+    "negative-0-45-em": {
+      "$type": "number",
+      "$value": -0.45,
+      "$description": "Original CSS: -.45em"
+    },
+    "negative-1-em": {
+      "$type": "number",
+      "$value": -1,
+      "$description": "Original CSS: -1em"
+    },
+    "negative-1-2-em": {
+      "$type": "number",
+      "$value": -1.2,
+      "$description": "Original CSS: -1.2em"
+    },
+    "negative-0-9-em": {
+      "$type": "number",
+      "$value": -0.9,
+      "$description": "Original CSS: -.9em"
+    },
+    "1-9-vw": {
+      "$type": "number",
+      "$value": 1.9,
+      "$description": "Original CSS: 1.9vw"
+    },
+    "0-75-em": {
+      "$type": "number",
+      "$value": 0.75,
+      "$description": "Original CSS: .75em"
+    },
+    "1-3-em": {
+      "$type": "number",
+      "$value": 1.3,
+      "$description": "Original CSS: 1.3em"
+    },
+    "negative-0-2-em": {
+      "$type": "number",
+      "$value": -0.2,
+      "$description": "Original CSS: -.2em"
+    },
+    "0-92-em": {
+      "$type": "number",
+      "$value": 0.92,
+      "$description": "Original CSS: .92em"
+    },
+    "3-vw": {
+      "$type": "number",
+      "$value": 3,
+      "$description": "Original CSS: 3vw"
+    },
+    "0-04-em": {
+      "$type": "number",
+      "$value": 0.04,
+      "$description": "Original CSS: .04em"
+    },
+    "6-4-vw": {
+      "$type": "number",
+      "$value": 6.4,
+      "$description": "Original CSS: 6.4vw"
+    },
+    "0-64-em": {
+      "$type": "number",
+      "$value": 0.64,
+      "$description": "Original CSS: .64em"
+    },
+    "0-32-em": {
+      "$type": "number",
+      "$value": 0.32,
+      "$description": "Original CSS: .32em"
+    },
+    "0-02-em": {
+      "$type": "number",
+      "$value": 0.02,
+      "$description": "Original CSS: .02em"
+    },
+    "8-4-vw": {
+      "$type": "number",
+      "$value": 8.4,
+      "$description": "Original CSS: 8.4vw"
+    },
+    "5-1-vw": {
+      "$type": "number",
+      "$value": 5.1,
+      "$description": "Original CSS: 5.1vw"
+    },
+    "0-07-em": {
+      "$type": "number",
+      "$value": 0.07,
+      "$description": "Original CSS: .07em"
+    },
+    "62-percent": {
+      "$type": "number",
+      "$value": 62,
+      "$description": "Original CSS: 62%"
+    },
+    "6-vw": {
+      "$type": "number",
+      "$value": 6,
+      "$description": "Original CSS: 6vw"
+    }
+  }
+}

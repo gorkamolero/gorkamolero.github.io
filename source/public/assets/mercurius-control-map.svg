@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Mercurius sanitized control map</title>
+  <desc id="desc">A fake-data control map showing market intake, watcher, risk gate, executor, operator surface, and forensic replay.</desc>
+  <rect width="1280" height="760" fill="#101318"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="56" y="72" fill="#f7f4ee" font-size="34" font-weight="800">Mercurius Control Map</text>
+    <text x="56" y="108" fill="#aeb5c0" font-size="18">Sanitized architecture view with fake symbols, fake prices, and no broker/account details.</text>
+    <g fill="none" stroke="#3d7ec9" stroke-width="5" stroke-linecap="round">
+      <path d="M200 258H390"/>
+      <path d="M520 258H710"/>
+      <path d="M840 258H1030"/>
+      <path d="M680 352V480H390"/>
+      <path d="M680 352V480H970"/>
+    </g>
+    <g>
+      <rect x="56" y="184" width="176" height="148" rx="8" fill="#f7f4ee"/>
+      <text x="80" y="226" fill="#101318" font-size="22" font-weight="800">Market intake</text>
+      <text x="80" y="262" fill="#343b46" font-size="16">FAKE: SYN-42</text>
+      <text x="80" y="288" fill="#343b46" font-size="16">Last: 412.36</text>
+      <text x="80" y="314" fill="#343b46" font-size="16">Mode: rehearsal</text>
+    </g>
+    <g>
+      <rect x="344" y="184" width="208" height="148" rx="8" fill="#4e9af1"/>
+      <text x="368" y="226" fill="#07101d" font-size="22" font-weight="800">Watcher</text>
+      <text x="368" y="262" fill="#07101d" font-size="16">Signal bundle</text>
+      <text x="368" y="288" fill="#07101d" font-size="16">State snapshot</text>
+      <text x="368" y="314" fill="#07101d" font-size="16">Intent candidate</text>
+    </g>
+    <g>
+      <rect x="664" y="184" width="208" height="148" rx="8" fill="#f7f4ee"/>
+      <text x="688" y="226" fill="#101318" font-size="22" font-weight="800">Risk gate</text>
+      <text x="688" y="262" fill="#343b46" font-size="16">Size guard</text>
+      <text x="688" y="288" fill="#343b46" font-size="16">Session guard</text>
+      <text x="688" y="314" fill="#343b46" font-size="16">Kill switch</text>
+    </g>
+    <g>
+      <rect x="984" y="184" width="208" height="148" rx="8" fill="#7bbf7a"/>
+      <text x="1008" y="226" fill="#071307" font-size="22" font-weight="800">Executor</text>
+      <text x="1008" y="262" fill="#071307" font-size="16">Paper/live boundary</text>
+      <text x="1008" y="288" fill="#071307" font-size="16">Bracket state</text>
+      <text x="1008" y="314" fill="#071307" font-size="16">Broker adapter</text>
+    </g>
+    <g>
+      <rect x="184" y="430" width="288" height="178" rx="8" fill="#f7f4ee"/>
+      <text x="216" y="474" fill="#101318" font-size="22" font-weight="800">Operator surface</text>
+      <text x="216" y="512" fill="#343b46" font-size="16">Current mode: rehearsal</text>
+      <text x="216" y="538" fill="#343b46" font-size="16">Open intent: synthetic</text>
+      <text x="216" y="564" fill="#343b46" font-size="16">Manual halt: available</text>
+    </g>
+    <g>
+      <rect x="808" y="430" width="288" height="178" rx="8" fill="#d35d4c"/>
+      <text x="840" y="474" fill="#160908" font-size="22" font-weight="800">Forensics</text>
+      <text x="840" y="512" fill="#160908" font-size="16">Replay window: fake</text>
+      <text x="840" y="538" fill="#160908" font-size="16">Intent trace: captured</text>
+      <text x="840" y="564" fill="#160908" font-size="16">Decision log: scrubbed</text>
+    </g>
+    <text x="56" y="700" fill="#f7f4ee" font-size="18" font-weight="700">Public-safe boundary</text>
+    <text x="56" y="728" fill="#aeb5c0" font-size="16">No strategy rules, account identifiers, broker endpoints, chat IDs, real alerts, or live trade logs are represented.</text>
+  </g>
+</svg>

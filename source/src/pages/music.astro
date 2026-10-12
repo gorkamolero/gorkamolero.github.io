@@ -1,0 +1,72 @@
+---
+import Release from '../components/Release.astro';
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import MetaLine from '../components/MetaLine.astro';
+const head = `<meta property="og:type" content="website" />
+    <meta property="og:title" content="Gorka Molero · Music" />
+    <meta property="og:description" content="Gorka Molero produces the band Gitano de Palo and releases his own music as Gorka." />
+    <meta property="og:url" content="https://gorkamolero.github.io/music.html" />
+    <meta property="og:image" content="https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb315dc13e2c147595b68d2871" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="data:," />`;
+const afterFooter = ``;
+---
+<Base title={"Gorka Molero · Music"} description={"Gorka Molero produces the band Gitano de Palo and releases his own music as Gorka."} page="music">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead role="Music producer" />
+    
+
+      <p class="intro">I produce the band Gitano de Palo, and I release my own music as <a href="https://open.spotify.com/artist/6kPHDVsuzYXW2oTAZ80QJj" target="_blank" rel="noopener">Gorka</a>.</p>
+
+      <main>
+        <WorkSection class="work" id="gitano-de-palo">
+          <div class="section-head">
+            <h2>Gitano de Palo</h2>
+            <a class="out" href="https://open.spotify.com/artist/4rO0P2RVElJ04AbXxSgViI" target="_blank" rel="noopener">Spotify</a>
+          </div>
+          <MetaLine class="meta">Arrangement, production, mixing and mastering</MetaLine>
+          <div class="player"><iframe src="https://open.spotify.com/embed/artist/4rO0P2RVElJ04AbXxSgViI?utm_source=generator&amp;theme=0" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Gitano de Palo on Spotify"></iframe></div>
+        </WorkSection>
+
+        <WorkSection class="work" id="gorka">
+          <h2>Gorka</h2>
+          <MetaLine class="meta">Solo work</MetaLine>
+          <div class="discography">
+          <Release class="release" id="thumos">
+            <div>
+              <h3>Thumos</h3>
+              <MetaLine class="meta">Single</MetaLine>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/track/7DY57dKpH4SXpoHuN62htI?utm_source=generator&amp;theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Thumos on Spotify"></iframe></div>
+          </Release>
+          <Release class="release" id="elohim">
+            <div>
+              <h3>Elohim</h3>
+              <MetaLine class="meta">Single</MetaLine>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/track/0myIFClne0a4z8R29FoAl6?utm_source=generator&amp;theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Elohim on Spotify"></iframe></div>
+          </Release>
+          <Release class="release" id="regret">
+            <div>
+              <h3>Regret</h3>
+              <MetaLine class="meta">Piano work</MetaLine>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/track/5Bfy5N803xh3djfhGX7Z7G?utm_source=generator&amp;theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Regret on Spotify"></iframe></div>
+          </Release>
+          <Release class="release tall" id="descent">
+            <div>
+              <h3>Descent</h3>
+              <MetaLine class="meta">EP</MetaLine>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/album/5AEHNm9UfatuBqrT0hGIfI?utm_source=generator&amp;theme=0" height="432" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Descent on Spotify"></iframe></div>
+          </Release>
+          </div>
+        </WorkSection>
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>

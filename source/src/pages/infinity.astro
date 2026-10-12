@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import ActionRow from '../components/ActionRow.astro';
+import TextLink from '../components/TextLink.astro';
+import Dot from '../components/Dot.astro';
+import Figure from '../components/Figure.astro';
+import CaseLead from '../components/CaseLead.astro';
+import MetaLine from '../components/MetaLine.astro';
+import PointsList from '../components/PointsList.astro';
+const head = `<link rel="icon" href="data:," />`;
+const afterFooter = ``;
+---
+<Base title={"Infinity - Gorka Molero Case Study"} description={"Sanitized case study for Infinity, a private options strategy research and readiness system with proof windows, source mapping, quote audits, and execution gates."} page="infinity">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead />
+    
+
+      <CaseLead class="lead">
+        <MetaLine class="meta eyebrow">Private · options research</MetaLine>
+        <h2 class="case-title">Infinity</h2>
+        <p class="intro">Private options strategy research infrastructure that turns source material, proof windows, quote audits, and readiness gates into a disciplined strategy lab.</p>
+        <MetaLine class="meta chips">Private code <Dot class="dot">&middot;</Dot> Evidence pipeline <Dot class="dot">&middot;</Dot> Review on request</MetaLine>
+      </CaseLead>
+
+      <main>
+      <WorkSection class="work">
+        <h2>Problem</h2>
+        <p>Strategy research becomes dangerous when attractive results move straight from inspiration to execution. The system has to preserve source material, test fidelity, proof windows, quote quality, and staged readiness.</p>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>What I Built</h2>
+        <p>I built Infinity as private options research and execution-readiness infrastructure that treats trading rules as a traceability problem. Every numeric strategy parameter is tied to a primary-source citation, and a static no-uncited-numbers gate enforces it. Performance claims always reference named in-sample and out-of-sample proof windows rather than open-ended history. Dedicated quote audits cross-check modeled fills against real bid/ask history to verify a modeled price was ever actually quoted.</p>
+        <p>Nothing is asserted without a backing artifact: the system maintains ~276 regenerable evidence artifacts, and promotion toward execution runs through staged readiness gates with a programmatic completion verifier and a kill switch.</p>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>System Shape</h2>
+        <Figure class="plate">
+          <div class="shot"><img src="./assets/infinity-strategy-lab.svg" alt="Sanitized Infinity strategy lab with fake source map, proof windows, quote audit, and readiness gate." loading="lazy" /></div>
+          <figcaption>Synthetic strategy-lab view. It makes the research-to-readiness pipeline visible while hiding exact rules, real trade data, account scale, broker details, and timing-sensitive results.</figcaption>
+        </Figure>
+        <Figure class="plate">
+          <div class="shot"><img src="./assets/infinity-proof-readiness.svg" alt="Synthetic Infinity proof-window report with fake quote audit and readiness checklist." loading="lazy" /></div>
+          <figcaption>Synthetic proof-window and readiness screen. It shows evidence quality, quote-audit thinking, and staged promotion without revealing real strategy rules or trades.</figcaption>
+        </Figure>
+        <Figure class="plate">
+          <div class="shot"><img src="./assets/infinity-source-rule-map.svg" alt="Synthetic Infinity source-to-rule map with fake source notes, rule categories, and evidence gates." loading="lazy" /></div>
+          <figcaption>Synthetic source-to-rule map. It shows how a strategy claim traces from source material to rule categories, tests, and readiness gates without revealing the actual edge.</figcaption>
+        </Figure>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Technical Decisions</h2>
+        <PointsList class="points">
+          <li>Keep strategy understanding separate from execution readiness.</li>
+          <li>Tie every parameter to a primary-source citation and gate builds on it statically.</li>
+          <li>Fix proof windows by name so no claim can quietly cherry-pick its time slice.</li>
+          <li>Audit modeled fills against real bid/ask history to avoid misleading backtest confidence.</li>
+          <li>Promote only evidence-backed versions through staged gates, verified programmatically, with a kill switch on the far side.</li>
+        </PointsList>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>What This Proves</h2>
+        <p>A research-to-live pipeline that treats trading rules as a traceability problem: ~28K lines of Python, 320 tests, ~276 regenerable evidence artifacts, and no path to live orders except through a fixed contract of gates. No parameter without a citation, no claim without an artifact.</p>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Public Evidence</h2>
+        <PointsList class="points">
+          <li>Fake-data strategy lab screen included.</li>
+          <li>Proof-window report represented in the lab view.</li>
+          <li>Quote-audit view with synthetic prices included.</li>
+          <li>Readiness checklist represented in the gate view.</li>
+          <li>Source-to-rule traceability map included.</li>
+        </PointsList>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Privacy Boundary</h2>
+        <p>Strategy rules, real trade data, account scale, broker details, source material, and results stay private. The screens above use synthetic data. The traceability system — citations, proof windows, quote audits, readiness gates — can be walked through live, on request.</p>
+        <ActionRow class="actions"><TextLink class="button primary" href="./contact.html">Ask for a demo</TextLink></ActionRow>
+      </WorkSection>
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>

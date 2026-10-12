@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="860" viewBox="0 0 1360 860" role="img" aria-labelledby="title desc">
+  <title id="title">Saga source-grounded workflow screen</title>
+  <desc id="desc">A public-safe mock product screen showing Saga's chat workflow, saved idea/script artifacts, voiceover step, visual asset map, and editor surface.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1117"/>
+      <stop offset="0.55" stop-color="#151827"/>
+      <stop offset="1" stop-color="#101b1d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f36f59"/>
+      <stop offset="0.48" stop-color="#f4c95d"/>
+      <stop offset="1" stop-color="#68d8be"/>
+    </linearGradient>
+    <style>
+      .bg { fill: url(#bg); }
+      .top { fill: #11131a; stroke: #303447; stroke-width: 1.4; }
+      .panel { fill: #181b25; stroke: #33394c; stroke-width: 1.4; }
+      .panel2 { fill: #11151d; stroke: #2d3542; stroke-width: 1.2; }
+      .card { fill: #222634; stroke: #454c64; stroke-width: 1; }
+      .soft { fill: #202833; stroke: #44655d; stroke-width: 1; }
+      .line { stroke: #343b4a; stroke-width: 2; fill: none; }
+      .flow { stroke: url(#accent); stroke-width: 4; fill: none; stroke-linecap: round; }
+      .brand { fill: #f7f2e9; font: 800 32px Arial, sans-serif; letter-spacing: 0; }
+      .label { fill: #98a3b4; font: 700 14px Arial, sans-serif; letter-spacing: 0.12em; }
+      .small { fill: #b9c1cb; font: 400 16px Arial, sans-serif; letter-spacing: 0; }
+      .tiny { fill: #8e98a6; font: 400 13px Arial, sans-serif; letter-spacing: 0; }
+      .title { fill: #ffffff; font: 700 22px Arial, sans-serif; letter-spacing: 0; }
+      .body { fill: #e8edf3; font: 400 17px Arial, sans-serif; letter-spacing: 0; }
+      .mono { fill: #e2ebdf; font: 400 14px "SFMono-Regular", Consolas, monospace; letter-spacing: 0; }
+      .pill { fill: #10131b; stroke: #50586f; stroke-width: 1; }
+      .ok { fill: #68d8be; }
+      .warn { fill: #f4c95d; }
+      .danger { fill: #f36f59; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1360" height="860"/>
+  <rect class="top" x="48" y="34" width="1264" height="72" rx="10"/>
+  <text class="brand" x="78" y="80">saga</text>
+  <text class="label" x="182" y="76">AGENTIC STORY STUDIO</text>
+  <rect class="pill" x="948" y="54" width="146" height="34" rx="17"/>
+  <text class="tiny" x="978" y="76">mock data</text>
+  <rect class="pill" x="1110" y="54" width="164" height="34" rx="17"/>
+  <text class="tiny" x="1142" y="76">source-grounded</text>
+
+  <text class="label" x="64" y="146">CHAT WORKFLOW</text>
+  <rect class="panel" x="64" y="168" width="382" height="548" rx="12"/>
+  <rect class="panel2" x="88" y="196" width="334" height="92" rx="10"/>
+  <text class="tiny" x="108" y="224">USER</text>
+  <text class="body" x="108" y="254">I have an idea: a short video about</text>
+  <text class="body" x="108" y="278">creative tools that make better builders.</text>
+  <rect class="soft" x="88" y="310" width="334" height="126" rx="10"/>
+  <text class="tiny" x="108" y="338">ARCHITECT AGENT</text>
+  <text class="body" x="108" y="368">Good. I will shape it into an idea,</text>
+  <text class="body" x="108" y="392">then a script, then a voiceover and</text>
+  <text class="body" x="108" y="416">visual asset map. Save this idea?</text>
+  <rect class="card" x="88" y="462" width="334" height="86" rx="10"/>
+  <text class="tiny" x="108" y="490">FUNCTION CALL</text>
+  <text class="mono" x="108" y="520">save_idea(title, description)</text>
+  <rect class="card" x="88" y="572" width="334" height="96" rx="10"/>
+  <text class="tiny" x="108" y="600">NEXT TOOL</text>
+  <text class="mono" x="108" y="630">save_generated_script(script)</text>
+  <text class="mono" x="108" y="654">choose_voiceover_model()</text>
+
+  <text class="label" x="496" y="146">SAVED STORY ARTIFACTS</text>
+  <rect class="panel" x="496" y="168" width="382" height="548" rx="12"/>
+  <rect class="card" x="522" y="200" width="330" height="112" rx="10"/>
+  <circle class="ok" cx="546" cy="228" r="7"/>
+  <text class="title" x="566" y="236">Idea</text>
+  <text class="body" x="546" y="268">The Right-Hand Builder</text>
+  <text class="tiny" x="546" y="292">Saved from chat state into product data.</text>
+  <rect class="card" x="522" y="336" width="330" height="142" rx="10"/>
+  <circle class="warn" cx="546" cy="364" r="7"/>
+  <text class="title" x="566" y="372">Script</text>
+  <text class="body" x="546" y="404">Hook, setup, conflict, proof, close.</text>
+  <text class="tiny" x="546" y="428">Generated text becomes a durable script.</text>
+  <text class="mono" x="546" y="456">wordCount: 420</text>
+  <rect class="card" x="522" y="502" width="330" height="146" rx="10"/>
+  <circle class="danger" cx="546" cy="530" r="7"/>
+  <text class="title" x="566" y="538">Voiceover + Transcript</text>
+  <text class="body" x="546" y="570">Voice model selection comes before</text>
+  <text class="body" x="546" y="594">timed visual asset generation.</text>
+  <text class="mono" x="546" y="626">words[] -> start/end timings</text>
+
+  <text class="label" x="928" y="146">REMOTION / EDITOR DIRECTION</text>
+  <rect class="panel" x="928" y="168" width="368" height="548" rx="12"/>
+  <rect class="panel2" x="954" y="198" width="316" height="184" rx="10"/>
+  <rect x="986" y="226" width="82" height="130" rx="6" fill="#2a3040" stroke="#566074"/>
+  <rect x="1084" y="226" width="154" height="130" rx="6" fill="#151a24" stroke="#566074"/>
+  <text class="tiny" x="999" y="294">VIDEO</text>
+  <text class="tiny" x="1120" y="288">PLAYER</text>
+  <text class="tiny" x="1108" y="314">Remotion shell</text>
+  <rect class="card" x="954" y="406" width="148" height="176" rx="10"/>
+  <text class="title" x="976" y="440">Transcript</text>
+  <text class="mono" x="976" y="474">00:00 Hook</text>
+  <text class="mono" x="976" y="502">00:08 Problem</text>
+  <text class="mono" x="976" y="530">00:22 Proof</text>
+  <rect class="card" x="1120" y="406" width="150" height="176" rx="10"/>
+  <text class="title" x="1142" y="440">Assets</text>
+  <text class="mono" x="1142" y="474">scene_01</text>
+  <text class="mono" x="1142" y="502">scene_02</text>
+  <text class="mono" x="1142" y="530">scene_03</text>
+  <rect class="pill" x="954" y="610" width="316" height="48" rx="8"/>
+  <text class="body" x="982" y="641">generate_video() routes to editor</text>
+
+  <path class="line" d="M446 442 H496"/>
+  <path class="flow" d="M454 442 H488"/>
+  <path class="line" d="M878 442 H928"/>
+  <path class="flow" d="M886 442 H920"/>
+
+  <rect class="panel2" x="64" y="752" width="1232" height="62" rx="10"/>
+  <text class="tiny" x="92" y="784">Boundary: public mock screen from source inspection, not a live runtime claim. It is grounded in src/app/action.tsx, chat/idea/script/editor components, schema, and the CrewAI prototype outputs.</text>
+  <text class="tiny" x="92" y="806">Remaining proof: fix env schema/auth/database drift, capture real chat, saved script, and Remotion editor screenshots with disposable mock data.</text>
+</svg>

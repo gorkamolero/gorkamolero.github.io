@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Claude-on-Discord operations loop</title>
+  <desc id="desc">Public-safe architecture diagram showing Discord commands, session state, worktree lanes, Claude Code execution, tool-event streaming, review handoff, and guardian supervision.</desc>
+  <rect width="1200" height="760" fill="#f6f1e8"/>
+  <rect x="44" y="44" width="1112" height="672" rx="8" fill="#11151b"/>
+  <text x="84" y="104" fill="#f8f5ee" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Claude-on-Discord: agent operations loop</text>
+  <text x="84" y="136" fill="#d9d1c3" font-family="Inter, Arial, sans-serif" font-size="17">Discord threads become reviewable Claude Code work lanes with local state, tool streaming, and supervisor controls.</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e2b24c"/>
+    </marker>
+    <style>
+      .box { fill: #f8f5ee; stroke: #d8cbb8; stroke-width: 2; }
+      .box-dark { fill: #1c232c; stroke: #667085; stroke-width: 2; }
+      .label { fill: #11151b; font: 800 20px Inter, Arial, sans-serif; }
+      .text { fill: #374151; font: 15px Inter, Arial, sans-serif; }
+      .dark-label { fill: #f8f5ee; font: 800 20px Inter, Arial, sans-serif; }
+      .dark-text { fill: #d9d1c3; font: 15px Inter, Arial, sans-serif; }
+      .tiny { fill: #d9d1c3; font: 13px Inter, Arial, sans-serif; }
+      .arrow { stroke: #e2b24c; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="box" x="84" y="190" width="270" height="132" rx="8"/>
+  <text class="label" x="108" y="230">Discord surface</text>
+  <text class="text" x="108" y="262">Channels as coding lanes</text>
+  <text class="text" x="108" y="286">Threads as branches</text>
+  <text class="text" x="108" y="310">Slash commands and buttons</text>
+
+  <rect class="box" x="466" y="190" width="270" height="132" rx="8"/>
+  <text class="label" x="490" y="230">Session router</text>
+  <text class="text" x="490" y="262">Model and permission mode</text>
+  <text class="text" x="490" y="286">Working directory and history</text>
+  <text class="text" x="490" y="310">SQLite-backed channel state</text>
+
+  <rect class="box" x="848" y="190" width="270" height="132" rx="8"/>
+  <text class="label" x="872" y="230">Work lane</text>
+  <text class="text" x="872" y="262">Repository selection</text>
+  <text class="text" x="872" y="286">Optional git worktree</text>
+  <text class="text" x="872" y="310">Branch-aware context</text>
+
+  <rect class="box" x="848" y="420" width="270" height="132" rx="8"/>
+  <text class="label" x="872" y="460">Claude Code run</text>
+  <text class="text" x="872" y="492">SDK query wrapper</text>
+  <text class="text" x="872" y="516">Retry ladder and safe mode</text>
+  <text class="text" x="872" y="540">Real files and shell tools</text>
+
+  <rect class="box" x="466" y="420" width="270" height="132" rx="8"/>
+  <text class="label" x="490" y="460">Review stream</text>
+  <text class="text" x="490" y="492">Thinking and answer deltas</text>
+  <text class="text" x="490" y="516">Tool-use summaries</text>
+  <text class="text" x="490" y="540">Generated files, diffs, costs</text>
+
+  <rect class="box" x="84" y="420" width="270" height="132" rx="8"/>
+  <text class="label" x="108" y="460">Human handoff</text>
+  <text class="text" x="108" y="492">Status, diff, PR helpers</text>
+  <text class="text" x="108" y="516">Interrupt and abort controls</text>
+  <text class="text" x="108" y="540">Reviewable Discord history</text>
+
+  <path class="arrow" d="M354 256 H456"/>
+  <path class="arrow" d="M736 256 H838"/>
+  <path class="arrow" d="M983 322 V410"/>
+  <path class="arrow" d="M848 486 H746"/>
+  <path class="arrow" d="M466 486 H364"/>
+  <path class="arrow" d="M219 420 V334"/>
+
+  <rect class="box-dark" x="84" y="610" width="1034" height="68" rx="8"/>
+  <text class="dark-label" x="108" y="650">Guardian supervisor</text>
+  <text class="dark-text" x="340" y="650">preflight checks</text>
+  <text class="dark-text" x="510" y="650">heartbeat</text>
+  <text class="dark-text" x="625" y="650">restart backoff</text>
+  <text class="dark-text" x="798" y="650">secure control API</text>
+  <text class="dark-text" x="980" y="650">log tailing</text>
+
+  <text class="tiny" x="84" y="704">Proof basis: local source, README architecture, docs/ARCHITECTURE.md, passing typecheck, and 187 passing tests.</text>
+</svg>

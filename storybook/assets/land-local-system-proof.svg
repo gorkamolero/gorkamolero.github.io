@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Land local system proof</title>
+  <desc id="desc">A sanitized diagram showing the locally inspected Land implementation: public research corpus, county sweep scripts, scoring, Astro board, map/list filters, pipeline, and privacy boundary.</desc>
+  <rect width="1200" height="820" fill="#f7f4ee"/>
+  <rect x="46" y="44" width="1108" height="732" rx="10" fill="#fffdf8" stroke="#d6cbbb" stroke-width="2"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="82" y="106" font-size="34" font-weight="800" fill="#101318">Land: local implementation proof</text>
+    <text x="82" y="144" font-size="18" font-weight="700" fill="#343b46">Astro board build passed; source inspected without copying parcel, owner, address, or APN data.</text>
+
+    <g transform="translate(82 204)">
+      <rect width="266" height="144" rx="8" fill="#eef4ed" stroke="#c7d8c3"/>
+      <text x="24" y="44" font-size="23" font-weight="800" fill="#162114">Research corpus</text>
+      <text x="24" y="80" font-size="17" fill="#343b46">public land guides,</text>
+      <text x="24" y="106" font-size="17" fill="#343b46">video transcript index,</text>
+      <text x="24" y="132" font-size="17" fill="#343b46">Surreal schema</text>
+    </g>
+
+    <g transform="translate(466 204)">
+      <rect width="266" height="144" rx="8" fill="#f4efe5" stroke="#ddcfb9"/>
+      <text x="24" y="44" font-size="23" font-weight="800" fill="#101318">County sweep</text>
+      <text x="24" y="80" font-size="17" fill="#343b46">parcel roll collectors,</text>
+      <text x="24" y="106" font-size="17" fill="#343b46">motivation signals,</text>
+      <text x="24" y="132" font-size="17" fill="#343b46">flood/access gates</text>
+    </g>
+
+    <g transform="translate(850 204)">
+      <rect width="220" height="144" rx="8" fill="#f0e7e2" stroke="#dfc8bd"/>
+      <text x="24" y="44" font-size="23" font-weight="800" fill="#101318">Scoring</text>
+      <text x="24" y="80" font-size="17" fill="#343b46">buy-box math,</text>
+      <text x="24" y="106" font-size="17" fill="#343b46">risk flags,</text>
+      <text x="24" y="132" font-size="17" fill="#343b46">ranked queue</text>
+    </g>
+
+    <path d="M358 276H444" stroke="#101318" stroke-width="5" stroke-linecap="round"/>
+    <path d="M444 276l-18-12v24z" fill="#101318"/>
+    <path d="M742 276H828" stroke="#101318" stroke-width="5" stroke-linecap="round"/>
+    <path d="M828 276l-18-12v24z" fill="#101318"/>
+
+    <g transform="translate(116 432)">
+      <rect width="968" height="172" rx="8" fill="#101318"/>
+      <text x="34" y="48" font-size="24" font-weight="800" fill="#f7f4ee">Astro operator board</text>
+      <g font-size="17" fill="#dbe5f1">
+        <text x="34" y="88">map pins + candidate cards stay in sync</text>
+        <text x="34" y="122">filters drive county, acreage, flood, owner grade, and sort</text>
+        <text x="34" y="156">pipeline tab keeps deal movement human-owned</text>
+      </g>
+      <g transform="translate(604 32)">
+        <rect width="318" height="108" rx="6" fill="#f7f4ee"/>
+        <text x="24" y="42" font-size="20" font-weight="800" fill="#101318">Verification</text>
+        <text x="24" y="72" font-size="17" fill="#343b46">pnpm build passed</text>
+        <text x="24" y="98" font-size="17" fill="#343b46">1 static page generated</text>
+      </g>
+    </g>
+
+    <g transform="translate(82 660)">
+      <rect width="1036" height="76" rx="8" fill="#fffdf8" stroke="#d6cbbb"/>
+      <text x="24" y="32" font-size="18" font-weight="800" fill="#101318">Public boundary</text>
+      <text x="24" y="56" font-size="15" fill="#343b46">Show architecture, build proof, and fake-data screens. Keep owner names, addresses, parcel IDs, APNs, exact coordinates,</text>
+      <text x="24" y="76" font-size="15" fill="#343b46">CRM rows, and operational text private.</text>
+    </g>
+  </g>
+</svg>

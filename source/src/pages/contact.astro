@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import ActionRow from '../components/ActionRow.astro';
+import TextLink from '../components/TextLink.astro';
+import CaseLead from '../components/CaseLead.astro';
+import MetaLine from '../components/MetaLine.astro';
+import PointsList from '../components/PointsList.astro';
+const head = `<link rel="icon" href="data:," />`;
+const afterFooter = ``;
+---
+<Base title={"Contact - Gorka Molero"} description={"Contact and private-review flow for Gorka Molero's AI product engineering portfolio."} page="contact">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead />
+    
+
+      <CaseLead class="lead">
+        <MetaLine class="meta eyebrow">Contact and private review</MetaLine>
+        <h2 class="case-title long">Some of the strongest systems are review-on-request.</h2>
+        <p class="intro">Trading systems, land workflows, and private business tooling can be discussed through sanitized architecture, fake-data demos, or selective code walkthroughs.</p>
+      </CaseLead>
+
+      <main>
+      <WorkSection class="work" aria-labelledby="contact-title">
+        <MetaLine class="meta eyebrow">Review flow</MetaLine>
+        <h2 id="contact-title">What can be shared safely.</h2>
+        <p>The public portfolio keeps sensitive data out of screenshots and source. A private review can go deeper without exposing live accounts, trade logic, owner records, client details, credentials, or operational endpoints.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Public review</h3>
+            <div>
+              <p>Use the portfolio pages, GitHub profile, upgraded READMEs, and public repos for the first technical screen.</p>
+              <PointsList class="points">
+                <li>Portfolio homepage and workbench.</li>
+                <li>Public repo READMEs.</li>
+                <li>Sanitized architecture maps.</li>
+              </PointsList>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Private walkthrough</h3>
+            <div>
+              <p>For serious conversations, review the sensitive systems through controlled demos and fake-data representations.</p>
+              <PointsList class="points">
+                <li>Mercurius architecture and operator flow.</li>
+                <li>Infinity research/readiness workflow.</li>
+                <li>Land Unconditional acquisition workflow.</li>
+              </PointsList>
+            </div>
+          </article>
+          <article class="card">
+            <h3>What stays private</h3>
+            <div>
+              <p>Commercial edge, personal data, client details, and live infrastructure remain outside public materials.</p>
+              <PointsList class="points">
+                <li>No live strategy, account, broker, or endpoint details.</li>
+                <li>No parcel owner, address, or APN data.</li>
+                <li>No credentials, raw logs, private chat IDs, or client data.</li>
+              </PointsList>
+            </div>
+          </article>
+        </div>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <MetaLine class="meta eyebrow">Best-fit conversations</MetaLine>
+        <h2 class="statement">AI product engineering, forward-deployed work, agentic tooling, creative AI products, solutions engineering, internal tools, and workflow modernization.</h2>
+        <div class="routes" aria-label="Contact routes">
+          <article class="route">
+            <span class="label">First contact</span>
+            <h3>GitHub</h3>
+            <p>Use this for recruiting, collaboration, private-review requests, and to inspect the public repositories and profile.</p>
+            <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/gorkamolero" target="_blank" rel="noopener">Open GitHub</TextLink></ActionRow>
+          </article>
+          <article class="route">
+            <span class="label">Project scan</span>
+            <h3>Workbench</h3>
+            <p>Use this to move quickly from positioning into the larger project atlas before asking for private walkthroughs.</p>
+            <ActionRow class="actions"><TextLink class="button" href="./workbench.html">Open workbench</TextLink></ActionRow>
+          </article>
+        </div>
+      </WorkSection>
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>

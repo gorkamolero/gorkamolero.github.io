@@ -1,0 +1,22 @@
+---
+import PortfoliosMenu from './PortfoliosMenu.astro';
+interface Props { role?: string; }
+const { role = 'Product engineer / AI engineer' } = Astro.props;
+const links = [
+  ['Email', 'mailto:gorka.molero@gmail.com'],
+  ['LinkedIn', 'https://www.linkedin.com/in/gorkamolero'],
+  ['GitHub', 'https://github.com/gorkamolero'],
+];
+---
+<header class="masthead has-photo">
+  <a class="identity" href="/" aria-label="Gorka Molero, home">
+    <h1>Gorka Molero</h1>
+    <p class="role"><span class="sr-only">{role}</span>{Array.from(role.toUpperCase()).map(letter => <span class={letter === ' ' ? 'sp' : undefined} aria-hidden="true">{letter === ' ' ? '' : letter}</span>)}</p>
+  </a>
+  <a class="portrait-link" href="/" tabindex="-1" aria-hidden="true"><img class="portrait-round" src="./assets/gorka-portrait-round.jpg" width="600" height="600" alt="" /></a>
+  <div class="contact">
+    <span class="place">Remote, location-independent</span>
+    <span class="links">{links.map(([label, href], i) => <>{i > 0 ? ' ' : ''}<a href={href} title={label === 'Email' ? 'gorka.molero@gmail.com' : undefined} target={href.startsWith('https:') ? '_blank' : undefined} rel={href.startsWith('https:') ? 'noopener' : undefined}>{label}</a></>)} <PortfoliosMenu /></span>
+  </div>
+</header>
+

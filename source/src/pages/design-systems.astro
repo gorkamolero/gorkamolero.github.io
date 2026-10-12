@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import ActionRow from '../components/ActionRow.astro';
+import TextLink from '../components/TextLink.astro';
+import Dot from '../components/Dot.astro';
+import Figure from '../components/Figure.astro';
+import FactsList from '../components/FactsList.astro';
+import Carousel from '../components/Carousel.astro';
+import CaseLead from '../components/CaseLead.astro';
+import MetaLine from '../components/MetaLine.astro';
+const head = `<link rel="icon" href="data:," />`;
+const afterFooter = ``;
+---
+<Base title={"Design systems - Gorka Molero"} description={"Design systems and component libraries Gorka Molero has built: Chessable Edge, openroadie's design system, Koda's design system and earlier work."} page="design-systems">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead />
+    
+
+      <CaseLead class="lead">
+        <MetaLine class="meta eyebrow">2012&ndash;2026 &middot; Components, tokens and themes</MetaLine>
+        <h2 class="case-title">Design systems</h2>
+        <p class="intro">Shared components and tokens I've built, for product teams and for my own products.</p>
+      </CaseLead>
+
+      <main class="systems">
+      <WorkSection class="work" id="chessable-edge">
+        <h2>Chessable Edge</h2>
+        <MetaLine class="meta">Frontend engineer, <a href="https://www.chessable.com" target="_blank" rel="noopener">Chessable</a> &middot; 2020&ndash;2022 <Dot class="dot">&middot;</Dot> React, Clutch, npm, Storybook</MetaLine>
+        <p>Chessable Edge was Chessable's design system and UI component library. We built it in React with Clutch, a visual builder for React, and published it to npm as <code>@chessable/edge</code>, with its core split into a package of its own. Three teams were using it in production.</p>
+        <p>The video is the guide for developers I made for the teams adopting it. It covers what Edge is, how Clutch works, how to get started, and where the system was going next: a shared process, a public roadmap and documentation generated with Storybook.</p>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/chessable-edge-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/chessable-edge.mp4" aria-label="Chessable Edge, a guide for developers: what the design system is, how it is built with Clutch, and where it stood."></video></div>
+          <figcaption>Chessable Edge, the guide for developers I made for the teams adopting it.</figcaption>
+        </Figure>
+      </WorkSection>
+
+      <WorkSection class="work" id="openroadie">
+        <h2><a href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener"><em>openroadie</em></a></h2>
+        <MetaLine class="meta"><a href="https://roadie.io" target="_blank" rel="noopener">Roadie</a> &middot; 2026 <Dot class="dot">&middot;</Dot> React, Tailwind, Storybook</MetaLine>
+        <p><em>openroadie</em>'s interface runs on <code>@roadiehq/ui</code>, a design system I co-led. It has about sixty components documented in Storybook, from forms, tables and drawers to the AI elements for agent conversations: messages, reasoning, tool calls and chain of thought. Its tokens cover color for light and dark themes, type, sizing, motion and z-index, and the code editor has a token set of its own.</p>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/openroadie-ui-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/openroadie-ui.mp4" aria-label="A tour of @roadiehq/ui in Storybook: buttons, badges, cards, form fields, dialog, dropdown menu, table and tabs, a switch from light to dark, and the AI elements."></video></div>
+          <figcaption>A 45-second tour of the design system in Storybook, from the basic components to the AI elements, with the switch from light to dark.</figcaption>
+        </Figure>
+        <Carousel class="carousel" aria-label="Components from @roadiehq/ui">
+          <div class="carousel-track">
+            <Figure class="slide"><div class="shot dark"><img src="./assets/openroadie-ui/chain-of-thought-dark.webp" loading="lazy" alt="Chain of thought component from @roadiehq/ui." /></div><figcaption>Chain of thought, dark</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/openroadie-ui/tool.webp" loading="lazy" alt="Tool call component from @roadiehq/ui." /></div><figcaption>Tool call, with its input and output</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/openroadie-ui/step-flow.webp" loading="lazy" alt="Step flow component from @roadiehq/ui." /></div><figcaption>Step flow</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/openroadie-ui/conversation.webp" loading="lazy" alt="Conversation component from @roadiehq/ui." /></div><figcaption>Conversation</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/openroadie-ui/dialog.webp" loading="lazy" alt="Dialog component from @roadiehq/ui." /></div><figcaption>Dialog</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/openroadie-ui/card.webp" loading="lazy" alt="Card component from @roadiehq/ui." /></div><figcaption>Card</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/openroadie-ui/combobox.webp" loading="lazy" alt="Combobox component from @roadiehq/ui." /></div><figcaption>Combobox</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/openroadie-ui/table.webp" loading="lazy" alt="Table component from @roadiehq/ui." /></div><figcaption>Table</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/openroadie-ui/dropdown-menu.webp" loading="lazy" alt="Dropdown menu component from @roadiehq/ui." /></div><figcaption>Dropdown menu</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/openroadie-ui/chain-of-thought.webp" loading="lazy" alt="Chain of thought component from @roadiehq/ui." /></div><figcaption>Chain of thought</figcaption></Figure>
+          </div>
+          <div class="carousel-nav"><button type="button" class="carousel-prev" aria-label="Previous screenshot">&larr;</button><span class="carousel-count">1 / 10</span><button type="button" class="carousel-next" aria-label="Next screenshot">&rarr;</button></div>
+        </Carousel>
+        <ActionRow class="actions"><TextLink class="button" href="https://github.com/RoadieHQ/openroadie/tree/main/packages/ui" target="_blank" rel="noopener">The design system on GitHub</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="koda">
+        <h2><a href="./koda.html">Koda</a></h2>
+        <MetaLine class="meta">Own project &middot; 2026 <Dot class="dot">&middot;</Dot> React, Radix, Tailwind, Storybook</MetaLine>
+        <p>Koda's interface runs on <code>@koda/ui</code>, the design system I built for it. It has forty components documented in Storybook, from buttons, dialogs and file trees to the parts of an agent session: tool calls, approval and question cards, the composer and the badge that shows who shared a session. Its tokens cover color for four themes, type, spacing, radius, motion and z-index, and a lint rule rejects hardcoded colors and sizes anywhere in the app. Every story also runs as a test in all four themes, with accessibility checks.</p>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/koda-ui-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/koda-ui.mp4" aria-label="A tour of @koda/ui in Storybook: the introduction, the color tokens, the animated KODA logo, an approval card in all four themes, a tool call, a question card, and the host and collaborator app screens."></video></div>
+          <figcaption>A tour of the design system in Storybook, from the color tokens and brand pieces to the agent patterns, the four themes and the two app screens.</figcaption>
+        </Figure>
+        <Carousel class="carousel" aria-label="Components from @koda/ui">
+          <div class="carousel-track">
+            <Figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/collaborator-workspace.webp" loading="lazy" alt="A collaborator's view of a shared Koda workspace, built from @koda/ui." /></div><figcaption>A collaborator's view of a shared workspace</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/koda-ui/host-workspace-light.webp" loading="lazy" alt="The host's Koda workspace in the Light theme." /></div><figcaption>The host's workspace, in the Light theme</figcaption></Figure>
+            <Figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/approval-card.webp" loading="lazy" alt="Approval card component from @koda/ui." /></div><figcaption>Approval card, for a collaborator with control</figcaption></Figure>
+            <Figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/question-card.webp" loading="lazy" alt="Question card component from @koda/ui." /></div><figcaption>Question card, in the Dim theme</figcaption></Figure>
+            <Figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/tool-block.webp" loading="lazy" alt="Tool call component from @koda/ui." /></div><figcaption>Tool call, with its result</figcaption></Figure>
+            <Figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/composer.webp" loading="lazy" alt="Composer component from @koda/ui." /></div><figcaption>Composer, in someone else's shared session</figcaption></Figure>
+            <Figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/terminal-frame.webp" loading="lazy" alt="Terminal frame component from @koda/ui." /></div><figcaption>Terminal, as a read-only mirror</figcaption></Figure>
+            <Figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/colors.webp" loading="lazy" alt="Color tokens from @koda/ui." /></div><figcaption>Color tokens</figcaption></Figure>
+            <Figure class="slide"><div class="shot dark"><img src="./assets/koda-ui/koda-logo.webp" loading="lazy" alt="The KODA logo from @koda/ui." /></div><figcaption>The KODA mark</figcaption></Figure>
+          </div>
+          <div class="carousel-nav"><button type="button" class="carousel-prev" aria-label="Previous screenshot">&larr;</button><span class="carousel-count">1 / 9</span><button type="button" class="carousel-next" aria-label="Next screenshot">&rarr;</button></div>
+        </Carousel>
+        <ActionRow class="actions"><TextLink class="button" href="https://koda-storybook.pages.dev" target="_blank" rel="noopener">The Storybook</TextLink>
+          <TextLink class="button" href="https://github.com/gorkamolero/koda/tree/main/packages/ui" target="_blank" rel="noopener">The design system on GitHub</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="this-portfolio">
+        <h2>This portfolio</h2>
+        <MetaLine class="meta">Own project &middot; 2026 <Dot class="dot">&middot;</Dot> Astro, Tailwind CSS, Terrazzo, Storybook</MetaLine>
+        <p>The site you're reading runs on its own design system. Its colours, sizes, spacing and timings live in 193 design tokens in the W3C format, and Terrazzo builds them into CSS variables and the Tailwind theme. Every page is composed from 23 Astro components, each documented in Storybook with its states, and a DESIGN.md sets out the rules for people and for AI agents.</p>
+        <p>I designed the system and had Codex build it page by page against screenshots of the old site, so the rebuild matches it to the pixel, and every component has a screenshot test.</p>
+        <Carousel class="carousel" aria-label="The portfolio's design system in Storybook">
+          <div class="carousel-track">
+            <Figure class="slide"><div class="shot"><img src="./assets/portfolio-ds/masthead.webp" loading="lazy" alt="The masthead component in Storybook, with the portfolios menu open." /></div><figcaption>The masthead in Storybook, with the portfolios menu open</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/portfolio-ds/tokens.webp" loading="lazy" alt="The token catalogue in Storybook, read from the token files." /></div><figcaption>The token catalogue, read from the token files</figcaption></Figure>
+            <Figure class="slide"><div class="shot"><img src="./assets/portfolio-ds/textlink.webp" loading="lazy" alt="The text link component in Storybook." /></div><figcaption>The text link, the site's one kind of button</figcaption></Figure>
+          </div>
+          <div class="carousel-nav"><button type="button" class="carousel-prev" aria-label="Previous screenshot">&larr;</button><span class="carousel-count">1 / 3</span><button type="button" class="carousel-next" aria-label="Next screenshot">&rarr;</button></div>
+        </Carousel>
+        <ActionRow class="actions"><TextLink class="button" href="./storybook/">The Storybook</TextLink>
+          <TextLink class="button" href="https://github.com/gorkamolero/gorkamolero.github.io/tree/main/source" target="_blank" rel="noopener">The source on GitHub</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="earlier">
+        <h2>Earlier</h2>
+        <FactsList class="facts">
+          <li><strong>BBVA Cells</strong><span>UI engineer on Cells, a hybrid component library and design system for BBVA's mobile apps, built on Polymer and web components and shown at Google I/O 2016. 2015&ndash;2016.</span></li>
+          <li><strong>William Hill</strong><span>A hybrid component library and design system for the sportsbook redesign. I prototyped and built parts of it with the in-house designers. 2012&ndash;2014.</span></li>
+        </FactsList>
+        <ActionRow class="actions"><TextLink class="button primary" href="./index.html">Engineering portfolio</TextLink>
+          <TextLink class="button" href="./pre-ai.html">Before AI</TextLink></ActionRow>
+      </WorkSection>
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>

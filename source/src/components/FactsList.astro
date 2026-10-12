@@ -1,0 +1,31 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'ul'>;
+const { class: className = 'facts', ...attributes } = Astro.props;
+---
+<ul class={className} {...attributes}><slot /></ul>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.facts { list-style: none; margin: var(--dimension-1-2-rem) 0 0; padding: 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.facts li { @apply grid; grid-template-columns: var(--dimension-11-rem) 1fr; gap: var(--dimension-1-rem); padding: var(--dimension-0-6-rem) 0; border-bottom: var(--dimension-1-px) solid var(--rule); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.facts strong { font-weight: var(--number-font-weight-600); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.facts span { color: var(--ink-soft); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.facts + p, .facts + .plate { margin-top: var(--dimension-1-4-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .facts li { grid-template-columns: 1fr; gap: var(--dimension-0-1-rem); } }
+}
+}
+</style>

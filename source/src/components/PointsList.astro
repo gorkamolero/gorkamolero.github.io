@@ -1,0 +1,30 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'ul'>;
+const { class: className = 'points', ...attributes } = Astro.props;
+---
+<ul class={className} {...attributes}><slot /></ul>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.points { list-style: none; margin: var(--dimension-1-rem) 0 0; padding: 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.points li { @apply relative; padding: var(--dimension-0-3-rem) 0 var(--dimension-0-3-rem) var(--dimension-1-3-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.points li::before {
+  content: ""; @apply absolute; left: var(--dimension-0-2-rem); top: calc(var(--dimension-0-3-rem) + calc(var(--relative-0-64-em) * 1em));
+  width: calc(var(--relative-0-32-em) * 1em); height: calc(var(--relative-0-32-em) * 1em); border-radius: calc(var(--relative-50-percent) * 1%); background: var(--vermilion);
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.points + p, .points + .actions { margin-top: var(--dimension-1-2-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.card .points { margin-top: var(--dimension-0-2-rem); }
+}
+}
+</style>

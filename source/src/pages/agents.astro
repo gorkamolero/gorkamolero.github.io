@@ -1,0 +1,108 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import ActionRow from '../components/ActionRow.astro';
+import TextLink from '../components/TextLink.astro';
+import Dot from '../components/Dot.astro';
+import Figure from '../components/Figure.astro';
+import CaseLead from '../components/CaseLead.astro';
+import MetaLine from '../components/MetaLine.astro';
+const head = `<link rel="icon" href="data:," />`;
+const afterFooter = ``;
+---
+<Base title={"Agents - Gorka Molero"} description={"Gorka Molero's work with AI agents: Claude-on-Discord, Koda, openroadie, Saga and Cybertantra, The Pulse, Anima and Molter."} page="agents">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead />
+    
+
+      <CaseLead class="lead">
+        <h2 class="case-title">Agents</h2>
+        <p class="intro">I work with AI agents as teammates every day, and I build the tools that let people do the same: hand an agent work in a chat, share its session with a colleague, give it a company's context, and test it before it ships.</p>
+      </CaseLead>
+
+      <main>
+      <WorkSection class="work" id="claude-on-discord">
+        <h2>Claude-on-Discord</h2>
+        <MetaLine class="meta">2026 <Dot class="dot">&middot;</Dot> Claude Code, Discord, Bun, SQLite</MetaLine>
+        <p>Claude Code run from Discord. Each channel is a working lane with its own repo, model, session and system prompt, and each thread can branch into its own git worktree. The agent's replies, thinking, tool calls and cost stream live into the conversation, with buttons to interrupt or stop it, and a supervisor keeps the bridge alive and recovers it after a crash.</p>
+        <Figure class="plate" id="claude-on-discord-video">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/claude-on-discord/claude-on-discord-poster.jpg" src="./assets/claude-on-discord/claude-on-discord.mp4" aria-label="Claude Code as Merlin in Discord: a task in the channel, its tool calls streaming in, a thread working in its own git worktree, and the merge back."></video></div>
+          <figcaption>A task in the channel streams its tool calls live, a thread takes a second change in its own git worktree, and the work merges back.</figcaption>
+        </Figure>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/gorkamolero/claude-on-discord" target="_blank" rel="noopener">Source</TextLink>
+          <TextLink class="button" href="./claude-on-discord.html">Case study</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="koda">
+        <h2>Koda</h2>
+        <MetaLine class="meta">2026 <Dot class="dot">&middot;</Dot> Tauri, React, Node, Liveblocks, Codex, Claude</MetaLine>
+        <p>A desktop app for working collaboratively with coding agents. A Codex or Claude session runs on your machine, and a teammate opens it from their own Koda with view or control access. They see the same transcript and tool calls live, and with control they can message the agent too. Any action that needs approval stops for Approve once or Deny right in the chat. Every flow is proven against the real services with Playwright, from a clean clone.</p>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/koda/koda-poster.jpg" src="./assets/koda/koda-collaboration.mp4" aria-label="Koda on two Macs: one Claude session shared live between two people."></video></div>
+          <figcaption>Recorded live: Claude on one Mac, a collaborator on another.</figcaption>
+        </Figure>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/gorkamolero/koda" target="_blank" rel="noopener">Source</TextLink>
+          <TextLink class="button" href="./koda.html">Case study</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="molter">
+        <h2>Molter</h2>
+        <MetaLine class="meta">2026 <Dot class="dot">&middot;</Dot> Agent-to-agent protocol, Hono, Postgres</MetaLine>
+        <p>A dating protocol for personal AI agents. Your own agent, the one you already work with, like OpenClaw, Hermes or a Grok bot, gets to know the real you through a series of questions. Then it negotiates anonymously with other people's agents in ephemeral conversations, revealing details step by step, until both agents agree on a match.</p>
+        <ActionRow class="actions"><TextLink class="button" href="./molter.html">Case study</TextLink>
+          <TextLink class="button" href="https://github.com/gorkamolero/molter" target="_blank" rel="noopener">Source</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="openroadie">
+        <h2><em>openroadie</em></h2>
+        <MetaLine class="meta">Roadie &middot; 2024&ndash;2026 <Dot class="dot">&middot;</Dot> Node, Postgres, MCP, React Flow</MetaLine>
+        <p>The open-source version of <a href="https://roadie.io" target="_blank" rel="noopener">Roadie</a>'s context layer for AI agents, which I wrote much of. It builds a graph of an organisation from the tools it already uses, about 40 integrations from GitHub and Jira to PagerDuty and Okta, and serves it to agents over MCP, limited to the actions you define. I designed and built its interfaces for data-source pipelines, relationship mapping and agent-led onboarding. At Roadie I also built the AI assistant, on the Vercel AI SDK with RAG on LangChain and tracing in Langfuse, and worked on its MCP server.</p>
+        <ActionRow class="actions"><TextLink class="button" href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener">Source</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="saga">
+        <h2>Saga and Cybertantra</h2>
+        <MetaLine class="meta">2023&ndash;now <Dot class="dot">&middot;</Dot> Codex agent teams, ElevenLabs, Remotion</MetaLine>
+        <p>Saga is my own video studio, run by a team of agents: a researcher and writer, a narrator, an art director and illustrators, a composer, and an editor who checks everything. They hand their work to each other through files, so nothing depends on chat memory, and every correction I give becomes a rule or an automatic check. Its first version, in late 2023, grew a YouTube channel to 1,000 subscribers in 34 days with no ads. It has since run on three generations of agent tooling, from OpenAI's Assistants to CrewAI to teams of Codex agents, and today it makes the fifty-minute episodes of my channel <a href="https://www.youtube.com/channel/UCQHasp7xbxTSZRh1WE3DK3Q" target="_blank" rel="noopener">Cybertantra</a>.</p>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/creative/cybertantra-reel-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/cybertantra-reel.mp4" aria-label="A short reel from Cybertantra, made with Saga."></video></div>
+          <figcaption>A short reel from Cybertantra. The full episodes are on the creative portfolio.</figcaption>
+        </Figure>
+        <ActionRow class="actions"><TextLink class="button" href="./creative.html#cybertantra">Watch the episodes</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="the-pulse">
+        <h2>The Pulse</h2>
+        <MetaLine class="meta">Live &middot; 2025&ndash;now <Dot class="dot">&middot;</Dot> ElevenLabs Agents, Next.js, Liveblocks</MetaLine>
+        <p>Live interactive fiction run by AI narrators, solo or multiplayer, where the story follows whatever the players do. The narrators are ElevenLabs agents. To test an agent that improvises, I built simulated players that play whole sessions, a grader model that scores each run on twelve criteria, and A/B runs with the cost per turn.</p>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/creative/the-pulse-innsmouth-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/the-pulse-innsmouth.mp4" aria-label="A session of Shadow Over Innsmouth on The Pulse, with the AI narrator running the story."></video></div>
+        </Figure>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://the-pulse.games" target="_blank" rel="noopener">Play The Pulse</TextLink>
+          <TextLink class="button" href="./the-pulse.html">Case study</TextLink></ActionRow>
+      </WorkSection>
+      <WorkSection class="work" id="anima">
+        <h2>Anima</h2>
+        <MetaLine class="meta">2025 <Dot class="dot">&middot;</Dot> StoryScript, Phaser, React, Veo 3.1</MetaLine>
+        <p>A system for creating point-and-click games, built on the old SCUMM model, where you can say anything to anyone and every character answers in its own voice. Its stories are written in StoryScript, a language I designed, and the engine runs without graphics, so swarms of agents can playtest every path of a story before any art exists. Characters are generated as video with Veo 3.1, cut out with a difference matte and packed into spritesheets. The game built on it is Shadow Over Innsmouth.</p>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/creative/point-and-click-bar-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/point-and-click-bar.mp4" aria-label="Anima: a conversation in the bar of Shadow Over Innsmouth."></video></div>
+        </Figure>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/anima-cutscene-poster.webp" src="./assets/anima-cutscene.webm" aria-label="A cutscene from Shadow Over Innsmouth in Anima."></video></div>
+        </Figure>
+        <ActionRow class="actions"><TextLink class="button" href="./anima.html">Case study</TextLink>
+          <TextLink class="button" href="https://github.com/gorkamolero/anima" target="_blank" rel="noopener">Source</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="more">
+        <ActionRow class="actions"><TextLink class="button primary" href="./index.html">Full portfolio</TextLink>
+          <TextLink class="button" href="./creative.html">Creative portfolio</TextLink></ActionRow>
+      </WorkSection>
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>

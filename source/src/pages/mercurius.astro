@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import ActionRow from '../components/ActionRow.astro';
+import TextLink from '../components/TextLink.astro';
+import Dot from '../components/Dot.astro';
+import Figure from '../components/Figure.astro';
+import CaseLead from '../components/CaseLead.astro';
+import MetaLine from '../components/MetaLine.astro';
+import PointsList from '../components/PointsList.astro';
+const head = `<link rel="icon" href="data:," />`;
+const afterFooter = ``;
+---
+<Base title={"Mercurius - Gorka Molero Case Study"} description={"Sanitized case study for Mercurius, private futures trading infrastructure with a parity-tested TypeScript/Rust backtesting engine, monitoring, execution boundaries, risk gates, rehearsal, and forensics."} page="mercurius">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead />
+    
+
+      <CaseLead class="lead">
+        <MetaLine class="meta eyebrow">Private · trading infra</MetaLine>
+        <h2 class="case-title">Mercurius</h2>
+        <p class="intro">Private futures trading infrastructure that turns backtesting rigor, market monitoring, strategy boundaries, execution control, and operational forensics into a working system.</p>
+        <MetaLine class="meta chips">Private code <Dot class="dot">&middot;</Dot> Sanitized architecture <Dot class="dot">&middot;</Dot> Review on request</MetaLine>
+      </CaseLead>
+
+      <main>
+      <WorkSection class="work">
+        <h2>Problem</h2>
+        <p>A serious trading system cannot be a script that places orders. It needs live data boundaries, risk controls, visible operator states, rehearsal paths, and a way to investigate what happened after a trade.</p>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>What I Built</h2>
+        <p>I built Mercurius end to end: private futures trading infrastructure whose core is the backtesting engine. It is a hybrid TypeScript/Rust design — a pure, side-effect-free TypeScript reference implementation plus a native Rust accelerator that automated parity tests prove equivalent before the fast path is trusted. Backtests run against 502 trading days of tick data under a strict local-only, fail-loud data policy, and parameter sweeps run in parallel on the native path.</p>
+        <p>Around that engine sits the live system: market daemons, execution daemons, a control plane, watcher/executor contracts, risk guards, rehearsal workflows, operator routing, and post-trade forensics. The discipline is enforced, not aspirational: ~840 tests across the monorepo, a mandatory written safety-gate audit before any setup or execution change is called ready, idempotent restart recovery that reconciles internal state against reality, and WebSocket-based order placement instead of UI automation.</p>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>System Shape</h2>
+        <Figure class="plate">
+          <div class="shot"><img src="./assets/mercurius-control-map.svg" alt="Sanitized Mercurius control map with fake market data, watcher, risk gate, executor, operator surface, and forensics." loading="lazy" /></div>
+          <figcaption>Fake-data public control map. It shows the operational boundaries without exposing strategy rules, broker endpoints, account identifiers, real alerts, or live logs.</figcaption>
+        </Figure>
+        <Figure class="plate">
+          <div class="shot"><img src="./assets/mercurius-operator-forensics.svg" alt="Synthetic Mercurius operator review screen with fake intent, risk gate, and forensic trail." loading="lazy" /></div>
+          <figcaption>Synthetic operator and forensics screen. It shows reviewability, rehearsal mode, risk checks, and event tracing without exposing live strategy or account data.</figcaption>
+        </Figure>
+        <Figure class="plate">
+          <div class="shot"><img src="./assets/mercurius-mode-boundaries.svg" alt="Synthetic Mercurius mode boundary diagram showing backtest, rehearsal, paper, and live modes." loading="lazy" /></div>
+          <figcaption>Synthetic mode-boundary diagram. It shows how backtest, rehearsal, paper, and live paths stay separated before any path with real consequence is allowed.</figcaption>
+        </Figure>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Technical Decisions</h2>
+        <PointsList class="points">
+          <li>Prove the Rust accelerator equivalent to the TypeScript reference with automated parity tests before trusting it.</li>
+          <li>Fail loud on missing data — local-only tick data, never a silent remote fetch.</li>
+          <li>Separate watcher logic from execution behavior.</li>
+          <li>Make rehearsal and backtest paths first-class workflows, gated by written safety audits.</li>
+          <li>Expose operator state instead of hiding automation behind opaque processes.</li>
+          <li>Treat forensics as a product surface, not as a folder of logs.</li>
+        </PointsList>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>What This Proves</h2>
+        <p>A two-person live trading operation runs on this infrastructure: ~108K lines across 6 apps and 5 shared packages, ~840 tests, a parity-tested native accelerator, and a written safety-gate audit before any change is called ready. Software where a bug costs real money, engineered accordingly.</p>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Public Evidence</h2>
+        <PointsList class="points">
+          <li>Sanitized control map included.</li>
+          <li>Fake-data operator dashboard represented in the control map.</li>
+          <li>Mode indicator for backtest, rehearsal, paper, and live.</li>
+          <li>Fake post-trade forensic report.</li>
+          <li>Mode-boundary diagram included.</li>
+        </PointsList>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Privacy Boundary</h2>
+        <p>Strategy logic, broker details, account identifiers, real alerts, live logs, and P/L stay private. Everything shown above is synthetic. The architecture, safety doctrine, and test discipline can be walked through live, on request.</p>
+        <ActionRow class="actions"><TextLink class="button primary" href="./contact.html">Ask for a demo</TextLink></ActionRow>
+      </WorkSection>
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>

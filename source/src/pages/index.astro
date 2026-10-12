@@ -1,0 +1,171 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import ActionRow from '../components/ActionRow.astro';
+import TextLink from '../components/TextLink.astro';
+import GitHubLink from '../components/GitHubLink.astro';
+import Dot from '../components/Dot.astro';
+import GroupHeading from '../components/GroupHeading.astro';
+import IntroNotes from '../components/IntroNotes.astro';
+import Figure from '../components/Figure.astro';
+import MetaLine from '../components/MetaLine.astro';
+import Job from '../components/Job.astro';
+import ProjectIndex from '../components/ProjectIndex.astro';
+const head = `<meta property="og:type" content="website" />
+    <meta property="og:title" content="Gorka Molero · Product engineer / AI engineer" />
+    <meta property="og:description" content="Web products, design systems, editors and creative AI tools, since 2012." />
+    <meta property="og:url" content="https://gorkamolero.github.io/" />
+    <meta property="og:image" content="https://gorkamolero.github.io/assets/the-pulse-ingame-turn.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:," />`;
+const afterFooter = `<elevenlabs-convai agent-id="agent_7401m49y0k32e83v9197gqssyz0r" variant="tiny"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>`;
+---
+<Base title={"Gorka Molero · Product engineer / AI engineer"} description={"Gorka Molero, product engineer and AI engineer. Interfaces and systems for AI agents, and web products since 2012."} page="index">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead />
+    
+
+      <IntroNotes class="intro">
+        <p class="note">Web products<span>since 2012</span></p>
+        <p>I'm Gorka Molero. I've been building for the web for fourteen years and worked as a senior frontend engineer and UI lead on <a href="https://roadie.io" target="_blank" rel="noopener">Roadie</a>, <a href="https://www.pickzen.com" target="_blank" rel="noopener">Pickzen</a> and <a href="https://typeshare.co" target="_blank" rel="noopener">Typeshare</a>.</p>
+        <p class="note">AI agents<span>since 2023</span></p>
+        <p>Since 2023 most of my work has been with AI. At Roadie I built the AI infrastructure, the MCP server and much of the context layer for agents. I build interfaces people use to work with agents and systems that keep them reliable, and I make games and media with AI. Here's a selection.</p>
+        <p class="intro-cta"><GitHubLink class="github-cta" href="https://github.com/gorkamolero" target="_blank" rel="noopener">Source for most of this on GitHub&nbsp;<span aria-hidden="true">&rarr;</span></GitHubLink></p>
+      </IntroNotes>
+
+      <main>
+      <GroupHeading class="group">Agents</GroupHeading>
+
+      <WorkSection class="work" id="openroadie">
+        <h2><em>openroadie</em></h2>
+        <MetaLine class="meta">Roadie &middot; 2026 <Dot class="dot">&middot;</Dot> TypeScript, React, Vite, Tailwind, React Flow, TanStack Query, Node, Express, Postgres, Redis, Vercel AI SDK, MCP, Storybook, Vitest, Playwright, Docker</MetaLine>
+        <p>The open-source context layer that came out of Roadie. It builds a graph of an organisation from the tools it already uses, around forty of them from GitHub and Jira to PagerDuty and Slack, and serves it to AI agents over MCP. Agents can only act through deterministic actions an admin has defined, with every call scoped to the caller.</p>
+        <p>I wrote much of its foundation and designed and built its interfaces, from the data-source pipelines and the relationship maps in React Flow to agent-led onboarding. Its design system, <code>@roadiehq/ui</code>, which I co-led, has about sixty components in Storybook, including the AI elements for agent conversations.</p>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener">Source</TextLink>
+          <TextLink class="button" href="./design-systems.html#openroadie">Design system</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="koda">
+        <h2>Koda</h2>
+        <MetaLine class="meta">Desktop app &middot; 2026 <Dot class="dot">&middot;</Dot> Tauri, React, Vite, TanStack Router, Tailwind, Radix, Node, Claude Agent SDK, MCP, Liveblocks, Yjs, SQLite, Drizzle, Cloudflare Workers, xterm.js, Monaco, Storybook, Vitest, Playwright</MetaLine>
+        <p>A desktop app for working collaboratively with coding agents. A Codex or Claude session runs on your machine, and a teammate opens your workspace from their own Koda. They see the same transcript and tool calls live, and with control they can message the agent too. Their message lands in your session, signed with their name.</p>
+        <p>Every flow is proven against the real services, from Codex and Claude sessions and approvals to restarts and two-instance collaboration, with Playwright runs from a clean clone.</p>
+        <Figure class="shot"><video controls playsinline preload="none" poster="./assets/koda/koda-poster.jpg" src="./assets/koda/koda-collaboration.mp4" aria-label="Koda on two Macs: Gorka asks Claude for a change, both screens update live, and Alex's follow-up lands in the same session."></video></Figure>
+        <p class="video-caption">Recorded live: Claude on one Mac, a collaborator on another.</p>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/gorkamolero/koda" target="_blank" rel="noopener">Source</TextLink>
+          <TextLink class="button" href="./koda.html">Case study</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="claude-on-discord">
+        <h2>Claude-on-Discord</h2>
+        <MetaLine class="meta">2026 <Dot class="dot">&middot;</Dot> Claude Code, Claude Agent SDK, discord.js, Bun, SQLite, git worktrees, Astro</MetaLine>
+        <p>Claude Code run from Discord. Each channel is a working lane with its own repo, model, session and system prompt, and each thread can branch into its own git worktree. The agent's replies, thinking, tool calls and cost stream live into the conversation, with buttons to interrupt or stop it, and a supervisor keeps the bridge alive and recovers it after a crash.</p>
+        <Figure class="shot"><video controls playsinline preload="none" poster="./assets/claude-on-discord/claude-on-discord-poster.jpg" src="./assets/claude-on-discord/claude-on-discord.mp4" aria-label="Claude Code as Merlin in Discord: a task in the channel, its tool calls streaming in, a thread working in its own git worktree, and the merge back."></video></Figure>
+        <p class="video-caption">A task in the channel streams its tool calls live, a thread takes a second change in its own git worktree, and the work merges back.</p>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/gorkamolero/claude-on-discord" target="_blank" rel="noopener">Source</TextLink>
+          <TextLink class="button" href="./claude-on-discord.html">Case study</TextLink></ActionRow>
+      </WorkSection>
+
+      <GroupHeading class="group">Games and media</GroupHeading>
+
+      <WorkSection class="work" id="the-pulse">
+        <h2>The Pulse</h2>
+        <MetaLine class="meta">Live &middot; 2025&ndash;now <Dot class="dot">&middot;</Dot> Next.js, React, Vercel AI SDK, OpenRouter, ElevenLabs Agents, Liveblocks, Postgres, Drizzle, NextAuth, Tailwind, Shadcn, Framer Motion, Three.js, Rive, fal, Vercel, Playwright</MetaLine>
+        <p>Interactive fiction with no fixed timeline. An AI narrator runs the story in real time, alone or in a multiplayer room, and you can do whatever you want, in any order. Narrators run as ElevenLabs agents, and the text lights up word by word in sync with the voice.</p>
+        <p>I test every model and prompt change against simulated players, scored by a separate grader model.</p>
+        <Figure class="shot"><video controls playsinline preload="none" poster="./assets/creative/the-pulse-innsmouth-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/the-pulse-innsmouth.mp4" aria-label="A session of Shadow Over Innsmouth on The Pulse, with the AI narrator running the story."></video></Figure>
+        <p class="video-caption">A session of Shadow Over Innsmouth, with the AI narrator running the story.</p>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://the-pulse.games" target="_blank" rel="noopener">Play The Pulse</TextLink>
+          <TextLink class="button" href="./the-pulse.html">Case study</TextLink>
+          <TextLink class="button" href="https://github.com/gorkamolero/the-pulse" target="_blank" rel="noopener">Source</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="anima">
+        <h2>Anima</h2>
+        <MetaLine class="meta">System &middot; 2025 <Dot class="dot">&middot;</Dot> Phaser, React, Vite, Tailwind, Hono, libSQL, Vercel AI SDK, OpenRouter, Gemini, fal, Veo 3.1, StoryScript, Vitest</MetaLine>
+        <p>A point-and-click adventure system for the AI age, based on the old SCUMM engine, where you can say anything to anyone and every character answers in its own voice. Scenes and dialogue are written in StoryScript, a language I designed, and an AI art pipeline turns generated video into sprites.</p>
+        <Figure class="shot"><video controls playsinline preload="none" poster="./assets/anima-cutscene-poster.webp" src="./assets/anima-cutscene.webm" aria-label="A cutscene from Shadow Over Innsmouth in Anima: two characters talking in the hotel lobby at dusk."></video></Figure>
+        <ActionRow class="actions"><TextLink class="button" href="./anima.html">Case study</TextLink>
+          <TextLink class="button" href="https://github.com/gorkamolero/anima" target="_blank" rel="noopener">Source</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="creative">
+        <h2>Saga and Cybertantra</h2>
+        <MetaLine class="meta">2023&ndash;2026 <Dot class="dot">&middot;</Dot> Python, Remotion, ffmpeg, Eleven v4, Eleven Music, OpenAI image generation, Codex, YouTube Data API, ElevenLabs Agents, Raspberry Pi</MetaLine>
+        <p>Saga is a fully automated video studio that takes a topic and publishes a finished video. In 2023 it published 205 Shorts in 34 days and grew <a href="https://www.youtube.com/channel/UCRF4rUJEc3UYv0wQduOnd3A" target="_blank" rel="noopener">a channel</a> to 1,000 subscribers with zero ads. After a lot of refinement, I now use it for long-form video in a new channel, <a href="https://www.youtube.com/channel/UCQHasp7xbxTSZRh1WE3DK3Q" target="_blank" rel="noopener">Cybertantra</a>, with episodes up to fifty minutes long, voiced in Eleven v4, scored with Eleven Music and cut in Remotion. The talking statues are wood carvings in the Missouri woods that you can talk to, each with a Raspberry Pi inside and an ElevenLabs agent behind it.</p>
+        <Figure class="shot"><a href="./creative.html"><img src="./assets/creative/cybertantra-reel-poster.jpg" width="1280" height="720" loading="lazy" alt="A frame from the Cybertantra reel." /></a></Figure>
+        <ActionRow class="actions"><TextLink class="button primary" href="./creative.html">Watch the creative work</TextLink></ActionRow>
+      </WorkSection>
+
+      <GroupHeading class="group">Products</GroupHeading>
+
+      <WorkSection class="work" id="hotpress">
+        <h2>Hotpress</h2>
+        <MetaLine class="meta">Live &middot; 2026 <Dot class="dot">&middot;</Dot> Next.js, Lexical, Liveblocks, Yjs, Postgres, Drizzle, react-pdf, pdf-lib, Vercel Blob, Playwright</MetaLine>
+        <p>A collaborative writing and publishing app I built to print my translations of old books. Real-time editing on Lexical, Liveblocks and Yjs, a print preview, and export on demand to press-ready PDF and EPUB.</p>
+        <ActionRow class="actions"><TextLink class="button" href="https://hotpress.app" target="_blank" rel="noopener">hotpress.app</TextLink>
+          <TextLink class="button" href="./hotpress.html">Case study</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="datomania">
+        <h2>Datomania</h2>
+        <MetaLine class="meta">Live &middot; 2026 <Dot class="dot">&middot;</Dot> Next.js, React, Tailwind, TanStack Table, Nivo, d3, Vitest, MSW, Vercel</MetaLine>
+        <p>Spanish public data you can browse, chart and query through a public API, refreshed monthly. It holds 1,257 records of Spain's representatives from the Congreso and Senado open data, covering legislature I (1979 to 1982) and the current one. The API is paginated and serves representatives, parties and stats, with CSV and JSON export. It has 119 Vitest tests and deploys to Vercel from GitHub Actions on every push.</p>
+        <ActionRow class="actions"><TextLink class="button" href="https://datomania.info" target="_blank" rel="noopener">datomania.info</TextLink>
+          <TextLink class="button" href="./datomania.html">Case study</TextLink>
+          <TextLink class="button" href="https://github.com/gorkamolero/datomania" target="_blank" rel="noopener">Source</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="experience">
+        <h2>At work</h2>
+        <div class="jobs">
+          <Job class="job">
+            <h3>Roadie <span class="at">Senior Software Engineer</span></h3>
+            <p class="when">2024&ndash;2026 &middot; Remote</p>
+            <p>Modernized the UI of a Backstage-based developer platform and became its de facto UI and product-design lead. Wrote much of the foundation of Roadie's context layer for AI agents, now open source as <a href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener"><em>openroadie</em></a>, and designed its interfaces for data-source pipelines, relationship mapping and agent-led onboarding.</p>
+          </Job>
+          <Job class="job">
+            <h3>Typeshare <span class="at">Senior Contract Software Engineer</span></h3>
+            <p class="when">2022&ndash;2023 &middot; Remote</p>
+            <p>Built the writing experience, the X thread editor and the Instagram carousel editor for a creator-writing product, on Tiptap and ProseMirror.</p>
+          </Job>
+          <Job class="job">
+            <h3>Maility <span class="at">CTO and co-founder</span></h3>
+            <p class="when">2022&ndash;2023</p>
+            <p>A tool marketing agencies used to send cold email at scale. Built on my own, from the product design and the React frontend to the sending infrastructure and billing. It reached about $17K a month in revenue.</p>
+          </Job>
+          <Job class="job">
+            <h3>Chessable <span class="at">Frontend Engineer</span></h3>
+            <p class="when">2020&ndash;2022 &middot; Barcelona and remote</p>
+            <p>Led the design system that moved the product's visual layer into one shared component library, and mentored the junior engineers working on it.</p>
+          </Job>
+          <Job class="job">
+            <h3>Earlier</h3>
+            <p>CTO at <a href="https://adalab.es" target="_blank" rel="noopener">Adalab</a>, frontend at Pickzen, Vigilant Software, ING Direct, BBVA and William Hill, from 2012.</p>
+          </Job>
+        </div>
+      </WorkSection>
+
+      <WorkSection class="work" id="more">
+        <h2>More projects</h2>
+        <ProjectIndex class="index">
+          <li><a href="./molter.html">Molter</a><span>A dating protocol for personal AI agents, where your agent learns the real you and negotiates anonymously with other people's agents.</span></li>
+          <li><a href="./solderpunk.html">Solderpunk</a><span>Synth explorers with guided tutorials and live MIDI control.</span></li>
+          <li><a href="./carvingen.html">Carvingen</a><span>A node canvas for AI image, video and 3D generation.</span></li>
+          <li><a href="./streamtui.html">StreamTUI</a><span>A terminal streaming client in Rust that searches, casts to a screen and can be scripted with JSON.</span></li>
+        </ProjectIndex>
+        <ActionRow class="actions"><TextLink class="button" href="./workbench.html">Everything else</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="writing">
+        <h2>Writing</h2>
+        <p>"<a href="https://web.archive.org/web/20131010070722/http://speckyboy.com/2013/09/11/responsive-design-is-not-about-screen-sizes-any-more/" target="_blank" rel="noopener">Responsive Design is Not About Screen Sizes Any More</a>", featured by <a href="https://news.ycombinator.com/item?id=6366223" target="_blank" rel="noopener">Hacker News</a>, Awwwards, Codrops and Responsive Design Weekly. "<a href="https://tympanus.net/codrops/2013/09/23/so-youre-a-web-designer-right/" target="_blank" rel="noopener">So, You&#39;re a Web Designer, right?</a>", for Codrops.</p>
+      </WorkSection>
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>

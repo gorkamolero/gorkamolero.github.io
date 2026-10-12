@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import ActionRow from '../components/ActionRow.astro';
+import TextLink from '../components/TextLink.astro';
+import Dot from '../components/Dot.astro';
+import Figure from '../components/Figure.astro';
+import FactsList from '../components/FactsList.astro';
+import CaseLead from '../components/CaseLead.astro';
+import MetaLine from '../components/MetaLine.astro';
+import PointsList from '../components/PointsList.astro';
+const head = `<link rel="icon" href="data:," />`;
+const afterFooter = ``;
+---
+<Base title={"Koda - Gorka Molero Case Study"} description={"Case study for Koda, a desktop app where a team and its coding agents work on the same code together. Tauri, React, Rust and a Node sidecar."} page="koda">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead />
+    
+
+      <CaseLead class="lead">
+        <MetaLine class="meta eyebrow">Case · agent workspace</MetaLine>
+        <h2 class="case-title">Koda</h2>
+        <p class="intro">A desktop app for working collaboratively with coding agents, where a team and its agents work on the same code together.</p>
+        <MetaLine class="meta chips">Working desktop build <Dot class="dot">&middot;</Dot> Codex and Claude <Dot class="dot">&middot;</Dot> Live collaboration on Liveblocks</MetaLine>
+      </CaseLead>
+
+      <main>
+      <WorkSection class="work open">
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/koda/koda-poster.jpg" src="./assets/koda/koda-collaboration.mp4" aria-label="Koda on two Macs: Gorka asks Claude for a change, both screens update live, and Alex's follow-up lands in the same session."></video></div>
+          <figcaption>Recorded live: Claude running on one Mac, a collaborator on another, in the same agent session.</figcaption>
+        </Figure>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Problem</h2>
+        <p>Coding agents are built for one person at a time: each session lives in one developer's terminal, and the rest of the team only sees the result. Koda is built for a team and its agents working on the same code together, with sessions, workspaces and checkpoints everyone can follow.</p>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>What I Built</h2>
+        <p>Koda is a desktop app for working collaboratively with coding agents. It's a Tauri shell with a React UI and a Node sidecar that runs Codex and Claude sessions in isolated git worktrees, with diffs, checkpoints, terminals and SQLite state.</p>
+        <p>Collaboration runs on Liveblocks. The host shares a workspace with a view or a control invitation, and the other person joins from their own Koda. Both see the same transcript and tool calls live. With control, the collaborator's messages go to the host's agent session, signed with their name. With view, they can only watch, and the host enforces it.</p>
+        <p>Koda paused when Claude removed the third-party access path it relied on. I brought it back on the installed Codex and Claude CLIs, and every flow now passes against the real services.</p>
+        <FactsList class="facts">
+          <li><strong>Shared sessions</strong><span>A teammate joins the agent session live, with view or control.</span></li>
+          <li><strong>Two agents</strong><span>Codex and Claude, each with its own models, permissions and saved sessions.</span></li>
+          <li><strong>Approvals</strong><span>Approve once or deny in the host chat. Bypass is a visible per-chat choice.</span></li>
+        </FactsList>
+        <Figure class="plate">
+          <div class="shot"><img src="./assets/koda-initializing-splash.png" alt="Koda initializing splash screen with pixel-art Koda wordmark on a black background." loading="lazy" /></div>
+          <figcaption>Startup splash from the Koda renderer. It captures the product tone without exposing private workspace state.</figcaption>
+        </Figure>
+      </WorkSection>
+
+
+      <WorkSection class="work">
+        <h2>Technical Decisions</h2>
+        <PointsList class="points">
+          <li>Run the agents through their installed CLIs, Codex's app-server and the official Claude Agent SDK, so sign-in stays with each provider.</li>
+          <li>Keep the Liveblocks secret on the sidecar and enforce view and control permissions on the host, not only in the UI.</li>
+          <li>Use a desktop shell for local filesystem, PTY, and workspace affordances that browser-only tools struggle to handle cleanly.</li>
+          <li>Separate the UI, desktop boundary, sidecar execution, and durable state so each responsibility stays legible.</li>
+          <li>Prove every flow against the real services with Playwright, from a clean clone, never with a mocked agent.</li>
+        </PointsList>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>What This Proves</h2>
+        <p>Koda is evidence for agent-product judgment: understanding where coding agents are heading, what makes them hard to trust, and how to design the layer where people and agents work together.</p>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Public Evidence</h2>
+        <PointsList class="points">
+          <li>Public repo, <code>gorkamolero/koda</code>, with 156 commits.</li>
+          <li>Real-service Playwright proofs for Codex, Claude, approvals and two-instance collaboration, with a screenshot of each step.</li>
+          <li><code>pnpm verify:clean</code> reruns every proof from a clean clone.</li>
+          <li>A live two-Mac recording of one shared Claude session (above).</li>
+        </PointsList>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/gorkamolero/koda" target="_blank" rel="noopener">View source</TextLink></ActionRow>
+      </WorkSection>
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>

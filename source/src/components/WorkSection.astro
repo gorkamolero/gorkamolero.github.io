@@ -1,0 +1,97 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'section'>;
+const { class: className = 'work', ...attributes } = Astro.props;
+---
+<section class={className} {...attributes}><slot /></section>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+:where(body[data-page="index"]) .work { margin-top: var(--dimension-4-rem); }
+:where(body[data-page="index"]) .work h2 {
+        font-family: var(--display); font-weight: var(--number-font-weight-400); font-size: var(--dimension-1-55-rem); letter-spacing: calc(var(--relative-0-08-em) * 1em);
+        margin: 0; padding-bottom: var(--dimension-0-45-rem); border-bottom: var(--dimension-1-px) solid var(--rule);
+      }
+:where(body[data-page="index"]) .work p { margin: 0 0 var(--dimension-1-rem); }
+@media (max-width: 640px) {
+        :where(body[data-page="index"]) .work { margin-top: var(--dimension-3-rem); }
+}
+:where(body[data-page="creative"]) .work { margin-top: var(--dimension-4-rem); }
+:where(body[data-page="creative"]) .work h2 {
+        font-family: var(--display); font-weight: var(--number-font-weight-400); font-size: var(--dimension-1-55-rem); letter-spacing: calc(var(--relative-0-08-em) * 1em);
+        margin: 0; padding-bottom: var(--dimension-0-45-rem); border-bottom: var(--dimension-1-px) solid var(--rule);
+      }
+:where(body[data-page="creative"]) .work p { margin: 0 0 var(--dimension-1-rem); }
+@media (max-width: 640px) {
+        :where(body[data-page="creative"]) .work { margin-top: var(--dimension-3-rem); }
+}
+:where(body[data-page="music"]) .work { margin-top: var(--dimension-4-5-rem); }
+:where(body[data-page="music"]) .work h2 {
+        font-family: var(--display); font-weight: var(--number-font-weight-400); font-size: clamp(var(--dimension-1-8-rem), calc(var(--relative-6-vw) * 1vw), var(--dimension-2-3-rem)); letter-spacing: calc(var(--relative-0-08-em) * 1em);
+        line-height: var(--number-line-height-1-1); margin: 0; padding-bottom: var(--dimension-0-45-rem); border-bottom: var(--dimension-1-px) solid var(--rule);
+      }
+@media (max-width: 640px) {
+        :where(body[data-page="music"]) .work { margin-top: var(--dimension-3-5-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+
+.work { margin-top: var(--dimension-4-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.systems .work + .work { margin-top: var(--dimension-7-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work h2 {
+  font-family: var(--display); font-weight: var(--number-font-weight-400); font-size: var(--dimension-1-55-rem); letter-spacing: calc(var(--relative-0-08-em) * 1em);
+  margin: 0; padding-bottom: var(--dimension-0-45-rem); border-bottom: var(--dimension-1-px) solid var(--rule);
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work p { margin: 0 0 var(--dimension-1-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .work { margin-top: var(--dimension-3-rem); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .systems .work + .work { margin-top: var(--dimension-5-rem); } }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work { overflow-wrap: break-word; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work.open { margin-top: var(--dimension-2-6-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work h2 { line-height: var(--number-line-height-1-25); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work h2 + p { margin-top: var(--dimension-1-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work > :last-child { margin-bottom: 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work .eyebrow { margin: 0 0 var(--dimension-0-3-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work h3 {
+  margin: var(--dimension-1-8-rem) 0 var(--dimension-0-5-rem); font-family: var(--display); font-weight: var(--number-font-weight-400);
+  font-size: var(--dimension-1-2-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em);
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work h2.statement {
+  font-family: var(--display-italic); @apply italic; font-size: var(--dimension-1-35-rem); letter-spacing: calc(var(--relative-0-02-em) * 1em); line-height: var(--number-line-height-1-4);
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work h2 a { color: inherit; text-decoration: underline; text-decoration-thickness: var(--dimension-1-px); text-underline-offset: calc(var(--relative-0-2-em) * 1em); text-decoration-color: var(--rule); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.work h2 a:hover { text-decoration-color: currentColor; }
+}
+}
+</style>

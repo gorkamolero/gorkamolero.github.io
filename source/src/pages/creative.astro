@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import ActionRow from '../components/ActionRow.astro';
+import TextLink from '../components/TextLink.astro';
+import GitHubLink from '../components/GitHubLink.astro';
+import Dot from '../components/Dot.astro';
+import CaseLead from '../components/CaseLead.astro';
+import MetaLine from '../components/MetaLine.astro';
+const head = `<meta property="og:type" content="website" />
+    <meta property="og:title" content="Gorka Molero · Creative technologist" />
+    <meta property="og:description" content="AI video, audio and music, unscripted games and statues you can talk to." />
+    <meta property="og:url" content="https://gorkamolero.github.io/creative.html" />
+    <meta property="og:image" content="https://gorkamolero.github.io/assets/creative/cybertantra-reel-poster.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:," />`;
+const afterFooter = `<elevenlabs-convai agent-id="agent_7401m49y0k32e83v9197gqssyz0r" variant="tiny"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>`;
+---
+<Base title={"Gorka Molero · Creative technologist"} description={"AI video, audio and music, unscripted games and statues you can talk to. Selected work by Gorka Molero."} page="creative">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead role="Creative technologist" />
+    
+
+      <CaseLead class="lead">
+        <p class="kind">Creative technology work</p>
+        <p class="scope">AI video, audio and music, and interactive stories</p>
+        <div class="cta-row">
+          <GitHubLink class="github-cta" href="https://github.com/gorkamolero" target="_blank" rel="noopener">Software projects and more on GitHub&nbsp;<span aria-hidden="true">&rarr;</span></GitHubLink>
+        </div>
+      </CaseLead>
+
+      <p class="intro">My name is Gorka Molero. I love writing, music, art, technology, media and spirituality, and I spend my days bringing them together with AI. I like to push it into places where it looks like it shouldn't work yet, such as long-form video, spirituality, music production, unscripted video games and statues you can talk to. Here's a selection of personal projects.</p>
+
+      <main>
+      <WorkSection class="work" id="cybertantra">
+        <h2>Cybertantra</h2>
+        <MetaLine class="meta">YouTube &middot; 2026 <Dot class="dot">&middot;</Dot> Long-form and Shorts</MetaLine>
+        <p>The latest iteration of Saga, my long-running experiment with gen-AI pipelines, and my first attempt at long-form. The art comes from OpenAI image generation, and a virtual camera moves across each image, following whatever the current sentence is about. The narration is Eleven v4, generated in chunks with a warm-up line before each one and stitched back together, so the voice holds for a fifty-minute episode. The score is Eleven Music, and everything is cut in Remotion.</p>
+            <div class="video-wide">
+              <video controls playsinline preload="metadata" poster="./assets/creative/cybertantra-reel-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/cybertantra-reel.mp4"></video>
+            </div>
+            <p class="video-caption">Here's a short version. You'll find the full episode and the Shorts below.</p>
+            <div class="video-wide">
+              <iframe src="https://www.youtube-nocookie.com/embed/lYYHSPLVURY" title="Cybertantra: What Is the Right-Hand Path?" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class="shorts-row">
+              <div class="short"><iframe src="https://www.youtube-nocookie.com/embed/-neYJeSggdg" title="Cybertantra Short: What owns you?" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+              <div class="short"><iframe src="https://www.youtube-nocookie.com/embed/GoerPTYSAr4" title="Cybertantra Short: School trained you to stop noticing" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+              <div class="short"><iframe src="https://www.youtube-nocookie.com/embed/NkddlDqdaCE" title="Cybertantra Short: Don't open the third eye unprepared" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+            </div>
+        <ActionRow class="actions"><TextLink class="button" href="https://www.youtube.com/channel/UCQHasp7xbxTSZRh1WE3DK3Q" target="_blank" rel="noopener">See Cybertantra</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="talking-statues">
+        <h2>Talking Statues</h2>
+        <MetaLine class="meta">Prototype &middot; 2026 <Dot class="dot">&middot;</Dot> Voice agents</MetaLine>
+        <p>Unconditional Carving, a studio in Missouri, has started an experimental project: carvings you come across in the forest and can actually talk to. The idea is that you wander the woods, find these spirits one by one, and have a conversation with each. I built the first one, a jackalope with a Raspberry Pi, a microphone and speakers inside, connected to an ElevenLabs agent. It's location-aware, and it sleeps until someone wakes it up.</p>
+            <div class="video-tall">
+              <video controls playsinline preload="metadata" poster="./assets/creative/jackalope-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/jackalope.mp4"></video>
+            </div>
+      </WorkSection>
+
+      <WorkSection class="work" id="the-pulse">
+        <h2>The Pulse</h2>
+        <MetaLine class="meta">Live &middot; 2025&ndash;2026 <Dot class="dot">&middot;</Dot> Interactive fiction</MetaLine>
+        <p>A reimagining of narrative. A novel has a timeline of events and a whole world around it. The Pulse keeps the world, the characters and the places, and lets go of the timeline: you can do whatever you want, in any order, and the story follows you. It's very immersive. The narrator for Shadow Over Innsmouth is a clone of Orson Welles, running as an ElevenLabs agent.</p>
+            <div class="video-wide">
+              <video controls playsinline preload="metadata" poster="./assets/creative/the-pulse-innsmouth-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/the-pulse-innsmouth.mp4"></video>
+            </div>
+            <ActionRow class="actions"><TextLink class="button primary" href="https://the-pulse.games" target="_blank" rel="noopener">Play The Pulse</TextLink>
+            <TextLink class="button" href="https://elevenlabs.io/app/talk-to?agent_id=agent_0801m498yyw3ey2vmx5t6hs8ynat" target="_blank" rel="noopener">Talk to the narrator</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="anima">
+        <h2>Anima</h2>
+        <MetaLine class="meta">Game system &middot; 2025 <Dot class="dot">&middot;</Dot> Open dialogue</MetaLine>
+        <p>A system for creating LucasArts-style point-and-click games. You write the story in StoryScript, a language I designed for it, and an art pipeline turns AI video into the characters' animations. I built a full game on it, Shadow Over Innsmouth, with the dialogue tree left open: type anything to anyone, and they answer in character, in their own voice. Next I want to leave the decisions open too, like in The Pulse, so you make your own way as you go: say you want to go to the bus station, and one is created in the style of the story. I've started on that, and it's on hold for now.</p>
+            <div class="video-wide">
+              <video controls playsinline preload="metadata" poster="./assets/creative/point-and-click-bar-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/point-and-click-bar.mp4"></video>
+            </div>
+            <div class="video-wide">
+              <video controls playsinline preload="metadata" poster="./assets/anima-cutscene-poster.webp" src="./assets/anima-cutscene.webm"></video>
+            </div>
+      </WorkSection>
+
+      <WorkSection class="work" id="saga">
+        <h2>Saga</h2>
+        <MetaLine class="meta">YouTube &middot; 2023&ndash;2026 <Dot class="dot">&middot;</Dot> Gen-AI pipeline</MetaLine>
+        <p>The gen-AI pipeline behind my YouTube channels. Its first iteration was The Last Alchemist: I set out to build a completely automated channel where all I'd give it was the editorial line, and I wanted to prove it could grow exponentially. In 34 days it made and uploaded 205 Shorts, gained 1,000 subscribers and drew 135K views, with no paid promotion, at under $1 a Short. It's an old project on old models. Once it had proved the point, I stopped and waited for the models to be ready. The second iteration, in 2024, was a writers' room of agents for long-form scripts: brief, research, outline, draft, critique and final script. The latest is <a href="https://www.youtube.com/channel/UCQHasp7xbxTSZRh1WE3DK3Q" target="_blank" rel="noopener">Cybertantra</a>.</p>
+            <ActionRow class="actions"><TextLink class="button" href="https://www.youtube.com/channel/UCRF4rUJEc3UYv0wQduOnd3A" target="_blank" rel="noopener">See The Last Alchemist</TextLink></ActionRow>
+      </WorkSection>
+
+
+
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>

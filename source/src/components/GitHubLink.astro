@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'a'>;
+const { class: className = 'github-cta', href, target, rel, ...attributes } = Astro.props;
+const external = typeof href === 'string' && /^https?:/.test(href);
+---
+<a class={className} href={href} target={external ? "_blank" : target} rel={external ? "noopener" : rel} {...attributes}><slot /></a>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+.github-cta { @apply inline-flex; @apply items-baseline; gap: calc(var(--relative-0-4-em) * 1em); padding: 0; border: 0; font-family: var(--display); font-size: var(--dimension-0-95-rem); letter-spacing: calc(var(--relative-0-05-em) * 1em); text-decoration: none; color: transparent; background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-middle) calc(var(--relative-50-percent) * 1%), var(--color-gradient-end)); -webkit-background-clip: text; background-clip: text; }
+.github-cta::before { content: ""; width: calc(var(--dots-leading) * 1em); height: calc(var(--dots-leading) * 1em); margin-right: calc(var(--relative-0-1-em) * 1em); border-radius: calc(var(--relative-50-percent) * 1%); background: var(--vermilion); align-self: baseline; @apply relative; top: calc(var(--relative-negative-0-12-em) * 1em); }
+.github-cta span { margin-left: calc(var(--relative-0-1-em) * 1em); color: var(--color-gradient-end); transition: transform var(--motion-transition-250) ease; }
+.github-cta:hover { text-decoration: underline; text-decoration-color: var(--color-surface-8); text-underline-offset: calc(var(--relative-0-25-em) * 1em); }
+.github-cta:hover span { transform: translateX(calc(var(--relative-0-2-em) * 1em)); }
+}
+</style>

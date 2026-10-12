@@ -1,0 +1,29 @@
+{
+  "dots": {
+    "separator": {
+      "$type": "number",
+      "$value": 0.3,
+      "$description": "Size in em; raised .18em."
+    },
+    "separator-raise": {
+      "$type": "number",
+      "$value": 0.18
+    },
+    "leading": {
+      "$type": "number",
+      "$value": 0.42
+    },
+    "leading-raise": {
+      "$type": "number",
+      "$value": 0.12
+    },
+    "name": {
+      "$type": "number",
+      "$value": 0.26
+    },
+    "name-top": {
+      "$type": "number",
+      "$value": 0.4
+    }
+  }
+}

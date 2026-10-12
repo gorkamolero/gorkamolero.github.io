@@ -1,0 +1,35 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'p'>;
+const { class: className = 'meta', ...attributes } = Astro.props;
+---
+<p class={className} {...attributes}><slot /></p>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+:where(body[data-page="index"]) .meta {
+        margin: var(--dimension-0-55-rem) 0 var(--dimension-1-rem); font-family: var(--display); font-size: var(--dimension-0-95-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); color: var(--ink-soft);
+      }
+:where(body[data-page="index"]) .meta .dot { color: var(--vermilion); margin: 0 calc(var(--relative-0-35-em) * 1em); }
+:where(body[data-page="creative"]) .meta {
+        margin: var(--dimension-0-55-rem) 0 var(--dimension-1-rem); font-family: var(--display); font-size: var(--dimension-0-95-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); color: var(--ink-soft);
+      }
+:where(body[data-page="creative"]) .meta .dot { color: var(--vermilion); margin: 0 calc(var(--relative-0-35-em) * 1em); }
+:where(body[data-page="music"]) .meta {
+        margin: var(--dimension-0-55-rem) 0 0; font-family: var(--display); font-size: var(--dimension-0-95-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); color: var(--ink-soft);
+      }
+:where(body[data-page="music"]) .meta .dot { color: var(--vermilion); margin: 0 calc(var(--relative-0-35-em) * 1em); }
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.meta {
+  margin: var(--dimension-0-55-rem) 0 var(--dimension-1-rem); font-family: var(--display); font-size: var(--dimension-0-95-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); color: var(--ink-soft);
+}
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.meta .dot { color: var(--vermilion); margin: 0 calc(var(--relative-0-35-em) * 1em); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.lead .meta { margin: 0; @apply text-center; }
+}
+}
+</style>

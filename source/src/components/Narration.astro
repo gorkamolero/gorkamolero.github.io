@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'div'>;
+const { class: className = 'narration', ...attributes } = Astro.props;
+---
+<div class={className} {...attributes}><slot /></div>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.narration { margin: var(--dimension-1-6-rem) 0 0; padding: var(--dimension-0-2-rem) 0 var(--dimension-0-2-rem) var(--dimension-1-2-rem); border-left: var(--dimension-2-px) solid var(--vermilion); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.narration blockquote { margin: 0; font-family: var(--display-italic); @apply italic; font-size: var(--dimension-1-2-rem); line-height: var(--number-line-height-1-55); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.narration .src { @apply block; margin-top: var(--dimension-0-7-rem); font-size: var(--dimension-1-rem); @apply italic; color: var(--ink-soft); }
+}
+}
+</style>

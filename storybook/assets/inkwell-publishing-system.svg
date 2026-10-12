@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Inkwell collaborative publishing system</title>
+  <desc id="desc">A public-safe system diagram for Inkwell/Hotpress, showing collaborative writing, editor state, exports, storage, billing, and publication workflow.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f4ee; }
+      .panel { fill: #ffffff; stroke: #d9d2c6; stroke-width: 2; }
+      .dark { fill: #101318; }
+      .blue { fill: #3d7ec9; }
+      .red { fill: #b94d42; }
+      .green { fill: #5b955a; }
+      .gold { fill: #b88a35; }
+      .line { stroke: #101318; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .label { font: 800 32px Inter, Arial, sans-serif; letter-spacing: 0; fill: #101318; }
+      .small { font: 700 19px Inter, Arial, sans-serif; letter-spacing: 0; fill: #343b46; }
+      .tiny { font: 700 16px Inter, Arial, sans-serif; letter-spacing: 0; fill: #343b46; }
+      .white { fill: #f7f4ee; }
+      .mono { font: 700 17px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0; fill: #101318; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#101318" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1440" height="900" />
+  <rect x="54" y="46" width="1332" height="808" rx="8" class="panel" />
+
+  <text x="90" y="108" class="label">Inkwell / Hotpress: collaborative publishing product</text>
+  <text x="90" y="144" class="small">Product-engineering signal: real-time writing, export pipelines, storage, billing, and publication workflow.</text>
+
+  <rect x="90" y="214" width="292" height="452" rx="8" class="dark" />
+  <text x="122" y="264" class="white" style="font:800 25px Inter, Arial, sans-serif">Writer surface</text>
+  <rect x="122" y="308" width="228" height="62" rx="6" fill="#f7f4ee" />
+  <text x="146" y="346" class="mono">Lexical editor</text>
+  <rect x="122" y="396" width="228" height="62" rx="6" fill="#f7f4ee" />
+  <text x="146" y="434" class="mono">Collaboration</text>
+  <rect x="122" y="484" width="228" height="62" rx="6" fill="#f7f4ee" />
+  <text x="146" y="522" class="mono">Typography</text>
+  <rect x="122" y="572" width="228" height="62" rx="6" fill="#f7f4ee" />
+  <text x="146" y="610" class="mono">Project library</text>
+
+  <rect x="540" y="186" width="360" height="526" rx="8" class="panel" />
+  <text x="572" y="236" class="label" style="font-size:25px">Product core</text>
+  <rect x="572" y="282" width="296" height="68" rx="6" fill="#e9f0f8" />
+  <circle cx="606" cy="316" r="12" class="blue" />
+  <text x="630" y="309" class="small">CRDT document state</text>
+  <text x="630" y="334" class="tiny">Liveblocks / Yjs collaboration</text>
+  <rect x="572" y="374" width="296" height="68" rx="6" fill="#edf4ec" />
+  <circle cx="606" cy="408" r="12" class="green" />
+  <text x="630" y="401" class="small">Export pipeline</text>
+  <text x="630" y="426" class="tiny">print-ready PDF and EPUB</text>
+  <rect x="572" y="466" width="296" height="68" rx="6" fill="#f6eddc" />
+  <circle cx="606" cy="500" r="12" class="gold" />
+  <text x="630" y="493" class="small">GitHub storage</text>
+  <text x="630" y="518" class="tiny">versioned manuscripts</text>
+  <rect x="572" y="558" width="296" height="68" rx="6" fill="#f3e8e5" />
+  <circle cx="606" cy="592" r="12" class="red" />
+  <text x="630" y="585" class="small">Stripe and Drizzle</text>
+  <text x="630" y="610" class="tiny">product data and paid flows</text>
+
+  <rect x="1058" y="214" width="292" height="452" rx="8" class="panel" />
+  <text x="1090" y="264" class="label" style="font-size:25px">Outputs</text>
+  <rect x="1090" y="308" width="228" height="62" rx="6" fill="#f7f4ee" stroke="#d9d2c6" stroke-width="2" />
+  <text x="1114" y="346" class="small">Book files</text>
+  <rect x="1090" y="396" width="228" height="62" rx="6" fill="#f7f4ee" stroke="#d9d2c6" stroke-width="2" />
+  <text x="1114" y="434" class="small">Review links</text>
+  <rect x="1090" y="484" width="228" height="62" rx="6" fill="#f7f4ee" stroke="#d9d2c6" stroke-width="2" />
+  <text x="1114" y="522" class="small">Publication package</text>
+  <rect x="1090" y="572" width="228" height="62" rx="6" fill="#f7f4ee" stroke="#d9d2c6" stroke-width="2" />
+  <text x="1114" y="610" class="small">Commerce path</text>
+
+  <path d="M 382 440 C 440 440 472 440 540 440" class="line" marker-end="url(#arrow)" />
+  <path d="M 900 440 C 970 440 1000 440 1058 440" class="line" marker-end="url(#arrow)" />
+  <path d="M 1204 666 C 1080 790 420 790 236 666" class="line" marker-end="url(#arrow)" />
+
+  <rect x="90" y="744" width="1260" height="74" rx="8" fill="#ffffff" stroke="#d9d2c6" stroke-width="2" />
+  <text x="122" y="780" class="small">Public-safe boundary: the product is live at hotpress.app; this diagram uses no private content.</text>
+  <text x="122" y="806" class="tiny">Manuscripts, customer data, payment configuration, and repository internals stay private; demos use fake content.</text>
+</svg>

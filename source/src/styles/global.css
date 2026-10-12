@@ -1,0 +1,117 @@
+@layer theme, base, components, utilities;
+/* Preflight is deliberately omitted: the browser defaults are part of the original design. */
+@import "./generated/theme.css";
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./generated/tokens.css";
+
+/* Letter justification, name dots, sweep and tolerance areas. */
+@layer components {
+
+@scope (.masthead) {
+:scope { text-align: center; padding-top: var(--dimension-3-5-rem); }
+      .identity { display: inline-flex; flex-direction: column; align-items: stretch; }
+      h1 {
+        font-family: var(--display); font-weight: var(--number-font-weight-400); font-size: var(--name-size);
+        letter-spacing: calc(var(--relative-0-06-em) * 1em); line-height: var(--number-line-height-1); margin: 0 calc(var(--relative-negative-0-06-em) * 1em) 0 0; position: relative; white-space: nowrap;
+      }
+      h1::before, h1::after {
+        content: ""; position: absolute; top: calc(var(--relative-0-4-em) * 1em); width: calc(var(--dots-name) * 1em); height: calc(var(--dots-name) * 1em);
+        border-radius: calc(var(--relative-50-percent) * 1%); background: var(--vermilion);
+      }
+      h1::before { left: calc(var(--relative-negative-0-8-em) * 1em); }
+      h1::after { right: calc(var(--relative-negative-0-74-em) * 1em); }
+      .role {
+        display: flex; justify-content: space-between; margin: var(--dimension-0-7-rem) 0 0;
+        font-family: var(--display); font-size: clamp(var(--dimension-0-82-rem), calc(var(--relative-2-2-vw) * 1vw), var(--dimension-1-08-rem)); color: var(--ink-soft);
+      }
+      .role .sp { width: calc(var(--relative-0-45-em) * 1em); }
+      .role [aria-hidden] { user-select: none; }
+      .sr-only { position: absolute; width: var(--dimension-1-px); height: var(--dimension-1-px); margin: var(--dimension-negative-1-px); padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+      .contact {
+        display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--dimension-0-3-rem) var(--dimension-1-5-rem);
+        margin-top: var(--dimension-1-6-rem); padding-top: var(--dimension-0-55-rem); border-top: var(--dimension-1-px) solid var(--rule); font-size: var(--dimension-1-rem);
+      }
+      .place { font-style: italic; color: var(--ink-soft); }
+      .links a { text-decoration: none; font-family: var(--display); letter-spacing: calc(var(--relative-0-05-em) * 1em); }
+      .links a + a::before { content: ""; display: inline-block; width: calc(var(--relative-0-3-em) * 1em); height: calc(var(--relative-0-3-em) * 1em); border-radius: calc(var(--relative-50-percent) * 1%); background: var(--vermilion); vertical-align: baseline; position: relative; top: calc(var(--relative-negative-0-18-em) * 1em); margin: 0 calc(var(--relative-0-55-em) * 1em); }
+      .links a:hover { color: var(--vermilion); }
+
+      :scope.has-photo { display: grid; grid-template-columns: 1fr auto; column-gap: var(--dimension-2-rem); text-align: left; }
+      :scope { --name-size: clamp(var(--dimension-2-1-rem), calc(var(--relative-7-5-vw) * 1vw), var(--dimension-3-4-rem)); }
+      :scope.has-photo .identity { grid-column: 1; grid-row: 1; justify-self: start; align-self: end; color: inherit; text-decoration: none;
+        /* Name flush left when the margin can hold the left dot; otherwise move in just enough to keep the dot on screen. */
+        margin-left: max(var(--dimension-0-px), calc(.8 * var(--name-size) + var(--dimension-6-px) - max(var(--dimension-16-px), calc(var(--relative-5-vw) * 1vw), (calc(var(--relative-100-vw) * 1vw) - var(--dimension-46-rem)) / 2))); }
+      .portrait-link { grid-column: 2; grid-row: 1; align-self: end; display: block; line-height: var(--number-line-height-0); margin-bottom: var(--dimension-0-2-rem); }
+      :scope.has-photo .contact { grid-column: 1 / -1; grid-row: 2; flex-wrap: nowrap; column-gap: var(--dimension-1-rem); font-size: var(--dimension-0-95-rem); }
+      :scope.has-photo .links a + a::before { margin: 0 calc(var(--relative-0-5-em) * 1em); }
+      .portrait-round { display: block; width: var(--dimension-6-4-rem); height: var(--dimension-6-4-rem); padding: var(--dimension-2-px); border: var(--dimension-1-px) solid var(--rule); border-radius: calc(var(--relative-50-percent) * 1%); background: var(--color-surface-10); object-fit: cover; }
+      @media (max-width: 640px) { .portrait-round { width: var(--dimension-3-8-rem); height: var(--dimension-3-8-rem); } :scope.has-photo { column-gap: var(--dimension-1-1-rem); } :scope { --name-size: var(--dimension-1-8-rem); } :scope.has-photo .contact { align-items: flex-start; } :scope.has-photo .links { text-align: left; } }
+
+      @media (max-width: 640px) {
+        :scope { padding-top: var(--dimension-2-4-rem); }
+        .contact { flex-direction: column; align-items: center; }
+        .links { width: calc(var(--relative-100-percent) * 1%); text-align: center; line-height: var(--number-line-height-1-9); font-size: var(--dimension-0-94-rem); }
+        .links a { white-space: nowrap; }
+        .links a + a::before { content: none; }
+        .links a:not(:last-child)::after { content: "\00b7"; color: var(--vermilion); margin: 0 calc(var(--relative-0-2-em) * 1em) 0 calc(var(--relative-0-55-em) * 1em); }
+      }
+.links a[aria-current="page"] { color: var(--vermilion); }
+/* Desktop spacing for the contact row within the original 46rem sheet. */
+@media (min-width: 641px) {
+  :scope.has-photo .place { white-space: nowrap; font-size: clamp(var(--dimension-0-72-rem), calc(var(--relative-1-8-vw) * 1vw), var(--dimension-0-95-rem)); }
+  :scope.has-photo .links { white-space: nowrap; }
+  :scope.has-photo .links a { letter-spacing: calc(var(--relative-0-025-em) * 1em); }
+  :scope.has-photo .links a + a::before { margin: 0 calc(var(--relative-0-5-em) * 1em); }
+}
+
+/* Portfolios: ink led by the masthead's vermilion dot, with a vermilion-to-amber gradient on the word. On hover or keyboard focus the portfolio pages sweep out to the left in ink over a line in the same gradient, while the contact links and the place fade; on touch screens a tap opens them on a line underneath. */
+.portfolios { --grad: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-middle) calc(var(--relative-50-percent) * 1%), var(--color-gradient-end)); position: relative; display: inline-flex; vertical-align: baseline; margin-left: calc(var(--relative-0-9-em) * 1em); color: var(--ink); }
+.trigger, .spacer { display: inline-flex; align-items: baseline; gap: calc(var(--relative-0-4-em) * 1em); padding: 0; font-family: var(--display); font-size: calc(var(--relative-1-em) * 1em); letter-spacing: calc(var(--relative-0-05-em) * 1em); line-height: var(--number-line-height-1-2); white-space: nowrap; }
+/* Dots sit centred on the capitals' mid-height, .33em above the baseline, like the dots beside the name. */
+.trigger::before, .spacer::before { content: ""; width: calc(var(--dots-leading) * 1em); height: calc(var(--dots-leading) * 1em); margin-right: calc(var(--relative-0-1-em) * 1em); border-radius: calc(var(--relative-50-percent) * 1%); align-self: baseline; position: relative; top: calc(var(--relative-negative-0-12-em) * 1em); }
+.trigger::before { background: var(--vermilion); }
+.trigger { position: relative; z-index: 2; border: 0; cursor: pointer; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.trigger:focus-visible { outline: var(--dimension-1-px) dashed var(--vermilion); outline-offset: var(--dimension-4-px); }
+.trigger svg, .spacer svg { width: calc(var(--relative-0-6-em) * 1em); height: calc(var(--relative-0-6-em) * 1em); align-self: center; color: var(--color-gradient-end); transition: transform var(--motion-transition-350) ease; }
+.spacer { visibility: hidden; margin-left: calc(var(--relative-0-9-em) * 1em); }
+.drawer { position: absolute; z-index: 1; right: 0; bottom: calc(var(--relative-negative-0-25-em) * 1em); display: flex; align-items: baseline; line-height: var(--number-line-height-1-2); padding-bottom: calc(var(--relative-0-15-em) * 1em); white-space: nowrap; border-bottom: var(--dimension-1-5-px) solid transparent; border-image: var(--grad) 1; clip-path: inset(calc(var(--relative-negative-1-3-em) * 1em) 0 calc(var(--relative-negative-1-3-em) * 1em) calc(var(--relative-100-percent) * 1%)); transition: clip-path var(--motion-transition-550) var(--motion-sweep-easing); pointer-events: none; }
+.links .drawer a { line-height: inherit; padding: calc(var(--relative-0-55-em) * 1em) 0; margin: calc(var(--relative-negative-0-55-em) * 1em) 0; color: var(--ink); letter-spacing: calc(var(--relative-0-03-em) * 1em); text-decoration: none; transition: color var(--motion-transition-200) ease; }
+.portfolios::after { content: ""; position: absolute; inset: calc(var(--relative-negative-0-7-em) * 1em) calc(var(--relative-negative-0-45-em) * 1em); }
+.drawer::after { content: ""; position: absolute; z-index: -1; inset: calc(var(--relative-negative-1-em) * 1em) calc(var(--relative-negative-1-2-em) * 1em) calc(var(--relative-negative-0-9-em) * 1em) calc(var(--relative-negative-1-2-em) * 1em); }
+:scope .links .drawer a + a::before { content: ""; display: inline-block; width: calc(var(--relative-0-3-em) * 1em); height: calc(var(--relative-0-3-em) * 1em); border-radius: calc(var(--relative-50-percent) * 1%); background: var(--vermilion); vertical-align: baseline; position: relative; top: calc(var(--relative-negative-0-18-em) * 1em); margin: 0 calc(var(--relative-0-6-em) * 1em); }
+.links .drawer a:hover, .links .drawer a:focus-visible, .links .drawer a[aria-current="page"] { color: var(--vermilion); outline: none; }
+.portfolios.open .drawer, .portfolios.hover .drawer { clip-path: inset(calc(var(--relative-negative-1-3-em) * 1em) calc(var(--relative-negative-1-3-em) * 1em) calc(var(--relative-negative-1-3-em) * 1em) calc(var(--relative-negative-1-3-em) * 1em)); pointer-events: auto; }
+.portfolios.hover .trigger svg { transform: rotate(180deg); }
+.portfolios.open .trigger svg { transform: rotate(180deg); }
+.place, .links > a { transition: opacity var(--motion-transition-300) ease; }
+@media (min-width: 641px) {
+  .contact:has(.portfolios.open) .place, .contact:has(.portfolios.open) .links > a { opacity: 0; pointer-events: none; }
+}
+@media (hover: hover) and (min-width: 641px) {
+  .portfolios:focus-within .drawer { clip-path: inset(calc(var(--relative-negative-1-3-em) * 1em) calc(var(--relative-negative-1-3-em) * 1em) calc(var(--relative-negative-1-3-em) * 1em) calc(var(--relative-negative-1-3-em) * 1em)); pointer-events: auto; }
+  .portfolios:focus-within .trigger svg { transform: rotate(180deg); }
+  .contact:has(.portfolios.hover) .place, .contact:has(.portfolios.hover) .links > a,
+  .contact:has(.portfolios:focus-within) .place, .contact:has(.portfolios:focus-within) .links > a { opacity: 0; pointer-events: none; }
+}
+@media (min-width: 641px) { :scope.has-photo .links { font-size: clamp(var(--dimension-0-78-rem), calc(var(--relative-1-9-vw) * 1vw), var(--dimension-0-95-rem)); } }
+@media (max-width: 640px) {
+  .links { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; }
+  :scope.has-photo .links { justify-content: flex-start; }
+  .portfolios { display: contents; }
+  .links a:not(:last-child)::after { content: none; }
+  :scope .links > a::after { content: ""; display: inline-block; width: calc(var(--relative-0-3-em) * 1em); height: calc(var(--relative-0-3-em) * 1em); border-radius: calc(var(--relative-50-percent) * 1%); background: var(--vermilion); vertical-align: baseline; position: relative; top: calc(var(--relative-negative-0-18-em) * 1em); margin: 0 calc(var(--relative-0-55-em) * 1em); }
+  :scope .links > a:last-of-type::after { content: none; }
+  .trigger { order: 1; margin-left: calc(var(--relative-0-75-em) * 1em); }
+  /* Each page carries its dot centred in a 1.3em lead-in on its left; the drawer starts 1.3em further left and clips that strip, so the page that begins a line never shows a dot. */
+  .drawer { order: 2; flex-basis: calc(var(--relative-100-percent) * 1%); position: static; display: none; flex-wrap: wrap; justify-content: flex-start; gap: 0; margin: var(--dimension-0-35-rem) 0 0 calc(var(--relative-negative-1-3-em) * 1em); white-space: normal; line-height: var(--number-line-height-1-9); clip-path: inset(calc(var(--relative-negative-1-em) * 1em) calc(var(--relative-negative-1-em) * 1em) calc(var(--relative-negative-1-em) * 1em) calc(var(--relative-1-3-em) * 1em)); transition: none; }
+  .links .drawer a { position: relative; padding: calc(var(--relative-0-2-em) * 1em) 0 calc(var(--relative-0-2-em) * 1em) calc(var(--relative-1-3-em) * 1em); margin: calc(var(--relative-negative-0-2-em) * 1em) 0; }
+  :scope .links .drawer a[href]::before { content: ""; display: block; position: absolute; top: calc(var(--relative-0-92-em) * 1em); left: calc(var(--relative-0-5-em) * 1em); width: calc(var(--relative-0-3-em) * 1em); height: calc(var(--relative-0-3-em) * 1em); border-radius: calc(var(--relative-50-percent) * 1%); background: var(--vermilion); margin: 0; }
+  :scope .links .drawer a + a::before { margin: 0; display: block; position: absolute; top: calc(var(--relative-0-92-em) * 1em); }
+  .spacer { display: none; }
+  .portfolios::after, .drawer::after { content: none; }
+  .portfolios.open .drawer { display: flex; clip-path: inset(calc(var(--relative-negative-1-em) * 1em) calc(var(--relative-negative-1-em) * 1em) calc(var(--relative-negative-1-em) * 1em) calc(var(--relative-1-3-em) * 1em)); }
+}
+@media (prefers-reduced-motion: reduce) { .drawer, .trigger svg, .place, .links > a { transition: none; } }
+}
+
+}

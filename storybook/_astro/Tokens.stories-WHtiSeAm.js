@@ -1,0 +1,14 @@
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";var t;function n(){return(n=e((()=>{(function(){if(typeof document>`u`)return;let e=document.head.querySelectorAll(`style[data-astro-build]`);for(let t of e)if(t.getAttribute(`data-astro-build`)===`/Users/gorkolas/Developer/job-hunt-command-center/portfolio/src/stories/Tokens.astro:0`)return;let t=document.createElement(`style`);t.setAttribute(`data-astro-build`,`/Users/gorkolas/Developer/job-hunt-command-center/portfolio/src/stories/Tokens.astro:0`),t.textContent=`.motion-dot { display: block; transition: transform var(--sample-duration, var(--motion-sweep)) var(--motion-sweep-easing); }
+.motion-sample:hover .motion-dot, .motion-sample:focus .motion-dot { transform: translateX(var(--dimension-3-rem)); }
+@media (prefers-reduced-motion: reduce) { .motion-dot { transition: none; } }
+.tokens-catalog { padding: var(--dimension-2-rem) 0; }
+.token-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--dimension-1-rem); }
+.token-grid code { display:block;overflow-wrap:anywhere; }
+.swatch { display:block;height:var(--dimension-3-rem);border:var(--dimension-1-px) solid var(--color-rule); }
+.space-sample { display:block;height:var(--dimension-0-5-rem);background:var(--color-vermilion); }
+@media(max-width:640px) { .token-grid {grid-template-columns:1fr;} }`,document.head.appendChild(t)})(),(function(){if(typeof document>`u`)return;let e=document.head.querySelectorAll(`style[data-astro-build]`);for(let t of e)if(t.getAttribute(`data-astro-build`)===`/Users/gorkolas/Developer/job-hunt-command-center/portfolio/src/components/Dot.astro:1`)return;let t=document.createElement(`style`);t.setAttribute(`data-astro-build`,`/Users/gorkolas/Developer/job-hunt-command-center/portfolio/src/components/Dot.astro:1`),t.textContent=`@layer components {
+  .dot-separator, .dot-leading, .dot-name { display: inline-block; position: relative; background: var(--color-vermilion); border-radius: calc(var(--relative-50-percent) * 1%); }
+  .dot-separator { width: calc(var(--dots-separator) * 1em); height: calc(var(--dots-separator) * 1em); top: calc(var(--dots-separator-raise) * -1em); }
+  .dot-leading { width: calc(var(--dots-leading) * 1em); height: calc(var(--dots-leading) * 1em); top: calc(var(--dots-leading-raise) * -1em); }
+  .dot-name { width: calc(var(--dots-name) * 1em); height: calc(var(--dots-name) * 1em); }
+}`,document.head.appendChild(t)})(),t=()=>{throw Error(`Astro components are rendered server-side by Storybook.`)},t.isAstroComponentFactory=!0,t.moduleId=`/Users/gorkolas/Developer/job-hunt-command-center/portfolio/src/stories/Tokens.astro`})))()}var r,i,a;function o(){return(o=e((()=>{n(),r={title:`Foundation/Tokens`,component:t},i={},a=[`Catalog`]})))()}o();export{i as Catalog,a as __namedExportsOrder,r as default};

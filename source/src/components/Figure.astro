@@ -1,0 +1,38 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'figure'> & { caption?: string };
+const { caption, class: className = 'plate', ...attributes } = Astro.props;
+---
+<figure class={className} {...attributes}><slot />{caption && <figcaption>{caption}</figcaption>}</figure>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+:where(body[data-page="index"]) .shot { margin: var(--dimension-1-4-rem) 0 0; border: var(--dimension-1-px) solid var(--rule); background: var(--color-surface-11); }
+:where(body[data-page="index"]) .shot img, :where(body[data-page="index"]) .shot video { @apply block; width: calc(var(--relative-100-percent) * 1%); height: auto; }
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.shot { margin: var(--dimension-1-4-rem) 0 0; border: var(--dimension-1-px) solid var(--rule); background: var(--color-surface-11); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.shot img, .shot video { @apply block; width: calc(var(--relative-100-percent) * 1%); height: auto; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.plate { margin: var(--dimension-1-6-rem) 0 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.plate .shot { margin: 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.plate figcaption { margin: var(--dimension-0-6-rem) 0 0; @apply italic; color: var(--ink-soft); font-size: var(--dimension-1-rem); @apply text-center; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.plate.narrow { max-width: var(--dimension-340-px); margin-left: auto; margin-right: auto; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.plate.portrait { max-width: var(--dimension-24-rem); margin-left: auto; margin-right: auto; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.plate + p, .plate + h3 { margin-top: var(--dimension-1-4-rem); }
+}
+}
+</style>

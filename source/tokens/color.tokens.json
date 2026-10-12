@@ -1,0 +1,225 @@
+{
+  "color": {
+    "paper": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.9266609846733648,
+          0.02423698065893337,
+          85.7895079348296
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #eee6d5"
+    },
+    "ink": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.22009774027814896,
+          0.007422356962542648,
+          67.42658649957241
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #1d1a17"
+    },
+    "ink-soft": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.3873235023050081,
+          0.016292062394290662,
+          71.02580687957311
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #4a433b"
+    },
+    "rule": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.7466421814048507,
+          0.03701438374681439,
+          81.21186711297628
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #b9ab93"
+    },
+    "vermilion": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.4944649649938275,
+          0.1537857892773282,
+          33.25606576474149
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #a7351e"
+    },
+    "gradient-start": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.438517995916071,
+          0.13977830091177074,
+          33.41595610400748
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #8f2a15"
+    },
+    "gradient-middle": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.5589779599198119,
+          0.17230339707790945,
+          35.43234182287
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #c4421f"
+    },
+    "gradient-end": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.6269266354031916,
+          0.15487625128866495,
+          49.0044734392834
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #d0661f"
+    },
+    "surface-8": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.5589779599198119,
+          0.17230339707790945,
+          35.43234182287
+        ],
+        "alpha": 0.45
+      },
+      "$description": "Original CSS: rgba(196, 66, 31, .45)"
+    },
+    "surface-9": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.22009774027814896,
+          0.007422356962542648,
+          67.42658649957241
+        ],
+        "alpha": 0.07
+      },
+      "$description": "Original CSS: rgba(29, 26, 23, .07)"
+    },
+    "surface-10": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.9367695226767407,
+          0.019375380580771442,
+          80.1168841148891
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #f1e9dc"
+    },
+    "surface-11": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #000"
+    },
+    "surface-12": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.22009774027814896,
+          0.007422356962542648,
+          67.42658649957241
+        ],
+        "alpha": 0.05
+      },
+      "$description": "Original CSS: rgba(29, 26, 23, .05)"
+    },
+    "surface-13": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.9791293560100793,
+          0,
+          0
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #f8f8f8"
+    },
+    "surface-14": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.1912512996316179,
+          0,
+          0
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #141414"
+    },
+    "surface-15": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.1822037028359986,
+          0,
+          0
+        ],
+        "alpha": 1
+      },
+      "$description": "Original CSS: #121212"
+    },
+    "surface-16": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.7466421814048507,
+          0.03701438374681439,
+          81.21186711297628
+        ],
+        "alpha": 0.55
+      },
+      "$description": "Original CSS: rgba(185, 171, 147, .55)"
+    }
+  }
+}

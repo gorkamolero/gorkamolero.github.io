@@ -1,0 +1,32 @@
+---
+const current = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/index';
+const portfolios = [
+  ['Engineering', './index.html'],
+  ['Agents', './agents.html'],
+  ['Design Systems', './design-systems.html'],
+  ['Creative Work', './creative.html'],
+  ['Before AI', './pre-ai.html'],
+  ['Music', './music.html'],
+];
+const isCurrent = (href: string) => href === '.' + current + '.html';
+const chevron = '<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M6.6 1.6 3.2 5l3.4 3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+---
+<span class="portfolios" data-portfolios>
+        <span class="drawer" id="portfolio-menu">{portfolios.map(([label, href]) => <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</a>)}<span class="spacer" aria-hidden="true">Portfolios<Fragment set:html={chevron} /></span></span>
+<button class="trigger" type="button" aria-expanded="false" aria-controls="portfolio-menu">Portfolios<Fragment set:html={chevron} /></button>
+</span>
+<script is:inline>
+  // Hover opens the portfolio pages and keeps them open for a moment after the pointer leaves, so slipping out by a pixel doesn't close them. A click pins them open until the next click on Portfolios, a click elsewhere or Escape.
+  for (const root of document.querySelectorAll('[data-portfolios]')) {
+    const trigger = root.querySelector('.trigger');
+    const canHover = matchMedia('(hover: hover) and (min-width: 641px)');
+    let timer;
+    const sync = () => trigger.setAttribute('aria-expanded', String(root.classList.contains('open') || root.classList.contains('hover')));
+    const pin = (open) => { root.classList.toggle('open', open); sync(); };
+    trigger.addEventListener('click', () => pin(!root.classList.contains('open')));
+    root.addEventListener('pointerenter', e => { if (e.pointerType !== 'mouse' || !canHover.matches) return; clearTimeout(timer); root.classList.add('hover'); sync(); });
+    root.addEventListener('pointerleave', e => { if (e.pointerType !== 'mouse') return; clearTimeout(timer); timer = window.setTimeout(() => { root.classList.remove('hover'); sync(); }, 450); });
+    document.addEventListener('click', e => { if (!root.contains(e.target)) { root.classList.remove('hover'); pin(false); } });
+    root.addEventListener('keydown', e => { if (e.key === 'Escape') { root.classList.remove('hover'); pin(false); trigger.focus(); } });
+  }
+</script>

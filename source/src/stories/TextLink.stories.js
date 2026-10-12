@@ -1,0 +1,11 @@
+import TextLink from '../components/TextLink.astro';
+import {userEvent} from 'storybook/test';
+export default {title:'Components/TextLink', component:TextLink};
+export const PlainInternal = {args:{href:'./koda.html',slots:{default:'Case study'}}};
+export const PrimaryInternal = {args:{...PlainInternal.args,variant:'primary'}};
+export const PlainExternal = {args:{href:'https://github.com/gorkamolero',slots:{default:'Source'}}};
+export const PrimaryExternal = {args:{...PlainExternal.args,variant:'primary'}};
+export const Hover = {...PrimaryExternal,play:async({canvasElement})=>userEvent.hover(canvasElement.querySelector('a'))};
+export const PlainInternalHover = {...PlainInternal, play:Hover.play};
+export const PrimaryInternalHover = {...PrimaryInternal, play:Hover.play};
+export const PlainExternalHover = {...PlainExternal, play:Hover.play};

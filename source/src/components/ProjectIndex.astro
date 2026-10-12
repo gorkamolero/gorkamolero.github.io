@@ -1,0 +1,39 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'ul'>;
+const { class: className = 'index', ...attributes } = Astro.props;
+---
+<ul class={className} {...attributes}><slot /></ul>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+:where(body[data-page="index"]) .index { list-style: none; margin: var(--dimension-1-rem) 0 0; padding: 0; }
+:where(body[data-page="index"]) .index li { @apply grid; grid-template-columns: var(--dimension-9-5-rem) 1fr; gap: var(--dimension-1-rem); padding: var(--dimension-0-55-rem) 0; border-bottom: var(--dimension-1-px) solid var(--rule); }
+:where(body[data-page="index"]) .index li a { font-family: var(--display); letter-spacing: calc(var(--relative-0-04-em) * 1em); text-decoration: none; }
+:where(body[data-page="index"]) .index li a:hover { color: var(--vermilion); }
+:where(body[data-page="index"]) .index li span { color: var(--ink-soft); }
+@media (max-width: 640px) {
+        :where(body[data-page="index"]) .index li { grid-template-columns: 1fr; gap: var(--dimension-0-1-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.index { list-style: none; margin: var(--dimension-1-rem) 0 0; padding: 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.index li { @apply grid; grid-template-columns: var(--dimension-9-5-rem) 1fr; gap: var(--dimension-1-rem); padding: var(--dimension-0-55-rem) 0; border-bottom: var(--dimension-1-px) solid var(--rule); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.index li a { font-family: var(--display); letter-spacing: calc(var(--relative-0-04-em) * 1em); text-decoration: none; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.index li a:hover { color: var(--vermilion); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.index li span { color: var(--ink-soft); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+  @media (max-width: 640px) {
+  .index li { grid-template-columns: 1fr; gap: var(--dimension-0-1-rem); } }
+}
+}
+</style>

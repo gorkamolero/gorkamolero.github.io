@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Koda review-first agent IDE architecture</title>
+  <desc id="desc">A public-safe diagram showing Koda as a desktop review workbench for agent sessions, workspaces, sidecars, checkpoints, and visual diffs.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f4ee; }
+      .ink { fill: #101318; }
+      .muted { fill: #343b46; }
+      .panel { fill: #ffffff; stroke: #d9d2c6; stroke-width: 2; }
+      .dark { fill: #101318; }
+      .blue { fill: #3d7ec9; }
+      .red { fill: #b94d42; }
+      .green { fill: #5b955a; }
+      .gold { fill: #b88a35; }
+      .line { stroke: #101318; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .soft-line { stroke: #d9d2c6; stroke-width: 2; fill: none; }
+      .label { font: 800 32px Inter, Arial, sans-serif; letter-spacing: 0; fill: #101318; }
+      .small { font: 700 19px Inter, Arial, sans-serif; letter-spacing: 0; fill: #343b46; }
+      .tiny { font: 700 16px Inter, Arial, sans-serif; letter-spacing: 0; fill: #343b46; }
+      .white { fill: #f7f4ee; }
+      .mono { font: 700 17px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0; fill: #101318; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#101318" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1440" height="900" />
+  <rect x="54" y="46" width="1332" height="808" rx="8" class="panel" />
+
+  <text x="90" y="108" class="label">Koda: review-first agent IDE</text>
+  <text x="90" y="144" class="small">Desktop workbench for steering multiple coding agents through inspected, checkpointed work.</text>
+
+  <rect x="90" y="190" width="360" height="530" rx="8" class="dark" />
+  <text x="122" y="240" class="white" style="font:800 25px Inter, Arial, sans-serif">Operator surface</text>
+  <rect x="122" y="278" width="296" height="74" rx="6" fill="#f7f4ee" />
+  <text x="146" y="307" class="mono">workspace: product-ui</text>
+  <text x="146" y="332" class="tiny">branch, files, prompts, context</text>
+  <rect x="122" y="374" width="296" height="74" rx="6" fill="#f7f4ee" />
+  <text x="146" y="403" class="mono">session: Claude</text>
+  <text x="146" y="428" class="tiny">tool stream and decisions</text>
+  <rect x="122" y="470" width="296" height="74" rx="6" fill="#f7f4ee" />
+  <text x="146" y="499" class="mono">session: Codex</text>
+  <text x="146" y="524" class="tiny">parallel investigation lane</text>
+  <rect x="122" y="566" width="296" height="74" rx="6" fill="#f7f4ee" />
+  <text x="146" y="595" class="mono">session: Kimi</text>
+  <text x="146" y="620" class="tiny">alternate model perspective</text>
+  <text x="122" y="682" class="white" style="font:700 18px Inter, Arial, sans-serif">Goal: review before merge.</text>
+
+  <rect x="540" y="190" width="360" height="530" rx="8" class="panel" />
+  <text x="572" y="240" class="label" style="font-size:25px">Koda core</text>
+  <rect x="572" y="282" width="296" height="68" rx="6" fill="#e9f0f8" />
+  <circle cx="606" cy="316" r="12" class="blue" />
+  <text x="630" y="309" class="small">React desktop UI</text>
+  <text x="630" y="334" class="tiny">review panes, timelines, diffs</text>
+  <rect x="572" y="374" width="296" height="68" rx="6" fill="#f3e8e5" />
+  <circle cx="606" cy="408" r="12" class="red" />
+  <text x="630" y="401" class="small">Tauri and Rust shell</text>
+  <text x="630" y="426" class="tiny">desktop boundary and commands</text>
+  <rect x="572" y="466" width="296" height="68" rx="6" fill="#edf4ec" />
+  <circle cx="606" cy="500" r="12" class="green" />
+  <text x="630" y="493" class="small">Node sidecar</text>
+  <text x="630" y="518" class="tiny">PTY, agent runners, file ops</text>
+  <rect x="572" y="558" width="296" height="68" rx="6" fill="#f6eddc" />
+  <circle cx="606" cy="592" r="12" class="gold" />
+  <text x="630" y="585" class="small">SQLite state</text>
+  <text x="630" y="610" class="tiny">sessions, checkpoints, events</text>
+  <rect x="572" y="650" width="296" height="42" rx="6" fill="#101318" />
+  <text x="608" y="677" class="white" style="font:800 18px Inter, Arial, sans-serif">Review before merge</text>
+
+  <rect x="990" y="190" width="330" height="530" rx="8" class="panel" />
+  <text x="1022" y="240" class="label" style="font-size:25px">Review outputs</text>
+  <rect x="1022" y="284" width="266" height="76" rx="6" fill="#f7f4ee" stroke="#d9d2c6" stroke-width="2" />
+  <text x="1046" y="315" class="small">Visual diff</text>
+  <text x="1046" y="340" class="tiny">what changed and why</text>
+  <rect x="1022" y="386" width="266" height="76" rx="6" fill="#f7f4ee" stroke="#d9d2c6" stroke-width="2" />
+  <text x="1046" y="417" class="small">Checkpoint</text>
+  <text x="1046" y="442" class="tiny">rollback and compare states</text>
+  <rect x="1022" y="488" width="266" height="76" rx="6" fill="#f7f4ee" stroke="#d9d2c6" stroke-width="2" />
+  <text x="1046" y="519" class="small">Worktree lane</text>
+  <text x="1046" y="544" class="tiny">safe parallel execution</text>
+  <rect x="1022" y="590" width="266" height="76" rx="6" fill="#f7f4ee" stroke="#d9d2c6" stroke-width="2" />
+  <text x="1046" y="621" class="small">Handoff packet</text>
+  <text x="1046" y="646" class="tiny">review notes for humans</text>
+
+  <path d="M 450 455 C 500 455 500 455 540 455" class="line" marker-end="url(#arrow)" />
+  <path d="M 900 455 C 940 455 940 455 990 455" class="line" marker-end="url(#arrow)" />
+  <path d="M 1155 720 C 1110 800 650 800 335 720" class="line" marker-end="url(#arrow)" />
+
+  <rect x="90" y="762" width="1230" height="58" rx="8" fill="#ffffff" stroke="#d9d2c6" stroke-width="2" />
+  <text x="122" y="798" class="small">Public-safe claim: high-signal private project from migration docs; source/build proof still pending.</text>
+</svg>

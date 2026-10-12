@@ -1,0 +1,13 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'p'>;
+const { class: className = 'group', ...attributes } = Astro.props;
+---
+<p class={className} {...attributes}><slot /></p>
+
+<style is:global>
+@layer components {
+:where(body[data-page="index"]) .group { margin: var(--dimension-5-5-rem) 0 0; font-family: var(--display); font-size: var(--dimension-0-92-rem); letter-spacing: calc(var(--relative-0-3-em) * 1em); text-transform: uppercase; color: var(--vermilion); }
+:where(body[data-page="index"]) .group + .work { margin-top: var(--dimension-1-2-rem); }
+}
+</style>
