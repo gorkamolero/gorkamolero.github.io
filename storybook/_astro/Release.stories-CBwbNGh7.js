@@ -1,4 +1,4 @@
-import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{c as t,l as n}from"./iframe-C887upMK.js";var r,i,a;function o(){return(o=e((()=>{n(),r={title:`Components/Release`,component:t,parameters:{page:`music`}},i={args:{class:`release`,slots:{default:`
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{c as t,l as n}from"./iframe-CRKmuegh.js";var r,i,a;function o(){return(o=e((()=>{n(),r={title:`Components/Release`,component:t,parameters:{page:`music`}},i={args:{class:`release`,slots:{default:`
             <div>
               <h3>Thumos</h3>
               <p class="meta">Single</p>

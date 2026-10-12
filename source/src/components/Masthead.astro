@@ -1,17 +1,16 @@
 ---
 import PortfoliosMenu from './PortfoliosMenu.astro';
 interface Props { role?: string; }
-const { role = 'Product engineer / AI engineer' } = Astro.props;
+const { role = 'Creative technologist / AI engineer' } = Astro.props;
 const links = [
   ['Email', 'mailto:gorka.molero@gmail.com'],
-  ['LinkedIn', 'https://www.linkedin.com/in/gorkamolero'],
   ['GitHub', 'https://github.com/gorkamolero'],
 ];
 ---
 <header class="masthead has-photo">
   <a class="identity" href="/" aria-label="Gorka Molero, home">
     <h1>Gorka Molero</h1>
-    <p class="role"><span class="sr-only">{role}</span>{Array.from(role.toUpperCase()).map(letter => <span class={letter === ' ' ? 'sp' : undefined} aria-hidden="true">{letter === ' ' ? '' : letter}</span>)}</p>
+    <p class={role.length > 30 ? "role long" : "role"}><span class="sr-only">{role}</span>{Array.from(role.toUpperCase()).map(letter => <span class={letter === ' ' ? 'sp' : undefined} aria-hidden="true">{letter === ' ' ? '' : letter}</span>)}</p>
   </a>
   <a class="portrait-link" href="/" tabindex="-1" aria-hidden="true"><img class="portrait-round" src="./assets/gorka-portrait-round.jpg" width="600" height="600" alt="" /></a>
   <div class="contact">
