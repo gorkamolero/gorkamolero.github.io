@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hotpress - Gorka Molero Case Study</title>
-    <meta name="description" content="Case study for Hotpress/Hotpress, a live collaborative publishing product at hotpress.app with real-time CRDT editing, print-production PDF and EPUB exports, GitHub-backed storage, Stripe, Drizzle, and Next.js.">
+    <meta name="description" content="Hotpress, a collaborative writing app like Google Docs that also publishes complex books, and how I tested its real-time collaboration on Liveblocks end to end.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
@@ -15,10 +15,6 @@
 @layer components{.dot-separator,.dot-leading,.dot-name{background:var(--color-vermilion);border-radius:calc(var(--relative-50-percent) * 1%);display:inline-block;position:relative}.dot-separator{width:calc(var(--dots-separator) * 1em);height:calc(var(--dots-separator) * 1em);top:calc(var(--dots-separator-raise) * -1em)}.dot-leading{width:calc(var(--dots-leading) * 1em);height:calc(var(--dots-leading) * 1em);top:calc(var(--dots-leading-raise) * -1em)}.dot-name{width:calc(var(--dots-name) * 1em);height:calc(var(--dots-name) * 1em)}}
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer components{:where(body[data-page=index]) .shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}:where(body[data-page=index]) .shot img,:where(body[data-page=index]) .shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot img,.shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate{margin:var(--dimension-1-6-rem) 0 0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate .shot{margin:0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate figcaption{margin:var(--dimension-0-6-rem) 0 0;color:var(--ink-soft);font-style:italic;font-size:var(--dimension-1-rem);text-align:center}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.narrow{max-width:var(--dimension-340-px);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.portrait{max-width:var(--dimension-24-rem);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate+p,.plate+h3{margin-top:var(--dimension-1-4-rem)}}}
-/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
-@layer components{@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts{margin:var(--dimension-1-2-rem) 0 0;padding:0;list-style:none}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts li{grid-template-columns:var(--dimension-11-rem) 1fr;gap:var(--dimension-1-rem);padding:var(--dimension-0-6-rem) 0;border-bottom:var(--dimension-1-px) solid var(--rule);display:grid}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts strong{font-weight:var(--number-font-weight-600)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts span{color:var(--ink-soft)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts+p,.facts+.plate{margin-top:var(--dimension-1-4-rem)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){@media (width<=640px){.facts li{gap:var(--dimension-0-1-rem);grid-template-columns:1fr}}}}
-/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
-@layer components{@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.points{margin:var(--dimension-1-rem) 0 0;padding:0;list-style:none}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.points li{padding:var(--dimension-0-3-rem) 0 var(--dimension-0-3-rem) var(--dimension-1-3-rem);position:relative}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.points li:before{content:"";left:var(--dimension-0-2-rem);top:calc(var(--dimension-0-3-rem) + calc(var(--relative-0-64-em) * 1em));width:calc(var(--relative-0-32-em) * 1em);height:calc(var(--relative-0-32-em) * 1em);border-radius:calc(var(--relative-50-percent) * 1%);background:var(--vermilion);position:absolute}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.points+p,.points+.actions{margin-top:var(--dimension-1-2-rem)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.card .points{margin-top:var(--dimension-0-2-rem)}}}
 </style></head>
   <body data-page="hotpress">
     
@@ -53,76 +49,37 @@
 </script></span>
   </div>
 </header>
-    
 
       <section class="lead">
-        <p class="meta eyebrow">Live · publishing product</p>
+        <p class="meta eyebrow">Case · collaborative writing and publishing</p>
         <h2 class="case-title">Hotpress</h2>
-        <p class="intro">A shipped collaborative publishing product: real-time writing, CRDT editing, print-production exports, Git-versioned storage, and paid product surfaces. Live at <a href="https://hotpress.app" rel="noopener" target="_blank">hotpress.app</a>.</p>
-        <p class="meta chips">Live product <span class="dot">&middot;</span> <a href="https://hotpress.app" rel="noopener" target="_blank">hotpress.app</a> <span class="dot">&middot;</span> Deeper review on request</p>
+        <p class="intro">Hotpress is a collaborative writing app, like Google Docs, that also publishes complex books. It's live at <a href="https://hotpress.app" target="_blank" rel="noopener">hotpress.app</a>, and its source is public.</p>
+        <p class="meta chips">Own project <span class="dot">&middot;</span> 2026 <span class="dot">&middot;</span> Next.js, Lexical, Liveblocks, Yjs, Postgres, Playwright</p>
       </section>
 
       <main>
       <section class="work">
-        <h2>Problem</h2>
-        <p>Serious writing and publishing work sits between authoring, collaboration, typography, storage, export quality, and commerce. A credible product needs to feel like an editor while also handling the unglamorous backend pieces that make publishing real.</p>
-      </section>
-
-      <section class="work">
-        <h2>What I Built</h2>
-        <p>I built and shipped Hotpress — publicly named Hotpress, live at <a href="https://hotpress.app" rel="noopener" target="_blank">hotpress.app</a> with Free/Pro/Team pricing: a collaborative writing and publishing product where teams write together in real time and every save can regenerate a print-ready book. The editor is Lexical with Liveblocks/Yjs CRDT collaboration: live cursors, presence, and comments. The publishing pipeline produces print-production PDF — CMYK output intent, bleed, trim marks, PDF/X — plus EPUB export, with 20+ typography templates and full front- and back-matter control.</p>
-        <p>Storage is GitHub-backed: every save is a commit in the user's own repository, so there is no vendor lock-in, and access security was migrated from broad OAuth scopes to a scoped GitHub App installation-token model. Stripe billing records purchases through idempotent webhooks. The result is ~41K lines of strict TypeScript on Next.js and Drizzle/Postgres, guarded by a ~4,800-line Playwright end-to-end suite covering the editor, collaboration, formatting, sharing, and the export paywall.</p>
-        <ul class="facts">
-          <li><strong>Product surface</strong><span>Editor, project library, 20+ typography templates, review, and publishing workflow.</span></li>
-          <li><strong>Collaboration core</strong><span>Lexical editor with Liveblocks/Yjs CRDT real-time editing and durable document state.</span></li>
-          <li><strong>Business layer</strong><span>Print-production PDF and EPUB exports, Git-backed storage, and Stripe subscriptions with idempotent webhooks.</span></li>
-        </ul>
+        <h2>Writing together</h2>
+        <p>The editor is Lexical, kept in sync through Liveblocks and Yjs. Writers share a document with a link, and guests can join without an account. Everyone sees who else is in the document and where they're typing, edits merge as they happen, and comments stay pinned to the words they're about.</p>
         <figure class="plate">
-          <div class="shot"><img src="./assets/inkwell-publishing-system.svg" alt="Hotpress system diagram showing writer surface, CRDT collaboration, export pipeline, GitHub storage, Stripe and Drizzle, book outputs, review links, and commerce path." loading="lazy"></div>
-          <figcaption>Public-safe system diagram of the shipped product. It captures the product-engineering signal without exposing private content, customer data, manuscripts, repository internals, or payment configuration.</figcaption>
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/hotpress/collaboration-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/hotpress-collaboration.mp4" aria-label="Two writers in one Hotpress document: a guest joins through the share link, both write at once, they comment and reply, and the guest's offline writing merges when they reconnect."></video></div>
+          <figcaption>Two people in one manuscript. A guest joins through the share link, both write at once, they comment and reply, and the guest's offline writing merges when they reconnect. Recorded locally on a production build of the app.</figcaption>
         </figure>
       </section>
 
-
       <section class="work">
-        <h2>Technical Decisions</h2>
-        <ul class="points">
-          <li>Lexical plus Liveblocks/Yjs CRDT for conflict-free real-time editing instead of lock-based collaboration.</li>
-          <li>Git as the storage engine: every save is a commit, so history, recovery, and portability come for free and users keep their own manuscripts.</li>
-          <li>Print-production output — CMYK output intent, bleed, trim marks, PDF/X — rather than a generic "export to PDF".</li>
-          <li>Scoped GitHub App installation tokens instead of broad OAuth scopes for repository access.</li>
-          <li>Idempotent Stripe webhooks so billing state survives retries and replays.</li>
-          <li>A ~4,800-line Playwright end-to-end suite as the quality backbone for editor, collaboration, and export flows.</li>
-        </ul>
+        <h2>How I tested it</h2>
+        <p>To check the collaboration properly, I wrote a Playwright suite that runs against Liveblocks itself, with nothing mocked. Three people share a room, two signed in and one guest. They type in the same sentence at once, comment, reply and resolve, and the guest drops offline for nine seconds while the others keep writing. Then someone joins late, and the saved document and the exported PDF have to contain everyone's text.</p>
+        <p>Fast typing lost characters. The cause was in Liveblocks' own Lexical comments plugin, which set a fresh array of active threads on every editor update. React stopped that with a "Maximum update depth exceeded" error, and the error cut off Lexical's other listeners before the last edits reached the shared Yjs document. The same bug left a writer out of date after a long offline gap. I patched the plugin in Hotpress so it keeps the old array when the threads haven't changed, a one-line change. The bug is still in Liveblocks' latest release, 3.24.3.</p>
+        <p>Comments also failed now and then with a 403. My auth route gave out two kinds of Liveblocks token, and the client sometimes sent a comment with the kind that carries no room permissions. I changed it to issue one kind for everything, with the same access as before.</p>
+        <p>With both fixes, the suite passed all 17 checks three runs in a row on a production build. In those runs an edit reached the other writer in a median of 0.2 seconds, and 0.45 seconds at the 95th percentile.</p>
       </section>
 
       <section class="work">
-        <h2>What This Proves</h2>
-        <p>Unlike the private flagships, this one anyone can click: Hotpress combines collaborative editing, export infrastructure, storage design, monetization, and taste-heavy user experience in a single shipped product.</p>
-      </section>
-
-      <section class="work">
-        <h2>Privacy Boundary</h2>
-        <p>The product itself is public — anyone can use it at <a href="https://hotpress.app" rel="noopener" target="_blank">hotpress.app</a>. What stays private: user manuscripts, customer data, payment configuration, and repository internals. Screenshots and demos use fake content, and deeper source review is available on request.</p>
-      </section>
-
-      <section class="work">
-        <h2>Public Evidence</h2>
-        <ul class="points">
-          <li>Live product at <a href="https://hotpress.app" rel="noopener" target="_blank">hotpress.app</a> with Free/Pro/Team pricing.</li>
-          <li>Real-time collaborative editor: Lexical with Liveblocks/Yjs CRDT.</li>
-          <li>Print-production PDF (CMYK, bleed, trim marks, PDF/X) and EPUB exports.</li>
-          <li>GitHub-backed storage — every save a commit — behind a scoped GitHub App.</li>
-          <li>~41K lines of TypeScript with a ~4,800-line Playwright e2e suite.</li>
-          <li>Proof note — available on request.</li>
-        </ul>
-      </section>
-
-      <section class="work">
-        <h2>Privacy Boundary</h2>
-        <p>The product is public; manuscripts, customer data, payment configuration, and repository internals stay private. Source walkthrough available on request.</p>
-        <p class="actions"><a class="button primary" href="https://hotpress.app" target="_blank" rel="noopener">Open hotpress.app</a>
-          <a class="button" href="./contact.html">Ask for a demo</a></p>
+        <h2>From manuscript to book</h2>
+        <p>Hotpress also lays out the book. You pick one of 22 templates, set up chapters, scene breaks, front and back matter, headers and footers, page layout and typography, and export a PDF for the printer, with a PDF/X-4 output intent, CMYK colour, bleed and trim marks, or an EPUB. It uses GitHub for version control.</p>
+        <p class="actions"><a class="button" href="https://hotpress.app" target="_blank" rel="noopener">Open hotpress.app</a>
+          <a class="button" href="https://github.com/gorkamolero/inkwell" target="_blank" rel="noopener">The source on GitHub</a></p>
       </section>
       </main>
   </div>
