@@ -1,0 +1,288 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import ActionRow from '../components/ActionRow.astro';
+import TextLink from '../components/TextLink.astro';
+import Dot from '../components/Dot.astro';
+import CaseLead from '../components/CaseLead.astro';
+import MetaLine from '../components/MetaLine.astro';
+import Figure from '../components/Figure.astro';
+import AudioEmbed from '../components/AudioEmbed.astro';
+import Release from '../components/Release.astro';
+import GroupHeading from '../components/GroupHeading.astro';
+
+// Illustrative values only; names and scale follow prompts/evaluator.ts.
+const harnessScores = [['Agency Respect', 9], ['Equipment Engagement', 7], ['NPC Dialogue Quality', 8], ['Spatial Consistency', 9], ['Character Creation Depth', 8], ['Invitation Architecture', 9], ['Atmosphere & Feeling', 9], ['Curiosity Following', 8], ['Pacing & Breath', 7], ['Declaration vs Acknowledgment', 8], ['Branching Persistence', 8], ['Actionable vs Atmospheric', 9]];
+---
+<Base title="Voice, sound and agents - Gorka Molero" description="Gorka Molero, creative technologist: AI narrators and voice agents, long-form narration, music production, and the agent systems behind them." page="voice">
+  <PageFrame class="sheet">
+    <Masthead role="Creative technologist" />
+    <CaseLead class="lead">
+      <p class="kind">Voice, sound and agents</p>
+    </CaseLead>
+    <p class="intro">I've produced music since I was a teenager, studied sound engineering and mixing, and have built software for fourteen years. Most of what I make now has a voice in it: an AI narrator people play a story with, fifty-minute episodes narrated for my YouTube channel, and a carving in the woods that talks back.</p>
+    <main>
+      <GroupHeading>Voices you can talk to</GroupHeading>
+      <WorkSection class="work" id="the-pulse">
+        <h2>The Pulse</h2>
+        <MetaLine class="meta">Live &middot; 2025&ndash;2026 <Dot class="dot">&middot;</Dot> Interactive fiction</MetaLine>
+        <p>A reimagining of narrative. A novel has a timeline of events and a whole world around it. The Pulse keeps the world, the characters and the places, and lets go of the timeline: you can do whatever you want, in any order, and the story follows you. It's very immersive. The narrator for Shadow Over Innsmouth is a clone of Orson Welles, running as an ElevenLabs agent.</p>
+            <div class="video-wide">
+              <video controls playsinline preload="metadata" poster="./assets/creative/the-pulse-innsmouth-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/the-pulse-innsmouth.mp4"></video>
+            </div>
+            <ActionRow class="actions"><TextLink class="button primary" href="https://the-pulse.games" target="_blank" rel="noopener">Play The Pulse</TextLink>
+            <TextLink class="button" href="https://elevenlabs.io/app/talk-to?agent_id=agent_0801m498yyw3ey2vmx5t6hs8ynat" target="_blank" rel="noopener">Talk to the narrator</TextLink></ActionRow>
+        <AudioEmbed class="audio-embed">
+          <div class="audio-label">Hear the narrator</div>
+          <audio controls preload="metadata" src="./assets/the-pulse-narrator.mp3"></audio>
+          <p class="note">Narration from a live session of Shadow Over Innsmouth.</p>
+        </AudioEmbed>
+      </WorkSection>
+
+      <WorkSection class="work" id="talking-statues">
+        <h2>Talking Statues</h2>
+        <MetaLine class="meta">Prototype &middot; 2026 <Dot class="dot">&middot;</Dot> Voice agents</MetaLine>
+        <p>Unconditional Carving, a studio in Missouri, has started an experimental project: carvings you come across in the forest and can actually talk to. The idea is that you wander the woods, find these spirits one by one, and have a conversation with each. I built the first one, a jackalope with a Raspberry Pi, a microphone and speakers inside, connected to an ElevenLabs agent. It's location-aware, and it sleeps until someone wakes it up.</p>
+            <div class="video-tall">
+              <video controls playsinline preload="metadata" poster="./assets/creative/jackalope-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/jackalope.mp4"></video>
+            </div>
+      </WorkSection>
+
+      <GroupHeading>Narration that holds for fifty minutes</GroupHeading>
+      <WorkSection class="work" id="cybertantra">
+        <h2>Cybertantra</h2>
+        <MetaLine class="meta">YouTube &middot; 2026 <Dot class="dot">&middot;</Dot> Long-form and Shorts</MetaLine>
+        <p>The latest iteration of Saga, my long-running experiment with gen-AI pipelines, and my first attempt at long-form. The art comes from OpenAI image generation, and a virtual camera moves across each image, following whatever the current sentence is about. The narration is Eleven v4, generated in chunks with a warm-up line before each one and stitched back together, so the voice holds for a fifty-minute episode. The score is Eleven Music, and everything is cut in Remotion.</p>
+            <div class="video-wide">
+              <video controls playsinline preload="metadata" poster="./assets/creative/cybertantra-reel-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/cybertantra-reel.mp4"></video>
+            </div>
+            <p class="video-caption">Here's a short version. You'll find the full episode and the Shorts below.</p>
+            <div class="video-wide">
+              <iframe src="https://www.youtube-nocookie.com/embed/lYYHSPLVURY" title="Cybertantra: What Is the Right-Hand Path?" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class="shorts-row">
+              <div class="short"><iframe src="https://www.youtube-nocookie.com/embed/-neYJeSggdg" title="Cybertantra Short: What owns you?" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+              <div class="short"><iframe src="https://www.youtube-nocookie.com/embed/GoerPTYSAr4" title="Cybertantra Short: School trained you to stop noticing" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+              <div class="short"><iframe src="https://www.youtube-nocookie.com/embed/NkddlDqdaCE" title="Cybertantra Short: Don't open the third eye unprepared" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+            </div>
+        <ActionRow class="actions"><TextLink class="button" href="https://www.youtube.com/channel/UCQHasp7xbxTSZRh1WE3DK3Q" target="_blank" rel="noopener">See Cybertantra</TextLink></ActionRow>
+        <p>Before that, Saga's first channel published 205 Shorts in 34 days and reached 1,000 subscribers with no ads. There's more in <a href="./saga.html">the case study</a>.</p>
+      </WorkSection>
+
+      <WorkSection class="work" id="measuring-quality">
+        <h2>Measuring quality</h2>
+        <p>The Pulse has a test harness where simulated players play through a story and a separate model scores each session on twelve criteria, so I can compare narrators, models and prompts side by side.</p>
+        <Figure class="plate harness-figure">
+          <div class="harness-report" aria-label="Illustrative harness report with sample values">
+            <div class="harness-eyebrow"><span>The Pulse / Test harness</span><span>Sample values</span></div>
+            <header class="harness-header">
+              <div><span class="harness-label">Session report · Config B</span><h3>Shadow Over Innsmouth</h3><span>Philosophical prompt · Claude Opus 4.5</span></div>
+              <dl class="harness-facts"><div><dt>Outcome</dt><dd>Completed</dd></div><div><dt>Turns</dt><dd>42</dd></div><div><dt>Duration</dt><dd>18m 24s</dd></div></dl>
+            </header>
+            <ol class="harness-flow" aria-label="How the harness works">
+              <li><b>01 · Simulated players</b><span>Joker, Questioner, Follower<br />via a spokesperson</span></li>
+              <li><b>02 · Narrator</b><span>Plays the story<br />with the group</span></li>
+              <li><b>03 · Separate grader</b><span>Gemini Pro reads<br />the transcript</span></li>
+              <li><b>04 · Report</b><span>Scores, evidence,<br />outcome &amp; costs</span></li>
+            </ol>
+            <div class="harness-panel-heading"><h4>Narrator evaluation</h4><span>12 criteria · 1–10</span></div>
+            <div class="harness-scores">
+              {harnessScores.map(([name, score], index) => <div class="harness-criterion">
+                <div class="harness-score-label"><span><small>{String(index + 1).padStart(2, '0')}</small>{name}</span><b>{score}<small>/10</small></b></div>
+                <div class="harness-bar" aria-hidden="true"><span style={`width: ${Number(score) * 10}%`}></span></div>
+              </div>)}
+            </div>
+            <div class="harness-bottom">
+              <section class="harness-comparison" aria-label="Sample A/B prompt comparison">
+                <h4>A/B · Change the prompt</h4>
+                <p>Same story, group and narrator model.</p>
+                <table><thead><tr><th scope="col">Config</th><th scope="col">Player rating</th><th scope="col">Session cost</th></tr></thead><tbody>
+                  <tr><th scope="row">A · Mechanical</th><td>7.2/10</td><td>$1.6800</td></tr>
+                  <tr><th scope="row">B · Philosophical</th><td>8.4/10</td><td>$1.4400</td></tr>
+                </tbody></table>
+                <p>Player feedback is separate from the grader’s twelve scores above.</p>
+              </section>
+              <section class="harness-costs" aria-label="Sample cost breakdown for configuration B">
+                <h4>B · Cost by role</h4>
+                <dl><div><dt>Narrator</dt><dd>$1.1200</dd></div><div><dt>Players</dt><dd>$0.2800</dd></div><div><dt>Classification</dt><dd>$0.0400</dd></div><div class="harness-total"><dt>Session total</dt><dd>$1.4400</dd></div><div><dt>Grader · estimate</dt><dd>$0.1800</dd></div></dl>
+                <p>USD. Grader cost is illustrative, not saved by the harness or included in the session total.</p>
+              </section>
+            </div>
+          </div>
+          <figcaption>An example report layout from the harness, with sample values.</figcaption>
+        </Figure>
+      </WorkSection>
+
+      <GroupHeading>Music and sound</GroupHeading>
+        <WorkSection class="work" id="gitano-de-palo">
+          <div class="section-head">
+            <h2>Gitano de Palo</h2>
+            <a class="out" href="https://open.spotify.com/artist/4rO0P2RVElJ04AbXxSgViI" target="_blank" rel="noopener">Spotify</a>
+          </div>
+          <MetaLine class="meta">Arrangement, production, mixing and mastering</MetaLine>
+          <div class="player"><iframe src="https://open.spotify.com/embed/artist/4rO0P2RVElJ04AbXxSgViI?utm_source=generator&amp;theme=0" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Gitano de Palo on Spotify"></iframe></div>
+        </WorkSection>
+
+        <WorkSection class="work" id="gorka">
+          <h2>Gorka</h2>
+          <MetaLine class="meta">Solo work</MetaLine>
+          <div class="discography">
+          <Release class="release" id="thumos">
+            <div>
+              <h3>Thumos</h3>
+              <MetaLine class="meta">Single</MetaLine>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/track/7DY57dKpH4SXpoHuN62htI?utm_source=generator&amp;theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Thumos on Spotify"></iframe></div>
+          </Release>
+          <Release class="release" id="elohim">
+            <div>
+              <h3>Elohim</h3>
+              <MetaLine class="meta">Single</MetaLine>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/track/0myIFClne0a4z8R29FoAl6?utm_source=generator&amp;theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Elohim on Spotify"></iframe></div>
+          </Release>
+          <Release class="release" id="regret">
+            <div>
+              <h3>Regret</h3>
+              <MetaLine class="meta">Piano work</MetaLine>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/track/5Bfy5N803xh3djfhGX7Z7G?utm_source=generator&amp;theme=0" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Regret on Spotify"></iframe></div>
+          </Release>
+          <Release class="release tall" id="descent">
+            <div>
+              <h3>Descent</h3>
+              <MetaLine class="meta">EP</MetaLine>
+            </div>
+            <div class="player"><iframe src="https://open.spotify.com/embed/album/5AEHNm9UfatuBqrT0hGIfI?utm_source=generator&amp;theme=0" height="432" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Descent on Spotify"></iframe></div>
+          </Release>
+          </div>
+        </WorkSection>
+      <p>I've also built tools for producers: <a href="./sidekick.html">Sidekick</a>, a copilot that sits beside Ableton Live, and <a href="./solderpunk.html">Solderpunk</a>, synth explorers with guided tutorials and live MIDI control.</p>
+
+      <WorkSection class="work" id="agents">
+        <h2>Agents</h2>
+        <p>I also build agent systems, for voice and for code. On my creative portfolio, an ElevenLabs agent answers questions about my work out loud, and The Pulse's narrator is an agent you can talk to directly. At Roadie I built the AI infrastructure, the MCP server and much of the context layer for agents.</p>
+      <WorkSection class="work" id="koda">
+        <h2>Koda</h2>
+        <MetaLine class="meta">2026 <Dot class="dot">&middot;</Dot> Tauri, React, Node, Liveblocks, Codex, Claude</MetaLine>
+        <p>A desktop app for working collaboratively with coding agents. A Codex or Claude session runs on your machine, and a teammate opens it from their own Koda with view or control access. They see the same transcript and tool calls live, and with control they can message the agent too. Any action that needs approval stops for Approve once or Deny right in the chat. Every flow is proven against the real services with Playwright, from a clean clone.</p>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/koda/koda-poster.jpg" src="./assets/koda/koda-collaboration.mp4" aria-label="Koda on two Macs: one Claude session shared live between two people."></video></div>
+          <figcaption>Recorded live: Claude on one Mac, a collaborator on another.</figcaption>
+        </Figure>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/gorkamolero/koda" target="_blank" rel="noopener">Source</TextLink>
+          <TextLink class="button" href="./koda.html">Case study</TextLink></ActionRow>
+      </WorkSection>
+
+      <WorkSection class="work" id="claude-on-discord">
+        <h2>Claude-on-Discord</h2>
+        <MetaLine class="meta">2026 <Dot class="dot">&middot;</Dot> Claude Code, Discord, Bun, SQLite</MetaLine>
+        <p>Claude Code run from Discord. Each channel is a working lane with its own repo, model, session and system prompt, and each thread can branch into its own git worktree. The agent's replies, thinking, tool calls and cost stream live into the conversation, with buttons to interrupt or stop it, and a supervisor keeps the bridge alive and recovers it after a crash.</p>
+        <Figure class="plate" id="claude-on-discord-video">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/claude-on-discord/claude-on-discord-poster.jpg" src="./assets/claude-on-discord/claude-on-discord.mp4" aria-label="Claude Code as Merlin in Discord: a task in the channel, its tool calls streaming in, a thread working in its own git worktree, and the merge back."></video></div>
+          <figcaption>A task in the channel streams its tool calls live, a thread takes a second change in its own git worktree, and the work merges back.</figcaption>
+        </Figure>
+        <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/gorkamolero/claude-on-discord" target="_blank" rel="noopener">Source</TextLink>
+          <TextLink class="button" href="./claude-on-discord.html">Case study</TextLink></ActionRow>
+      </WorkSection>
+        <ActionRow class="actions">
+          <TextLink href="https://elevenlabs.io/app/talk-to?agent_id=agent_0801m498yyw3ey2vmx5t6hs8ynat" target="_blank" rel="noopener">Talk to the narrator</TextLink>
+          <TextLink href="./agents.html">The agents portfolio</TextLink>
+          <TextLink href="https://github.com/gorkamolero/koda" target="_blank" rel="noopener">Koda on GitHub</TextLink>
+        </ActionRow>
+      </WorkSection>
+    </main>
+  </PageFrame>
+</Base>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+
+@scope (.harness-report) {
+:scope { border: var(--dimension-1-px) solid var(--rule); background: var(--paper); padding: var(--dimension-1-5-rem); color: var(--ink); font-size: var(--dimension-1-rem); }
+h3, h4, p, dl, dd, ol { margin: 0; }
+h3 { font-family: var(--display); font-size: var(--dimension-2-rem); font-weight: var(--number-font-weight-400); line-height: var(--number-line-height-1-15); margin: var(--dimension-0-5-rem) 0; }
+h4 { font-family: var(--display); font-size: var(--dimension-1-2-rem); font-weight: var(--number-font-weight-400); }
+.harness-eyebrow { display: flex; justify-content: space-between; gap: var(--dimension-1-rem); color: var(--vermilion); font-family: var(--display); border-bottom: var(--dimension-2-px) solid var(--vermilion); padding-bottom: var(--dimension-0-7-rem); }
+.harness-header { padding: var(--dimension-1-5-rem) 0; }
+.harness-label, dt { color: var(--ink-soft); }
+.harness-facts { display: flex; flex-wrap: wrap; gap: var(--dimension-2-rem); margin-top: var(--dimension-1-rem); }
+.harness-facts dd { font-size: var(--dimension-1-25-rem); }
+.harness-facts div:first-child dd { color: var(--vermilion); }
+.harness-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; padding: var(--dimension-1-rem) 0; border-top: var(--dimension-1-px) solid var(--rule); border-bottom: var(--dimension-1-px) solid var(--rule); gap: var(--dimension-0-9-rem); }
+.harness-flow b { display: block; color: var(--vermilion); font-weight: var(--number-font-weight-400); }
+.harness-flow span { display: block; color: var(--ink-soft); line-height: var(--number-line-height-1-35); margin-top: var(--dimension-0-3-rem); }
+.harness-panel-heading { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--dimension-0-5-rem); margin: var(--dimension-1-5-rem) 0 var(--dimension-1-rem); }
+.harness-panel-heading > span { color: var(--ink-soft); }
+.harness-scores { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dimension-1-rem) var(--dimension-2-rem); }
+.harness-score-label { display: flex; justify-content: space-between; align-items: baseline; gap: var(--dimension-0-5-rem); line-height: var(--number-line-height-1-35); }
+.harness-score-label > span { display: flex; gap: var(--dimension-0-5-rem); }
+.harness-score-label b { white-space: nowrap; font-weight: var(--number-font-weight-400); }
+small { color: var(--ink-soft); font-size: var(--dimension-0-82-rem); }
+.harness-bar { height: var(--dimension-4-px); background: var(--color-surface-9); margin-top: var(--dimension-0-5-rem); }
+.harness-bar span { display: block; height: 100%; background: var(--vermilion); }
+.harness-bottom { display: grid; grid-template-columns: 3fr 2fr; gap: var(--dimension-2-rem); border-top: var(--dimension-1-px) solid var(--rule); margin-top: var(--dimension-1-5-rem); padding-top: var(--dimension-1-5-rem); }
+p { font-size: var(--dimension-0-95-rem); color: var(--ink-soft); line-height: var(--number-line-height-1-35); margin-top: var(--dimension-0-5-rem); }
+table { width: 100%; border-collapse: collapse; margin: var(--dimension-0-7-rem) 0; font-size: var(--dimension-0-95-rem); }
+th, td { text-align: right; padding: var(--dimension-0-5-rem) 0; border-bottom: var(--dimension-1-px) solid var(--rule); font-weight: var(--number-font-weight-400); }
+th:first-child { text-align: left; }
+thead { color: var(--ink-soft); }
+tbody tr:last-child { color: var(--vermilion); }
+.harness-costs dl { margin-top: var(--dimension-0-7-rem); }
+.harness-costs dl div { display: flex; justify-content: space-between; gap: var(--dimension-0-5-rem); padding: var(--dimension-0-3-rem) 0; }
+.harness-total { border-top: var(--dimension-1-px) solid var(--rule); }
+@media (max-width: 640px) {
+:scope { padding: var(--dimension-1-rem); }
+h3 { font-size: var(--dimension-1-7-rem); }
+.harness-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.harness-scores, .harness-bottom { grid-template-columns: 1fr; }
+.harness-facts { gap: var(--dimension-1-rem); }
+}
+}
+
+:where(body[data-page="voice"]) .kind { margin: 0; font-family: var(--display); font-size: clamp(var(--dimension-1-2-rem), calc(var(--relative-5-1-vw) * 1vw), var(--dimension-2-2-rem)); letter-spacing: calc(var(--relative-0-07-em) * 1em); line-height: var(--number-line-height-1-15); }
+:where(body[data-page="voice"]) .video-wide, :where(body[data-page="voice"]) .video-tall, :where(body[data-page="voice"]) .short { @apply relative; background: var(--color-surface-11); border: var(--dimension-1-px) solid var(--rule); overflow: hidden; }
+:where(body[data-page="voice"]) .video-wide { aspect-ratio: 16 / 9; margin-top: var(--dimension-1-4-rem); }
+:where(body[data-page="voice"]) .video-tall { aspect-ratio: 9 / 16; max-width: var(--dimension-22-rem); margin: var(--dimension-1-4-rem) auto 0; }
+:where(body[data-page="voice"]) .video-wide video, :where(body[data-page="voice"]) .video-wide iframe, :where(body[data-page="voice"]) .video-tall video, :where(body[data-page="voice"]) .short iframe {
+        @apply absolute; inset: 0; width: calc(var(--relative-100-percent) * 1%); height: calc(var(--relative-100-percent) * 1%); border: 0; @apply block; background: var(--color-surface-11);
+      }
+:where(body[data-page="voice"]) .video-caption { margin: var(--dimension-0-6-rem) 0 0 !important; @apply italic; color: var(--ink-soft); font-size: var(--dimension-1-rem); @apply text-center; }
+:where(body[data-page="voice"]) .shorts-row { @apply grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dimension-0-9-rem); margin-top: var(--dimension-0-9-rem); }
+:where(body[data-page="voice"]) .short { aspect-ratio: 9 / 16; }
+@media (max-width: 640px) {
+        :where(body[data-page="voice"]) .shorts-row { @apply flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: var(--dimension-0-7-rem); padding-bottom: var(--dimension-0-4-rem); }
+}
+@media (max-width: 640px) {
+        :where(body[data-page="voice"]) .shorts-row .short { flex: 0 0 calc(var(--relative-62-percent) * 1%); scroll-snap-align: start; }
+}
+:where(body[data-page="voice"]) .section-head {
+        @apply flex; justify-content: space-between; @apply items-baseline; gap: var(--dimension-1-rem);
+        padding-bottom: var(--dimension-0-45-rem); border-bottom: var(--dimension-1-px) solid var(--rule);
+      }
+:where(body[data-page="voice"]) .work .section-head h2 { padding-bottom: 0; border-bottom: 0; }
+:where(body[data-page="voice"]) .out { font-family: var(--display); font-size: var(--dimension-1-02-rem); letter-spacing: calc(var(--relative-0-06-em) * 1em); color: var(--vermilion); text-decoration: none; white-space: nowrap; }
+:where(body[data-page="voice"]) .out::after { content: "\2009\2197"; }
+:where(body[data-page="voice"]) .out:hover { text-decoration: underline; text-underline-offset: calc(var(--relative-0-2-em) * 1em); }
+:where(body[data-page="voice"]) .player { margin-top: var(--dimension-1-4-rem); }
+:where(body[data-page="voice"]) .player iframe { @apply block; width: calc(var(--relative-100-percent) * 1%); border: 0; border-radius: var(--dimension-12-px); background: var(--color-surface-15); }
+:where(body[data-page="voice"]) .discography { margin-top: var(--dimension-1-2-rem); }
+:where(body[data-page="voice"]) .release {
+        @apply grid; grid-template-columns: var(--dimension-11-5-rem) minmax(0, 1fr); gap: var(--dimension-1-6-rem); @apply items-center;
+        padding: var(--dimension-1-5-rem) 0;
+      }
+:where(body[data-page="voice"]) .release + .release { border-top: var(--dimension-1-px) solid var(--color-surface-16); }
+:where(body[data-page="voice"]) .release.tall { align-items: start; }
+:where(body[data-page="voice"]) .release h3 { font-family: var(--display); font-weight: var(--number-font-weight-400); font-size: var(--dimension-1-45-rem); letter-spacing: calc(var(--relative-0-07-em) * 1em); line-height: var(--number-line-height-1-15); margin: 0; }
+:where(body[data-page="voice"]) .release .meta { margin-top: var(--dimension-0-35-rem); font-size: var(--dimension-0-88-rem); }
+:where(body[data-page="voice"]) .release .player { margin-top: 0; }
+@media (max-width: 640px) {
+        :where(body[data-page="voice"]) .release { grid-template-columns: 1fr; gap: var(--dimension-0-9-rem); padding: var(--dimension-1-3-rem) 0; }
+}
+:where(body[data-page="voice"]) .group { margin: var(--dimension-5-5-rem) 0 0; font-family: var(--display); font-size: var(--dimension-0-92-rem); letter-spacing: calc(var(--relative-0-3-em) * 1em); text-transform: uppercase; color: var(--vermilion); }
+:where(body[data-page="voice"]) .group + .work { margin-top: var(--dimension-1-2-rem); }
+}
+</style>
