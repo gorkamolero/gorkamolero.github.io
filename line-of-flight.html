@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Line of Flight - Gorka Molero Case Study</title>
+    <meta name="description" content="Line of Flight, a video podcast recorded on Zencastr, and the studio and post-production tooling I built around it, from one start command to the edit.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+    <link rel="icon" href="data:," /><meta name="robots" content="noindex" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="/_astro/MetaLine.P_DtJFTB.css">
+<style>@layer components{.dot-separator,.dot-leading,.dot-name{background:var(--color-vermilion);border-radius:calc(var(--relative-50-percent) * 1%);display:inline-block;position:relative}.dot-separator{width:calc(var(--dots-separator) * 1em);height:calc(var(--dots-separator) * 1em);top:calc(var(--dots-separator-raise) * -1em)}.dot-leading{width:calc(var(--dots-leading) * 1em);height:calc(var(--dots-leading) * 1em);top:calc(var(--dots-leading-raise) * -1em)}.dot-name{width:calc(var(--dots-name) * 1em);height:calc(var(--dots-name) * 1em)}}
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer components{:where(body[data-page=index]) .shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}:where(body[data-page=index]) .shot img,:where(body[data-page=index]) .shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot img,.shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate{margin:var(--dimension-1-6-rem) 0 0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate .shot{margin:0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate figcaption{margin:var(--dimension-0-6-rem) 0 0;color:var(--ink-soft);font-style:italic;font-size:var(--dimension-1-rem);text-align:center}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.narrow{max-width:var(--dimension-340-px);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.portrait{max-width:var(--dimension-24-rem);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate+p,.plate+h3{margin-top:var(--dimension-1-4-rem)}}}
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer components{@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts{margin:var(--dimension-1-2-rem) 0 0;padding:0;list-style:none}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts li{grid-template-columns:var(--dimension-11-rem) 1fr;gap:var(--dimension-1-rem);padding:var(--dimension-0-6-rem) 0;border-bottom:var(--dimension-1-px) solid var(--rule);display:grid}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts strong{font-weight:var(--number-font-weight-600)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts span{color:var(--ink-soft)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts+p,.facts+.plate{margin-top:var(--dimension-1-4-rem)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){@media (width<=640px){.facts li{gap:var(--dimension-0-1-rem);grid-template-columns:1fr}}}}
+</style>
+<link rel="stylesheet" href="/_astro/line-of-flight.CfN2LzvO.css"></head>
+  <body data-page="line-of-flight">
+    
+  
+  <div class="sheet">
+    <header class="masthead has-photo">
+  <a class="identity" href="/" aria-label="Gorka Molero, home">
+    <h1>Gorka Molero</h1>
+    <p class="role long"><span class="sr-only">Creative technologist / AI engineer</span><span aria-hidden="true">C</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span aria-hidden="true">A</span><span aria-hidden="true">T</span><span aria-hidden="true">I</span><span aria-hidden="true">V</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">T</span><span aria-hidden="true">E</span><span aria-hidden="true">C</span><span aria-hidden="true">H</span><span aria-hidden="true">N</span><span aria-hidden="true">O</span><span aria-hidden="true">L</span><span aria-hidden="true">O</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">S</span><span aria-hidden="true">T</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">/</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">A</span><span aria-hidden="true">I</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
+  </a>
+  <a class="portrait-link" href="/" tabindex="-1" aria-hidden="true"><img class="portrait-round" src="./assets/gorka-portrait-round.jpg" width="600" height="600" alt=""></a>
+  <div class="contact">
+    <span class="place">Remote, location-independent</span>
+    <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <span class="portfolios" data-portfolios>
+        <span class="drawer" id="portfolio-menu"><a href="./index.html">Engineering</a><a href="./agents.html">Agents</a><a href="./design-systems.html">Design Systems</a><a href="./creative.html">Creative Work</a><a href="./pre-ai.html">Before AI</a><a href="./music.html">Music</a><span class="spacer" aria-hidden="true">Portfolios<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M6.6 1.6 3.2 5l3.4 3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+<button class="trigger" type="button" aria-expanded="false" aria-controls="portfolio-menu">Portfolios<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M6.6 1.6 3.2 5l3.4 3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</span>
+<script>
+  // Hover opens the portfolio pages and keeps them open for a moment after the pointer leaves, so slipping out by a pixel doesn't close them. A click pins them open until the next click on Portfolios, a click elsewhere or Escape.
+  for (const root of document.querySelectorAll('[data-portfolios]')) {
+    const trigger = root.querySelector('.trigger');
+    const canHover = matchMedia('(hover: hover) and (min-width: 641px)');
+    let timer;
+    const sync = () => trigger.setAttribute('aria-expanded', String(root.classList.contains('open') || root.classList.contains('hover')));
+    const pin = (open) => { root.classList.toggle('open', open); sync(); };
+    trigger.addEventListener('click', () => pin(!root.classList.contains('open')));
+    root.addEventListener('pointerenter', e => { if (e.pointerType !== 'mouse' || !canHover.matches) return; clearTimeout(timer); root.classList.add('hover'); sync(); });
+    root.addEventListener('pointerleave', e => { if (e.pointerType !== 'mouse') return; clearTimeout(timer); timer = window.setTimeout(() => { root.classList.remove('hover'); sync(); }, 450); });
+    document.addEventListener('click', e => { if (!root.contains(e.target)) { root.classList.remove('hover'); pin(false); } });
+    root.addEventListener('keydown', e => { if (e.key === 'Escape') { root.classList.remove('hover'); pin(false); trigger.focus(); } });
+  }
+</script></span>
+  </div>
+</header>
+
+      <section class="lead">
+        <p class="meta eyebrow">Case · podcast studio and post-production</p>
+        <h2 class="case-title">Line of Flight</h2>
+        <p class="intro">Line of Flight is a video podcast I make with a tantra teacher in Missouri. I bring a news story, researched and told with clips and pictures on slides, and my co-host, who hasn't seen any of it, reads it through the occult traditions as it lands. We record remotely on Zencastr, and everything around it, from the studio to the edit, is tooling I built. The first episode was recorded on 14 October 2026 and is in the edit.</p>
+        <p class="meta chips">Own project <span class="dot">&middot;</span> 2026 <span class="dot">&middot;</span> Zencastr, Chrome DevTools Protocol, WebRTC, Python, ffmpeg, MediaPipe, Cloudflare</p>
+      </section>
+
+      <main>
+      <section class="work">
+        <h2>On air</h2>
+        <p>A minute and a quarter of episode 1, as the cut makes it. I open the chapter on gold and my co-host cuts in.</p>
+        <figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/line-of-flight/alchemy-and-gold-poster.webp" src="./assets/line-of-flight/alchemy-and-gold.mp4" aria-label="From episode 1 of Line of Flight: a chapter card reading Alchemy and Gold, then a 2008 paper on the history of potable gold, with both hosts in two circles on the slides while the co-host talks about science and the occult."></video></div>
+          <figcaption>From episode 1, recorded on 14 October 2026. The picture is the show as it went out, with both faces replaced by our own Zencastr camera files. The sound is our two Zencastr tracks. My co-host's lip sync, measured in this clip: 4 ms.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>The setup</h2>
+        <p>Two computers and Zencastr. My Mac runs the studio, and my co-host only opens a link. One command brings it all up, and one Record button starts the show's own recording and Zencastr's together.</p>
+
+        <figure class="plate lof-map" aria-label="How the studio is connected during the show, and what happens after it.">
+          <div class="lof-flow">
+            <p class="lof-flow-name">The call</p>
+            <div class="lof-node"><span class="lof-where">Co-host's laptop</span><strong>Call tab</strong><span>Zencastr guest. Records his WAV and 1080p video.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&harr;</span>
+            <div class="lof-node"><span class="lof-where">Zencastr</span><strong>The call</strong><span>Uploads each track to the Library as we talk.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&harr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>Room tab</strong><span>Records my WAV and video. A watcher drives it over the DevTools Protocol.</span></div>
+          </div>
+          <div class="lof-flow">
+            <p class="lof-flow-name">The slides</p>
+            <div class="lof-node"><span class="lof-where">Co-host's laptop</span><strong>Slides tab</strong><span>The deck, view only. Also records his mic.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&harr;</span>
+            <div class="lof-node"><span class="lof-where">Cloudflare</span><strong>Tunnel and R2</strong><span>A tunnel to the slides gate. The clips and pictures from R2.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&harr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>Deck server</strong><span>Slides follow my presenter. His mic arrives in 2 s pieces.</span></div>
+          </div>
+          <div class="lof-flow">
+            <p class="lof-flow-name">The Program</p>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>Camera sender</strong><span>My camera at 1920&times;1080 and my DJI mic.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&rarr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>The bridge</strong><span>My co-host's face and voice, taken from the room tab.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&rarr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>The Program</strong><span>A hidden Chrome draws the show and records it at 3840&times;2160.</span></div>
+          </div>
+          <div class="lof-flow">
+            <p class="lof-flow-name">After the show</p>
+            <div class="lof-node"><span class="lof-where">Zencastr</span><strong>Download</strong><span>The Library's zip, fetched until every track is in it.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&rarr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>The cut</strong><span>Program parts placed on Zencastr's timeline, Zencastr's cameras over the faces, the clean voices.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&rarr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>The edit</strong><span>Reviewed on a 720p proxy, cuts anchored on the transcript, rendered in seconds.</span></div>
+          </div>
+        </figure>
+
+        <h3>During the show</h3>
+        <ol class="lof-steps">
+          <li><code>dharma start 1</code> restarts the deck server, writes the show settings to my DJI mic over USB, and opens a Chrome on its own profile with four tabs: the Zencastr room, the presenter with its cockpit, the stage and a camera sender.</li>
+          <li>The slides are a web app built from my script: markers in the Markdown place each slide, and a sync script turns the draft into the deck.</li>
+          <li>The Program is the deck drawing the whole show, slides and both faces in their scene, in a hidden Chrome that records its own tab at 3840&times;2160 in ten-minute parts.</li>
+          <li>Zencastr is the call, and it records each of us on our own machine, WAV and 1080p video, uploading as we go.</li>
+          <li>A watcher holds a DevTools Protocol connection to the room tab. It pins Zencastr to my camera and mic, reads its recorder, presses its buttons, and bridges my co-host into the Program through an RTCPeerConnection it injects into Zencastr's page.</li>
+          <li>My co-host gets one link: the slides through a Cloudflare tunnel with the media from R2, view only, and a start card that opens the Zencastr call in a tab of its own.</li>
+          <li>The cockpit, inside the presenter, has a line for everything that can fail (each voice in the Program, Zencastr's recording and upload, both cameras, the mic, the headphones, the disk), and a red line blocks Start.</li>
+          <li>I present from the presenter in Beats mode, each slide as facts to tell rather than a script to read.</li>
+        </ol>
+        <h3>After the show</h3>
+        <ol class="lof-steps" start="9">
+          <li><code>dharma stop</code> waits until my Zencastr tracks show 100% uploaded, then closes everything.</li>
+          <li><code>zencastr.py download</code> takes the recording's zip from Zencastr's Library and fetches it again until everyone the Library lists is in it.</li>
+          <li><code>dharma cut</code> lays every Program part on Zencastr's timeline by sound, measures each camera's lip sync, puts Zencastr's camera files over the faces and the clean voices under them, and renders a 1280&times;720 proxy in about 12 minutes.</li>
+          <li>I review the proxy on a page that plays the session as the edit, jumping over the cuts. The cuts and the camera changes go in two JSON files, anchored on the words of the transcript.</li>
+          <li><code>dharma cut go</code> renders the cut in 4K and measures its lip sync, and <code>edl.py --render</code> makes the edit from it in about 40 seconds for a 2 h 22 min episode, re-encoding only the frames at each cut.</li>
+        </ol>
+      </section>
+
+      <section class="work">
+        <h2>The deck</h2>
+        <p>Every slide is HTML on a 1920&times;1080 stage, built from the script. The deck has two looks, paper and night, and we recorded in night. These four slides from episode 1 are redrawn for this page from the deck's layouts and pictures.</p>
+        <figure class="plate lof">
+          <div class="lof-deck" data-lof-deck data-look="paper" tabindex="0" role="region" aria-roledescription="slides" aria-label="Four slides from episode 1. Left and right arrow keys step through them.">
+            <div class="lof-screen"><div class="lof-stage" aria-live="polite"></div></div>
+            <div class="lof-bar">
+              <button type="button" class="lof-btn" data-lof="prev" aria-label="Previous">&larr;</button>
+              <span class="lof-count"><span data-lof="n">1</span> / 4 <span class="lof-name" data-lof="name"></span></span>
+              <button type="button" class="lof-btn" data-lof="next" aria-label="Next">&rarr;</button>
+              <span class="lof-looks" role="group" aria-label="Look"><button type="button" class="lof-look" data-look="paper" aria-pressed="true">Paper</button><button type="button" class="lof-look" data-look="night" aria-pressed="false">Night</button></span>
+            </div>
+          </div>
+          <figcaption>Step through with the arrows. On the timeline, the arrows move from event to event, and you can drag it along. Pictures: Ebers Papyrus and Geber, Wellcome Collection (CC BY 4.0); Splendor Solis, British Library (CC0); the others public domain. The two engravings were generated for the show after Henry de Malvost's 1895 plates.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
+        <h2>The audio</h2>
+        <p>I wear headphones and a clip-on DJI Mic Mini 2S. Its show settings (mono, low cut, clipping control, gain on the transmitter, noise cancelling) are written to the receiver over USB at every start, through a vendored open-source CLI driven from Python, and the cockpit reads them back once a minute, never while recording. Clipped on, it gave about 14 dB more voice than the MacBook's mic in the same room.</p>
+        <p>On my side, Zencastr is pinned to that mic by name. The watcher wraps the page's <code>getUserMedia</code> before Zencastr loads, so whatever Zencastr asks for, it gets the named device with echo cancellation, noise suppression and auto gain off. The voice reaches the WAV as the mic gives it.</p>
+        <p>Every voice is recorded more than once. Zencastr's local WAVs are the masters. The Program carries a mix (my mic live, my co-host over the call, the clips), and a safety file of each voice. My co-host's own mic is also recorded in his slides tab at 64 kbps and streamed to my Mac.</p>
+        <p>The cut works on Zencastr's timeline. Each ten-minute Program part is placed by cross-correlating loudness envelopes (log RMS at 100 Hz) of my Zencastr voice against my voice in the Program, near where the end of the part before it says it should start, and three one-minute stretches of it have to agree within 50 ms. The first version guessed each part at 598.5 s; the parts are about 1.5 s longer, and by part 9 the picture was 27 seconds off the sound.</p>
+        <p>The mix is the two clean voices, with the Program's own sound let in only where a clip played, read from the deck's clip log and crossfaded over 150 ms, so no voice is doubled. Where my co-host's Zencastr track has 20 seconds of digital silence, his own-mic recording fills in at his Zencastr level. In episode 1 that was 9.3 minutes.</p>
+        <p>Loudness is two passes: the whole mix measured with ffmpeg's <code>loudnorm</code>, then one linear gain to &minus;16 LUFS with true peak under &minus;1.5 dB, encoded with Apple's AAC encoder. For a noisy room there's a pass through ElevenLabs' Voice Isolator with an 80 Hz high-pass; in a rain test it took the rain out at every noise-cancelling setting. Mic tests are recorded with sox, because ffmpeg's avfoundation input dropped a 10 ms slice about every tenth of a second on every Mac mic I tried.</p>
+      </section>
+
+      <section class="work">
+        <h2>Where Zencastr pushed back</h2>
+        <p>Zencastr's local recordings are why the cut sounds and looks the way it does. Running it inside a scripted studio found its edges. Most of these came out of a test rig: a stand-in co-host on my second laptop, driven by script, with his face and voice from a real recording.</p>
+        <ul class="facts">
+          <li><strong>Stop ends the session</strong><span>Zencastr's Stop ends the recording, and the next one needs New Recording, which reloads the room and drops the guest to the green room. Pausing doesn't work either: a guest who joins while it's paused is never recorded when it resumes ("timed out waiting for … to report they actually resumed"). So Zencastr records the whole session, and the studio's Stop stops only the Program. The cut finds each take inside the long recording by sound.</span></li>
+          <li><strong>A dead tab's stretch never finishes</strong><span>If the guest's call tab dies mid-recording (a reload, a crash), that stretch stays unfinalized on his laptop and the download skips it: 12 of his 15 tracks in one drop test. So his slides tab, a separate tab, records his mic too and streams it in two-second pieces, which wait on his laptop when the network is down. In episode 1 it covered 9.3 minutes.</span></li>
+          <li><strong>Nothing stops the room closing mid-upload</strong><span>Zencastr's "Leave site?" warning needs a click in the page first (Chrome's rule), and in a scripted studio nobody clicks. <code>dharma stop</code> reads the room's upload state and waits for 100% before it closes anything. A guest who closes his browser early leaves tracks that only that browser can finish, so the checklist has my co-host wait for 100%.</span></li>
+          <li><strong>Getting the files</strong><span>The room's own MP3, WAV and MOV buttons did nothing for me; the Library's zip works. The guest's tracks reach the Library a few minutes after the Stop (a zip 90 seconds after had only mine), and a 2 h 33 min session took about ten minutes a file. The download follows Zencastr's "Downloading file N/M" and fetches again until everyone the Library lists is in the zip.</span></li>
+          <li><strong>The first camera request sets the size</strong><span>In one Chrome, the first page to open the camera sets its resolution for every page. Zencastr's green room took it at 640&times;360 and everything followed. The camera sender now opens it first at 1920&times;1080, every request asks for exactly 16:9 (looser constraints gave square or vertical video), and a check redoes the order if it comes up small.</span></li>
+          <li><strong>The guest at his tile's size</strong><span>Zencastr sends a guest at the size of his tile in the room, 640&times;360, and that's what the live Program gets. I tried stretching his tile to full size and hiding it. It fought Zencastr's own layout, and in a test the call lost him for two and a half minutes, so it went. The live show uses the small picture, and the cut uses his full-size local file.</span></li>
+          <li><strong>A take cancelled five seconds in</strong><span>One failed upload request on the guest's side ("Track initialization error") made Zencastr abort a take for everyone, while the studio still showed recording. The watcher now notices when Zencastr isn't recording during a take and presses Record again, and it never starts a New Recording while the guest is in the call.</span></li>
+          <li><strong>Camera files drift</strong><span>After my co-host's Zencastr failed and reloaded 44 minutes into episode 1, his camera file ran 0.11 to 0.14 s behind his voice, and it was black for 8.3 minutes in all. <code>lipsync.py</code> reads each camera every ten minutes (MediaPipe's face mesh, mouth opening against the voice's loudness, cross-correlated over two minutes), the cut takes each frame where that curve says, and a last pass measures the finished cut, where every reading must be within a frame. Where his camera was black, the Program's picture of him stays.</span></li>
+          <li><strong>File names on a 12-hour clock</strong><span>Zencastr's local files are named on a 12-hour UTC clock, so "t12-06am" sorts after "t01-08am". The tools take the folder written last.</span></li>
+        </ul>
+      </section>
+
+      <section class="work">
+        <h2>Numbers</h2>
+        <ul class="facts">
+          <li><strong>Built</strong><span>503 commits between 27 September and 15 October 2026, about 9,800 lines across the studio, the deck and the post tools, tests included.</span></li>
+          <li><strong>Tests</strong><span>33 Python unit tests and 44 Playwright browser tests. An end-to-end studio test with the stand-in on a second Mac, judged by what's in the files: every voice measured every few seconds, the picture checked for freezes. A drop test of six ways the guest can drop, each of which recovered by itself in 17 to 103 seconds.</span></li>
+          <li><strong>Zencastr</strong><span>45 recordings in one room between 5 and 14 October, most of them studio tests.</span></li>
+          <li><strong>Episode 1</strong><span>A 154-minute session: 16 Program parts at 3840&times;2160, 21 clips, cut to 2 h 22 min with 8 cuts.</span></li>
+          <li><strong>Turnaround</strong><span>The Zencastr download about ten minutes a file, the review proxy about 12 minutes, the edit about 40 seconds. Episode 1 isn't published yet, so there's no time from recording to publish to give.</span></li>
+          <li><strong>On disk</strong><span>235 GB of recordings.</span></li>
+        </ul>
+      </section>
+      </main>
+  </div>
+  
+
+    <footer data-astro-cid-jo6i4kqk><span class="item" data-astro-cid-jo6i4kqk>Gorka Molero</span><span class="mark" data-astro-cid-jo6i4kqk><span class="sep" data-astro-cid-jo6i4kqk>&nbsp;·&nbsp;</span></span><a class="item" href="mailto:gorka.molero@gmail.com" data-astro-cid-jo6i4kqk>gorka.molero@gmail.com</a><span class="mark last" data-astro-cid-jo6i4kqk><span class="sep" data-astro-cid-jo6i4kqk>&nbsp;·&nbsp;</span></span><span class="item built" data-astro-cid-jo6i4kqk>Built with <a href="https://astro.build" target="_blank" rel="noopener" data-astro-cid-jo6i4kqk>Astro</a></span></footer>
+    
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
+
+
+
+<script type="module" src="/_astro/line-of-flight.astro_astro_type_script_index_0_lang.B7T_Jq46.js"></script>
