@@ -17,6 +17,8 @@
 @layer components{:where(body[data-page=index]) .shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}:where(body[data-page=index]) .shot img,:where(body[data-page=index]) .shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot img,.shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate{margin:var(--dimension-1-6-rem) 0 0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate .shot{margin:0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate figcaption{margin:var(--dimension-0-6-rem) 0 0;color:var(--ink-soft);font-style:italic;font-size:var(--dimension-1-rem);text-align:center}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.narrow{max-width:var(--dimension-340-px);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.portrait{max-width:var(--dimension-24-rem);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate+p,.plate+h3{margin-top:var(--dimension-1-4-rem)}}}
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer components{@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts{margin:var(--dimension-1-2-rem) 0 0;padding:0;list-style:none}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts li{grid-template-columns:var(--dimension-11-rem) 1fr;gap:var(--dimension-1-rem);padding:var(--dimension-0-6-rem) 0;border-bottom:var(--dimension-1-px) solid var(--rule);display:grid}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts strong{font-weight:var(--number-font-weight-600)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts span{color:var(--ink-soft)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts+p,.facts+.plate{margin-top:var(--dimension-1-4-rem)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){@media (width<=640px){.facts li{gap:var(--dimension-0-1-rem);grid-template-columns:1fr}}}}
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer components{@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.steps{counter-reset:step;gap:var(--dimension-1-6-rem) var(--dimension-1-rem);margin:var(--dimension-1-6-rem) 0 0;grid-template-columns:repeat(3,minmax(0,1fr));display:grid}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.steps.pair{grid-template-columns:repeat(2,minmax(0,1fr))}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.steps+p,.steps+.plate{margin-top:var(--dimension-1-6-rem)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.steps .step{counter-increment:step;margin:0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.steps .step .shot{aspect-ratio:1;background:var(--color-surface-10);justify-content:center;align-items:center;margin:0;display:flex;overflow:hidden}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.steps .step .shot img,.steps .step .shot video{width:calc(var(--relative-100-percent) * 1%);height:calc(var(--relative-100-percent) * 1%);object-fit:contain}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.steps .step figcaption{margin:var(--dimension-0-6-rem) 0 0;color:var(--ink-soft);font-style:italic;font-size:var(--dimension-1-rem)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.steps .step figcaption:before{content:counter(step) ". ";color:var(--vermilion);font-family:var(--display);font-style:normal}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){@media (width<=640px){.steps,.steps.pair{grid-template-columns:repeat(2,minmax(0,1fr))}}}}
 </style></head>
   <body>
     
@@ -61,110 +63,51 @@
 
       <main>
       <section class="work">
-        <h2>What it has made</h2>
-        <p>Carvingen puts the whole path on one canvas. Before it, I made pieces like this by hand, with prompts in a chat and a separate tool for the 3D model. Two of them are here, both carved in wood.</p>
-
-        <h3>A rider on a leaping horse</h3>
-        <figure class="plate narrow">
-          <div class="shot"><img src="./assets/carvingen/rider-01-ink-drawing.jpg" alt="An ink drawing of a woman riding a leaping horse." loading="lazy"></div>
-          <figcaption>An ink drawing of the idea.</figcaption>
-        </figure>
-        <figure class="plate narrow">
-          <div class="shot"><img src="./assets/carvingen/rider-02-marble.jpg" alt="The same rider and horse as a marble sculpture." loading="lazy"></div>
-          <figcaption>The same piece as a sculpture.</figcaption>
-        </figure>
-        <figure class="plate narrow">
-          <div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/woman-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/woman-model.mp4" aria-label="The 3D model of the marble rider and horse, turning."></video></div>
-          <figcaption>Its 3D model, <a href="https://www.meshy.ai/3d-models/Realistic-Marble-Statuejpg-v2-019ac0c3-eb1f-71a8-b59d-87e9ed433fa6" target="_blank" rel="noopener">on Meshy</a>.</figcaption>
-        </figure>
-        <figure class="plate narrow">
-          <div class="shot"><img src="./assets/carvingen/rider-03-composite.jpg" alt="The marble rider and horse with a bronze baby carrier on her back." loading="lazy"></div>
-          <figcaption>With a bronze baby carrier added on her back. This version went to 3D.</figcaption>
-        </figure>
-        <figure class="plate narrow">
-          <div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/baby-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/baby-model.mp4" aria-label="The 3D model of the baby carrier, turning."></video></div>
-          <figcaption>The baby carrier as its own 3D model, <a href="https://www.meshy.ai/3d-models/Adorable-Baby-Portraitjpg-v2-019ac101-59e5-7ca3-a39f-8986b2c5ea27" target="_blank" rel="noopener">on Meshy</a>.</figcaption>
-        </figure>
-        <figure class="plate">
-          <div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/horse-rider-3d-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/horse-rider-3d-model.mp4" aria-label="The 3D model of the woman on the leaping horse, turning."></video></div>
-          <figcaption>The 3D model the carvers worked from.</figcaption>
-        </figure>
-        <figure class="plate">
-          <div class="shot"><img src="./assets/carvingen/leaping-wood.jpg" alt="The woman on the leaping horse, carved in pale wood, standing in the studio at night." loading="lazy"></div>
-          <figcaption>The piece in the studio.</figcaption>
-        </figure>
-        <figure class="plate">
-          <div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/leaping-carving-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/leaping-carving.mp4" aria-label="The woman on the leaping horse in the studio, carved in wood."></video></div>
-          <figcaption>Up close, before the finish.</figcaption>
-        </figure>
-
-        <h3>A rider on a rearing horse</h3>
-        <p>A second piece, a rider in a feathered headdress on a rearing horse. <a href="https://www.meshy.ai/3d-models/IMG9310jpeg-v2-019ac138-e375-7ee8-80ad-6b96d1c296eb" target="_blank" rel="noopener">Its 3D model is on Meshy.</a></p>
-        <figure class="plate narrow">
-          <div class="shot"><img src="./assets/carvingen/rearing-01-ink-drawing.jpg" alt="An ink drawing of a rider in a feathered headdress on a rearing horse." loading="lazy"></div>
-          <figcaption>The drawing the 3D model was made from.</figcaption>
-        </figure>
-        <figure class="plate narrow">
-          <div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/rearing-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/rearing-model.mp4" aria-label="The 3D model of the rider on the rearing horse, turning."></video></div>
-          <figcaption>The 3D model, turning in the Meshy viewer.</figcaption>
-        </figure>
-        <figure class="plate">
-          <div class="shot"><img src="./assets/carvingen/rearing-wood.jpg" alt="The rider in a feathered headdress on a rearing horse, carved in wood, in the studio at night." loading="lazy"></div>
-          <figcaption>The piece in the studio.</figcaption>
-        </figure>
-        <figure class="plate">
-          <div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/rearing-carving-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/rearing-carving.mp4" aria-label="A carver finishing the wooden rider on the rearing horse."></video></div>
-          <figcaption>The carver finishing it.</figcaption>
-        </figure>
-
-        <figure class="plate">
-          <div class="shot"><img src="./assets/carvingen/flatbed-both.jpg" alt="Both finished wooden pieces strapped to a flatbed truck." loading="lazy"></div>
-          <figcaption>Both pieces leaving the studio.</figcaption>
-        </figure>
-      </section>
-
-      <section class="work">
         <h2>One canvas, start to finish</h2>
         <p>To show the canvas, I made an owl landing on a log: five Nano Banana 2 images, one branch and one Meshy v6 model. Every step is a node.</p>
         <figure class="plate">
           <div class="shot"><img src="./assets/carvingen/owl-canvas.jpg" alt="The Carvingen canvas for the owl: a chain of prompt nodes with their images, a branch, a Mesh node and a Viewer node." loading="lazy"></div>
           <figcaption>The whole chain on one canvas, from the first image to the 3D model.</figcaption>
         </figure>
-
-        <h3>1. A first image</h3>
-        <p>A text prompt and nothing else.</p>
-        <figure class="plate narrow">
-          <div class="shot"><img src="./assets/carvingen/owl-1-first-image.jpg" alt="A great horned owl landing on a log with its wings wide open." loading="lazy"></div>
-        </figure>
-
-        <h3>2. The same owl, as wood</h3>
-        <p>An edit of the first image that turns the same owl into one block of pale, unstained wood.</p>
-        <figure class="plate narrow">
-          <div class="shot"><img src="./assets/carvingen/owl-2-as-wood.jpg" alt="The owl as a sculpture carved from one block of pale wood." loading="lazy"></div>
-        </figure>
-
-        <h3>3. Two branches</h3>
-        <p>Wings raised higher, or swept back and down. I kept the raised wings, and the other branch stays on the canvas in case I want it back.</p>
-        <figure class="plate narrow">
-          <div class="shot"><img src="./assets/carvingen/owl-3a-wings-up.jpg" alt="The owl sculpture with its wings raised high." loading="lazy"></div>
-          <figcaption>Wings raised higher. The one I kept.</figcaption>
-        </figure>
-        <figure class="plate narrow">
-          <div class="shot"><img src="./assets/carvingen/owl-3b-wings-back.jpg" alt="The owl sculpture with its wings swept back and down." loading="lazy"></div>
-          <figcaption>Wings swept back.</figcaption>
-        </figure>
-
-        <h3>4. Simplified for carving</h3>
-        <p>The feathers and face reduced to bolder planes that a carver can cut.</p>
-        <figure class="plate narrow">
-          <div class="shot"><img src="./assets/carvingen/owl-4-simplified.jpg" alt="The owl simplified into bolder carvable planes, standing on a log." loading="lazy"></div>
-        </figure>
-
-        <h3>5. A 3D model</h3>
+        <div class="steps">
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/owl-1-first-image.jpg" alt="A great horned owl landing on a log with its wings wide open." loading="lazy"></div><figcaption>A text prompt and nothing else.</figcaption></figure>
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/owl-2-as-wood.jpg" alt="The owl as a sculpture carved from one block of pale wood." loading="lazy"></div><figcaption>The same owl in one block of pale, unstained wood.</figcaption></figure>
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/owl-3a-wings-up.jpg" alt="The owl sculpture with its wings raised high." loading="lazy"></div><figcaption>Wings raised higher. The one I kept.</figcaption></figure>
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/owl-3b-wings-back.jpg" alt="The owl sculpture with its wings swept back and down." loading="lazy"></div><figcaption>Wings swept back. The other branch, still on the canvas.</figcaption></figure>
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/owl-4-simplified.jpg" alt="The owl simplified into bolder carvable planes, standing on a log." loading="lazy"></div><figcaption>Feathers and face reduced to bolder planes a carver can cut.</figcaption></figure>
+        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/owl-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/owl-model.mp4" aria-label="The 3D model of the owl turning in the Carvingen viewer."></video></div><figcaption>The Meshy v6 model, turning in the viewer.</figcaption></figure>
+        </div>
         <p>The chosen image goes into a Mesh node and comes back as a 3D model, with GLB, FBX and USDZ files to download. The Viewer node turns it so you can check every side before carving.</p>
+      </section>
+
+      <section class="work">
+        <h2>What it has made</h2>
+        <p>Carvingen puts the whole path on one canvas. Before it, I made pieces like this by hand, with prompts in a chat and a separate tool for the 3D model. Two of them are here, both carved in wood.</p>
+
+        <h3>A rider on a leaping horse</h3>
+        <div class="steps">
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/rider-01-ink-drawing.jpg" alt="An ink drawing of a woman riding a leaping horse." loading="lazy"></div><figcaption>An ink drawing of the idea.</figcaption></figure>
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/rider-02-marble.jpg" alt="The same rider and horse as a marble sculpture." loading="lazy"></div><figcaption>The same piece as a sculpture.</figcaption></figure>
+        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/woman-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/woman-model.mp4" aria-label="The 3D model of the marble rider and horse, turning."></video></div><figcaption>Its 3D model, <a href="https://www.meshy.ai/3d-models/Realistic-Marble-Statuejpg-v2-019ac0c3-eb1f-71a8-b59d-87e9ed433fa6" target="_blank" rel="noopener">on Meshy</a>.</figcaption></figure>
+        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/baby-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/baby-model.mp4" aria-label="The 3D model of the baby carrier, turning."></video></div><figcaption>The baby carrier as its own 3D model, <a href="https://www.meshy.ai/3d-models/Adorable-Baby-Portraitjpg-v2-019ac101-59e5-7ca3-a39f-8986b2c5ea27" target="_blank" rel="noopener">on Meshy</a>.</figcaption></figure>
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/rider-03-composite.jpg" alt="The marble rider and horse with a bronze baby carrier on her back." loading="lazy"></div><figcaption>The carrier added on her back. This version went to 3D.</figcaption></figure>
+        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/horse-rider-3d-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/horse-rider-3d-model.mp4" aria-label="The 3D model of the woman on the leaping horse, turning."></video></div><figcaption>The 3D model the carvers worked from.</figcaption></figure>
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/leaping-wood.jpg" alt="The woman on the leaping horse, carved in pale wood, standing in the studio at night." loading="lazy"></div><figcaption>The piece in the studio.</figcaption></figure>
+        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/leaping-carving-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/leaping-carving.mp4" aria-label="The woman on the leaping horse in the studio, carved in wood."></video></div><figcaption>Up close, before the finish.</figcaption></figure>
+        </div>
+
+        <h3>A rider on a rearing horse</h3>
+        <p>A second piece, a rider in a feathered headdress on a rearing horse.</p>
+        <div class="steps pair">
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/rearing-01-ink-drawing.jpg" alt="An ink drawing of a rider in a feathered headdress on a rearing horse." loading="lazy"></div><figcaption>The drawing the 3D model was made from.</figcaption></figure>
+        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/rearing-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/rearing-model.mp4" aria-label="The 3D model of the rider on the rearing horse, turning."></video></div><figcaption>Its 3D model, <a href="https://www.meshy.ai/3d-models/IMG9310jpeg-v2-019ac138-e375-7ee8-80ad-6b96d1c296eb" target="_blank" rel="noopener">on Meshy</a>.</figcaption></figure>
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/rearing-wood.jpg" alt="The rider in a feathered headdress on a rearing horse, carved in wood, in the studio at night." loading="lazy"></div><figcaption>The piece in the studio.</figcaption></figure>
+        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/rearing-carving-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/rearing-carving.mp4" aria-label="A carver finishing the wooden rider on the rearing horse."></video></div><figcaption>The carver finishing it.</figcaption></figure>
+        </div>
+
         <figure class="plate">
-          <div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/owl-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/owl-model.mp4" aria-label="The 3D model of the owl turning in the Carvingen viewer."></video></div>
-          <figcaption>The model, turning in the viewer.</figcaption>
+          <div class="shot"><img src="./assets/carvingen/flatbed-both.jpg" alt="Both finished wooden pieces strapped to a flatbed truck." loading="lazy"></div>
+          <figcaption>Both pieces leaving the studio.</figcaption>
         </figure>
       </section>
 
