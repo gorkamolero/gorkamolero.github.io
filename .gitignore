@@ -1,0 +1,7 @@
+# Clips live on R2 only
+*.mp4
+*.webm
+*.mov
+*.mp3
+*.wav
+*.m4a

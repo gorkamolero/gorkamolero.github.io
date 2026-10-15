@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{_ as t,g as n}from"./iframe-DgWor3bl.js";var r,i,a;function o(){return(o=e((()=>{t(),r={title:`Components/MetaLine`,component:n,parameters:{page:`anima`}},i={args:{class:`meta eyebrow`,slots:{default:`Live · adventure engine`}}},a=[`Default`]})))()}o();export{i as Default,a as __namedExportsOrder,r as default};

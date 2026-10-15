@@ -1,0 +1,5 @@
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{B as t,V as n}from"./iframe-DgWor3bl.js";var r,i,a;function o(){return(o=e((()=>{n(),r={title:`Components/AudioEmbed`,component:t,parameters:{page:`the-pulse`}},i={args:{class:`audio-embed`,slots:{default:`
+          <div class="audio-label">Hear the narrator</div>
+          <audio controls="" preload="metadata" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/the-pulse-narrator.mp3"></audio>
+          <p class="note">This is the actual narration audio, pulled straight from a live session — the game generating the voice as it plays. Each world is cast with its own voice through ElevenLabs, tuned for theatricality and compared across TTS providers; the voice is a design choice per story, not a default read-aloud.</p>
+        `}}},a=[`Default`]})))()}o();export{i as Default,a as __namedExportsOrder,r as default};

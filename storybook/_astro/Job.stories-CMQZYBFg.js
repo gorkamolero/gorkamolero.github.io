@@ -1,0 +1,5 @@
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{b as t,x as n}from"./iframe-DgWor3bl.js";var r,i,a;function o(){return(o=e((()=>{n(),r={title:`Components/Job`,component:t,parameters:{page:`index`}},i={args:{class:`job`,slots:{default:`
+            <h3>Roadie <span class="at">Senior Software Engineer</span></h3>
+            <p class="when">2024–2026 · Remote</p>
+            <p>Modernized the UI of a Backstage-based developer platform and became its de facto UI and product-design lead. Wrote much of the foundation of Roadie's context layer for AI agents, now open source as <a href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener"><em>openroadie</em></a>, and designed its interfaces for data-source pipelines, relationship mapping and agent-led onboarding.</p>
+          `}}},a=[`Default`]})))()}o();export{i as Default,a as __namedExportsOrder,r as default};
