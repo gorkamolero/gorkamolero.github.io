@@ -1,4 +1,4 @@
-import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{d as t,u as n}from"./iframe-DgWor3bl.js";var r,i,a;function o(){return(o=e((()=>{t(),r={title:`Components/ProjectIndex`,component:n,parameters:{page:`index`}},i={args:{class:`index`,slots:{default:`
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{d as t,u as n}from"./iframe-Cr5jfhY1.js";var r,i,a;function o(){return(o=e((()=>{t(),r={title:`Components/ProjectIndex`,component:n,parameters:{page:`index`}},i={args:{class:`index`,slots:{default:`
           <li><a href="./molter.html">Molter</a><span>A dating protocol for personal AI agents, where your agent learns the real you and negotiates anonymously with other people's agents.</span></li>
           <li><a href="./solderpunk.html">Solderpunk</a><span>Synth explorers with guided tutorials and live MIDI control.</span></li>
           <li><a href="./carvingen.html">Carvingen</a><span>A node canvas for AI image, video and 3D generation.</span></li>

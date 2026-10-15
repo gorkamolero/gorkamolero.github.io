@@ -11,83 +11,80 @@ import FactsList from '../components/FactsList.astro';
 import CaseLead from '../components/CaseLead.astro';
 import MetaLine from '../components/MetaLine.astro';
 import PointsList from '../components/PointsList.astro';
+import Steps from '../components/Steps.astro';
 const head = `<link rel="icon" href="data:," />`;
 const afterFooter = ``;
 ---
-<Base title={"Carvingen - Gorka Molero Case Study"} description={"Case study for Carvingen, a canvas-based AI media and 3D workflow, with branching image generation, reference chaining, Meshy/fal integration, and local asset persistence."} page="carvingen">
+<Base title={"Carvingen - Gorka Molero Case Study"} description={"Carvingen is a canvas that takes an idea from a first AI image to a 3D model that carving studios in Kentucky and Missouri view in 3D glasses and carve from."}>
   <Fragment slot="head" set:html={head} />
   <PageFrame class="sheet">
     <Masthead />
-    
 
       <CaseLead class="lead">
-        <MetaLine class="meta eyebrow">Case · generation canvas</MetaLine>
+        <MetaLine class="meta eyebrow">Case · AI image to 3D to wood</MetaLine>
         <h2 class="case-title">Carvingen</h2>
-        <p class="intro">A node-based canvas to branch image concepts, carry references forward, generate 3D meshes, and review VR-ready outputs.</p>
-        <MetaLine class="meta chips">Public repo <Dot class="dot">&middot;</Dot> Build, lint, unit, and e2e tests pass <Dot class="dot">&middot;</Dot> Fixture demo captured</MetaLine>
+        <p class="intro">Carvingen is a node canvas for AI image, video and 3D generation. Carving studios in Kentucky and Missouri put on 3D glasses, look at the model from every side and carve from it.</p>
+        <MetaLine class="meta chips">Used by carving studios in Kentucky and Missouri <Dot class="dot">&middot;</Dot> From first image to 3D model on one canvas <Dot class="dot">&middot;</Dot> Public repo</MetaLine>
       </CaseLead>
 
       <main>
       <WorkSection class="work">
-        <h2>Problem</h2>
-        <p>Creative iteration with AI models often happens in linear chat: prompt, image, revision, another image, then a separate jump into 3D tooling. The lineage gets lost, references are awkward to reuse, and the workflow does not match how people compare branches of an idea.</p>
+        <h2>One canvas, start to finish</h2>
+        <p>To show the canvas, I made an owl landing on a log: five Nano Banana 2 images, one branch and one Meshy v6 model. Every step is a node.</p>
+        <Figure class="plate">
+          <div class="shot"><img src="./assets/carvingen/owl-canvas.jpg" alt="The Carvingen canvas for the owl: a chain of prompt nodes with their images, a branch, a Mesh node and a Viewer node." loading="lazy" /></div>
+          <figcaption>The whole chain on one canvas, from the first image to the 3D model.</figcaption>
+        </Figure>
+        <Steps class="steps">
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/owl-1-first-image.jpg" alt="A great horned owl landing on a log with its wings wide open." loading="lazy" /></div><figcaption>A text prompt and nothing else.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/owl-2-as-wood.jpg" alt="The owl as a sculpture carved from one block of pale wood." loading="lazy" /></div><figcaption>The same owl in one block of pale, unstained wood.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/owl-3a-wings-up.jpg" alt="The owl sculpture with its wings raised high." loading="lazy" /></div><figcaption>Wings raised higher. The one I kept.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/owl-3b-wings-back.jpg" alt="The owl sculpture with its wings swept back and down." loading="lazy" /></div><figcaption>Wings swept back. The other branch, still on the canvas.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/owl-4-simplified.jpg" alt="The owl simplified into bolder carvable planes, standing on a log." loading="lazy" /></div><figcaption>Feathers and face reduced to bolder planes a carver can cut.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/owl-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/owl-model.mp4" aria-label="The 3D model of the owl turning in the Carvingen viewer."></video></div><figcaption>The Meshy v6 model, turning in the viewer.</figcaption></Figure>
+        </Steps>
+        <p>The chosen image goes into a Mesh node and comes back as a 3D model, with GLB, FBX and USDZ files to download. The Viewer node turns it so you can check every side before carving.</p>
       </WorkSection>
 
       <WorkSection class="work">
-        <h2>What I Built</h2>
-        <p>Carvingen turns that into a spatial canvas. Image, Prompt, Mesh, and Viewer nodes let you drag in references, generate variations, branch from any output, send a chosen image into Meshy/fal image-to-3D, persist assets locally, and inspect the resulting GLB through a model viewer.</p>
+        <h2>What it has made</h2>
+        <p>Carvingen puts the whole path on one canvas. Before it, I made pieces like this by hand, with prompts in a chat and a separate tool for the 3D model. Two of them are here, both carved in wood.</p>
+
+        <h3>A rider on a leaping horse</h3>
+        <Steps class="steps">
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/rider-01-ink-drawing.jpg" alt="An ink drawing of a woman riding a leaping horse." loading="lazy" /></div><figcaption>An ink drawing of the idea.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/rider-02-marble.jpg" alt="The same rider and horse as a marble sculpture." loading="lazy" /></div><figcaption>The same piece as a sculpture.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/woman-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/woman-model.mp4" aria-label="The 3D model of the marble rider and horse, turning."></video></div><figcaption>Its 3D model, <a href="https://www.meshy.ai/3d-models/Realistic-Marble-Statuejpg-v2-019ac0c3-eb1f-71a8-b59d-87e9ed433fa6" target="_blank" rel="noopener">on Meshy</a>.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/baby-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/baby-model.mp4" aria-label="The 3D model of the baby carrier, turning."></video></div><figcaption>The baby carrier as its own 3D model, <a href="https://www.meshy.ai/3d-models/Adorable-Baby-Portraitjpg-v2-019ac101-59e5-7ca3-a39f-8986b2c5ea27" target="_blank" rel="noopener">on Meshy</a>.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/rider-03-composite.jpg" alt="The marble rider and horse with a bronze baby carrier on her back." loading="lazy" /></div><figcaption>The carrier added on her back. This version went to 3D.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/horse-rider-3d-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/horse-rider-3d-model.mp4" aria-label="The 3D model of the woman on the leaping horse, turning."></video></div><figcaption>The 3D model the carvers worked from.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/leaping-wood.jpg" alt="The woman on the leaping horse, carved in pale wood, standing in the studio at night." loading="lazy" /></div><figcaption>The piece in the studio.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/leaping-carving-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/leaping-carving.mp4" aria-label="The woman on the leaping horse in the studio, carved in wood."></video></div><figcaption>Up close, before the finish.</figcaption></Figure>
+        </Steps>
+
+        <h3>A rider on a rearing horse</h3>
+        <p>A second piece, a rider in a feathered headdress on a rearing horse.</p>
+        <Steps class="steps pair">
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/rearing-01-ink-drawing.jpg" alt="An ink drawing of a rider in a feathered headdress on a rearing horse." loading="lazy" /></div><figcaption>The drawing the 3D model was made from.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/rearing-model-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/rearing-model.mp4" aria-label="The 3D model of the rider on the rearing horse, turning."></video></div><figcaption>Its 3D model, <a href="https://www.meshy.ai/3d-models/IMG9310jpeg-v2-019ac138-e375-7ee8-80ad-6b96d1c296eb" target="_blank" rel="noopener">on Meshy</a>.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><img src="./assets/carvingen/rearing-wood.jpg" alt="The rider in a feathered headdress on a rearing horse, carved in wood, in the studio at night." loading="lazy" /></div><figcaption>The piece in the studio.</figcaption></Figure>
+        <Figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/rearing-carving-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/rearing-carving.mp4" aria-label="A carver finishing the wooden rider on the rearing horse."></video></div><figcaption>The carver finishing it.</figcaption></Figure>
+        </Steps>
+
+        <Figure class="plate">
+          <div class="shot"><img src="./assets/carvingen/flatbed-both.jpg" alt="Both finished wooden pieces strapped to a flatbed truck." loading="lazy" /></div>
+          <figcaption>Both pieces leaving the studio.</figcaption>
+        </Figure>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>What&rsquo;s in it</h2>
         <FactsList class="facts">
-          <li><strong>Canvas workflow</strong><span>React Flow graph with prompt, image, mesh, and viewer nodes.</span></li>
-          <li><strong>Provider boundary</strong><span>fal image models, Meshy image-to-3D, local job records, and persisted assets.</span></li>
-          <li><strong>Operator fit</strong><span>Built for branching creative decisions rather than one-shot generation.</span></li>
+          <li><strong>Canvas</strong><span>Image, prompt, vision, video, mesh and viewer nodes. Every run is kept, any image can be a reference for the next, and every change can be undone.</span></li>
+          <li><strong>Models</strong><span>Flux Kontext Pro, Nano Banana 2 and Pro, GPT Image 2, Veo 3.1, Meshy v6 and Hunyuan 3D, all through fal.</span></li>
+          <li><strong>3D</strong><span>GLB, FBX and USDZ files, a viewer, and scripts that rig, animate and pack characters for games.</span></li>
+          <li><strong>Why a canvas</strong><span>A chat loses which image came from which. On the canvas you branch, compare and go back. It is a node workflow in the way ComfyUI is, built to take a concept all the way to a 3D model.</span></li>
         </FactsList>
-        <Figure class="plate">
-          <div class="shot"><img src="./assets/carvingen-workflow.svg" alt="Carvingen workflow diagram showing image, prompt, mesh, viewer, jobs, assets, SQLite graph state, and public-safe boundaries." loading="lazy" /></div>
-          <figcaption>Sanitized workflow diagram grounded in the local source and docs. It shows the product architecture without exposing private generated images, prompts, provider keys, client files, or live outputs.</figcaption>
-        </Figure>
-        <Figure class="plate">
-          <div class="shot"><img src="./assets/carvingen-fake-canvas.png" alt="Carvingen runtime canvas with fake public-demo image, prompt, mesh, and viewer nodes on an isolated temporary database." loading="lazy" /></div>
-          <figcaption>Runtime canvas proof captured from an isolated temporary database. The workflow uses fake public-demo text and a placeholder reference image so the screenshot proves the product surface without exposing private generated media or client prompts.</figcaption>
-        </Figure>
-        <Figure class="plate">
-          <div class="shot"><img src="./assets/carvingen-portfolio-demo.png" alt="Carvingen static portfolio demo route showing image, prompt, mesh, and viewer nodes with read-only, no-provider, and fake-data badges." loading="lazy" /></div>
-          <figcaption>Static <code>/portfolio-demo</code> proof captured from the source app. The route renders typed fixture data, disables generation controls, and makes no project, job, fal, or asset-persistence API requests.</figcaption>
-        </Figure>
-      </WorkSection>
-
-
-      <WorkSection class="work">
-        <h2>Technical Decisions</h2>
-        <PointsList class="points">
-          <li>Use a graph canvas so iteration history becomes visible and branchable.</li>
-          <li>Separate graph state from jobs and assets so reloads do not lose provider work.</li>
-          <li>Make generation explicit-run to avoid quietly spending money on model calls.</li>
-          <li>Persist provider output locally because remote result URLs are not the durable source of truth.</li>
-        </PointsList>
-      </WorkSection>
-
-      <WorkSection class="work">
-        <h2>What This Proves</h2>
-        <p>Carvingen is transformation evidence: domain taste, AI media integration, workflow design, local persistence, and practical product engineering for a real creative business process.</p>
-      </WorkSection>
-
-      <WorkSection class="work">
-        <h2>Public Evidence</h2>
-        <PointsList class="points">
-          <li>Local source inspected; public transcript records only sanitized implementation evidence.</li>
-          <li><code>pnpm build</code> passed.</li>
-          <li><code>pnpm lint</code> passed.</li>
-          <li><code>pnpm test</code> passed with 44 tests across 10 files.</li>
-          <li><code>pnpm test:e2e:local</code> passed, including the portfolio demo route.</li>
-          <li>Fake-data runtime canvas captured from an isolated temporary database.</li>
-          <li>Static fixture demo captured from <code>/portfolio-demo</code> with no API requests.</li>
-          <li>Proof transcript — available on request.</li>
-        </PointsList>
-      </WorkSection>
-
-      <WorkSection class="work">
-        <h2>Privacy Boundary</h2>
-        <p>Generated images, prompts, provider keys, database contents, and unreleased media stay private. The demo route runs on fixture data; a full walkthrough is available on request.</p>
         <ActionRow class="actions"><TextLink class="button primary" href="https://github.com/gorkamolero/carvingen" target="_blank" rel="noopener">View source</TextLink></ActionRow>
       </WorkSection>
       </main>

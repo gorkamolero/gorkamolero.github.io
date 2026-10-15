@@ -1,4 +1,4 @@
-import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{C as t,S as n}from"./iframe-DgWor3bl.js";var r,i,a;function o(){return(o=e((()=>{t(),r={title:`Components/IntroNotes`,component:n,parameters:{page:`index`}},i={args:{class:`intro`,slots:{default:`
+import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{C as t,S as n}from"./iframe-Cr5jfhY1.js";var r,i,a;function o(){return(o=e((()=>{t(),r={title:`Components/IntroNotes`,component:n,parameters:{page:`index`}},i={args:{class:`intro`,slots:{default:`
         <p class="note">Web products<span>since 2012</span></p>
         <p>I'm Gorka Molero. I've been building for the web for fourteen years and worked as a senior frontend engineer and UI lead on <a href="https://roadie.io" target="_blank" rel="noopener">Roadie</a>, <a href="https://www.pickzen.com" target="_blank" rel="noopener">Pickzen</a> and <a href="https://typeshare.co" target="_blank" rel="noopener">Typeshare</a>.</p>
         <p class="note">AI agents<span>since 2023</span></p>

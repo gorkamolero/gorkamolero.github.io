@@ -1,0 +1,424 @@
+---
+import Base from '../layouts/Base.astro';
+import PageFrame from '../components/PageFrame.astro';
+import Masthead from '../components/Masthead.astro';
+import WorkSection from '../components/WorkSection.astro';
+import Dot from '../components/Dot.astro';
+import Figure from '../components/Figure.astro';
+import FactsList from '../components/FactsList.astro';
+import CaseLead from '../components/CaseLead.astro';
+import MetaLine from '../components/MetaLine.astro';
+// The Zencastr case study: unlisted (linked from the Zencastr CV), kept out of search engines.
+const head = `<link rel="icon" href="data:," /><meta name="robots" content="noindex" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" />`;
+const afterFooter = ``;
+---
+<Base title={"Line of Flight - Gorka Molero Case Study"} description={"Line of Flight, a video podcast recorded on Zencastr, and the studio and post-production tooling I built around it, from one start command to the edit."} page="line-of-flight">
+  <Fragment slot="head" set:html={head} />
+  <PageFrame class="sheet">
+    <Masthead />
+
+      <CaseLead class="lead">
+        <MetaLine class="meta eyebrow">Case · podcast studio and post-production</MetaLine>
+        <h2 class="case-title">Line of Flight</h2>
+        <p class="intro">Line of Flight is a video podcast I make with a tantra teacher in Missouri. I bring a news story, researched and told with clips and pictures on slides, and my co-host, who hasn't seen any of it, reads it through the occult traditions as it lands. We record remotely on Zencastr, and everything around it, from the studio to the edit, is tooling I built. The first episode was recorded on 14 October 2026 and is in the edit.</p>
+        <MetaLine class="meta chips">Own project <Dot class="dot">&middot;</Dot> 2026 <Dot class="dot">&middot;</Dot> Zencastr, Chrome DevTools Protocol, WebRTC, Python, ffmpeg, MediaPipe, Cloudflare</MetaLine>
+      </CaseLead>
+
+      <main>
+      <WorkSection class="work">
+        <h2>On air</h2>
+        <p>A minute and a quarter of episode 1, as the cut makes it. I open the chapter on gold and my co-host cuts in.</p>
+        <Figure class="plate">
+          <div class="shot"><video controls playsinline preload="none" poster="./assets/line-of-flight/alchemy-and-gold-poster.webp" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/line-of-flight/alchemy-and-gold.mp4" aria-label="From episode 1 of Line of Flight: a chapter card reading Alchemy and Gold, then a 2008 paper on the history of potable gold, with both hosts in two circles on the slides while the co-host talks about science and the occult."></video></div>
+          <figcaption>From episode 1, recorded on 14 October 2026. The picture is the show as it went out, with both faces replaced by our own Zencastr camera files. The sound is our two Zencastr tracks. My co-host's lip sync, measured in this clip: 4 ms.</figcaption>
+        </Figure>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>The setup</h2>
+        <p>Two computers and Zencastr. My Mac runs the studio, and my co-host only opens a link. One command brings it all up, and one Record button starts the show's own recording and Zencastr's together.</p>
+
+        <figure class="plate lof-map" aria-label="How the studio is connected during the show, and what happens after it.">
+          <div class="lof-flow">
+            <p class="lof-flow-name">The call</p>
+            <div class="lof-node"><span class="lof-where">Co-host's laptop</span><strong>Call tab</strong><span>Zencastr guest. Records his WAV and 1080p video.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&harr;</span>
+            <div class="lof-node"><span class="lof-where">Zencastr</span><strong>The call</strong><span>Uploads each track to the Library as we talk.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&harr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>Room tab</strong><span>Records my WAV and video. A watcher drives it over the DevTools Protocol.</span></div>
+          </div>
+          <div class="lof-flow">
+            <p class="lof-flow-name">The slides</p>
+            <div class="lof-node"><span class="lof-where">Co-host's laptop</span><strong>Slides tab</strong><span>The deck, view only. Also records his mic.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&harr;</span>
+            <div class="lof-node"><span class="lof-where">Cloudflare</span><strong>Tunnel and R2</strong><span>A tunnel to the slides gate. The clips and pictures from R2.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&harr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>Deck server</strong><span>Slides follow my presenter. His mic arrives in 2 s pieces.</span></div>
+          </div>
+          <div class="lof-flow">
+            <p class="lof-flow-name">The Program</p>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>Camera sender</strong><span>My camera at 1920&times;1080 and my DJI mic.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&rarr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>The bridge</strong><span>My co-host's face and voice, taken from the room tab.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&rarr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>The Program</strong><span>A hidden Chrome draws the show and records it at 3840&times;2160.</span></div>
+          </div>
+          <div class="lof-flow">
+            <p class="lof-flow-name">After the show</p>
+            <div class="lof-node"><span class="lof-where">Zencastr</span><strong>Download</strong><span>The Library's zip, fetched until every track is in it.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&rarr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>The cut</strong><span>Program parts placed on Zencastr's timeline, Zencastr's cameras over the faces, the clean voices.</span></div>
+            <span class="lof-arrow" aria-hidden="true">&rarr;</span>
+            <div class="lof-node"><span class="lof-where">My Mac</span><strong>The edit</strong><span>Reviewed on a 720p proxy, cuts anchored on the transcript, rendered in seconds.</span></div>
+          </div>
+        </figure>
+
+        <h3>During the show</h3>
+        <ol class="lof-steps">
+          <li><code>dharma start 1</code> restarts the deck server, writes the show settings to my DJI mic over USB, and opens a Chrome on its own profile with four tabs: the Zencastr room, the presenter with its cockpit, the stage and a camera sender.</li>
+          <li>The slides are a web app built from my script: markers in the Markdown place each slide, and a sync script turns the draft into the deck.</li>
+          <li>The Program is the deck drawing the whole show, slides and both faces in their scene, in a hidden Chrome that records its own tab at 3840&times;2160 in ten-minute parts.</li>
+          <li>Zencastr is the call, and it records each of us on our own machine, WAV and 1080p video, uploading as we go.</li>
+          <li>A watcher holds a DevTools Protocol connection to the room tab. It pins Zencastr to my camera and mic, reads its recorder, presses its buttons, and bridges my co-host into the Program through an RTCPeerConnection it injects into Zencastr's page.</li>
+          <li>My co-host gets one link: the slides through a Cloudflare tunnel with the media from R2, view only, and a start card that opens the Zencastr call in a tab of its own.</li>
+          <li>The cockpit, inside the presenter, has a line for everything that can fail (each voice in the Program, Zencastr's recording and upload, both cameras, the mic, the headphones, the disk), and a red line blocks Start.</li>
+          <li>I present from the presenter in Beats mode, each slide as facts to tell rather than a script to read.</li>
+        </ol>
+        <h3>After the show</h3>
+        <ol class="lof-steps" start="9">
+          <li><code>dharma stop</code> waits until my Zencastr tracks show 100% uploaded, then closes everything.</li>
+          <li><code>zencastr.py download</code> takes the recording's zip from Zencastr's Library and fetches it again until everyone the Library lists is in it.</li>
+          <li><code>dharma cut</code> lays every Program part on Zencastr's timeline by sound, measures each camera's lip sync, puts Zencastr's camera files over the faces and the clean voices under them, and renders a 1280&times;720 proxy in about 12 minutes.</li>
+          <li>I review the proxy on a page that plays the session as the edit, jumping over the cuts. The cuts and the camera changes go in two JSON files, anchored on the words of the transcript.</li>
+          <li><code>dharma cut go</code> renders the cut in 4K and measures its lip sync, and <code>edl.py --render</code> makes the edit from it in about 40 seconds for a 2 h 22 min episode, re-encoding only the frames at each cut.</li>
+        </ol>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>The deck</h2>
+        <p>Every slide is HTML on a 1920&times;1080 stage, built from the script. The deck has two looks, paper and night, and we recorded in night. These four slides from episode 1 are redrawn for this page from the deck's layouts and pictures.</p>
+        <figure class="plate lof">
+          <div class="lof-deck" data-lof-deck data-look="paper" tabindex="0" role="region" aria-roledescription="slides" aria-label="Four slides from episode 1. Left and right arrow keys step through them.">
+            <div class="lof-screen"><div class="lof-stage" aria-live="polite"></div></div>
+            <div class="lof-bar">
+              <button type="button" class="lof-btn" data-lof="prev" aria-label="Previous">&larr;</button>
+              <span class="lof-count"><span data-lof="n">1</span> / 4 <span class="lof-name" data-lof="name"></span></span>
+              <button type="button" class="lof-btn" data-lof="next" aria-label="Next">&rarr;</button>
+              <span class="lof-looks" role="group" aria-label="Look"><button type="button" class="lof-look" data-look="paper" aria-pressed="true">Paper</button><button type="button" class="lof-look" data-look="night" aria-pressed="false">Night</button></span>
+            </div>
+          </div>
+          <figcaption>Step through with the arrows. On the timeline, the arrows move from event to event, and you can drag it along. Pictures: Ebers Papyrus and Geber, Wellcome Collection (CC BY 4.0); Splendor Solis, British Library (CC0); the others public domain. The two engravings were generated for the show after Henry de Malvost's 1895 plates.</figcaption>
+        </figure>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>The audio</h2>
+        <p>I wear headphones and a clip-on DJI Mic Mini 2S. Its show settings (mono, low cut, clipping control, gain on the transmitter, noise cancelling) are written to the receiver over USB at every start, through a vendored open-source CLI driven from Python, and the cockpit reads them back once a minute, never while recording. Clipped on, it gave about 14 dB more voice than the MacBook's mic in the same room.</p>
+        <p>On my side, Zencastr is pinned to that mic by name. The watcher wraps the page's <code>getUserMedia</code> before Zencastr loads, so whatever Zencastr asks for, it gets the named device with echo cancellation, noise suppression and auto gain off. The voice reaches the WAV as the mic gives it.</p>
+        <p>Every voice is recorded more than once. Zencastr's local WAVs are the masters. The Program carries a mix (my mic live, my co-host over the call, the clips), and a safety file of each voice. My co-host's own mic is also recorded in his slides tab at 64 kbps and streamed to my Mac.</p>
+        <p>The cut works on Zencastr's timeline. Each ten-minute Program part is placed by cross-correlating loudness envelopes (log RMS at 100 Hz) of my Zencastr voice against my voice in the Program, near where the end of the part before it says it should start, and three one-minute stretches of it have to agree within 50 ms. The first version guessed each part at 598.5 s; the parts are about 1.5 s longer, and by part 9 the picture was 27 seconds off the sound.</p>
+        <p>The mix is the two clean voices, with the Program's own sound let in only where a clip played, read from the deck's clip log and crossfaded over 150 ms, so no voice is doubled. Where my co-host's Zencastr track has 20 seconds of digital silence, his own-mic recording fills in at his Zencastr level. In episode 1 that was 9.3 minutes.</p>
+        <p>Loudness is two passes: the whole mix measured with ffmpeg's <code>loudnorm</code>, then one linear gain to &minus;16 LUFS with true peak under &minus;1.5 dB, encoded with Apple's AAC encoder. For a noisy room there's a pass through ElevenLabs' Voice Isolator with an 80 Hz high-pass; in a rain test it took the rain out at every noise-cancelling setting. Mic tests are recorded with sox, because ffmpeg's avfoundation input dropped a 10 ms slice about every tenth of a second on every Mac mic I tried.</p>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Where Zencastr pushed back</h2>
+        <p>Zencastr's local recordings are why the cut sounds and looks the way it does. Running it inside a scripted studio found its edges. Most of these came out of a test rig: a stand-in co-host on my second laptop, driven by script, with his face and voice from a real recording.</p>
+        <FactsList class="facts">
+          <li><strong>Stop ends the session</strong><span>Zencastr's Stop ends the recording, and the next one needs New Recording, which reloads the room and drops the guest to the green room. Pausing doesn't work either: a guest who joins while it's paused is never recorded when it resumes ("timed out waiting for … to report they actually resumed"). So Zencastr records the whole session, and the studio's Stop stops only the Program. The cut finds each take inside the long recording by sound.</span></li>
+          <li><strong>A dead tab's stretch never finishes</strong><span>If the guest's call tab dies mid-recording (a reload, a crash), that stretch stays unfinalized on his laptop and the download skips it: 12 of his 15 tracks in one drop test. So his slides tab, a separate tab, records his mic too and streams it in two-second pieces, which wait on his laptop when the network is down. In episode 1 it covered 9.3 minutes.</span></li>
+          <li><strong>Nothing stops the room closing mid-upload</strong><span>Zencastr's "Leave site?" warning needs a click in the page first (Chrome's rule), and in a scripted studio nobody clicks. <code>dharma stop</code> reads the room's upload state and waits for 100% before it closes anything. A guest who closes his browser early leaves tracks that only that browser can finish, so the checklist has my co-host wait for 100%.</span></li>
+          <li><strong>Getting the files</strong><span>The room's own MP3, WAV and MOV buttons did nothing for me; the Library's zip works. The guest's tracks reach the Library a few minutes after the Stop (a zip 90 seconds after had only mine), and a 2 h 33 min session took about ten minutes a file. The download follows Zencastr's "Downloading file N/M" and fetches again until everyone the Library lists is in the zip.</span></li>
+          <li><strong>The first camera request sets the size</strong><span>In one Chrome, the first page to open the camera sets its resolution for every page. Zencastr's green room took it at 640&times;360 and everything followed. The camera sender now opens it first at 1920&times;1080, every request asks for exactly 16:9 (looser constraints gave square or vertical video), and a check redoes the order if it comes up small.</span></li>
+          <li><strong>The guest at his tile's size</strong><span>Zencastr sends a guest at the size of his tile in the room, 640&times;360, and that's what the live Program gets. I tried stretching his tile to full size and hiding it. It fought Zencastr's own layout, and in a test the call lost him for two and a half minutes, so it went. The live show uses the small picture, and the cut uses his full-size local file.</span></li>
+          <li><strong>A take cancelled five seconds in</strong><span>One failed upload request on the guest's side ("Track initialization error") made Zencastr abort a take for everyone, while the studio still showed recording. The watcher now notices when Zencastr isn't recording during a take and presses Record again, and it never starts a New Recording while the guest is in the call.</span></li>
+          <li><strong>Camera files drift</strong><span>After my co-host's Zencastr failed and reloaded 44 minutes into episode 1, his camera file ran 0.11 to 0.14 s behind his voice, and it was black for 8.3 minutes in all. <code>lipsync.py</code> reads each camera every ten minutes (MediaPipe's face mesh, mouth opening against the voice's loudness, cross-correlated over two minutes), the cut takes each frame where that curve says, and a last pass measures the finished cut, where every reading must be within a frame. Where his camera was black, the Program's picture of him stays.</span></li>
+          <li><strong>File names on a 12-hour clock</strong><span>Zencastr's local files are named on a 12-hour UTC clock, so "t12-06am" sorts after "t01-08am". The tools take the folder written last.</span></li>
+        </FactsList>
+      </WorkSection>
+
+      <WorkSection class="work">
+        <h2>Numbers</h2>
+        <FactsList class="facts">
+          <li><strong>Built</strong><span>503 commits between 27 September and 15 October 2026, about 9,800 lines across the studio, the deck and the post tools, tests included.</span></li>
+          <li><strong>Tests</strong><span>33 Python unit tests and 44 Playwright browser tests. An end-to-end studio test with the stand-in on a second Mac, judged by what's in the files: every voice measured every few seconds, the picture checked for freezes. A drop test of six ways the guest can drop, each of which recovered by itself in 17 to 103 seconds.</span></li>
+          <li><strong>Zencastr</strong><span>45 recordings in one room between 5 and 14 October, most of them studio tests.</span></li>
+          <li><strong>Episode 1</strong><span>A 154-minute session: 16 Program parts at 3840&times;2160, 21 clips, cut to 2 h 22 min with 8 cuts.</span></li>
+          <li><strong>Turnaround</strong><span>The Zencastr download about ten minutes a file, the review proxy about 12 minutes, the edit about 40 seconds. Episode 1 isn't published yet, so there's no time from recording to publish to give.</span></li>
+          <li><strong>On disk</strong><span>235 GB of recordings.</span></li>
+        </FactsList>
+      </WorkSection>
+      </main>
+  </PageFrame>
+  <Fragment slot="after-footer" set:html={afterFooter} />
+</Base>
+
+<style is:global>
+/* the studio map: four flows, three nodes each, stacked on a phone */
+.lof-map { margin: 1.6rem 0 0; }
+.lof-flow { display: grid; grid-template-columns: 6.6rem 1fr 1.4rem 1fr 1.4rem 1fr; align-items: stretch; padding: 0.9rem 0; border-top: 1px solid var(--rule); }
+.lof-flow:last-child { border-bottom: 1px solid var(--rule); }
+.lof-flow-name { margin: 0; padding-top: 0.15rem; font-family: var(--display); font-size: 1rem; letter-spacing: 0.04em; color: var(--vermilion); }
+.lof-node { display: flex; flex-direction: column; gap: 0.15rem; padding: 0.55rem 0.7rem 0.6rem; border: 1px solid var(--rule); background: rgba(255, 252, 244, 0.45); font-size: 0.92rem; line-height: 1.3; }
+.lof-node strong { font-weight: 600; font-size: 1rem; }
+.lof-node span:last-child { color: var(--ink-soft); }
+.lof-where { font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+.lof-arrow { align-self: center; text-align: center; color: var(--vermilion); font-size: 1.1rem; }
+@media (max-width: 640px) {
+  .lof-flow { grid-template-columns: 1fr; row-gap: 0.15rem; }
+  .lof-flow-name { padding: 0 0 0.35rem; }
+  .lof-arrow { transform: rotate(90deg); line-height: 1.3; }
+}
+.lof-steps { margin: 0 0 1rem; padding-left: 1.6rem; }
+.lof-steps li { margin: 0 0 0.45rem; padding-left: 0.2rem; }
+.lof-steps li::marker { font-family: var(--display); color: var(--vermilion); }
+
+/* the deck sampler: a 1920x1080 stage scaled to the column, in the deck's two looks */
+.lof .lof-deck { outline: none; }
+.lof .lof-deck:focus-visible .lof-screen { box-shadow: 0 0 0 2px var(--vermilion); }
+.lof-screen { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--rule); background: var(--ground); cursor: pointer; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.lof-stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; background: var(--ground); color: var(--ink); overflow: hidden; font-family: var(--old); font-variant-numeric: normal; }
+.lof-deck[data-look="paper"] .lof-screen { --ground: #fef8ea; --ink: #1b1714; --ink3: #8a8174; --red: #8f3622; --gray: #6b6258; --line: #1b1714; --wash: 254, 248, 234; }
+.lof-deck[data-look="night"] .lof-screen { --ground: #000; --ink: #f1e9d6; --ink3: #7d766a; --red: #d2a64a; --gray: #a39b8c; --line: #3a342d; --wash: 0, 0, 0; }
+.lof-deck { --didot: "Didot", "GFS Didot", "Bodoni 72", serif; --old: "Old Standard TT", "Old Standard", "EB Garamond", serif; }
+.lof-stage .abs { position: absolute; }
+.lof-stage img { -webkit-user-drag: none; pointer-events: none; }
+.lof-stage .push { animation: lofPush 45s linear forwards; transform-origin: 50% 50%; }
+.lof-stage.dip > * { animation: lofDip 0.7s ease-out both; }
+@keyframes lofPush { from { transform: scale(1); } to { transform: scale(1.06); } }
+@keyframes lofDip { from { opacity: 0; } to { opacity: 1; } }
+.lof-stage .rules { position: absolute; height: 11px; box-sizing: border-box; border-top: 2px solid var(--ink); border-bottom: 5px solid var(--ink); }
+.lof-stage .rules.under { border-top-width: 5px; border-bottom-width: 2px; }
+.lof-stage .card-label { font-family: var(--old); text-transform: uppercase; letter-spacing: 0.24em; font-size: 20px; color: var(--gray); }
+.lof-stage .card-title { font-family: var(--didot); text-transform: uppercase; letter-spacing: 0.15em; color: var(--ink); white-space: nowrap; }
+.lof-stage .card-title .acc { color: var(--red); }
+.lof-stage .card-sub { font-family: var(--old); text-transform: uppercase; letter-spacing: 0.2em; font-size: 22px; color: var(--red); white-space: nowrap; }
+.lof-stage .quote-block { left: 260px; width: 1400px; top: 0; height: 1080px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.lof-stage .quote { margin-top: 50px; font-family: var(--old); font-style: italic; font-size: 48px; line-height: 1.4; text-align: center; color: var(--ink); }
+.lof-stage .rule { width: 160px; height: 11px; margin: 44px 0 0; box-sizing: border-box; border-top: 2px solid var(--ink); border-bottom: 5px solid var(--ink); }
+.lof-stage .attrib { margin-top: 22px; font-family: var(--old); text-transform: uppercase; letter-spacing: 0.2em; font-size: 22px; color: var(--red); }
+.lof-stage .ornament { position: relative; width: 200px; height: 18px; }
+.lof-stage .ornament::before, .lof-stage .ornament::after { content: ''; position: absolute; top: 8px; width: 78px; height: 2px; background: var(--red); }
+.lof-stage .ornament::before { left: 0; }
+.lof-stage .ornament::after { right: 0; }
+.lof-stage .ornament i { position: absolute; left: 50%; top: 9px; width: 12px; height: 12px; margin: -6px 0 0 -6px; background: var(--red); transform: rotate(45deg); }
+.lof-stage .ornament b, .lof-stage .ornament u { position: absolute; top: 7px; width: 4px; height: 4px; border-radius: 50%; background: var(--red); }
+.lof-stage .ornament b { left: 82px; }
+.lof-stage .ornament u { right: 82px; }
+.lof-stage .tl { position: absolute; left: 0; top: 0; height: 1080px; transform-origin: 0 0; transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
+.lof-stage .tl.live { transition: none; }
+.lof-stage .tl-base { position: absolute; top: 498px; height: 1px; background: var(--ink); }
+.lof-stage .tl-era { position: absolute; top: 7.7px; height: 6.7px; box-sizing: border-box; border-top: 1.25px solid var(--ink); border-bottom: 3px solid var(--ink); }
+.lof-stage .tl-era span { position: absolute; left: 0; top: -24px; font-family: var(--old); text-transform: uppercase; letter-spacing: 0.2em; font-size: 14px; color: var(--red); white-space: nowrap; }
+.lof-stage .tl-ev { position: absolute; top: 0; width: 640px; height: 1080px; }
+.lof-stage .tl-ev .box { position: absolute; left: 40px; top: 44.7px; width: 560px; height: 380px; transform: scale(0.952); transform-origin: 50% 0; }
+.lof-stage .tl-ev .box img { position: absolute; object-fit: cover; background: #000; outline: 1.27px solid var(--line); }
+.lof-stage .tl-ev .box img.whole { object-fit: contain; outline: none; background: transparent; }
+.lof-stage .tl-ev .box .li { position: absolute; left: -40px; width: 640px; text-align: center; white-space: nowrap; font-family: var(--old); color: var(--ink); }
+.lof-stage .tl-ev .box .li.last { color: var(--red); }
+.lof-stage .tl-ev .yr { position: absolute; left: 0; width: 640px; top: 434.4px; text-align: center; font-family: var(--didot); font-size: 40px; line-height: 46px; letter-spacing: 0.12em; color: var(--ink); }
+.lof-stage .tl-ev .dot { position: absolute; left: 314px; top: 493px; width: 11px; height: 11px; border-radius: 50%; background: var(--red); }
+.lof-stage .tl-ev .ti { position: absolute; left: -80px; width: 800px; top: 511px; text-align: center; font-family: var(--didot); text-transform: uppercase; letter-spacing: 0.3em; font-size: 15px; line-height: 24px; color: var(--ink); }
+.lof-stage .tl-ev .su { position: absolute; left: -40px; width: 720px; top: 542.7px; text-align: center; font-family: var(--old); text-transform: uppercase; letter-spacing: 0.2em; font-size: 12.5px; line-height: 16px; color: var(--red); }
+.lof-bar { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.55rem; font-family: var(--display); }
+.lof-btn, .lof-look { font: inherit; color: var(--ink); background: transparent; border: 1px solid var(--rule); padding: 0.15rem 0.7rem; cursor: pointer; }
+.lof-btn { font-size: 1.05rem; line-height: 1.4; }
+.lof-btn:hover, .lof-look:hover { border-color: var(--vermilion); color: var(--vermilion); }
+.lof-btn:disabled { opacity: 0.35; cursor: default; border-color: var(--rule); color: var(--ink); }
+.lof-count { color: var(--ink-soft); font-size: 0.95rem; white-space: nowrap; }
+.lof-name { margin-left: 0.4rem; color: var(--ink); }
+.lof-looks { margin-left: auto; display: inline-flex; }
+.lof-look { font-size: 0.9rem; }
+.lof-look + .lof-look { border-left: 0; }
+.lof-look[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper, #eee6d5); }
+@media (max-width: 640px) {
+  .lof-name { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lof-stage .push, .lof-stage.dip > * { animation: none; }
+  .lof-stage .tl { transition: none; }
+}
+</style>
+
+<script>
+const root = document.querySelector<HTMLElement>('[data-lof-deck]');
+if (root) {
+  const A = './assets/line-of-flight/deck/';
+  const stage = root.querySelector<HTMLElement>('.lof-stage')!;
+  const screen = root.querySelector<HTMLElement>('.lof-screen')!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+
+  type Card = { type: 'card'; name: string; image: string; alt: string; label?: string; title: string[]; accent?: string; sub: string[]; L: number; W: number; fs: number };
+  type Quote = { type: 'quote'; name: string; quote: string; attrib: string };
+  type Line = { type: 'timeline'; name: string };
+  const SLIDES: (Card | Quote | Line)[] = [
+    { type: 'card', name: 'The cold open', image: 'lake', alt: 'An engraving of a lake at night behind a villa with a gazebo, a swimmer in the water.', label: 'Case one', title: ['The man', 'who', 'injected', 'gold'], sub: ['Samut Prakan, Thailand', '7 July 2026'], L: 1280, W: 560, fs: 60 },
+    { type: 'card', name: 'A chapter card', image: 'alchemy', alt: 'An engraving of an alchemist in his laboratory holding up a glowing flask.', title: ['Alchemy', 'and', 'gold'], accent: 'gold', sub: ['The quest for immortality'], L: 1250, W: 560, fs: 67 },
+    { type: 'timeline', name: 'The timeline' },
+    { type: 'quote', name: 'The paper’s last line', quote: 'The prolonged efforts throughout medical history to discover the therapeutic value of gold has included periods of great enthusiasm and complete rejection.', attrib: 'Stata Norton · 2008' },
+  ];
+
+  type Ev = { year: string; title: string; sub?: string; imgs?: string[]; list?: string[]; whole?: number[] };
+  const EVENTS: Ev[] = [
+    { year: '2900 BCE', title: 'Egypt', sub: 'Ebers Papyrus, c. 1500 BCE', imgs: ['egyptian-physician'] },
+    { year: '210 BCE', title: 'Qin Shi Huang', imgs: ['qin-shi-huang'] },
+    { year: '8th c.', title: 'Jabir ibn Hayyan', imgs: ['jabir-geber'] },
+    { year: '1493 – 1541', title: 'Paracelsus', sub: 'Swiss physician and alchemist', imgs: ['splendor-solis-harley-f7-knight-fountains'] },
+    { year: '1566', title: 'Diane de Poitiers', imgs: ['diane-de-poitiers-clouet-workshop-1555'] },
+    { year: '1567', title: 'The Jiajing Emperor', imgs: ['ming-jiajing'] },
+    { year: '1597', title: 'Shakespeare', imgs: ['shakespeare-chandos-portrait', 'shakespeare-2h4-first-folio-p1'] },
+    { year: '1690s', title: 'Isaac Newton', imgs: ['newton-kneller-1689', 'newton-sophick-mercury-ms-p1', 'newton-alchemical-ms-aq17'] },
+    { year: '1879', title: 'The gold cure', imgs: ['keeley-institute', 'keeley-institute-building-1894'], whole: [1.523, 1.07] },
+    { year: '1890', title: 'Robert Koch', imgs: ['koch-portrait'] },
+    { year: '1926', title: 'U.S. Pharmacopoeia', list: ['Dyspepsia', 'Cirrhosis', 'Syphilis', 'Tuberculosis', 'Depression', 'Hypochondria', 'Hysteria', 'And impotence'] },
+  ];
+  const ERAS = [{ name: 'Antiquity', fr: 0, to: 2 }, { name: 'The Renaissance', fr: 3, to: 6 }, { name: 'It becomes medicine', fr: 8, to: 10 }];
+  const SP = 640, Z = 1.65, CY = 281, N = EVENTS.length;
+
+  let i = 0, pos = 0, panX = 0, entered = false;
+  let look = 'paper';
+  try { const s = localStorage.getItem('lof-look'); if (s === 'night' || s === 'paper') look = s; } catch (_) {}
+
+  const still = (name: string) => `${A}${name}-${look}.webp`;
+
+  function card(sl: Card) {
+    const lh = Math.round(sl.fs * 1.15), L = sl.L, W = sl.W;
+    const bh = (sl.label ? 47 : 0) + 11 + 27 + sl.title.length * lh + 22 + 11 + (sl.sub.length ? 26 + sl.sub.length * 36 : 0);
+    let y = Math.round(540 - bh / 2);
+    let h = `<img class="abs push" src="${still(sl.image)}" alt="${esc(sl.alt)}" style="left:0;top:0;width:1920px;height:1080px;object-fit:cover">`;
+    h += `<div class="abs" style="left:0;top:0;width:1920px;height:1080px;background:linear-gradient(90deg,rgba(var(--wash),0) ${L - 260}px,rgba(var(--wash),.82) ${L - 40}px,rgba(var(--wash),.88))"></div>`;
+    h += `<div class="abs" style="left:${L - 220}px;width:${W + 440}px;top:${y - 170}px;height:${bh + 340}px;background:radial-gradient(closest-side,rgba(var(--wash),.97),rgba(var(--wash),.9) 60%,rgba(var(--wash),0))"></div>`;
+    if (sl.label) { h += `<div class="abs card-label" style="left:${L}px;top:${y}px">${esc(sl.label)}</div>`; y += 47; }
+    h += `<div class="rules" style="left:${L}px;width:${W}px;top:${y}px"></div>`; y += 38;
+    for (const ln of sl.title) {
+      const t = sl.accent && ln === sl.accent ? `<span class="acc">${esc(ln)}</span>` : esc(ln);
+      h += `<div class="abs card-title" style="left:${L}px;top:${y}px;font-size:${sl.fs}px;line-height:${lh}px">${t}</div>`; y += lh;
+    }
+    y += 22; h += `<div class="rules under" style="left:${L}px;width:${W}px;top:${y}px"></div>`; y += 37;
+    for (const su of sl.sub) { h += `<div class="abs card-sub" style="left:${L}px;top:${y}px">${esc(su)}</div>`; y += 36; }
+    return h;
+  }
+
+  function quote(sl: Quote) {
+    return `<div class="abs quote-block"><div class="ornament"><b></b><i></i><u></u></div><div class="quote">${esc(sl.quote)}</div><div class="rule"></div><div class="attrib">${esc(sl.attrib)}</div></div>`;
+  }
+
+  // an event's 560x380 box: one picture, two side by side, one large and two stacked, or a list of lines
+  function box(ev: Ev) {
+    const W = 560, H = 380, G = 8, r = (x: number, y: number, w: number, h: number) => `left:${Math.round(x)}px;top:${Math.round(y)}px;width:${Math.round(w)}px;height:${Math.round(h)}px`;
+    if (ev.list) {
+      const n = ev.list.length, lh = Math.min(44, 380 / n);
+      return ev.list.map((t, k) => `<div class="li${k === n - 1 ? ' last' : ''}" style="top:${Math.round(190 - (n * lh) / 2 + k * lh)}px;line-height:${lh}px;font-size:${Math.min(32, Math.round(lh * 0.8))}px">${esc(t)}</div>`).join('');
+    }
+    const imgs = ev.imgs || [], n = imgs.length;
+    let cells: string[] = [];
+    if (n === 1) cells = [r(0, 0, W, H)];
+    else if (n === 2 && ev.whole) {
+      const tw = (ev.whole[0] + ev.whole[1]) * H, sc = Math.min(1, (W - G) / tw), h = H * sc, w0 = ev.whole[0] * h, w1 = ev.whole[1] * h, x0 = (W - (w0 + w1 + G)) / 2, y = (H - h) / 2;
+      cells = [r(x0, y, w0, h), r(x0 + w0 + G, y, w1, h)];
+    } else if (n === 2) { const w = (W - G) / 2; cells = [r(0, 0, w, H), r(w + G, 0, w, H)]; }
+    else { const w = Math.round(W * 0.58), w2 = W - w - G, h = (H - G) / 2; cells = [r(0, 0, w, H), r(w + G, 0, w2, h), r(w + G, h + G, w2, h)]; }
+    return imgs.map((src, k) => `<img src="${A}${src}.webp" alt="" loading="lazy" class="${ev.whole ? 'whole' : ''}" style="${cells[k]}">`).join('');
+  }
+
+  function timeline() {
+    let h = `<div class="tl" style="width:${N * SP}px"><div class="tl-base" style="left:0;width:${N * SP}px"></div>`;
+    for (const e of ERAS) h += `<div class="tl-era" style="left:${e.fr * SP + 40}px;width:${(e.to - e.fr + 1) * SP - 80}px"><span>${esc(e.name)}</span></div>`;
+    EVENTS.forEach((ev, k) => {
+      h += `<div class="tl-ev" style="left:${k * SP}px"><div class="box">${box(ev)}</div><div class="yr">${esc(ev.year)}</div><div class="dot"></div><div class="ti">${esc(ev.title)}</div>${ev.sub ? `<div class="su">${esc(ev.sub)}</div>` : ''}</div>`;
+    });
+    return h + '</div>';
+  }
+
+  function camera(instant = false) {
+    const el = stage.querySelector<HTMLElement>('.tl'); if (!el) return;
+    el.classList.toggle('live', instant);
+    el.style.transform = `translate(${960 - (pos * SP + SP / 2) * Z + panX}px,${540 - CY * Z}px) scale(${Z})`;
+  }
+
+  const prevBtn = root.querySelector<HTMLButtonElement>('[data-lof="prev"]')!, nextBtn = root.querySelector<HTMLButtonElement>('[data-lof="next"]')!;
+  function show(n: number, from = 0) {
+    const was = i; i = Math.max(0, Math.min(SLIDES.length - 1, n)); const sl = SLIDES[i];
+    stage.classList.remove('dip');
+    stage.innerHTML = sl.type === 'card' ? card(sl) : sl.type === 'quote' ? quote(sl) : timeline();
+    if (sl.type === 'card' && i !== was) { void stage.offsetWidth; stage.classList.add('dip'); }
+    if (sl.type === 'timeline') {
+      panX = 0; pos = from < 0 ? N - 1 : 0;
+      const el = stage.querySelector<HTMLElement>('.tl')!;
+      if (!entered) {   // the first visit: the whole line for a beat, then in
+        entered = true; const sc = 1920 / (N * SP);
+        el.classList.add('live'); el.style.transform = `translate(0px,${540 - CY * sc}px) scale(${sc})`;
+        void el.offsetWidth; setTimeout(() => camera(), 650);
+      } else camera(true);
+    }
+    root!.querySelector('[data-lof="n"]')!.textContent = String(i + 1);
+    root!.querySelector('[data-lof="name"]')!.textContent = '· ' + sl.name;
+    stage.setAttribute('aria-label', `Slide ${i + 1} of ${SLIDES.length}: ${sl.name}`);
+    prevBtn.disabled = i === 0 && !(sl.type === 'timeline' && pos > 0);
+    nextBtn.disabled = i === SLIDES.length - 1;
+    const nx = SLIDES[i + 1]; if (nx && nx.type === 'card') new Image().src = still(nx.image);
+  }
+
+  function step(d: number) {
+    const sl = SLIDES[i];
+    if (sl.type === 'timeline') {
+      const p = pos + d;
+      if (p >= 0 && p < N) { pos = p; panX = 0; camera(); prevBtn.disabled = false; return; }
+    }
+    if (i + d < 0 || i + d >= SLIDES.length) return;
+    show(i + d, d);
+  }
+
+  function setLook(l: string) {
+    look = l; root!.dataset.look = l;
+    try { localStorage.setItem('lof-look', l); } catch (_) {}
+    root!.querySelectorAll<HTMLButtonElement>('.lof-look').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.look === l)));
+    const sl = SLIDES[i];
+    if (sl.type === 'card') stage.querySelectorAll<HTMLImageElement>('img.push').forEach(img => { img.src = still(sl.image); });
+  }
+
+  // the stage's scale follows the column
+  const fit = () => { stage.style.transform = `scale(${screen.clientWidth / 1920})`; };
+  new ResizeObserver(fit).observe(screen); fit();
+
+  prevBtn.addEventListener('click', () => step(-1));
+  nextBtn.addEventListener('click', () => step(1));
+  root.querySelectorAll<HTMLButtonElement>('.lof-look').forEach(b => b.addEventListener('click', () => setLook(b.dataset.look!)));
+  root.addEventListener('keydown', e => {
+    if (e.target instanceof HTMLButtonElement && (e.key === ' ' || e.key === 'Enter')) return;
+    if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); step(1); }
+    else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); step(-1); }
+  });
+
+  // a click on the stage steps on (the left third steps back); on the timeline a drag pans it, and it settles on the event at the centre
+  let down: { x: number; pan: number; moved: boolean } | null = null;
+  screen.addEventListener('pointerdown', e => { down = { x: e.clientX, pan: panX, moved: false }; });
+  screen.addEventListener('pointermove', e => {
+    if (!down || SLIDES[i].type !== 'timeline') return;
+    const k = screen.clientWidth / 1920, dx = (e.clientX - down.x) / k;
+    if (!down.moved && Math.abs(dx) < 12) return;
+    if (!down.moved) { down.moved = true; screen.setPointerCapture(e.pointerId); }
+    panX = Math.max(-(N - 1 - pos) * SP * Z - SP * Z / 2, Math.min(pos * SP * Z + SP * Z / 2, down.pan + dx)); camera(true);
+  });
+  const settle = () => {
+    const kc = Math.max(0, Math.min(N - 1, Math.round(pos - panX / (SP * Z))));
+    pos = kc; panX = 0; camera(); prevBtn.disabled = i === 0 && pos === 0;
+  };
+  screen.addEventListener('pointerup', e => {
+    if (!down) return; const d = down; down = null;
+    if (d.moved) { settle(); return; }
+    const r = screen.getBoundingClientRect();
+    step(e.clientX - r.left < r.width / 3 ? -1 : 1);
+  });
+  screen.addEventListener('pointercancel', () => { if (down?.moved) settle(); down = null; });
+  let wheelT: number | undefined;
+  screen.addEventListener('wheel', e => {
+    if (SLIDES[i].type !== 'timeline' || Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+    e.preventDefault(); panX -= e.deltaX / (screen.clientWidth / 1920); camera(true);
+    clearTimeout(wheelT); wheelT = window.setTimeout(settle, 180);
+  }, { passive: false });
+
+  setLook(look);
+  show(0);
+}
+</script>

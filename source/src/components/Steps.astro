@@ -1,0 +1,38 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'div'>;
+const { class: className = 'steps', ...attributes } = Astro.props;
+---
+<div class={className} {...attributes}><slot /></div>
+
+<style is:global>
+@reference "../styles/global.css";
+@layer components {
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.steps { @apply grid; counter-reset: step; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dimension-1-6-rem) var(--dimension-1-rem); margin: var(--dimension-1-6-rem) 0 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.steps.pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.steps + p, .steps + .plate { margin-top: var(--dimension-1-6-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.steps .step { counter-increment: step; margin: 0; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.steps .step .shot { margin: 0; aspect-ratio: 1 / 1; @apply flex; @apply items-center; @apply justify-center; @apply overflow-hidden; background: var(--color-surface-10); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.steps .step .shot img, .steps .step .shot video { width: calc(var(--relative-100-percent) * 1%); height: calc(var(--relative-100-percent) * 1%); object-fit: contain; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.steps .step figcaption { margin: var(--dimension-0-6-rem) 0 0; color: var(--ink-soft); @apply italic; font-size: var(--dimension-1-rem); }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.steps .step figcaption::before { content: counter(step) ". "; color: var(--vermilion); font-family: var(--display); font-style: normal; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) { @media (max-width: 640px) { .steps, .steps.pair { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+}
+}
+</style>
