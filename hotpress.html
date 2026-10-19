@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hotpress - Gorka Molero Case Study</title>
-    <meta name="description" content="Hotpress, a collaborative writing app like Google Docs that also publishes complex books, and how I tested its real-time collaboration on Liveblocks end to end.">
+    <meta name="description" content="Hotpress, an app for writing together in real time with print-ready book and e-book export, and how I tested its collaboration on Liveblocks end to end.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
@@ -53,14 +53,14 @@
       <section class="lead">
         <p class="meta eyebrow">Case · collaborative writing and publishing</p>
         <h2 class="case-title">Hotpress</h2>
-        <p class="intro">Hotpress is a collaborative writing app, like Google Docs, that also publishes complex books. It's live at <a href="https://hotpress.app" target="_blank" rel="noopener">hotpress.app</a>, and its source is public.</p>
+        <p class="intro">Hotpress is an app for writing together in real time, with print-ready book and e-book export. It's live at <a href="https://hotpress.app" target="_blank" rel="noopener">hotpress.app</a>, and its source is public.</p>
         <p class="meta chips">Own project <span class="dot">&middot;</span> 2026 <span class="dot">&middot;</span> Next.js, Lexical, Liveblocks, Yjs, Postgres, Playwright</p>
       </section>
 
       <main>
       <section class="work">
         <h2>Writing together</h2>
-        <p>The editor is Lexical, kept in sync through Liveblocks and Yjs. Writers share a document with a link, and guests can join without an account. Everyone sees the others' pointers move and where they're typing, edits merge as they happen, and each comment is a pin beside its phrase that opens in place.</p>
+        <p>The editor is Lexical, kept in sync through Liveblocks and Yjs. Writers share a document with a link, and guests can join without an account. Each writer has their own colour, and you see their pointer move, their caret with their name on it and their selection tinted in that colour. Edits merge as they happen. Each comment is a pin beside its phrase, with the writer's initials, and it opens the thread right there, or as a bottom sheet on a phone.</p>
         <figure class="plate">
           <div class="shot"><video controls playsinline preload="none" poster="./assets/hotpress/collaboration-v22-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/hotpress-collaboration-v22.mp4" aria-label="Two writers in one Hotpress document: a guest joins through the share link, both write at once, they comment and reply, and the guest's offline writing merges when they reconnect."></video></div>
           <figcaption>Two people in one manuscript. A guest joins through the share link, both write at once, they comment and reply in place, and while the guest is offline both keep writing, then everything merges when they reconnect. Recorded locally on a production build of the app.</figcaption>
@@ -72,7 +72,7 @@
         <p>To check the collaboration properly, I wrote a Playwright suite that runs against Liveblocks itself, with nothing mocked. Three people share a room, two signed in and one guest. They type in the same sentence at once, comment, reply and resolve, and the guest drops offline for nine seconds while the others keep writing. Then someone joins late, and the saved document and the exported PDF have to contain everyone's text.</p>
         <p>Fast typing lost characters. The cause was in Liveblocks' own Lexical comments plugin, which set a fresh array of active threads on every editor update. React stopped that with a "Maximum update depth exceeded" error, and the error cut off Lexical's other listeners before the last edits reached the shared Yjs document. The same bug left a writer out of date after a long offline gap. I patched the plugin in Hotpress so it keeps the old array when the threads haven't changed, a one-line change. The bug is still in Liveblocks' latest release, 3.24.3, so I <a href="https://github.com/liveblocks/liveblocks/issues/3753" target="_blank" rel="noopener">reported it</a> and opened a <a href="https://github.com/liveblocks/liveblocks/pull/3754" target="_blank" rel="noopener">pull request with the fix</a>.</p>
         <p>Comments also failed now and then with a 403. My auth route gave out two kinds of Liveblocks token, and the client sometimes sent a comment with the kind that carries no room permissions. I changed it to issue one kind for everything, with the same access as before.</p>
-        <p>With both fixes, the suite passed all 17 checks three runs in a row on a production build. In those runs an edit reached the other writer in a median of 0.2 seconds, and 0.45 seconds at the 95th percentile.</p>
+        <p>With both fixes, the suite passed all 17 checks three runs in a row on a production build. In those runs an edit reached the other writer in a median of 0.2 seconds, and 0.45 seconds at the 95th percentile. After I added the coloured carets, selections and comment pins, the full suite of 20 tests passed on a production build, and a check against the live hotpress.app passed five runs out of five.</p>
       </section>
 
       <section class="work">
