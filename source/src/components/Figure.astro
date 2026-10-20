@@ -23,6 +23,9 @@ const { caption, class: className = 'plate', ...attributes } = Astro.props;
 .plate .shot { margin: 0; }
 }
 @scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
+.plate .shot > a { @apply block; }
+}
+@scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
 .plate figcaption { margin: var(--dimension-0-6-rem) 0 0; @apply italic; color: var(--ink-soft); font-size: var(--dimension-1-rem); @apply text-center; }
 }
 @scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {

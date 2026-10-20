@@ -28,6 +28,7 @@ const { class: className = 'carousel', ...attributes } = Astro.props;
 }
 @scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
 .carousel .shot img { max-width: calc(var(--relative-100-percent) * 1%); max-height: calc(var(--relative-100-percent) * 1%); width: auto; height: auto; }
+.carousel .shot > a { @apply flex; @apply items-center; @apply justify-center; width: calc(var(--relative-100-percent) * 1%); height: calc(var(--relative-100-percent) * 1%); }
 }
 @scope (html:has(body:not([data-page="index"], [data-page="creative"], [data-page="music"]))) {
 .carousel figcaption { margin: var(--dimension-0-6-rem) 0 0; @apply italic; color: var(--ink-soft); font-size: var(--dimension-1-rem); @apply text-center; }

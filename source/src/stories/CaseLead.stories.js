@@ -3,6 +3,6 @@ export default {title:'Components/CaseLead', component:Component, parameters:{pa
 export const Default = {args:{
   "class": "lead",
   "slots": {
-    "default": "\n        <p class=\"meta eyebrow\">Live · adventure engine</p>\n        <h2 class=\"case-title\">Anima</h2>\n        <p class=\"intro\">A graphic-adventure creation system: write scenes and dialogue, place hotspots, run the AI art pipeline, and walk the result as a playable point-and-click game. I proved it by building a real game on it — a Lovecraft adventure, Shadow Over Innsmouth.</p>\n        <p class=\"meta chips\">Creative AI toolchain <span class=\"dot\">·</span> Phaser + React <span class=\"dot\">·</span> Playable demo on request</p>\n      "
+    "default": "\n        <p class=\"meta eyebrow\">Case · open-world point-and-click</p>\n        <h2 class=\"case-title\">Anima</h2>\n        <p class=\"intro\">Anima is a system I built for creating open-world point-and-click games with AI. You write the story, and AI makes the characters, the scenes and whatever happens when a player tries something the story doesn't cover. Shadow Over Innsmouth, a Lovecraft adventure, is the game I'm making with it, and it isn't finished yet.</p>\n        <p class=\"meta chips\">Game creation with AI <span class=\"dot\">·</span> Phaser and React <span class=\"dot\">·</span> Playable prototype</p>\n      "
   }
 }};

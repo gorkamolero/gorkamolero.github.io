@@ -1,7 +1,0 @@
-import{t as e}from"./rolldown-runtime-Dh6celcD.js";import{C as t,S as n}from"./iframe-Cr5jfhY1.js";var r,i,a;function o(){return(o=e((()=>{t(),r={title:`Components/IntroNotes`,component:n,parameters:{page:`index`}},i={args:{class:`intro`,slots:{default:`
-        <p class="note">Web products<span>since 2012</span></p>
-        <p>I'm Gorka Molero. I've been building for the web for fourteen years and worked as a senior frontend engineer and UI lead on <a href="https://roadie.io" target="_blank" rel="noopener">Roadie</a>, <a href="https://www.pickzen.com" target="_blank" rel="noopener">Pickzen</a> and <a href="https://typeshare.co" target="_blank" rel="noopener">Typeshare</a>.</p>
-        <p class="note">AI agents<span>since 2023</span></p>
-        <p>Since 2023 most of my work has been with AI. At Roadie I built the AI infrastructure, the MCP server and much of the context layer for agents. I build interfaces people use to work with agents and systems that keep them reliable, and I make games and media with AI. Here's a selection.</p>
-        <p class="intro-cta"><a class="github-cta" href="https://github.com/gorkamolero" target="_blank" rel="noopener">Source for most of this on GitHub&nbsp;<span aria-hidden="true">→</span></a></p>
-      `}}},a=[`Default`]})))()}o();export{i as Default,a as __namedExportsOrder,r as default};
