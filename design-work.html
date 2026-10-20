@@ -127,18 +127,50 @@
       <section class="work" id="openroadie">
         <h2><a href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener"><em>openroadie</em></a></h2>
         <p class="meta"><a href="https://roadie.io" target="_blank" rel="noopener">Roadie</a> &middot; 2026 <span class="dot">&middot;</span> Open source</p>
-        <p><em>openroadie</em> is the open-source context layer that came out of Roadie, and I designed and built its interfaces. They run on <code>@roadiehq/ui</code>, a design system I co-led.</p>
+        <p><em>openroadie</em> is the open-source context layer that came out of Roadie, and I designed and built its interfaces. It maps how a company's services, repos and on-call connect, so agents can answer questions about them. The app runs on <code>@roadiehq/ui</code>, a design system I co-led, and these screens come from a local install with made-up demo data.</p>
         <figure class="plate">
-          <div class="shot"><a href="./assets/openroadie-ui/step-flow.webp" target="_blank" rel="noopener"><img src="./assets/openroadie-ui/step-flow.webp" width="866" height="784" loading="lazy" alt="An openroadie data-source pipeline: a Trigger card on an hourly schedule, a GitHub repositories source and a Catalog datastore sink, joined by arrows, with 1,204 objects shown on the connector."></a></div>
-          <figcaption>A data-source pipeline reads from top to bottom, from the trigger to the source and the sink, with the number of objects shown on the line between them.</figcaption>
+          <div class="shot dark"><a href="./assets/design-work/openroadie-pipeline-editor.webp" target="_blank" rel="noopener"><img src="./assets/design-work/openroadie-pipeline-editor.webp" width="2560" height="1600" loading="lazy" alt="The openroadie pipeline editor in the dark theme for a GitHub teams data source: schedule, source, two chained sources and store as cards joined by arrows, and after a dry run the selected step's JSON output in the panel on the right."></a></div>
+          <figcaption>Each pipeline is a column of step cards joined by arrows, and after a dry run you pick a step to read its output in the panel beside it.</figcaption>
         </figure>
         <figure class="plate">
-          <div class="shot"><a href="./assets/openroadie-ui/chain-of-thought-dark.webp" target="_blank" rel="noopener"><img src="./assets/openroadie-ui/chain-of-thought-dark.webp" width="1049" height="472" loading="lazy" alt="An agent's chain of thought in the dark theme: searching the catalog for Kubernetes workloads, with two workloads as chips, tracing a deployed commit to its pull request, and resolving the owning team."></a></div>
-          <figcaption>The chain of thought lists each step an agent takes, with an icon for each kind of step and the objects it found as chips.</figcaption>
+          <div class="shot dark"><a href="./assets/design-work/openroadie-relationships-map.webp" target="_blank" rel="noopener"><img src="./assets/design-work/openroadie-relationships-map.webp" width="2560" height="1600" loading="lazy" alt="The openroadie relationships map in the dark theme, built with React Flow: nineteen data sources from GitHub, Okta, PagerDuty and Slack as cards with their join fields, linked by coloured and dashed lines, with a legend of relationship types and a minimap."></a></div>
+          <figcaption>Each data source is a card listing the fields it joins on, and each relationship is a line between two fields, coloured and dashed by type, with a legend.</figcaption>
         </figure>
         <figure class="plate">
-          <div class="shot"><a href="./assets/openroadie-ui/tool.webp" target="_blank" rel="noopener"><img src="./assets/openroadie-ui/tool.webp" width="1136" height="851" loading="lazy" alt="A tool call, explore_objects_search, with its JSON input and its JSON result, in the light theme."></a></div>
-          <figcaption>A tool call shows its input and its result as code, and the components work in both light and dark.</figcaption>
+          <div class="shot"><a href="./assets/design-work/openroadie-rule-editor.webp" target="_blank" rel="noopener"><img src="./assets/design-work/openroadie-rule-editor.webp" width="2560" height="1600" loading="lazy" alt="The openroadie rule editor for Okta user to GitHub user in the light theme: source, field email, the samePerson match and the target in one row, with ten generated pairs listed underneath, all matched."></a></div>
+          <figcaption>A relationship rule is one row, from source and field through the match to the target, with a preview of the pairs it generates underneath, ten of ten matched here.</figcaption>
+        </figure>
+        <div class="carousel" aria-label="The openroadie setup wizard in the terminal">
+          <div class="carousel-track">
+            <figure class="slide"><div class="shot dark"><a href="./assets/design-work/openroadie-wizard-welcome.webp" target="_blank" rel="noopener"><img src="./assets/design-work/openroadie-wizard-welcome.webp" width="1950" height="1160" loading="lazy" alt="The openroadie setup wizard's welcome screen in the terminal, with its steps on the left and an orange heading."></a></div><figcaption>Setup starts in the terminal, where you only pick integrations, add their secrets and connect them.</figcaption></figure>
+            <figure class="slide"><div class="shot dark"><a href="./assets/design-work/openroadie-wizard-connect.webp" target="_blank" rel="noopener"><img src="./assets/design-work/openroadie-wizard-connect.webp" width="1950" height="1160" loading="lazy" alt="The setup wizard's connect step, with PagerDuty, GitHub, Okta and Slack each ticked green and 4/4 integrations connected above the list."></a></div><figcaption>Each integration gets a green tick when it connects, with a running count above the list.</figcaption></figure>
+            <figure class="slide"><div class="shot dark"><a href="./assets/design-work/openroadie-wizard-handoff.webp" target="_blank" rel="noopener"><img src="./assets/design-work/openroadie-wizard-handoff.webp" width="1950" height="1160" loading="lazy" alt="The setup wizard's last screen, with the command openroadie agent, the alternative skill install for a coding agent, and a note that tokens stay in setup."></a></div><figcaption>On the last screen you hand over to an agent, with a command to run or a skill to give your own coding agent, and a note that your credentials stay in setup.</figcaption></figure>
+          </div>
+          <div class="carousel-nav"><button type="button" class="carousel-prev" aria-label="Previous setup screen">&larr;</button><span class="carousel-count">1 / 3</span><button type="button" class="carousel-next" aria-label="Next setup screen">&rarr;</button></div>
+        </div>
+
+
+
+<script>
+      document.querySelectorAll('.carousel').forEach(function (c) {
+        var track = c.querySelector('.carousel-track'), slides = track.children, count = c.querySelector('.carousel-count');
+        var prev = c.querySelector('.carousel-prev'), next = c.querySelector('.carousel-next');
+        function step() { var s = slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : 0; return s > 0 ? s : track.clientWidth || 1; }
+        function index() { return Math.round(track.scrollLeft / step()); }
+        function update() { var i = index(); count.textContent = (i + 1) + ' / ' + slides.length; prev.disabled = i === 0; next.disabled = i === slides.length - 1; }
+        prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+        next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+        track.addEventListener('scroll', function () { window.requestAnimationFrame(update); });
+        update();
+      });
+    </script>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/design-work/openroadie-onboarding-checklist.webp" target="_blank" rel="noopener"><img src="./assets/design-work/openroadie-onboarding-checklist.webp" width="2560" height="1600" loading="lazy" alt="The openroadie Getting started checklist in the light theme: a progress bar at four of six, the first four steps struck through as done, and a filled Create a context group button on the next step."></a></div>
+          <figcaption>The Getting started checklist shows progress as a bar, strikes through finished steps and gives only the next step a filled button.</figcaption>
+        </figure>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/design-work/openroadie-storybook-step-node.webp" target="_blank" rel="noopener"><img src="./assets/design-work/openroadie-storybook-step-node.webp" width="2700" height="2000" loading="lazy" alt="The StepNode component from @roadiehq/ui in Storybook, its In Flow story selected in the sidebar next to Default, Statuses and Disabled, showing a trigger, source and sink as connected cards."></a></div>
+          <figcaption>The pipeline step card is a <code>@roadiehq/ui</code> component, StepNode, with Default, Statuses, In Flow and Disabled stories in Storybook.</figcaption>
         </figure>
         <p class="actions"><a class="button" href="https://github.com/RoadieHQ/openroadie" target="_blank" rel="noopener">The source on GitHub</a></p>
       </section>
