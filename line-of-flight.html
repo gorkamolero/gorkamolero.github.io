@@ -16,7 +16,7 @@
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer components{@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts{margin:var(--dimension-1-2-rem) 0 0;padding:0;list-style:none}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts li{grid-template-columns:var(--dimension-11-rem) 1fr;gap:var(--dimension-1-rem);padding:var(--dimension-0-6-rem) 0;border-bottom:var(--dimension-1-px) solid var(--rule);display:grid}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts strong{font-weight:var(--number-font-weight-600)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts span{color:var(--ink-soft)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts+p,.facts+.plate{margin-top:var(--dimension-1-4-rem)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){@media (width<=640px){.facts li{gap:var(--dimension-0-1-rem);grid-template-columns:1fr}}}}
 </style>
-<link rel="stylesheet" href="/_astro/line-of-flight.CfN2LzvO.css"></head>
+<link rel="stylesheet" href="/_astro/line-of-flight.B4BaCgA9.css"></head>
   <body data-page="line-of-flight">
     
   
@@ -146,6 +146,42 @@
       </section>
 
       <section class="work">
+        <h2>The plate</h2>
+        <p>Episode 2 is called P(DOOM). Its master plate is one huge pen drawing of the whole episode. It's a Roman town on a quiet Sunday, drawn like a Bruegel crowd scene. Everyone the episode talks about is in it somewhere. On the show, the deck flies through it scene by scene.</p>
+        <figure class="plate lof-pd" data-lof-plate>
+          <div class="lof-pd-frame">
+            <div class="lof-pd-view" tabindex="0" role="region" aria-roledescription="zoomable drawing" aria-label="The P(DOOM) plate. Left and right arrow keys step through its scenes.">
+              <img class="lof-pd-still" src="./assets/line-of-flight/p-doom/plate.webp" width="1800" height="1200" loading="lazy" alt="The whole P(DOOM) plate: a Roman town seen from above under a stormy sky, with a forum in the middle, a tower of Babel on the left, temples and a domed church at the back, a market in front and a cave cut open under the street.">
+            </div>
+            <div class="lof-bar">
+              <button type="button" class="lof-btn" data-pd="prev" aria-label="Previous scene">&larr;</button>
+              <span class="lof-count"><span data-pd="n">1</span> / <span data-pd="total">20</span></span>
+              <button type="button" class="lof-btn" data-pd="next" aria-label="Next scene">&rarr;</button>
+              <span class="lof-looks"><button type="button" class="lof-look" data-pd="whole">Whole</button><button type="button" class="lof-look" data-pd="open" aria-pressed="false">Full screen</button></span>
+            </div>
+            <p class="lof-pd-say" aria-live="polite"><strong data-pd="name">The whole plate</strong> <span data-pd="text">The town from above, with a cave cut open under its street. Eight small scenes of townsfolk and their tablets are tucked into its streets.</span></p>
+          </div>
+          <figcaption>The full plate, 16,384 pixels wide. Drag to look around, pinch or Ctrl-scroll to zoom, and use the arrows to step through its scenes.</figcaption>
+        </figure>
+
+        <h3>How it was made</h3>
+        <ul class="facts">
+          <li><strong>Square by square</strong><span>The town was drawn first, empty, in a thin pen. Then an image model drew townsfolk into it one grid square at a time, one generation for each of the 34 squares. A second pass lifted each square's townsfolk onto a layer of their own, so no seam runs through the town.</span></li>
+          <li><strong>Crowds on paper</strong><span>What a square couldn't hold whole, like a march running off its edges, was drawn alone on paper. The protesters were drawn twelve to a sheet. Each one was then placed by itself on real ground, in knots with open road between them.</span></li>
+          <li><strong>Foot checks</strong><span>Every townsperson and protester has a foot-check picture, showing the empty plate where they stand with a red circle where their feet land. The build refuses to run while any of those pictures is older than the person it checks.</span></li>
+          <li><strong>Faces</strong><span>Every named figure was redrawn from photos. Grimes's pose kept coming out wrong until it went to the model as a diagram first, with her photo.</span></li>
+          <li><strong>Review</strong><span>An independent reviewer agent checked every close-up against the goal at full size, 30 times over. Each pass's failures were fixed before the next, and the thirtieth, on 23 October 2026, found nothing failing.</span></li>
+        </ul>
+        <figure class="plate lof-pair">
+          <div class="lof-pair-row">
+            <div class="shot"><img src="./assets/line-of-flight/p-doom/grimes-pose.webp" width="1600" height="911" loading="lazy" alt="A pose diagram: on the left, a mannequin sitting at the foot of a round well beside a dark mound marked as the AI, her head the size of a standing priest's; on the right, the pose close up, labelled: head tilted and resting on the well, brass collar, right hand flat on the well's step, left hand on her knee, legs folded to her left under a long skirt."></div>
+            <div class="shot"><img src="./assets/line-of-flight/p-doom/grimes-drawn.webp" width="899" height="840" loading="lazy" alt="The AI, a mass of black coiled tentacles studded with eyes and wearing a small smiling white mask, chained to a stone well and ringed by hooded priests; Grimes sits on the paving at the well's foot in a long dress, leaning on it, bored, with a chain from her brass collar up to a tentacle."></div>
+          </div>
+          <figcaption>The pose diagram that went to the model, and Grimes as she is on the plate.</figcaption>
+        </figure>
+      </section>
+
+      <section class="work">
         <h2>The audio</h2>
         <p>I wear headphones and a clip-on DJI Mic Mini 2S. Its show settings (mono, low cut, clipping control, gain on the transmitter, noise cancelling) are written to the receiver over USB at every start, through a vendored open-source CLI driven from Python, and the cockpit reads them back once a minute, never while recording. Clipped on, it gave about 14 dB more voice than the MacBook's mic in the same room.</p>
         <p>On my side, Zencastr is pinned to that mic by name. The watcher wraps the page's <code>getUserMedia</code> before Zencastr loads, so whatever Zencastr asks for, it gets the named device with echo cancellation, noise suppression and auto gain off. The voice reaches the WAV as the mic gives it.</p>
@@ -195,3 +231,5 @@
 
 
 <script type="module" src="/_astro/line-of-flight.astro_astro_type_script_index_0_lang.B7T_Jq46.js"></script>
+
+<script type="module" src="/_astro/line-of-flight.astro_astro_type_script_index_1_lang.Czzxk7Q2.js"></script>

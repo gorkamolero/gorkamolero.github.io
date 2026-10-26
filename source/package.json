@@ -19,7 +19,8 @@
     "design:sync": "node scripts/design-tokens.mjs"
   },
   "dependencies": {
-    "astro": "7.3.8"
+    "astro": "7.3.8",
+    "openseadragon": "5.0.1"
   },
   "devDependencies": {
     "@google/design.md": "0.4.0",
