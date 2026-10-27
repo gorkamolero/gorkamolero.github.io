@@ -117,6 +117,7 @@ const afterFooter = ``;
           <div class="lof-pd-frame">
             <div class="lof-pd-view" tabindex="0" role="region" aria-roledescription="zoomable drawing" aria-label="The P(DOOM) plate. Left and right arrow keys step through its scenes.">
               <img class="lof-pd-still" src="./assets/line-of-flight/p-doom/plate.webp" width="1800" height="1200" loading="lazy" alt="The whole P(DOOM) plate: a Roman town seen from above under a stormy sky, with a forum in the middle, a tower of Babel on the left, temples and a domed church at the back, a market in front and a cave cut open under the street.">
+              <p class="lof-pd-hint" data-pd="hint" aria-hidden="true">Drag to look around. Pinch or Ctrl-scroll to zoom. Press &rarr; for the next of its 20 scenes.</p>
             </div>
             <div class="lof-bar">
               <button type="button" class="lof-btn" data-pd="prev" aria-label="Previous scene">&larr;</button>
@@ -126,7 +127,7 @@ const afterFooter = ``;
             </div>
             <p class="lof-pd-say" aria-live="polite"><strong data-pd="name">The whole plate</strong> <span data-pd="text">The town from above, with a cave under its street and eight small scenes hidden in it.</span></p>
           </div>
-          <figcaption>The full plate is 16,384 pixels wide. Drag to look around, pinch or Ctrl-scroll to zoom, and step through it with the arrows.</figcaption>
+          <figcaption>The full plate is 16,384 pixels wide.</figcaption>
         </figure>
 
         <h3>How it was made</h3>
@@ -274,9 +275,11 @@ const afterFooter = ``;
 
 /* the P(DOOM) plate: wider than the text column (up to 84rem, at most 86% of the screen's height), edge to edge on a phone, and it can take the whole window */
 .lof-pd-frame { --w: min(calc(100vw - 2rem), 84rem); width: var(--w); margin-left: calc((100% - var(--w)) / 2); }
-.lof-pd-view { position: relative; height: min(calc(var(--w) * 2 / 3), 86vh); border: 1px solid var(--rule); background: #fef8ea; overflow: hidden; outline: none; }
+.lof-pd-view { position: relative; height: max(26rem, calc(100vh - 5.25rem)); height: max(26rem, calc(100svh - 5.25rem)); border: 1px solid var(--rule); background: #fef8ea; overflow: hidden; outline: none; }
 .lof-pd-view:focus-visible { box-shadow: 0 0 0 2px var(--vermilion); }
-.lof-pd-still { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: contain; }
+.lof-pd-still { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.lof-pd-hint { position: absolute; z-index: 3; left: 50%; bottom: 1rem; transform: translateX(-50%); width: max-content; max-width: calc(100% - 2rem); margin: 0; padding: 0.45rem 0.9rem; background: rgba(29, 26, 23, 0.84); color: #f1e9dc; font-size: 0.98rem; line-height: 1.35; text-align: center; pointer-events: none; transition: opacity 0.6s; }
+.lof-pd.is-used .lof-pd-hint { opacity: 0; }
 .lof-pd-say { margin: 0.6rem 0 0; min-height: 1.45em; font-size: 1rem; line-height: 1.45; color: var(--ink-soft); }
 .lof-pd-say strong { margin-right: 0.3rem; font-family: var(--display); font-weight: 400; letter-spacing: 0.04em; color: var(--ink); }
 .lof-pd.is-open .lof-pd-frame { position: fixed; inset: 0; z-index: 100; width: auto; margin: 0; display: flex; flex-direction: column; padding: 0.8rem 1rem 0.6rem; background: var(--paper, #eee6d5); }
@@ -286,7 +289,7 @@ html.lof-pd-lock { overflow: hidden; }
 .lof-pair-row .shot { margin: 0; }
 @media (max-width: 640px) {
   .lof-pd-frame { --w: 100vw; }
-  .lof-pd-view { height: calc(var(--w) * 5 / 4); border-left: 0; border-right: 0; }
+  .lof-pd-view { height: max(24rem, calc(100vh - 7rem)); height: max(24rem, calc(100svh - 7rem)); border-left: 0; border-right: 0; }
   .lof-pd-frame > .lof-bar, .lof-pd-say { padding: 0 1rem; }
   .lof-pd.is-open .lof-pd-frame { padding: 0.6rem 0 0.5rem; }
   .lof-pd.is-open .lof-pd-view { height: auto; }
@@ -511,6 +514,9 @@ if (pd) {
   const $ = (k: string) => pd.querySelector<HTMLElement>(`[data-pd="${k}"]`)!;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   let OSD: any = null, viewer: any = null, at = 0, open = false, moved = false;
+  // the hint on the plate says what to do, in touch words on a phone, and fades once the plate is used
+  if (matchMedia('(pointer: coarse)').matches) $('hint').textContent = 'Drag to look around. Pinch to zoom. Tap → for the next of its 20 scenes.';
+  const used = () => pd!.classList.add('is-used');
 
   const inside = (x: number, y: number, [bx, by, bw, bh]: Box) => x >= bx && x <= bx + bw && y >= by * R && y <= (by + bh) * R;
   // a stop's box in the viewer's coordinates (the plate is 1 wide), with a little air round the close ones;
@@ -559,7 +565,7 @@ if (pd) {
     viewer.addHandler('canvas-scroll', (e: any) => {
       if (!open && !(e.originalEvent.ctrlKey || e.originalEvent.metaKey)) { e.preventDefaultAction = true; e.preventDefault = false; }
     });
-    for (const ev of ['canvas-drag', 'canvas-scroll', 'canvas-pinch']) viewer.addHandler(ev, (e: any) => { if (!e.preventDefaultAction) moved = true; });
+    for (const ev of ['canvas-drag', 'canvas-scroll', 'canvas-pinch']) viewer.addHandler(ev, (e: any) => { if (!e.preventDefaultAction) { moved = true; used(); } });
     // a click on a scene flies to it: the smallest stop under the pointer, never out of the one we're in
     viewer.addHandler('canvas-click', (e: any) => {
       if (!e.quick) return;
@@ -567,15 +573,15 @@ if (pd) {
       if (at && inside(p.x, p.y, STOPS[at][2])) return;
       let best = -1;
       STOPS.forEach(([, , b], i) => { if (i && inside(p.x, p.y, b) && (best < 0 || b[2] * b[3] < STOPS[best][2][2] * STOPS[best][2][3])) best = i; });
-      if (best > 0) go(best);
+      if (best > 0) { go(best); used(); }
     });
     // a new size (full screen, a turned phone) frames the stop again unless you've moved away from it
     viewer.addHandler('after-resize', () => requestAnimationFrame(() => { if (!moved) viewer.viewport.fitBoundsWithConstraints(rect(STOPS[at][2]), true); }));
   }
 
-  $('prev').addEventListener('click', () => go(at - 1));
-  $('next').addEventListener('click', () => go(at + 1));
-  $('whole').addEventListener('click', () => go(0));
+  $('prev').addEventListener('click', () => { go(at - 1); used(); });
+  $('next').addEventListener('click', () => { go(at + 1); used(); });
+  $('whole').addEventListener('click', () => { go(0); used(); });
   $('open').addEventListener('click', () => setOpen(!open));
   pd.addEventListener('keydown', e => {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
@@ -583,6 +589,7 @@ if (pd) {
     if (e.key === 'ArrowRight' || e.key === 'PageDown') go(at + 1);
     else if (e.key === 'ArrowLeft' || e.key === 'PageUp') go(at - 1);
     else return;
+    used();
     e.preventDefault(); e.stopPropagation();
   }, true);
   document.addEventListener('keydown', e => { if (open && e.key === 'Escape') setOpen(false); });
