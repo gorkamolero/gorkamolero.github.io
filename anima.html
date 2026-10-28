@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anima - Gorka Molero Case Study</title>
-    <meta name="description" content="Anima is a system I built for creating open-world point-and-click games with AI. Shadow Over Innsmouth, a Lovecraft adventure, is the game I'm making with it.">
+    <meta name="description" content="Anima is a system I built to make point-and-click games with AI. Shadow Over Innsmouth is the adventure I'm making with it.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
@@ -58,7 +58,7 @@
       <section class="lead">
         <p class="meta eyebrow">Case · open-world point-and-click</p>
         <h2 class="case-title">Anima</h2>
-        <p class="intro">Anima is a system I built for creating open-world point-and-click games with AI. You write the story, and AI makes the characters, the scenes and whatever happens when a player tries something the story doesn't cover. Shadow Over Innsmouth, a Lovecraft adventure, is the game I'm making with it, and it isn't finished yet.</p>
+        <p class="intro">Anima is a system I built to make point-and-click games efficiently with AI. The story stays separate from the visuals, so you can write and test it independently while creating the characters and scenes in the same set of tools. Shadow Over Innsmouth, a Lovecraft adventure, is the game I'm making with it, and it's still in development.</p>
         <p class="meta chips">Game creation with AI <span class="dot">&middot;</span> Phaser and React <span class="dot">&middot;</span> Playable prototype</p>
       </section>
 
@@ -72,17 +72,17 @@
 
       <section class="work">
         <h2>Problem</h2>
-        <p>A point-and-click adventure normally needs a writer, artists, animators and programmers. In an open world the player can click anything, so nobody can write every outcome by hand.</p>
-        <p>In Anima's open-world mode you can click any object in Innsmouth. A narrator offers three things to do, or you type your own. If you type that you set the van on fire, the van in the picture burns. When you go somewhere new, the place is generated, your character can walk around it, and it's still there the next time you come back. The narrator is the story guide from <a class="inline-link" href="./the-pulse.html">The Pulse</a>, my voice-narrated interactive fiction. The open world is a playable prototype so far.</p>
+        <p>I want to make games efficiently and, eventually, build a game studio around Anima.</p>
+        <p>I'm also experimenting with letting players explore freely, try things I haven't scripted and go somewhere I haven't designed, with AI generating new scenes in real time.</p>
       </section>
 
       <section class="work">
         <h2>What I Built</h2>
-        <p>Anima is a game engine, an editor and an art pipeline that all run from the same story script. The engine runs on Phaser, the editor is built in React, and each player's world is saved in a database behind a Hono API.</p>
+        <p>The engine runs on Phaser, the editor is built in React, and each player's world is saved in a database behind a Hono API.</p>
         <ul class="facts">
-          <li><strong>Language</strong><span>StoryScript, my own language for writing the story and everything you can click.</span></li>
-          <li><strong>Engine</strong><span>Characters walk on the floor at the right size and step behind furniture. In the open world, new places are generated as you go.</span></li>
-          <li><strong>Art pipeline</strong><span>Walk cycles generated as video, cut out with a difference matte and turned into game sprites.</span></li>
+          <li><strong>Story and dialogue</strong><span>StoryScript, my own language for writing the story, and a dialogue system based on StoryScript and Ink.</span></li>
+          <li><strong>Scenes</strong><span>Tools for creating scenes and detecting their walkable areas.</span></li>
+          <li><strong>Characters</strong><span>Characters generated as video, cut out with a difference matte and turned into animated sprites.</span></li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@
       <section class="work">
         <h2>Technical Decisions</h2>
         <ul class="points">
-          <li>In the open world, most clicks only change the narration, the voice and the character's animation. A new image is made only when something visible changes. Every generated place is cached and shared, so a place someone has already visited loads straight away.</li>
+          <li>In the experimental open world, most clicks only change the narration, the voice and the character's animation. A new image is made when something visible changes. Generated places are cached and shared.</li>
           <li>Language models are bad at pixel positions, so the floor and the perspective come from perception models. SAM 3 finds the floor, a depth model finds the horizon, and a vision model only answers whether the character looks right standing in the scene.</li>
           <li>The character's size comes from the depth of the scene. Every step is planned onto the floor so the feet don't slide, and the character can walk behind furniture and props.</li>
           <li>I test the walking without opening the game in a browser. A test harness replays 139 walks across ten scenes and checks every frame.</li>
