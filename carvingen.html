@@ -112,11 +112,30 @@
       </section>
 
       <section class="work">
+        <h2>From one painting to a character that walks</h2>
+        <p>Carvingen also takes a single character image all the way to a rigged, animated file a game engine can load. I added the seven nodes it needed on 3 November 2026, in one day, by directing coding agents: Claude Code planned the work and reviewed it, Codex built each part from those plans, and I ran a real character through every step to prove it.</p>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/carvingen/boy-canvas.jpg" target="_blank" rel="noopener"><img src="./assets/carvingen/boy-canvas.jpg" alt="The Carvingen canvas for the boy: image nodes with the painted reference and style references, then Prompt, Multi-view, Mesh, Bake, Rig, Animate and Engine export nodes in a row, each with a Viewer node underneath showing the 3D character." loading="lazy"></a></div>
+          <figcaption>The whole chain on one canvas, from the painted reference to the Unity export.</figcaption>
+        </figure>
+        <p>The boy started as a crop of a painting. A Prompt node redrew him as a full-body character design, and a Multi-view node turned that into front, side and back views in a T-pose. Mesh built the model with Tripo, at 28,114 triangles, and Bake ran Blender in the background to bring it down to 17,999 with the colour baked onto one texture. Rig gave him 65 bones, 40 of them in the fingers, and Animate added an idle and a walk that stay in place. The last node renamed the skeleton for Unity and wrote one FBX per clip. Every step stays a node you can rerun, and this run cost $0.90.</p>
+        <figure class="plate">
+          <div class="shot"><img src="./assets/carvingen/boy-multiview.jpg" alt="The boy as a full-body character design, then in a T-pose from the front, the side and the back." loading="lazy"></div>
+          <figcaption>The character design, then the front, side and back views the mesh is built from.</figcaption>
+        </figure>
+        <div class="steps pair">
+        <figure class="step"><div class="shot"><img src="./assets/carvingen/boy-rigged.jpg" alt="The rigged low-poly 3D model of the boy in a T-pose, rendered in Blender." loading="lazy"></div><figcaption>The rigged model, 17,999 triangles and 65 bones.</figcaption></figure>
+        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/boy-walk-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/boy-walk.mp4" aria-label="The boy walking in place in the Carvingen viewer."></video></div><figcaption>The walk, playing in the Viewer.</figcaption></figure>
+        </div>
+        <p>Running a real character through it found the problems no test would. The first rigs walked sideways, because the 3D models came back facing the wrong way, so Bake can now turn a model to face forward. Feeding Tripo its views in the wrong order painted a second face on the back of the head. Meshy numbers its spine bones from the top down, which would have swapped the chest and the spine in Unity, so the exporter names them by their distance from the hips. And an "in place" walk still started 1.45 metres ahead of the idle pose, so a Blender step now moves every clip back to the rest position.</p>
+      </section>
+
+      <section class="work">
         <h2>What&rsquo;s in it</h2>
         <ul class="facts">
-          <li><strong>Canvas</strong><span>Image, prompt, vision, video, mesh and viewer nodes. Every run is kept, any image can be a reference for the next, and every change can be undone.</span></li>
-          <li><strong>Models</strong><span>Flux Kontext Pro, Nano Banana 2 and Pro, GPT Image 2, Veo 3.1, Meshy v6 and Hunyuan 3D, all through fal.</span></li>
-          <li><strong>3D</strong><span>GLB, FBX and USDZ files, a viewer, and scripts that rig, animate and pack characters for games.</span></li>
+          <li><strong>Canvas</strong><span>Image, prompt, vision, video, multi-view, mesh, bake, rig, animate, engine export and viewer nodes. Every run is kept, any image can be a reference for the next, and every change can be undone.</span></li>
+          <li><strong>Models</strong><span>Flux Kontext Pro, Nano Banana 2 and Pro, GPT Image 2, Veo 3.1, Meshy v6, Tripo and Hunyuan 3D, through fal and Tripo.</span></li>
+          <li><strong>3D</strong><span>GLB, FBX and USDZ files, a viewer that plays animation clips, and FBX exports for Unity and Unreal.</span></li>
           <li><strong>Why a canvas</strong><span>A chat loses which image came from which. On the canvas you branch, compare and go back. It is a node workflow in the way ComfyUI is, built to take a concept all the way to a 3D model.</span></li>
         </ul>
         <p class="actions"><a class="button primary" href="https://github.com/gorkamolero/carvingen" target="_blank" rel="noopener">View source</a></p>
