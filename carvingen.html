@@ -125,7 +125,7 @@
         </figure>
         <div class="steps pair">
         <figure class="step"><div class="shot"><img src="./assets/carvingen/boy-rigged.jpg" alt="The rigged low-poly 3D model of the boy in a T-pose, rendered in Blender." loading="lazy"></div><figcaption>The rigged model, 17,999 triangles and 65 bones.</figcaption></figure>
-        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/boy-walk-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/boy-walk.mp4" aria-label="The boy walking in place in the Carvingen viewer."></video></div><figcaption>The walk, playing in the Viewer.</figcaption></figure>
+        <figure class="step"><div class="shot"><video controls playsinline preload="none" poster="./assets/carvingen/boy-walk-30-poster.jpg" src="https://pub-066596d7e4fe4de2b74eac13bb03fe55.r2.dev/carvingen/boy-walk-30.mp4" aria-label="The boy walking in place, rendered in Blender from the exported walk clip."></video></div><figcaption>The walk clip from the Unity export, rendered in Blender.</figcaption></figure>
         </div>
         <p>Running a real character through it found the problems no test would. The first rigs walked sideways, because the 3D models came back facing the wrong way, so Bake can now turn a model to face forward. Feeding Tripo its views in the wrong order painted a second face on the back of the head. Meshy numbers its spine bones from the top down, which would have swapped the chest and the spine in Unity, so the exporter names them by their distance from the hips. And an "in place" walk still started 1.45 metres ahead of the idle pose, so a Blender step now moves every clip back to the rest position.</p>
       </section>
