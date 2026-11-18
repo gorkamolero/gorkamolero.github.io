@@ -13,9 +13,9 @@
 <style>/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer components{:where(body[data-page=index]) .actions,:where(body[data-page=creative]) .actions{align-items:baseline;gap:var(--dimension-0-55-rem) var(--dimension-1-7-rem);flex-wrap:wrap;display:flex;margin-top:var(--dimension-1-3-rem)!important}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.actions{align-items:baseline;gap:var(--dimension-0-55-rem) var(--dimension-1-7-rem);flex-wrap:wrap;display:flex;margin-top:var(--dimension-1-3-rem)!important}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.route .actions{margin-top:var(--dimension-1-1-rem)!important}}.button{align-items:baseline;gap:calc(var(--relative-0-4-em) * 1em);font-family:var(--display);font-size:var(--dimension-0-98-rem);letter-spacing:calc(var(--relative-0-05-em) * 1em);color:var(--ink);transition:color var(--motion-transition-200) ease;background:0 0;border:0;padding:0;text-decoration:none;display:inline-flex}.button:after{content:"→";color:var(--vermilion);transition:transform var(--motion-transition-250) ease}.button[target=_blank]:after{content:"↗"}.button:hover{color:var(--vermilion)}.button:hover:after{transform:translateX(calc(var(--relative-0-18-em) * 1em))}.button[target=_blank]:hover:after{transform:translate(calc(var(--relative-0-12-em) * 1em), calc(var(--relative-negative-0-12-em) * 1em))}.button.primary{background:linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-middle) calc(var(--relative-50-percent) * 1%), var(--color-gradient-end));color:#0000;-webkit-background-clip:text;background-clip:text}.button.primary:before{content:"";width:calc(var(--dots-leading) * 1em);height:calc(var(--dots-leading) * 1em);margin-right:calc(var(--relative-0-1-em) * 1em);border-radius:calc(var(--relative-50-percent) * 1%);background:var(--vermilion);top:calc(var(--relative-negative-0-12-em) * 1em);align-self:baseline;position:relative}.button.primary:after{color:var(--color-gradient-end)}.button.primary:hover{color:#0000;text-decoration:underline;-webkit-text-decoration-color:var(--color-surface-8);-webkit-text-decoration-color:var(--color-surface-8);text-decoration-color:var(--color-surface-8);text-underline-offset:calc(var(--relative-0-25-em) * 1em)}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.work a:not(.button):hover{color:var(--vermilion)}}}
 @layer components{.dot-separator,.dot-leading,.dot-name{background:var(--color-vermilion);border-radius:calc(var(--relative-50-percent) * 1%);display:inline-block;position:relative}.dot-separator{width:calc(var(--dots-separator) * 1em);height:calc(var(--dots-separator) * 1em);top:calc(var(--dots-separator-raise) * -1em)}.dot-leading{width:calc(var(--dots-leading) * 1em);height:calc(var(--dots-leading) * 1em);top:calc(var(--dots-leading-raise) * -1em)}.dot-name{width:calc(var(--dots-name) * 1em);height:calc(var(--dots-name) * 1em)}}
+@reference "../styles/global.css";@layer components{.trend-chart{padding:var(--dimension-0-6-rem) 0 0;font-family:var(--body);color:var(--ink-soft);font-size:var(--dimension-0-82-rem);margin:0;line-height:1}.trend-plot{height:var(--dimension-14-rem);position:relative}.trend-chart svg{width:calc(var(--relative-100-percent) * 1%);height:calc(var(--relative-100-percent) * 1%);display:block;overflow:visible}.trend-grid{stroke:var(--rule);stroke-width:var(--dimension-1-px);vector-effect:non-scaling-stroke}.trend-mark{stroke:var(--ink-soft);stroke-width:var(--dimension-1-px);stroke-dasharray:3 3;vector-effect:non-scaling-stroke}.trend-line{fill:none;stroke:var(--vermilion);stroke-width:var(--dimension-2-px);stroke-linejoin:round;vector-effect:non-scaling-stroke}.trend-area{fill:color-mix(in srgb, var(--vermilion) 16%, transparent)}.trend-y{transform:translateY(calc(var(--relative-negative-1-2-em) * 1em));background:var(--color-paper);padding-right:var(--dimension-0-3-rem);font-variant-numeric:tabular-nums;position:absolute;left:0}.trend-note{padding-left:var(--dimension-0-4-rem);white-space:nowrap;color:var(--ink);font-style:italic;position:absolute}.trend-note.top{top:0}.trend-note.bottom{bottom:var(--dimension-0-3-rem)}.trend-bars{height:var(--dimension-3-rem);margin-top:var(--dimension-0-6-rem);border-bottom:var(--dimension-1-px) solid var(--rule);position:relative}.trend-bar{fill:var(--ink-soft)}.trend-bars-label{background:var(--color-paper);padding-left:var(--dimension-0-3-rem);font-style:italic;position:absolute;top:0;right:0}.trend-x{height:var(--dimension-1-4-rem);margin-top:var(--dimension-0-4-rem);position:relative}.trend-x span{white-space:nowrap;transform:translateX(calc(var(--relative-50-percent) * -1%));position:absolute;top:0}.trend-x span.start{transform:none}.trend-x span.end{transform:translateX(calc(var(--relative-100-percent) * -1%))}@media (width<=640px){.trend-plot{height:var(--dimension-11-rem)}.trend-chart{font-size:var(--dimension-0-78-rem)}}#saga-factory-architecture{width:min(1160px,100vw - 32px);max-width:none;margin-left:50%;transform:translate(-50%)}.saga-architecture svg{width:100%;height:auto;color:var(--ink);font-family:var(--body);font-size:18px;display:block}.saga-architecture .architecture-mobile{display:none}.saga-architecture .paper{fill:var(--color-paper)}.saga-architecture text{fill:currentColor}.saga-architecture .display{font-family:var(--display)}.saga-architecture .heading{font-size:34px}.saga-architecture .section{font-size:25px}.saga-architecture .group{font-size:17px}.saga-architecture .phase-name{font-size:16px;font-weight:500}.saga-architecture .role,.saga-architecture .small,.saga-architecture .verdict{font-size:16px}.saga-architecture .lane-name{font-size:17px}.saga-architecture .soft{fill:var(--ink-soft)}.saga-architecture .accent{fill:var(--vermilion)}.saga-architecture .phase{fill:var(--color-paper);stroke:var(--rule);stroke-width:1px}.saga-architecture .critic{fill:color-mix(in srgb, var(--vermilion) 5%, var(--color-paper));stroke:var(--vermilion);stroke-width:1px}.saga-architecture .rule,.saga-architecture .lane{stroke:var(--rule);stroke-width:1px}.saga-architecture .lane{stroke-dasharray:2 4}.saga-architecture .dot{fill:var(--vermilion)}.saga-architecture .boundary{stroke:var(--ink-soft);stroke-width:1px;stroke-dasharray:6 5}.saga-architecture .flow{fill:none;stroke:var(--ink-soft);stroke-width:1px;marker-end:url(#saga-arrow)}.saga-architecture .return{fill:none;stroke:var(--vermilion);stroke-width:1px;marker-end:url(#saga-arrow)}.saga-architecture .return-guide{fill:none;stroke:var(--vermilion);stroke-width:1px}@media (width<=1000px){#saga-factory-architecture{width:min(390px,100%);margin-left:0;transform:none}.saga-architecture .architecture-wide{display:none}.saga-architecture .architecture-mobile{display:block}.saga-architecture .architecture-mobile .flow,.saga-architecture .architecture-mobile .return{marker-end:url(#saga-mobile-arrow)}}}
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer components{:where(body[data-page=index]) .shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}:where(body[data-page=index]) .shot img,:where(body[data-page=index]) .shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot img,.shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate{margin:var(--dimension-1-6-rem) 0 0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate .shot{margin:0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate .shot>a{display:block}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate figcaption{margin:var(--dimension-0-6-rem) 0 0;color:var(--ink-soft);font-style:italic;font-size:var(--dimension-1-rem);text-align:center}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.narrow{max-width:var(--dimension-340-px);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.portrait{max-width:var(--dimension-24-rem);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate+p,.plate+h3{margin-top:var(--dimension-1-4-rem)}}}
-@reference "../styles/global.css";@layer components{.trend-chart{padding:var(--dimension-0-6-rem) 0 0;font-family:var(--body);color:var(--ink-soft);font-size:var(--dimension-0-82-rem);margin:0;line-height:1}.trend-plot{height:var(--dimension-14-rem);position:relative}.trend-chart svg{width:calc(var(--relative-100-percent) * 1%);height:calc(var(--relative-100-percent) * 1%);display:block;overflow:visible}.trend-grid{stroke:var(--rule);stroke-width:var(--dimension-1-px);vector-effect:non-scaling-stroke}.trend-mark{stroke:var(--ink-soft);stroke-width:var(--dimension-1-px);stroke-dasharray:3 3;vector-effect:non-scaling-stroke}.trend-line{fill:none;stroke:var(--vermilion);stroke-width:var(--dimension-2-px);stroke-linejoin:round;vector-effect:non-scaling-stroke}.trend-area{fill:color-mix(in srgb, var(--vermilion) 16%, transparent)}.trend-y{transform:translateY(calc(var(--relative-negative-1-2-em) * 1em));background:var(--color-paper);padding-right:var(--dimension-0-3-rem);font-variant-numeric:tabular-nums;position:absolute;left:0}.trend-note{padding-left:var(--dimension-0-4-rem);white-space:nowrap;color:var(--ink);font-style:italic;position:absolute}.trend-note.top{top:0}.trend-note.bottom{bottom:var(--dimension-0-3-rem)}.trend-bars{height:var(--dimension-3-rem);margin-top:var(--dimension-0-6-rem);border-bottom:var(--dimension-1-px) solid var(--rule);position:relative}.trend-bar{fill:var(--ink-soft)}.trend-bars-label{background:var(--color-paper);padding-left:var(--dimension-0-3-rem);font-style:italic;position:absolute;top:0;right:0}.trend-x{height:var(--dimension-1-4-rem);margin-top:var(--dimension-0-4-rem);position:relative}.trend-x span{white-space:nowrap;transform:translateX(calc(var(--relative-50-percent) * -1%));position:absolute;top:0}.trend-x span.start{transform:none}.trend-x span.end{transform:translateX(calc(var(--relative-100-percent) * -1%))}@media (width<=640px){.trend-plot{height:var(--dimension-11-rem)}.trend-chart{font-size:var(--dimension-0-78-rem)}}}
 </style></head>
   <body data-page="saga">
     
@@ -128,6 +128,386 @@
         <p>Saga's latest version is how I make Cybertantra, my channel about spirituality, with episodes up to fifty minutes long, narrated with Eleven v4, scored with Eleven Music and illustrated with OpenAI's image model.</p>
         <p>It now runs as a line of stages, each one an AI agent with its own job. A researcher gathers the sources. A writer builds the episode in three passes, a spine, a treatment and the script, and a critic reads each pass and sends it back when it isn't good enough. An editor chooses the pictures and what each camera move should land on, a producer voices the narration, the editor cuts it in Remotion, and a judge watches the cut. Nothing renders until I sign off. Saga then uploads it as a private, scheduled video with its title, chapters, captions and thumbnail.</p>
         <figure class="plate portrait"><div class="shot"><img src="./assets/saga-factory-episode-board.jpg" alt="Mastra Factory's Saga episodes board listing its stages in order: Idea, Research, Spine, Spine critic, Treatment, Treatment critic, Script, Script gate, Pictures and anchors, Anchors critic, Voice and listening draft, Edit, Judge, Render, and Upload (private, scheduled)." loading="lazy"></div><figcaption>Saga&#39;s episode board, every stage an episode passes through, in Mastra Factory.</figcaption></figure>
+        <figure class="plate saga-architecture" id="saga-factory-architecture">
+  <svg class="architecture-wide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 1010" role="img" aria-labelledby="saga-wide-title saga-wide-desc">
+    <title id="saga-wide-title">Saga on Mastra Factory — one episode, from idea to scheduled upload</title>
+    <desc id="saga-wide-desc">Eight stage groups run left to right. Five critic phases return failures to their maker, with an editor sign on the third valid critic refusal, never past failed house checks. Seven separate Factory role sessions drive Saga's stage.py. Matching newest JSON verdict files authorize board-rule moves. Render and upload remain on the episode board; there is no human review stop on this path.</desc>
+    <defs><marker id="saga-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><path d="M0 0 L7 3.5 L0 7 Z" fill="context-stroke"></path></marker></defs>
+    <rect class="paper" width="1160" height="1010"></rect>
+    <text class="display heading" x="30" y="44">Saga / one episode</text>
+    <text class="soft" x="30" y="75">Idea → research → writing → pictures → voice → cut → render → private, scheduled upload</text>
+    <line class="rule" x1="30" x2="1130" y1="96" y2="96"></line>
+    <text class="display section" x="30" y="131">Mastra Factory</text>
+    <text class="soft" x="245" y="131">Board phases · role seats · persistent sessions · rule-driven moves</text>
+    <g>
+        <text class="group" x="30" y="168">01 / Research</text>
+        <rect class="phase" x="30" y="188" width="112" height="86" rx="4"></rect>
+        <text class="phase-name" x="39" y="212">Research</text>
+        <text class="role soft" x="39" y="259">researcher</text>
+        
+          <path class="flow" d="M86 274 V310"></path>
+          <text class="small soft" x="30" y="343">Dossier + sources</text>
+          <text class="small soft" x="30" y="366">No critic phase</text>
+        
+        <path class="flow" d="M40 384 V418 H166 V231 H170"></path>
+      </g><g>
+        <text class="group" x="170" y="168">02 / Spine</text>
+        <rect class="phase" x="170" y="188" width="112" height="86" rx="4"></rect>
+        <text class="phase-name" x="179" y="212">Spine</text>
+        <text class="role soft" x="179" y="259">writer</text>
+        
+          <path class="flow" d="M226 274 V310"></path>
+          <text class="verdict soft" x="234" y="297">verdict</text>
+          <rect class="critic" x="170" y="314" width="112" height="66" rx="4"></rect>
+          <text class="phase-name" x="178" y="340">Spine critic</text>
+          <text class="role soft" x="178" y="363">review</text>
+          
+            <path class="return" d="M282 350 H302 V231 H284"></path>
+            <path class="return-guide" d="M302 350 V394 H292"></path>
+            <text class="small accent" x="188" y="399">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M180 384 V418 H306 V231 H310"></path>
+      </g><g>
+        <text class="group" x="310" y="168">03 / Treatment</text>
+        <rect class="phase" x="310" y="188" width="112" height="86" rx="4"></rect>
+        <text class="phase-name" x="319" y="212">Treatment</text>
+        <text class="role soft" x="319" y="259">writer</text>
+        
+          <path class="flow" d="M366 274 V310"></path>
+          <text class="verdict soft" x="374" y="297">verdict</text>
+          <rect class="critic" x="310" y="314" width="112" height="66" rx="4"></rect>
+          <text class="phase-name" x="318" y="340">Treatment critic</text>
+          <text class="role soft" x="318" y="363">review</text>
+          
+            <path class="return" d="M422 350 H442 V231 H424"></path>
+            <path class="return-guide" d="M442 350 V394 H432"></path>
+            <text class="small accent" x="328" y="399">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M320 384 V418 H446 V231 H450"></path>
+      </g><g>
+        <text class="group" x="450" y="168">04 / Script</text>
+        <rect class="phase" x="450" y="188" width="112" height="86" rx="4"></rect>
+        <text class="phase-name" x="459" y="212">Script</text>
+        <text class="role soft" x="459" y="259">writer</text>
+        
+          <path class="flow" d="M506 274 V310"></path>
+          <text class="verdict soft" x="514" y="297">verdict</text>
+          <rect class="critic" x="450" y="314" width="112" height="66" rx="4"></rect>
+          <text class="phase-name" x="458" y="340">Script gate</text>
+          <text class="role soft" x="458" y="363">review</text>
+          
+            <path class="return" d="M562 350 H582 V231 H564"></path>
+            <path class="return-guide" d="M582 350 V394 H572"></path>
+            <text class="small accent" x="468" y="399">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M460 384 V418 H586 V231 H590"></path>
+      </g><g>
+        <text class="group" x="590" y="168">05 / Pictures</text>
+        <rect class="phase" x="590" y="188" width="112" height="86" rx="4"></rect>
+        <text class="phase-name" x="599" y="212">Pictures and</text><text class="phase-name" x="599" y="231">anchors</text>
+        <text class="role soft" x="599" y="259">editor</text>
+        
+          <path class="flow" d="M646 274 V310"></path>
+          <text class="verdict soft" x="654" y="297">verdict</text>
+          <rect class="critic" x="590" y="314" width="112" height="66" rx="4"></rect>
+          <text class="phase-name" x="598" y="340">Anchors critic</text>
+          <text class="role soft" x="598" y="363">review</text>
+          
+            <path class="return" d="M702 350 H722 V231 H704"></path>
+            <path class="return-guide" d="M722 350 V394 H712"></path>
+            <text class="small accent" x="608" y="399">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M600 384 V418 H726 V231 H730"></path>
+      </g><g>
+        <text class="group" x="730" y="168">06 / Voice</text>
+        <rect class="phase" x="730" y="188" width="112" height="86" rx="4"></rect>
+        <text class="phase-name" x="739" y="212">Voice and</text><text class="phase-name" x="739" y="231">listening draft</text>
+        <text class="role soft" x="739" y="259">producer</text>
+        
+          <path class="flow" d="M786 274 V310"></path>
+          <text class="small soft" x="730" y="343">Local audio checks</text>
+          <text class="small soft" x="730" y="366">No critic phase</text>
+        
+        <path class="flow" d="M740 384 V418 H866 V231 H870"></path>
+      </g><g>
+        <text class="group" x="870" y="168">07 / Cut</text>
+        <rect class="phase" x="870" y="188" width="112" height="86" rx="4"></rect>
+        <text class="phase-name" x="879" y="212">Edit</text>
+        <text class="role soft" x="879" y="259">editor</text>
+        
+          <path class="flow" d="M926 274 V310"></path>
+          <text class="verdict soft" x="934" y="297">verdict</text>
+          <rect class="critic" x="870" y="314" width="112" height="66" rx="4"></rect>
+          <text class="phase-name" x="878" y="340">Judge</text>
+          <text class="role soft" x="878" y="363">review</text>
+          
+            <path class="return" d="M982 350 H1002 V231 H984"></path>
+            <path class="return-guide" d="M1002 350 V394 H992"></path>
+            <text class="small accent" x="888" y="399">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M880 384 V418 H1006 V231 H1010"></path>
+      </g><g>
+        <text class="group" x="1010" y="168">08 / Delivery</text>
+        <rect class="phase" x="1010" y="188" width="112" height="86" rx="4"></rect>
+        <text class="phase-name" x="1019" y="212">Render</text>
+        <text class="role soft" x="1019" y="259">renderer</text>
+        
+          <path class="flow" d="M1066 274 V310"></path>
+          <text class="verdict soft" x="1074" y="297">verdict</text>
+          <rect class="phase" x="1010" y="314" width="112" height="66" rx="4"></rect>
+          <text class="phase-name" x="1018" y="340">Upload</text>
+          <text class="role soft" x="1018" y="363">uploader</text>
+          
+        
+        
+      </g>
+    <text class="small soft" x="30" y="437">Forward arrows: verified PASS. FAIL returns to the maker; the editor signs critic round 3, not failed house checks.</text>
+    <text class="small soft" x="30" y="460">Idea starts research automatically. Upload → Scheduled (done). Every working phase also has Stuck / cancel exits.</text>
+    <line class="rule" x1="30" x2="1130" y1="482" y2="482"></line>
+    <text class="display section" x="30" y="515">One session per role, per card</text>
+    <text class="small soft" x="30" y="538">Dots mark phases using that role. A line is reused context, not parallel work. No cross-role inheritance.</text>
+    <text class="small soft" x="220" y="559">Research</text><text class="small soft" x="340" y="559">Spine</text><text class="small soft" x="460" y="559">Treatment</text><text class="small soft" x="580" y="559">Script</text><text class="small soft" x="700" y="559">Pictures</text><text class="small soft" x="820" y="559">Voice</text><text class="small soft" x="940" y="559">Cut</text><text class="small soft" x="1060" y="559">Delivery</text>
+    <g>
+      <text class="lane-name" x="30" y="587">researcher</text>
+      <line class="lane" x1="220" x2="1110" y1="582" y2="582"></line>
+      <circle class="dot" cx="250" cy="582" r="4"></circle>
+    </g><g>
+      <text class="lane-name" x="30" y="611">writer</text>
+      <line class="lane" x1="220" x2="1110" y1="606" y2="606"></line>
+      <circle class="dot" cx="370" cy="606" r="4"></circle><circle class="dot" cx="490" cy="606" r="4"></circle><circle class="dot" cx="610" cy="606" r="4"></circle>
+    </g><g>
+      <text class="lane-name" x="30" y="635">review</text>
+      <line class="lane" x1="220" x2="1110" y1="630" y2="630"></line>
+      <circle class="dot" cx="370" cy="630" r="4"></circle><circle class="dot" cx="490" cy="630" r="4"></circle><circle class="dot" cx="610" cy="630" r="4"></circle><circle class="dot" cx="730" cy="630" r="4"></circle><circle class="dot" cx="970" cy="630" r="4"></circle>
+    </g><g>
+      <text class="lane-name" x="30" y="659">editor</text>
+      <line class="lane" x1="220" x2="1110" y1="654" y2="654"></line>
+      <circle class="dot" cx="730" cy="654" r="4"></circle><circle class="dot" cx="970" cy="654" r="4"></circle>
+    </g><g>
+      <text class="lane-name" x="30" y="683">producer</text>
+      <line class="lane" x1="220" x2="1110" y1="678" y2="678"></line>
+      <circle class="dot" cx="850" cy="678" r="4"></circle>
+    </g><g>
+      <text class="lane-name" x="30" y="707">renderer</text>
+      <line class="lane" x1="220" x2="1110" y1="702" y2="702"></line>
+      <circle class="dot" cx="1090" cy="702" r="4"></circle>
+    </g><g>
+      <text class="lane-name" x="30" y="731">uploader</text>
+      <line class="lane" x1="220" x2="1110" y1="726" y2="726"></line>
+      <circle class="dot" cx="1090" cy="726" r="4"></circle>
+    </g>
+    <line class="boundary" x1="30" x2="1130" y1="752" y2="752"></line>
+    <text class="display section" x="30" y="786">Saga</text>
+    <text class="soft" x="135" y="786">Production code + evidence on the real Saga filesystem, outside the session sandbox clone</text>
+    <path class="flow" d="M180 727 V737 H200"></path>
+    <text class="verdict soft" x="210" y="743">session runs execute_command → stage.py</text>
+    <path class="flow" d="M520 737 V760 H18 V860 H28"></path>
+    <rect class="phase" x="30" y="809" width="335" height="103" rx="4"></rect>
+    <text class="phase-name" x="47" y="836">stage.py run / wait</text>
+    <text class="soft" x="47" y="863">Make → check → report</text>
+    <text class="small soft" x="47" y="890">Codex / optional Claude script writer</text>
+    <path class="flow" d="M366 860 H403"></path>
+    <rect class="phase" x="410" y="809" width="335" height="103" rx="4"></rect>
+    <text class="phase-name" x="427" y="836">Work + verdict files</text>
+    <text class="small soft" x="427" y="863">work/factory/&lt;card&gt;/verdicts/&lt;id&gt;.json</text>
+    <text class="small soft" x="427" y="890">Vault writing · media · checks · critic memory</text>
+    <path class="flow" d="M746 860 H783"></path>
+    <rect class="critic" x="790" y="809" width="340" height="103" rx="4"></rect>
+    <text class="phase-name" x="807" y="836">Saga board's onResult rule</text>
+    <text class="small soft" x="807" y="863">Matching + newest verdict → transition</text>
+    <text class="small soft" x="807" y="890">No direct session move-tool calls</text>
+    <path class="flow" d="M1098 809 V770 H1144 V131 H1000"></path>
+    <text class="small soft" x="1000" y="119">moves the card</text>
+    <text class="small soft" x="30" y="948">Saga engines: Pi + web research · voice / images / music · Remotion build + render · YouTube upload + read-back</text>
+    <text class="small soft" x="30" y="976">Episode board: no human review stop. Shorts differ: an external Review with Gorka releases Render.</text>
+  </svg>
+  <svg class="architecture-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 2600" role="img" aria-labelledby="saga-mobile-title saga-mobile-desc">
+    <title id="saga-mobile-title">Saga episode architecture, mobile reading order</title>
+    <desc id="saga-mobile-desc">The desktop left-to-right phase groups reflow top to bottom without changing the order, roles or critic return edges.</desc>
+    <defs><marker id="saga-mobile-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><path d="M0 0 L7 3.5 L0 7 Z" fill="context-stroke"></path></marker></defs>
+    <rect class="paper" width="350" height="2600"></rect>
+    <text class="display heading" x="16" y="38">Saga / one episode</text>
+    <text class="display section" x="16" y="75">Mastra Factory</text>
+    <text class="soft" x="16" y="101">Board · seats · sessions · moves</text>
+    <text class="small soft" x="16" y="128">Idea starts Research automatically.</text>
+    <g>
+        <text class="group" x="16" y="160">01 / Research</text>
+        <rect class="phase" x="16" y="172" width="144" height="82" rx="4"></rect>
+        <text class="phase-name" x="26" y="197">Research</text>
+        <text class="role soft" x="26" y="239">researcher</text>
+        
+          <text class="small soft" x="184" y="205">Dossier + sources</text>
+          <text class="small soft" x="184" y="230">No critic phase</text>
+        
+        <path class="flow" d="M23 260 V308"></path>
+      </g><g>
+        <text class="group" x="16" y="331">02 / Spine</text>
+        <rect class="phase" x="16" y="343" width="144" height="82" rx="4"></rect>
+        <text class="phase-name" x="26" y="368">Spine</text>
+        <text class="role soft" x="26" y="410">writer</text>
+        
+          <path class="flow" d="M160 383 H187"></path>
+          <rect class="critic" x="193" y="343" width="141" height="82" rx="4"></rect>
+          <text class="phase-name" x="203" y="374">Spine critic</text>
+          <text class="role soft" x="203" y="410">review</text>
+          
+            <path class="return" d="M263 425 V454 H88 V427"></path>
+            <text class="small accent" x="116" y="449">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M23 431 V479"></path>
+      </g><g>
+        <text class="group" x="16" y="502">03 / Treatment</text>
+        <rect class="phase" x="16" y="514" width="144" height="82" rx="4"></rect>
+        <text class="phase-name" x="26" y="539">Treatment</text>
+        <text class="role soft" x="26" y="581">writer</text>
+        
+          <path class="flow" d="M160 554 H187"></path>
+          <rect class="critic" x="193" y="514" width="141" height="82" rx="4"></rect>
+          <text class="phase-name" x="203" y="545">Treatment critic</text>
+          <text class="role soft" x="203" y="581">review</text>
+          
+            <path class="return" d="M263 596 V625 H88 V598"></path>
+            <text class="small accent" x="116" y="620">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M23 602 V650"></path>
+      </g><g>
+        <text class="group" x="16" y="673">04 / Script</text>
+        <rect class="phase" x="16" y="685" width="144" height="82" rx="4"></rect>
+        <text class="phase-name" x="26" y="710">Script</text>
+        <text class="role soft" x="26" y="752">writer</text>
+        
+          <path class="flow" d="M160 725 H187"></path>
+          <rect class="critic" x="193" y="685" width="141" height="82" rx="4"></rect>
+          <text class="phase-name" x="203" y="716">Script gate</text>
+          <text class="role soft" x="203" y="752">review</text>
+          
+            <path class="return" d="M263 767 V796 H88 V769"></path>
+            <text class="small accent" x="116" y="791">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M23 773 V821"></path>
+      </g><g>
+        <text class="group" x="16" y="844">05 / Pictures</text>
+        <rect class="phase" x="16" y="856" width="144" height="82" rx="4"></rect>
+        <text class="phase-name" x="26" y="881">Pictures and</text><text class="phase-name" x="26" y="900">anchors</text>
+        <text class="role soft" x="26" y="923">editor</text>
+        
+          <path class="flow" d="M160 896 H187"></path>
+          <rect class="critic" x="193" y="856" width="141" height="82" rx="4"></rect>
+          <text class="phase-name" x="203" y="887">Anchors critic</text>
+          <text class="role soft" x="203" y="923">review</text>
+          
+            <path class="return" d="M263 938 V967 H88 V940"></path>
+            <text class="small accent" x="116" y="962">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M23 944 V992"></path>
+      </g><g>
+        <text class="group" x="16" y="1015">06 / Voice</text>
+        <rect class="phase" x="16" y="1027" width="144" height="82" rx="4"></rect>
+        <text class="phase-name" x="26" y="1052">Voice and</text><text class="phase-name" x="26" y="1071">listening draft</text>
+        <text class="role soft" x="26" y="1094">producer</text>
+        
+          <text class="small soft" x="184" y="1060">Local audio checks</text>
+          <text class="small soft" x="184" y="1085">No critic phase</text>
+        
+        <path class="flow" d="M23 1115 V1163"></path>
+      </g><g>
+        <text class="group" x="16" y="1186">07 / Cut</text>
+        <rect class="phase" x="16" y="1198" width="144" height="82" rx="4"></rect>
+        <text class="phase-name" x="26" y="1223">Edit</text>
+        <text class="role soft" x="26" y="1265">editor</text>
+        
+          <path class="flow" d="M160 1238 H187"></path>
+          <rect class="critic" x="193" y="1198" width="141" height="82" rx="4"></rect>
+          <text class="phase-name" x="203" y="1229">Judge</text>
+          <text class="role soft" x="203" y="1265">review</text>
+          
+            <path class="return" d="M263 1280 V1309 H88 V1282"></path>
+            <text class="small accent" x="116" y="1304">FAIL · 3 rounds</text>
+          
+        
+        <path class="flow" d="M23 1286 V1334"></path>
+      </g><g>
+        <text class="group" x="16" y="1357">08 / Delivery</text>
+        <rect class="phase" x="16" y="1369" width="144" height="82" rx="4"></rect>
+        <text class="phase-name" x="26" y="1394">Render</text>
+        <text class="role soft" x="26" y="1436">renderer</text>
+        
+          <path class="flow" d="M160 1409 H187"></path>
+          <rect class="phase" x="193" y="1369" width="141" height="82" rx="4"></rect>
+          <text class="phase-name" x="203" y="1400">Upload</text>
+          <text class="role soft" x="203" y="1436">uploader</text>
+          
+        
+        <path class="flow" d="M23 1457 V1505"></path>
+      </g>
+    <text class="phase-name" x="16" y="1545">Scheduled (done)</text>
+    <text class="small soft" x="16" y="1573">Forward arrows: PASS; critic round 3 is</text>
+    <text class="small soft" x="16" y="1593">editor-signed, never past house checks.</text>
+    <text class="small soft" x="16" y="1618">All work also has Stuck / cancel exits.</text>
+    <line class="rule" x1="16" x2="334" y1="1640" y2="1640"></line>
+    <text class="display section" x="16" y="1673">Persistent role sessions</text>
+    <text class="small soft" x="16" y="1699">One per role per card; no role inherits.</text>
+    <g>
+      <line class="lane" x1="16" x2="334" y1="1720" y2="1720"></line>
+      <text class="lane-name" x="16" y="1739">researcher</text>
+      <text class="small soft" x="16" y="1757">research</text>
+    </g><g>
+      <line class="lane" x1="16" x2="334" y1="1768" y2="1768"></line>
+      <text class="lane-name" x="16" y="1787">writer</text>
+      <text class="small soft" x="16" y="1805">spine → treatment → script</text>
+    </g><g>
+      <line class="lane" x1="16" x2="334" y1="1816" y2="1816"></line>
+      <text class="lane-name" x="16" y="1835">review</text>
+      <text class="small soft" x="16" y="1853">all five critics / judges</text>
+    </g><g>
+      <line class="lane" x1="16" x2="334" y1="1864" y2="1864"></line>
+      <text class="lane-name" x="16" y="1883">editor</text>
+      <text class="small soft" x="16" y="1901">pictures → edit</text>
+    </g><g>
+      <line class="lane" x1="16" x2="334" y1="1912" y2="1912"></line>
+      <text class="lane-name" x="16" y="1931">producer</text>
+      <text class="small soft" x="16" y="1949">voice + listening checks</text>
+    </g><g>
+      <line class="lane" x1="16" x2="334" y1="1960" y2="1960"></line>
+      <text class="lane-name" x="16" y="1979">renderer</text>
+      <text class="small soft" x="16" y="1997">render driver; no creative model</text>
+    </g><g>
+      <line class="lane" x1="16" x2="334" y1="2008" y2="2008"></line>
+      <text class="lane-name" x="16" y="2027">uploader</text>
+      <text class="small soft" x="16" y="2045">private scheduled upload</text>
+    </g>
+    <line class="boundary" x1="16" x2="334" y1="2075" y2="2075"></line>
+    <text class="display section" x="16" y="2110">Saga / production + evidence</text>
+    <text class="small soft" x="16" y="2136">Each seat calls execute_command in Saga.</text>
+    <rect class="phase" x="16" y="2154" width="318" height="68" rx="4"></rect>
+    <text class="phase-name" x="29" y="2180">stage.py run / wait</text>
+    <text class="small soft" x="29" y="2205">Make → check → report; child model calls</text>
+    <path class="flow" d="M175 2222 V2242"></path>
+    <rect class="phase" x="16" y="2248" width="318" height="81" rx="4"></rect>
+    <text class="phase-name" x="29" y="2274">Work + verdict files</text>
+    <text class="small soft" x="29" y="2295">work/factory/&lt;card&gt;/verdicts/&lt;id&gt;.json</text>
+    <text class="small soft" x="29" y="2315">Vault writing · media · critic memory</text>
+    <path class="flow" d="M175 2329 V2349"></path>
+    <rect class="critic" x="16" y="2355" width="318" height="81" rx="4"></rect>
+    <text class="phase-name" x="29" y="2381">Saga rule → Factory move</text>
+    <text class="small soft" x="29" y="2402">Only a matching, newest verdict counts.</text>
+    <text class="small soft" x="29" y="2422">Session move-tool calls are refused.</text>
+    <text class="small soft" x="16" y="2466">Saga owns research, voice, images, music,</text>
+    <text class="small soft" x="16" y="2486">Remotion and YouTube upload / read-back.</text>
+    <text class="small soft" x="16" y="2520">No human review stop on this episode path.</text>
+    <text class="small soft" x="16" y="2540">Shorts wait at Review with Gorka.</text>
+    <text class="small soft" x="16" y="2573">Render → private scheduled upload ≠ public.</text>
+  </svg>
+<figcaption>Saga’s episode board: separate role sessions, file-backed verdicts and bounded critic loops in Mastra Factory.</figcaption></figure>
         <p>Holding one voice steady for fifty minutes is the hard part, so Saga narrates in short takes, each with a warm-up line that is cut afterwards, and splices them back together sentence by sentence. The camera moves across each image toward whatever the current sentence is about.</p>
         <figure class="plate"><div class="shot"><img src="./assets/saga-remotion-studio-fire.jpg" alt="Remotion Studio showing Saga's edit of the Cybertantra episode The Fire in Your Belly: the frame preview, an illustration of a stepped pyramid of figures under a dark sun, and a 30-minute timeline of the episode's picture and narration sequences." loading="lazy"></div><figcaption>Saga&#39;s edit of an episode, The Fire in Your Belly, open in Remotion Studio.</figcaption></figure>
         <p>Cybertantra went live on 29 September 2026, and its first episode came out on 3 October. By 2 November the channel had 35,200 views, 641 hours of watch time and 281 subscribers, from episodes of 18 to 50 minutes and the Shorts that send viewers to them.</p>
