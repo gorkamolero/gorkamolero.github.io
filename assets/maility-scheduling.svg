@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1530" viewBox="0 0 960 1530" role="img" aria-labelledby="title desc">
+<title id="title">Maility — Scheduling and rate limits</title>
+<desc id="desc">Campaign scheduling checks timezone, weekdays, holidays and time slots. Account eligibility, counter ordering, weighted campaign selection and daily campaign budgets lead to a due job. Success increments counters and leashes the account for twenty seconds. Fifteen-minute resets and a separately controlled warmup pool are distinct mechanisms.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#100f14"/>
+<stop offset=".55" stop-color="#17101d"/>
+<stop offset="1" stop-color="#121a1f"/>
+</linearGradient>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse">
+<path d="M0 0 L8 4 L0 8" fill="none" stroke="#4cc9f0" stroke-width="1.5"/>
+</marker>
+<style>.bg{fill:url(#bg)}.panel{fill:#17181f;stroke:#3a3d49;stroke-width:1.4}.card{fill:#22232b;stroke:#474b59;stroke-width:1.1}.soft{fill:#16242a;stroke:#366779;stroke-width:1.1}.warm{fill:#2a1d18;stroke:#8b5543;stroke-width:1.1}.gold{fill:#2a2715;stroke:#756c35;stroke-width:1.1}.brand{fill:#fff8ee;font:800 36px Arial,sans-serif}.title{fill:#fff;font:700 25px Arial,sans-serif}.body{fill:#ecedf2;font:400 21px Arial,sans-serif}.small{fill:#c2c5cf;font:400 19px Arial,sans-serif}.label{fill:#a9aab4;font:700 17px Arial,sans-serif;letter-spacing:1.6px}.metric{fill:#f9c74f;font:800 38px Arial,sans-serif}.edge{fill:none;stroke:#4cc9f0;stroke-width:2;marker-end:url(#arrow)}.return{fill:none;stroke:#f9c74f;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#arrow)}.lifeline{stroke:#474b59;stroke-width:1.4;stroke-dasharray:6 7}.band{fill:#101218;stroke:#3a3d49;stroke-width:1.1}</style>
+</defs>
+<rect class="bg" width="960" height="1530"/>
+<rect class="panel" x="28" y="28" width="904" height="100" rx="10"/>
+<text class="brand" x="52" y="72">Maility</text>
+<text class="label" x="52" y="106">CONFIGURED LIMITS, NOT MEASURED THROUGHPUT</text>
+<rect class="soft" x="110" y="175" width="740" height="110" rx="12"/>
+<text class="title" x="130" y="211">Minute scheduler</text>
+<text class="body" x="130" y="245">Three rounds, 15 seconds apart</text>
+<path class="edge" d="M480 285 V322"/>
+<rect class="card" x="110" y="322" width="740" height="110" rx="12"/>
+<text class="title" x="130" y="358">Campaign window</text>
+<text class="body" x="130" y="392">Timezone + weekdays + holiday rules</text>
+<path class="edge" d="M480 432 V469"/>
+<rect class="card" x="110" y="469" width="740" height="110" rx="12"/>
+<text class="title" x="130" y="505">Eligible account</text>
+<text class="body" x="130" y="539">running; ready or advancedMode</text>
+<path class="edge" d="M480 579 V616"/>
+<rect class="gold" x="110" y="616" width="740" height="110" rx="12"/>
+<text class="title" x="130" y="652">Account budget</text>
+<text class="body" x="130" y="686">sent &lt; limit; leash has elapsed</text>
+<path class="edge" d="M480 726 V763"/>
+<rect class="card" x="110" y="763" width="740" height="110" rx="12"/>
+<text class="title" x="130" y="799">Rotation + campaign choice</text>
+<text class="body" x="130" y="833">sent-group ordering; random ties; weighted choice</text>
+<path class="edge" d="M480 873 V910"/>
+<rect class="gold" x="110" y="910" width="740" height="110" rx="12"/>
+<text class="title" x="130" y="946">Campaign budget + due job</text>
+<text class="body" x="130" y="980">Daily cap; first-touch / follow-up split; sender affinity</text>
+<path class="edge" d="M480 1020 V1057"/>
+<rect class="soft" x="110" y="1057" width="740" height="110" rx="12"/>
+<text class="title" x="130" y="1093">Successful send</text>
+<text class="body" x="130" y="1127">Counters increment; account leash = now + 20 seconds</text>
+<rect class="warm" x="38" y="1230" width="431" height="205" rx="12"/>
+<text class="title" x="58" y="1266">Daily maintenance</text>
+<text class="body" x="58" y="1300">Every 15 minutes</text>
+<text class="body" x="58" y="1329">Due sent counter → 0</text>
+<text class="body" x="58" y="1358">Next account reset: tomorrow</text>
+<text class="body" x="58" y="1387">Ramp code is commented.</text>
+<rect class="warm" x="491" y="1230" width="431" height="205" rx="12"/>
+<text class="title" x="511" y="1266">Separate warmup pool</text>
+<text class="body" x="511" y="1300">20-account selection chunk</text>
+<text class="body" x="511" y="1329">Own warmupLimit counters</text>
+<text class="body" x="511" y="1358">Pub/Sub → rescue/create/answer</text>
+<text class="body" x="511" y="1387">Export commented in source.</text>
+<path d="M38 1464 H922" stroke="#3a3d49"/>
+<text class="small" x="38" y="1497">Recovered backend · source-grounded architecture · no production volume claim</text>
+</svg>

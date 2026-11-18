@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1430" viewBox="0 0 960 1430" role="img" aria-labelledby="title desc">
+<title id="title">Maility — Sending pipeline</title>
+<desc id="desc">Batch preparation creates a journey and its first scheduled job. Three client scheduler rounds create client run documents; a client runner selects a job, and its scheduled-to-sending update triggers the job runner. Nylas returns message identity; successful completion creates the next step and an activity. Activities drive projections and integration delivery.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#100f14"/>
+<stop offset=".55" stop-color="#17101d"/>
+<stop offset="1" stop-color="#121a1f"/>
+</linearGradient>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse">
+<path d="M0 0 L8 4 L0 8" fill="none" stroke="#4cc9f0" stroke-width="1.5"/>
+</marker>
+<style>.bg{fill:url(#bg)}.panel{fill:#17181f;stroke:#3a3d49;stroke-width:1.4}.card{fill:#22232b;stroke:#474b59;stroke-width:1.1}.soft{fill:#16242a;stroke:#366779;stroke-width:1.1}.warm{fill:#2a1d18;stroke:#8b5543;stroke-width:1.1}.gold{fill:#2a2715;stroke:#756c35;stroke-width:1.1}.brand{fill:#fff8ee;font:800 36px Arial,sans-serif}.title{fill:#fff;font:700 25px Arial,sans-serif}.body{fill:#ecedf2;font:400 21px Arial,sans-serif}.small{fill:#c2c5cf;font:400 19px Arial,sans-serif}.label{fill:#a9aab4;font:700 17px Arial,sans-serif;letter-spacing:1.6px}.metric{fill:#f9c74f;font:800 38px Arial,sans-serif}.edge{fill:none;stroke:#4cc9f0;stroke-width:2;marker-end:url(#arrow)}.return{fill:none;stroke:#f9c74f;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#arrow)}.lifeline{stroke:#474b59;stroke-width:1.4;stroke-dasharray:6 7}.band{fill:#101218;stroke:#3a3d49;stroke-width:1.1}</style>
+</defs>
+<rect class="bg" width="960" height="1430"/>
+<rect class="panel" x="28" y="28" width="904" height="100" rx="10"/>
+<text class="brand" x="52" y="72">Maility</text>
+<text class="label" x="52" y="106">DOCUMENT EVENTS CONNECT THE WORKERS</text>
+<text class="label" x="38" y="173">A. PREPARE WORK</text>
+<rect class="soft" x="38" y="194" width="274" height="110" rx="12"/>
+<text class="title" x="58" y="230">Batch Scheduler</text>
+<text class="body" x="58" y="264">Due campaigns</text>
+<rect class="card" x="344" y="194" width="274" height="110" rx="12"/>
+<text class="title" x="364" y="230">Firestore</text>
+<text class="body" x="364" y="264">Batches / people</text>
+<rect class="soft" x="650" y="194" width="274" height="110" rx="12"/>
+<text class="title" x="670" y="230">Journey builder</text>
+<text class="body" x="670" y="264">batchRunner trigger</text>
+<path class="edge" d="M312 246 H344"/>
+<path class="edge" d="M618 246 H650"/>
+<rect class="gold" x="38" y="355" width="886" height="100" rx="12"/>
+<text class="title" x="58" y="391">Ready prospect → journey → first scheduled job</text>
+<text class="body" x="58" y="425">Later jobs are created only after a successful send.</text>
+<path class="edge" d="M787 304 V330 H480 V355"/>
+<text class="label" x="38" y="510">B. SELECT, SEND, RECORD</text>
+<rect class="soft" x="39" y="535" width="172" height="85" rx="10"/>
+<text class="title" x="125" y="570" text-anchor="middle">Client</text>
+<text class="body" x="125" y="598" text-anchor="middle">Scheduler</text>
+<path class="lifeline" d="M125 620 V1175"/>
+<rect class="soft" x="269" y="535" width="172" height="85" rx="10"/>
+<text class="title" x="355" y="570" text-anchor="middle">Client</text>
+<text class="body" x="355" y="598" text-anchor="middle">Runner</text>
+<path class="lifeline" d="M355 620 V1175"/>
+<rect class="soft" x="499" y="535" width="172" height="85" rx="10"/>
+<text class="title" x="585" y="570" text-anchor="middle">Job</text>
+<text class="body" x="585" y="598" text-anchor="middle">Runner</text>
+<path class="lifeline" d="M585 620 V1175"/>
+<rect class="soft" x="729" y="535" width="172" height="85" rx="10"/>
+<text class="title" x="815" y="570" text-anchor="middle">Nylas /</text>
+<text class="body" x="815" y="598" text-anchor="middle">activities</text>
+<path class="lifeline" d="M815 620 V1175"/>
+<text class="body" x="48" y="660">1  Create pending clientRun</text>
+<path class="edge" d="M125 680 H355"/>
+<text class="body" x="48" y="770">2  Select job; scheduled → sending</text>
+<path class="edge" d="M355 790 H585"/>
+<text class="body" x="48" y="880">3  Validate, render, send tracked email</text>
+<path class="edge" d="M585 900 H815"/>
+<text class="body" x="48" y="990">4  Return message / thread identity</text>
+<path class="return" d="M815 1010 H585"/>
+<text class="body" x="48" y="1100">5  Commit job + next step + activity</text>
+<path class="edge" d="M585 1120 H815"/>
+<rect class="warm" x="38" y="1212" width="886" height="122" rx="12"/>
+<text class="title" x="58" y="1248">Activity handler</text>
+<text class="body" x="58" y="1282">Activities trigger projections, suppression and integration jobs.</text>
+<text class="body" x="58" y="1311">emailSent itself is recorded by the send-success path.</text>
+<path class="edge" d="M815 1175 V1212"/>
+<path d="M38 1364 H922" stroke="#3a3d49"/>
+<text class="small" x="38" y="1397">Recovered backend · source-grounded architecture · no production volume claim</text>
+</svg>

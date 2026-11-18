@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1450" viewBox="0 0 960 1450" role="img" aria-labelledby="title desc">
+<title id="title">Maility — Billing and entitlements</title>
+<desc id="desc">Custom checkout creates a Stripe subscription session. Separate managed extension deployments handle payment integration endpoints but their implementation is absent. A custom subscription-create trigger reads product names and updates claims or migrates ownership. The send scheduler has no direct subscription lookup; a separate cloud-budget handler can disable project billing.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#100f14"/>
+<stop offset=".55" stop-color="#17101d"/>
+<stop offset="1" stop-color="#121a1f"/>
+</linearGradient>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse">
+<path d="M0 0 L8 4 L0 8" fill="none" stroke="#4cc9f0" stroke-width="1.5"/>
+</marker>
+<style>.bg{fill:url(#bg)}.panel{fill:#17181f;stroke:#3a3d49;stroke-width:1.4}.card{fill:#22232b;stroke:#474b59;stroke-width:1.1}.soft{fill:#16242a;stroke:#366779;stroke-width:1.1}.warm{fill:#2a1d18;stroke:#8b5543;stroke-width:1.1}.gold{fill:#2a2715;stroke:#756c35;stroke-width:1.1}.brand{fill:#fff8ee;font:800 36px Arial,sans-serif}.title{fill:#fff;font:700 25px Arial,sans-serif}.body{fill:#ecedf2;font:400 21px Arial,sans-serif}.small{fill:#c2c5cf;font:400 19px Arial,sans-serif}.label{fill:#a9aab4;font:700 17px Arial,sans-serif;letter-spacing:1.6px}.metric{fill:#f9c74f;font:800 38px Arial,sans-serif}.edge{fill:none;stroke:#4cc9f0;stroke-width:2;marker-end:url(#arrow)}.return{fill:none;stroke:#f9c74f;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#arrow)}.lifeline{stroke:#474b59;stroke-width:1.4;stroke-dasharray:6 7}.band{fill:#101218;stroke:#3a3d49;stroke-width:1.1}</style>
+</defs>
+<rect class="bg" width="960" height="1450"/>
+<rect class="panel" x="28" y="28" width="904" height="100" rx="10"/>
+<text class="brand" x="52" y="72">Maility</text>
+<text class="label" x="52" y="106">STRIPE PLUMBING &amp; CUSTOM OWNERSHIP CHANGES</text>
+<text class="label" x="38" y="170">PAYMENT ENTRY POINTS</text>
+<rect class="soft" x="38" y="194" width="425" height="171" rx="12"/>
+<text class="title" x="58" y="230">Custom checkout</text>
+<text class="body" x="58" y="264">Callable accepts price / uid / email</text>
+<text class="body" x="58" y="293">Stripe subscription session</text>
+<text class="body" x="58" y="322">Returns checkout URL</text>
+<rect class="warm" x="497" y="194" width="425" height="171" rx="12"/>
+<text class="title" x="517" y="230">Managed Stripe extension</text>
+<text class="body" x="517" y="264">Auth + checkout document triggers</text>
+<text class="body" x="517" y="293">Webhook / portal HTTP endpoints</text>
+<text class="body" x="517" y="322">Implementation not recovered.</text>
+<text class="label" x="38" y="424">CUSTOM PRODUCT BEHAVIOR</text>
+<rect class="card" x="180" y="450" width="600" height="116" rx="12"/>
+<text class="title" x="200" y="486">users / {uid} / subscriptions</text>
+<text class="body" x="200" y="520">onCreateSubscription reads product reference</text>
+<rect class="soft" x="180" y="625" width="600" height="141" rx="12"/>
+<text class="title" x="200" y="661">Product-name routing</text>
+<text class="body" x="200" y="695">solo → USER + CLIENT roles</text>
+<text class="body" x="200" y="724">agency / enterprise → USER + migration</text>
+<path class="edge" d="M480 566 V625"/>
+<rect class="gold" x="38" y="827" width="425" height="170" rx="12"/>
+<text class="title" x="58" y="863">Auth claims</text>
+<text class="body" x="58" y="897">Merged through claims helper</text>
+<text class="body" x="58" y="926">Creation hook only</text>
+<text class="body" x="58" y="955">No complete revocation path here.</text>
+<rect class="gold" x="497" y="827" width="425" height="170" rx="12"/>
+<text class="title" x="517" y="863">Ownership migration</text>
+<text class="body" x="517" y="897">Move accounts to / from client</text>
+<text class="body" x="517" y="926">Rewrite campaign / job / journey</text>
+<text class="body" x="517" y="955">Also rewrite activity client IDs.</text>
+<path class="edge" d="M355 766 V797 H250 V827"/>
+<path class="edge" d="M605 766 V797 H710 V827"/>
+<rect class="warm" x="38" y="1060" width="884" height="141" rx="12"/>
+<text class="title" x="58" y="1096">Sending eligibility is a separate path</text>
+<text class="body" x="58" y="1130">Scheduler checks running state, account limits and control.</text>
+<text class="body" x="58" y="1159">No subscription lookup is present in that scheduler path.</text>
+<rect class="card" x="38" y="1243" width="884" height="112" rx="12"/>
+<text class="title" x="58" y="1279">Cloud cost control is separate again</text>
+<text class="body" x="58" y="1313">Budget Pub/Sub can disable Google Cloud project billing.</text>
+<path d="M38 1384 H922" stroke="#3a3d49"/>
+<text class="small" x="38" y="1417">Recovered backend · source-grounded architecture · no production volume claim</text>
+</svg>

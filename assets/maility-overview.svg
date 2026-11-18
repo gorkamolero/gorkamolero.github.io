@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="970" viewBox="0 0 960 970" role="img" aria-labelledby="title desc">
+<title id="title">Maility — System overview</title>
+<desc id="desc">Web and onboarding clients use Firebase functions; Scheduler and Pub/Sub drive background workers over Firestore. Nylas and Google support mailbox operations, Stripe supports billing, Algolia and delivery integrations project events, and logs and exports support operations.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#100f14"/>
+<stop offset=".55" stop-color="#17101d"/>
+<stop offset="1" stop-color="#121a1f"/>
+</linearGradient>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse">
+<path d="M0 0 L8 4 L0 8" fill="none" stroke="#4cc9f0" stroke-width="1.5"/>
+</marker>
+<style>.bg{fill:url(#bg)}.panel{fill:#17181f;stroke:#3a3d49;stroke-width:1.4}.card{fill:#22232b;stroke:#474b59;stroke-width:1.1}.soft{fill:#16242a;stroke:#366779;stroke-width:1.1}.warm{fill:#2a1d18;stroke:#8b5543;stroke-width:1.1}.gold{fill:#2a2715;stroke:#756c35;stroke-width:1.1}.brand{fill:#fff8ee;font:800 36px Arial,sans-serif}.title{fill:#fff;font:700 25px Arial,sans-serif}.body{fill:#ecedf2;font:400 21px Arial,sans-serif}.small{fill:#c2c5cf;font:400 19px Arial,sans-serif}.label{fill:#a9aab4;font:700 17px Arial,sans-serif;letter-spacing:1.6px}.metric{fill:#f9c74f;font:800 38px Arial,sans-serif}.edge{fill:none;stroke:#4cc9f0;stroke-width:2;marker-end:url(#arrow)}.return{fill:none;stroke:#f9c74f;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#arrow)}.lifeline{stroke:#474b59;stroke-width:1.4;stroke-dasharray:6 7}.band{fill:#101218;stroke:#3a3d49;stroke-width:1.1}</style>
+</defs>
+<rect class="bg" width="960" height="970"/>
+<rect class="panel" x="28" y="28" width="904" height="100" rx="10"/>
+<text class="brand" x="52" y="72">Maility</text>
+<text class="label" x="52" y="106">SYSTEM BOUNDARIES</text>
+<text class="label" x="38" y="170">CLIENTS &amp; CLOUD</text>
+<text class="label" x="345" y="170">FIREBASE BACKEND</text>
+<text class="label" x="652" y="170">EXTERNAL SERVICES</text>
+<rect class="card" x="38" y="196" width="270" height="178" rx="12"/>
+<text class="title" x="58" y="232">Web + onboarding</text>
+<text class="body" x="58" y="266">Web client actions</text>
+<text class="body" x="58" y="295">Extension whitelist</text>
+<text class="body" x="58" y="324">HTTP / callable API</text>
+<rect class="soft" x="345" y="196" width="270" height="178" rx="12"/>
+<text class="title" x="365" y="232">Functions + Auth</text>
+<text class="body" x="365" y="266">Callable / Express</text>
+<text class="body" x="365" y="295">Auth users + claims</text>
+<text class="body" x="365" y="324">Document triggers</text>
+<rect class="warm" x="652" y="196" width="270" height="178" rx="12"/>
+<text class="title" x="672" y="232">Mailbox services</text>
+<text class="body" x="672" y="266">Google OAuth</text>
+<text class="body" x="672" y="295">Nylas sends + reads</text>
+<text class="body" x="672" y="324">Signed webhooks</text>
+<rect class="card" x="38" y="456" width="270" height="149" rx="12"/>
+<text class="title" x="58" y="492">Cloud Scheduler</text>
+<text class="body" x="58" y="526">Nine scheduled jobs</text>
+<text class="body" x="58" y="555">Pub/Sub transport</text>
+<rect class="soft" x="345" y="436" width="270" height="189" rx="12"/>
+<text class="title" x="365" y="472">Firestore</text>
+<text class="body" x="365" y="506">Users + accounts</text>
+<text class="body" x="365" y="535">Campaign work state</text>
+<text class="body" x="365" y="564">Mailbox conversations</text>
+<rect class="warm" x="652" y="456" width="270" height="149" rx="12"/>
+<text class="title" x="672" y="492">Stripe</text>
+<text class="body" x="672" y="526">Custom checkout</text>
+<text class="body" x="672" y="555">Firebase extension</text>
+<rect class="card" x="38" y="709" width="270" height="149" rx="12"/>
+<text class="title" x="58" y="745">Operations</text>
+<text class="body" x="58" y="779">Cloud Logging</text>
+<text class="body" x="58" y="808">Cloud Storage export</text>
+<rect class="soft" x="345" y="689" width="270" height="189" rx="12"/>
+<text class="title" x="365" y="725">Background work</text>
+<text class="body" x="365" y="759">Batch / send workers</text>
+<text class="body" x="365" y="788">Activity projections</text>
+<text class="body" x="365" y="817">Polling + maintenance</text>
+<rect class="warm" x="652" y="709" width="270" height="149" rx="12"/>
+<text class="title" x="672" y="745">Search + delivery</text>
+<text class="body" x="672" y="779">Algolia indexing</text>
+<text class="body" x="672" y="808">Webhooks + Zapier</text>
+<path class="edge" d="M308 282 H345"/>
+<path class="edge" d="M615 282 H652" marker-start="url(#arrow)"/>
+<path class="edge" d="M480 374 V436" marker-start="url(#arrow)"/>
+<path class="edge" d="M480 625 V689" marker-start="url(#arrow)"/>
+<path class="edge" d="M615 530 H652"/>
+<path class="edge" d="M308 530 H325 V730 H345"/>
+<path class="edge" d="M345 825 H308"/>
+<path class="edge" d="M615 783 H652"/>
+<text class="small" x="490" y="410">state / events</text>
+<text class="small" x="490" y="663">state / events</text>
+<path d="M38 904 H922" stroke="#3a3d49"/>
+<text class="small" x="38" y="937">Recovered backend · source-grounded architecture · no production volume claim</text>
+</svg>

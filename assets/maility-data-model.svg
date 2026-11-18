@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1508" viewBox="0 0 960 1508" role="img" aria-labelledby="title desc">
+<title id="title">Maility — Data model</title>
+<desc id="desc">Users contain sending accounts, client runs, subscriptions, notifications and webhook configurations. Campaigns contain prospects, batches, journeys, email jobs and activities. Prospect identifiers join journeys to jobs; thread identifiers join activities to mailbox conversations. Root delivery jobs and control documents are separate operational state.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#100f14"/>
+<stop offset=".55" stop-color="#17101d"/>
+<stop offset="1" stop-color="#121a1f"/>
+</linearGradient>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse">
+<path d="M0 0 L8 4 L0 8" fill="none" stroke="#4cc9f0" stroke-width="1.5"/>
+</marker>
+<style>.bg{fill:url(#bg)}.panel{fill:#17181f;stroke:#3a3d49;stroke-width:1.4}.card{fill:#22232b;stroke:#474b59;stroke-width:1.1}.soft{fill:#16242a;stroke:#366779;stroke-width:1.1}.warm{fill:#2a1d18;stroke:#8b5543;stroke-width:1.1}.gold{fill:#2a2715;stroke:#756c35;stroke-width:1.1}.brand{fill:#fff8ee;font:800 36px Arial,sans-serif}.title{fill:#fff;font:700 25px Arial,sans-serif}.body{fill:#ecedf2;font:400 21px Arial,sans-serif}.small{fill:#c2c5cf;font:400 19px Arial,sans-serif}.label{fill:#a9aab4;font:700 17px Arial,sans-serif;letter-spacing:1.6px}.metric{fill:#f9c74f;font:800 38px Arial,sans-serif}.edge{fill:none;stroke:#4cc9f0;stroke-width:2;marker-end:url(#arrow)}.return{fill:none;stroke:#f9c74f;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#arrow)}.lifeline{stroke:#474b59;stroke-width:1.4;stroke-dasharray:6 7}.band{fill:#101218;stroke:#3a3d49;stroke-width:1.1}</style>
+</defs>
+<rect class="bg" width="960" height="1508"/>
+<rect class="panel" x="28" y="28" width="904" height="100" rx="10"/>
+<text class="brand" x="52" y="72">Maility</text>
+<text class="label" x="52" y="106">CORE FIRESTORE PATHS &amp; IDENTITY</text>
+<text class="label" x="38" y="169">DOCUMENT CONTAINMENT</text>
+<rect class="soft" x="38" y="194" width="425" height="112" rx="12"/>
+<text class="title" x="58" y="230">users / {uid}</text>
+<text class="body" x="58" y="264">Owner or sending client</text>
+<rect class="soft" x="497" y="194" width="425" height="112" rx="12"/>
+<text class="title" x="517" y="230">campaigns / {campaignId}</text>
+<text class="body" x="517" y="264">createdBy + client</text>
+<rect class="card" x="62" y="356" width="401" height="108" rx="12"/>
+<text class="title" x="82" y="392">accounts / {email}</text>
+<text class="body" x="82" y="426">status · sent · limit · leash</text>
+<path class="edge" d="M50 306 V410 H62"/>
+<rect class="card" x="62" y="498" width="401" height="108" rx="12"/>
+<text class="title" x="82" y="534">clientRuns / {runId}</text>
+<text class="body" x="82" y="568">status · expireAt · scheduler ID</text>
+<path class="edge" d="M50 410 V552 H62"/>
+<rect class="card" x="62" y="640" width="401" height="108" rx="12"/>
+<text class="title" x="82" y="676">subscriptions / {id}</text>
+<text class="body" x="82" y="710">product · role · canceled_at</text>
+<path class="edge" d="M50 552 V694 H62"/>
+<rect class="card" x="62" y="782" width="401" height="108" rx="12"/>
+<text class="title" x="82" y="818">notifications / webhooks</text>
+<text class="body" x="82" y="852">Notifications and delivery config</text>
+<path class="edge" d="M50 694 V836 H62"/>
+<rect class="card" x="521" y="356" width="401" height="108" rx="12"/>
+<text class="title" x="541" y="392">people / {prospectId}</text>
+<text class="body" x="541" y="426">Contact and campaign state</text>
+<path class="edge" d="M509 306 V410 H521"/>
+<rect class="card" x="521" y="498" width="401" height="108" rx="12"/>
+<text class="title" x="541" y="534">batches / {batchId}</text>
+<text class="body" x="541" y="568">people IDs · status · processed</text>
+<path class="edge" d="M509 410 V552 H521"/>
+<rect class="card" x="521" y="640" width="401" height="108" rx="12"/>
+<text class="title" x="541" y="676">journeys / {prospectId}</text>
+<text class="body" x="541" y="710">currentStep · status · account</text>
+<path class="edge" d="M509 552 V694 H521"/>
+<rect class="card" x="521" y="782" width="401" height="108" rx="12"/>
+<text class="title" x="541" y="818">jobs / {prospectId}-job-{step}</text>
+<text class="body" x="541" y="852">status · sendAt · retries · email</text>
+<path class="edge" d="M509 694 V836 H521"/>
+<rect class="card" x="521" y="924" width="401" height="108" rx="12"/>
+<text class="title" x="541" y="960">activities / {activityId}</text>
+<text class="body" x="541" y="994">action · on · job / thread context</text>
+<path class="edge" d="M509 836 V978 H521"/>
+<rect class="gold" x="38" y="1100" width="884" height="139" rx="12"/>
+<text class="title" x="58" y="1136">Cross-document identity</text>
+<text class="body" x="58" y="1170">One prospect ID keys the journey and prefixes its step jobs.</text>
+<text class="body" x="58" y="1199">threadId joins activities to mailbox / {uid} / conversations.</text>
+<rect class="warm" x="38" y="1274" width="884" height="139" rx="12"/>
+<text class="title" x="58" y="1310">Other operational state</text>
+<text class="body" x="58" y="1344">Root jobs: webhook / Zapier delivery, distinct from campaign jobs.</text>
+<text class="body" x="58" y="1373">control: scheduler and warmup gates. Warmup keeps its own state.</text>
+<path d="M38 1442 H922" stroke="#3a3d49"/>
+<text class="small" x="38" y="1475">Recovered backend · source-grounded architecture · no production volume claim</text>
+</svg>

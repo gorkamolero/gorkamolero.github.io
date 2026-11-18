@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maility - Gorka Molero Case Study</title>
+    <meta name="description" content="Maility, the outbound email SaaS I co-founded as CTO and built myself. Architecture of campaign scheduling, mailbox integration and event-driven sending.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+    <link rel="icon" href="data:," /><meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="/_astro/MetaLine.CncQRohf.css">
+<style>/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer components{:where(body[data-page=index]) .shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}:where(body[data-page=index]) .shot img,:where(body[data-page=index]) .shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot{margin:var(--dimension-1-4-rem) 0 0;border:var(--dimension-1-px) solid var(--rule);background:var(--color-surface-11)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.shot img,.shot video{width:calc(var(--relative-100-percent) * 1%);height:auto;display:block}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate{margin:var(--dimension-1-6-rem) 0 0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate .shot{margin:0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate .shot>a{display:block}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate figcaption{margin:var(--dimension-0-6-rem) 0 0;color:var(--ink-soft);font-style:italic;font-size:var(--dimension-1-rem);text-align:center}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.narrow{max-width:var(--dimension-340-px);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate.portrait{max-width:var(--dimension-24-rem);margin-left:auto;margin-right:auto}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.plate+p,.plate+h3{margin-top:var(--dimension-1-4-rem)}}}
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer components{@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts{margin:var(--dimension-1-2-rem) 0 0;padding:0;list-style:none}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts li{grid-template-columns:var(--dimension-11-rem) 1fr;gap:var(--dimension-1-rem);padding:var(--dimension-0-6-rem) 0;border-bottom:var(--dimension-1-px) solid var(--rule);display:grid}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts strong{font-weight:var(--number-font-weight-600)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts span{color:var(--ink-soft)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.facts+p,.facts+.plate{margin-top:var(--dimension-1-4-rem)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){@media (width<=640px){.facts li{gap:var(--dimension-0-1-rem);grid-template-columns:1fr}}}}
+</style></head>
+  <body data-page="maility">
+    
+  
+  <div class="sheet">
+    <header class="masthead has-photo">
+  <a class="identity" href="/" aria-label="Gorka Molero, home">
+    <h1>Gorka Molero</h1>
+    <p class="role long"><span class="sr-only">Creative technologist / AI engineer</span><span aria-hidden="true">C</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span aria-hidden="true">A</span><span aria-hidden="true">T</span><span aria-hidden="true">I</span><span aria-hidden="true">V</span><span aria-hidden="true">E</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">T</span><span aria-hidden="true">E</span><span aria-hidden="true">C</span><span aria-hidden="true">H</span><span aria-hidden="true">N</span><span aria-hidden="true">O</span><span aria-hidden="true">L</span><span aria-hidden="true">O</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">S</span><span aria-hidden="true">T</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">/</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">A</span><span aria-hidden="true">I</span><span class="sp" aria-hidden="true"></span><span aria-hidden="true">E</span><span aria-hidden="true">N</span><span aria-hidden="true">G</span><span aria-hidden="true">I</span><span aria-hidden="true">N</span><span aria-hidden="true">E</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span></p>
+  </a>
+  <a class="portrait-link" href="/" tabindex="-1" aria-hidden="true"><img class="portrait-round" src="./assets/gorka-portrait-round.jpg" width="600" height="600" alt=""></a>
+  <div class="contact">
+    <span class="place">Remote, location-independent</span>
+    <span class="links"><a href="mailto:gorka.molero@gmail.com" title="gorka.molero@gmail.com">Email</a> <a href="https://github.com/gorkamolero" target="_blank" rel="noopener">GitHub</a> <span class="portfolios" data-portfolios>
+        <span class="drawer" id="portfolio-menu"><a href="./index.html">Engineering</a><a href="./agents.html">Agents</a><a href="./design-systems.html">Design Systems</a><a href="./creative.html">Creative Work</a><a href="./pre-ai.html">Before AI</a><a href="./music.html">Music</a><span class="spacer" aria-hidden="true">Portfolios<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M6.6 1.6 3.2 5l3.4 3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+<button class="trigger" type="button" aria-expanded="false" aria-controls="portfolio-menu">Portfolios<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M6.6 1.6 3.2 5l3.4 3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</span>
+<script>
+  // Hover opens the portfolio pages and keeps them open for a moment after the pointer leaves, so slipping out by a pixel doesn't close them. A click pins them open until the next click on Portfolios, a click elsewhere or Escape.
+  for (const root of document.querySelectorAll('[data-portfolios]')) {
+    const trigger = root.querySelector('.trigger');
+    const canHover = matchMedia('(hover: hover) and (min-width: 641px)');
+    let timer;
+    const sync = () => trigger.setAttribute('aria-expanded', String(root.classList.contains('open') || root.classList.contains('hover')));
+    const pin = (open) => { root.classList.toggle('open', open); sync(); };
+    trigger.addEventListener('click', () => pin(!root.classList.contains('open')));
+    root.addEventListener('pointerenter', e => { if (e.pointerType !== 'mouse' || !canHover.matches) return; clearTimeout(timer); root.classList.add('hover'); sync(); });
+    root.addEventListener('pointerleave', e => { if (e.pointerType !== 'mouse') return; clearTimeout(timer); timer = window.setTimeout(() => { root.classList.remove('hover'); sync(); }, 450); });
+    document.addEventListener('click', e => { if (!root.contains(e.target)) { root.classList.remove('hover'); pin(false); } });
+    root.addEventListener('keydown', e => { if (e.key === 'Escape') { root.classList.remove('hover'); pin(false); trigger.focus(); } });
+  }
+</script></span>
+  </div>
+</header>
+    <section class="lead">
+      <p class="meta eyebrow">Draft case study · 2022–2023</p>
+      <h2 class="case-title">Maility</h2>
+      <p class="intro">Maility was an outbound email SaaS. I co-founded it as CTO and built the product myself. Most of the onboarding ran through a flow in a browser extension I built.</p>
+      <p class="meta chips">Co-founder / CTO · Campaign orchestration · Mailbox integrations</p>
+    </section>
+    <main>
+      <section class="work">
+        <h2>What I built</h2>
+        <p>A campaign needed to send a sequence over time, choose an available sending account, respect its limits and stop when a prospect replied or unsubscribed. I built the campaign system around scheduled workers, Firestore work records and provider events.</p>
+        <ul class="facts">
+          <li><strong>Role</strong><span>Co-founder and CTO, May 2022–June 2023.</span></li>
+          <li><strong>Backend</strong><span>Firebase Functions, Firestore and Pub/Sub, with Nylas for mail operations.</span></li>
+          <li><strong>Onboarding</strong><span>A browser-extension flow, with a backend domain-whitelist endpoint.</span></li>
+        </ul>
+        <p>These diagrams reconstruct the architecture from a recovered backend snapshot and deployed function metadata. The snapshot is later than my time at Maility; the diagrams describe the code recovered, rather than assigning every later revision to me.</p>
+      </section>
+      <section class="work">
+        <h2>The system</h2>
+        <p>Firebase Functions handled client actions, scheduled work and document events. Firestore held campaign execution state, while Nylas supplied mailbox operations and signed callbacks.</p>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/maility-overview.svg"><img src="./assets/maility-overview.svg" width="960" height="970" alt="Maility system boundaries: clients, Firebase Functions and Auth, Firestore, Scheduler and Pub/Sub, Nylas, Stripe, Algolia and operations." loading="lazy"></a></div>
+          <figcaption>The clients, execution state and external services.</figcaption>
+        </figure>
+      </section>
+      <section class="work">
+        <h2>From campaign to send</h2>
+        <p>The batch scheduler made prospects ready and created their journeys and first jobs. A client scheduler and client runner selected work; the job runner sent the email and recorded an activity, creating the next step after success.</p>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/maility-sending-pipeline.svg"><img src="./assets/maility-sending-pipeline.svg" width="960" height="1430" alt="Sending sequence from batch preparation through Client Scheduler, Client Runner, Job Runner, Nylas and the activity handler." loading="lazy"></a></div>
+          <figcaption>Firestore document events connect the sending stages.</figcaption>
+        </figure>
+      </section>
+      <section class="work">
+        <h2>Scheduling and sending limits</h2>
+        <p>Campaign windows, account budgets and campaign daily caps all influenced which job could run. Accounts were ordered by sent count with randomized ties, campaigns were chosen by weight, and follow-ups stayed with their original sender.</p>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/maility-scheduling.svg"><img src="./assets/maility-scheduling.svg" width="960" height="1530" alt="Scheduling gates: campaign windows, account readiness, stored daily limits, weighted campaign choice, due jobs and a twenty-second post-send leash, with separate maintenance and warmup paths." loading="lazy"></a></div>
+          <figcaption>Configured pacing and eligibility, with warmup kept separate.</figcaption>
+        </figure>
+      </section>
+      <section class="work">
+        <h2>The data behind a campaign</h2>
+        <p>A prospect’s journey tracked sequence progress; jobs described work to do, and activities recorded what happened. Campaign documents kept ownership and scheduling state, while thread identifiers connected activities to mailbox conversations.</p>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/maility-data-model.svg"><img src="./assets/maility-data-model.svg" width="960" height="1508" alt="Firestore core model: users contain accounts and client runs; campaigns contain people, batches, journeys, jobs and activities, with prospect and thread identity linking records." loading="lazy"></a></div>
+          <figcaption>Document ownership, execution state and cross-document identity.</figcaption>
+        </figure>
+      </section>
+      <section class="work">
+        <h2>Connecting mailboxes and handling replies</h2>
+        <p>The onboarding endpoint recorded a domain whitelist used during Google authorization. Signed Nylas callbacks classified replies and bounces into activities; a separate polling path updated mailbox conversations for eligible incoming messages.</p>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/maility-mailbox.svg"><img src="./assets/maility-mailbox.svg" width="960" height="1275" alt="Account connection through whitelist and OAuth, followed by signed webhook and separate polling flows into prospect state and mailbox conversations." loading="lazy"></a></div>
+          <figcaption>Connection, reply detection and mailbox projections.</figcaption>
+        </figure>
+      </section>
+      <section class="work">
+        <h2>Failure and recovery</h2>
+        <p>Send errors could reschedule a job, mark it failed or invalidate its sending account. The code also had account and job-status guards plus an hourly sending-state recovery worker; the external provider call and the later Firestore commit remained separate operations.</p>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/maility-failure-retry.svg"><img src="./assets/maility-failure-retry.svg" width="960" height="1446" alt="Send state transitions, retryLater postponement, invalid credentials, abort paths and hourly sending-job recovery, with the Nylas and Firestore transaction boundary made explicit." loading="lazy"></a></div>
+          <figcaption>The retry paths and the boundary between sending and recording success.</figcaption>
+        </figure>
+      </section>
+      <section class="work">
+        <h2>Billing and client ownership</h2>
+        <p>Stripe integration combined managed extension endpoints with custom checkout and subscription code. Plan changes could move sending accounts and rewrite client ownership across campaign records, rather than changing a single role flag.</p>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/maility-billing.svg"><img src="./assets/maility-billing.svg" width="960" height="1450" alt="Custom Stripe checkout, managed extension boundary, subscription-create handling, role claims, ownership migrations and separate sending eligibility and cloud-cost control." loading="lazy"></a></div>
+          <figcaption>Payment integration and the custom subscription-to-ownership path.</figcaption>
+        </figure>
+      </section>
+      <section class="work">
+        <h2>The deployed function surface</h2>
+        <p>The deployment export contains 98 functions across callable, HTTP, scheduled, Pub/Sub, Firestore and Auth triggers. It also exposes the boundary of the recovery: some deployed implementations are absent, and the managed extensions are separate from the custom backend.</p>
+        <figure class="plate">
+          <div class="shot"><a href="./assets/maility-function-inventory.svg"><img src="./assets/maility-function-inventory.svg" width="960" height="1602" alt="All ninety-eight deployed Maility functions grouped by trigger, with active custom source coverage and missing implementations distinguished." loading="lazy"></a></div>
+          <figcaption>Deployment inventory, including managed functions and source gaps.</figcaption>
+        </figure>
+      </section>
+    </main>
+  </div>
+
+    <footer data-astro-cid-jo6i4kqk><span class="item" data-astro-cid-jo6i4kqk>Gorka Molero</span><span class="mark" data-astro-cid-jo6i4kqk><span class="sep" data-astro-cid-jo6i4kqk>&nbsp;·&nbsp;</span></span><a class="item" href="mailto:gorka.molero@gmail.com" data-astro-cid-jo6i4kqk>gorka.molero@gmail.com</a><span class="mark last" data-astro-cid-jo6i4kqk><span class="sep" data-astro-cid-jo6i4kqk>&nbsp;·&nbsp;</span></span><span class="item built" data-astro-cid-jo6i4kqk>Built with <a href="https://astro.build" target="_blank" rel="noopener" data-astro-cid-jo6i4kqk>Astro</a></span></footer>
+    
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "30140c96917e488999cc0fc45ca9a785"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>

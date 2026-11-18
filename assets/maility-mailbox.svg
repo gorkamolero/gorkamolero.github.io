@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1275" viewBox="0 0 960 1275" role="img" aria-labelledby="title desc">
+<title id="title">Maility — Mailbox connection and detection</title>
+<desc id="desc">The extension writes a domain whitelist. Google OAuth and Nylas helpers return account credentials; client-side persistence is not recovered. A signed Nylas webhook classifies replies or bounces into campaign activities. A separate polling path projects eligible non-bounced incoming messages. Conversation writes trigger search indexing.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#100f14"/>
+<stop offset=".55" stop-color="#17101d"/>
+<stop offset="1" stop-color="#121a1f"/>
+</linearGradient>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse">
+<path d="M0 0 L8 4 L0 8" fill="none" stroke="#4cc9f0" stroke-width="1.5"/>
+</marker>
+<style>.bg{fill:url(#bg)}.panel{fill:#17181f;stroke:#3a3d49;stroke-width:1.4}.card{fill:#22232b;stroke:#474b59;stroke-width:1.1}.soft{fill:#16242a;stroke:#366779;stroke-width:1.1}.warm{fill:#2a1d18;stroke:#8b5543;stroke-width:1.1}.gold{fill:#2a2715;stroke:#756c35;stroke-width:1.1}.brand{fill:#fff8ee;font:800 36px Arial,sans-serif}.title{fill:#fff;font:700 25px Arial,sans-serif}.body{fill:#ecedf2;font:400 21px Arial,sans-serif}.small{fill:#c2c5cf;font:400 19px Arial,sans-serif}.label{fill:#a9aab4;font:700 17px Arial,sans-serif;letter-spacing:1.6px}.metric{fill:#f9c74f;font:800 38px Arial,sans-serif}.edge{fill:none;stroke:#4cc9f0;stroke-width:2;marker-end:url(#arrow)}.return{fill:none;stroke:#f9c74f;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#arrow)}.lifeline{stroke:#474b59;stroke-width:1.4;stroke-dasharray:6 7}.band{fill:#101218;stroke:#3a3d49;stroke-width:1.1}</style>
+</defs>
+<rect class="bg" width="960" height="1275"/>
+<rect class="panel" x="28" y="28" width="904" height="100" rx="10"/>
+<text class="brand" x="52" y="72">Maility</text>
+<text class="label" x="52" y="106">OAUTH, SIGNED WEBHOOKS &amp; A SEPARATE POLLING PATH</text>
+<text class="label" x="38" y="170">CONNECT AN ACCOUNT</text>
+<rect class="card" x="38" y="194" width="425" height="141" rx="12"/>
+<text class="title" x="58" y="230">Onboarding extension</text>
+<text class="body" x="58" y="264">domain + uid → whitelister HTTP</text>
+<text class="body" x="58" y="293">Write domain whitelist</text>
+<rect class="soft" x="497" y="194" width="425" height="141" rx="12"/>
+<text class="title" x="517" y="230">Google OAuth callable</text>
+<text class="body" x="517" y="264">Whitelist check + code exchange</text>
+<text class="body" x="517" y="293">Nylas authorize / token helpers</text>
+<path class="edge" d="M463 263 H497"/>
+<rect class="gold" x="38" y="377" width="884" height="113" rx="12"/>
+<text class="title" x="58" y="413">Nylas account boundary</text>
+<text class="body" x="58" y="447">Returned credentials; initial client-side account storage is not recovered.</text>
+<path class="edge" d="M710 335 V377"/>
+<text class="label" x="38" y="545">DETECT AND PROJECT INCOMING MAIL</text>
+<rect class="soft" x="38" y="570" width="425" height="170" rx="12"/>
+<text class="title" x="58" y="606">Signed webhook</text>
+<text class="body" x="58" y="640">HMAC-SHA256 verification</text>
+<text class="body" x="58" y="669">Process first delta</text>
+<text class="body" x="58" y="698">Raw message classification</text>
+<rect class="soft" x="497" y="570" width="425" height="170" rx="12"/>
+<text class="title" x="517" y="606">Mailbox polling</text>
+<text class="body" x="517" y="640">Minute schedule → Pub/Sub</text>
+<text class="body" x="517" y="669">Account + campaign message</text>
+<text class="body" x="517" y="698">Read incoming mail via Nylas</text>
+<rect class="card" x="38" y="795" width="425" height="170" rx="12"/>
+<text class="title" x="58" y="831">Campaign activity</text>
+<text class="body" x="58" y="865">threadReplied or bounce</text>
+<text class="body" x="58" y="894">Abort / update journey + prospect</text>
+<text class="body" x="58" y="923">Reply projection + notifications</text>
+<rect class="card" x="497" y="795" width="425" height="170" rx="12"/>
+<text class="title" x="517" y="831">Polling projection</text>
+<text class="body" x="517" y="865">Skip activity-linked threads</text>
+<text class="body" x="517" y="894">Skip bounced raw messages</text>
+<text class="body" x="517" y="923">Update prospect + conversation</text>
+<path class="edge" d="M250 740 V795"/>
+<path class="edge" d="M710 740 V795"/>
+<rect class="warm" x="38" y="1040" width="884" height="141" rx="12"/>
+<text class="title" x="58" y="1076">Mailbox conversation + search</text>
+<text class="body" x="58" y="1110">mailbox / {uid} / conversations / {threadId}</text>
+<text class="body" x="58" y="1139">Conversation writes trigger Algolia indexing.</text>
+<path class="edge" d="M250 965 V1040"/>
+<path class="edge" d="M710 965 V1040"/>
+<path d="M38 1209 H922" stroke="#3a3d49"/>
+<text class="small" x="38" y="1242">Recovered backend · source-grounded architecture · no production volume claim</text>
+</svg>

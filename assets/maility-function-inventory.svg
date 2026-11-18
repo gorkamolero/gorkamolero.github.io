@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1602" viewBox="0 0 960 1602" role="img" aria-labelledby="title desc">
+<title id="title">Maility — Deployed function inventory</title>
+<desc id="desc">The 98 deployed functions comprise 52 callable, 12 HTTP, nine scheduled Pub/Sub, six other Pub/Sub, seventeen Firestore and two Firebase Auth functions. Eighty-five custom functions have active recovered bindings, warmup has a commented export and four custom functions plus eight extension implementations are not recovered.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#100f14"/>
+<stop offset=".55" stop-color="#17101d"/>
+<stop offset="1" stop-color="#121a1f"/>
+</linearGradient>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse">
+<path d="M0 0 L8 4 L0 8" fill="none" stroke="#4cc9f0" stroke-width="1.5"/>
+</marker>
+<style>.bg{fill:url(#bg)}.panel{fill:#17181f;stroke:#3a3d49;stroke-width:1.4}.card{fill:#22232b;stroke:#474b59;stroke-width:1.1}.soft{fill:#16242a;stroke:#366779;stroke-width:1.1}.warm{fill:#2a1d18;stroke:#8b5543;stroke-width:1.1}.gold{fill:#2a2715;stroke:#756c35;stroke-width:1.1}.brand{fill:#fff8ee;font:800 36px Arial,sans-serif}.title{fill:#fff;font:700 25px Arial,sans-serif}.body{fill:#ecedf2;font:400 21px Arial,sans-serif}.small{fill:#c2c5cf;font:400 19px Arial,sans-serif}.label{fill:#a9aab4;font:700 17px Arial,sans-serif;letter-spacing:1.6px}.metric{fill:#f9c74f;font:800 38px Arial,sans-serif}.edge{fill:none;stroke:#4cc9f0;stroke-width:2;marker-end:url(#arrow)}.return{fill:none;stroke:#f9c74f;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#arrow)}.lifeline{stroke:#474b59;stroke-width:1.4;stroke-dasharray:6 7}.band{fill:#101218;stroke:#3a3d49;stroke-width:1.1}</style>
+</defs>
+<rect class="bg" width="960" height="1602"/>
+<rect class="panel" x="28" y="28" width="904" height="100" rx="10"/>
+<text class="brand" x="52" y="72">Maility</text>
+<text class="label" x="52" y="106">TRIGGER TYPES FROM THE DEPLOYMENT EXPORT</text>
+<rect class="soft" x="38" y="175" width="884" height="112" rx="12"/>
+<text class="metric" x="64" y="228">98</text>
+<text class="title" x="144" y="223">deployed functions</text>
+<text class="body" x="144" y="257">97 distinct entryPoint names; checkout has two deployments.</text>
+<rect class="panel" x="38" y="340" width="884" height="104" rx="12"/>
+<text class="metric" x="65" y="401">52</text>
+<text class="title" x="163" y="380">Callable</text>
+<text class="body" x="163" y="417">Client / admin function calls</text>
+<rect class="panel" x="38" y="472" width="884" height="104" rx="12"/>
+<text class="metric" x="65" y="533">12</text>
+<text class="title" x="163" y="512">HTTP</text>
+<text class="body" x="163" y="549">Express APIs + extension endpoints</text>
+<rect class="panel" x="38" y="604" width="884" height="104" rx="12"/>
+<text class="metric" x="65" y="665">9</text>
+<text class="title" x="163" y="644">Scheduled Pub/Sub</text>
+<text class="body" x="163" y="681">The nine captured scheduler jobs</text>
+<rect class="panel" x="38" y="736" width="884" height="104" rx="12"/>
+<text class="metric" x="65" y="797">6</text>
+<text class="title" x="163" y="776">Other Pub/Sub</text>
+<text class="body" x="163" y="813">Polling, warmup, repair and budget</text>
+<rect class="panel" x="38" y="868" width="884" height="104" rx="12"/>
+<text class="metric" x="65" y="929">17</text>
+<text class="title" x="163" y="908">Firestore</text>
+<text class="body" x="163" y="945">9 create · 3 update · 3 write · 2 delete</text>
+<rect class="panel" x="38" y="1000" width="884" height="104" rx="12"/>
+<text class="metric" x="65" y="1061">2</text>
+<text class="title" x="163" y="1040">Firebase Auth</text>
+<text class="body" x="163" y="1077">Stripe extension create / delete</text>
+<rect class="gold" x="38" y="1175" width="884" height="174" rx="12"/>
+<text class="title" x="58" y="1211">Source coverage</text>
+<text class="body" x="58" y="1245">85 active custom bindings + 1 commented warmup implementation</text>
+<text class="body" x="58" y="1274">8 managed extension implementations not recovered</text>
+<text class="body" x="58" y="1303">4 custom deployments with no recovered implementation</text>
+<rect class="warm" x="38" y="1390" width="884" height="117" rx="12"/>
+<text class="title" x="58" y="1426">Operational visibility</text>
+<text class="body" x="58" y="1460">Structured Cloud Logging; control docs; maintenance and backups.</text>
+<path d="M38 1536 H922" stroke="#3a3d49"/>
+<text class="small" x="38" y="1569">Recovered backend · source-grounded architecture · no production volume claim</text>
+</svg>
