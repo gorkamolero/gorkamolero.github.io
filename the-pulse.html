@@ -27,6 +27,7 @@
 @layer components{@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.narration{margin:var(--dimension-1-6-rem) 0 0;padding:var(--dimension-0-2-rem) 0 var(--dimension-0-2-rem) var(--dimension-1-2-rem);border-left:var(--dimension-2-px) solid var(--vermilion)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.narration blockquote{font-family:var(--display-italic);font-style:italic;font-size:var(--dimension-1-2-rem);line-height:var(--number-line-height-1-55);margin:0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.narration .src{margin-top:var(--dimension-0-7-rem);font-size:var(--dimension-1-rem);color:var(--ink-soft);font-style:italic;display:block}}}
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer components{@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.audio-embed{margin:var(--dimension-1-6-rem) 0 0}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.audio-embed .audio-label{margin-bottom:var(--dimension-0-5-rem);font-family:var(--display);font-size:var(--dimension-0-95-rem);letter-spacing:calc(var(--relative-0-06-em) * 1em);color:var(--ink-soft)}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.audio-embed audio{width:calc(var(--relative-100-percent) * 1%);display:block}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.audio-embed .note{margin:var(--dimension-0-6-rem) 0 0;color:var(--ink-soft);font-style:italic;font-size:var(--dimension-1-rem);text-align:center}}@scope(html:has(body:not([data-page=index],[data-page=creative],[data-page=music]))){.audio-embed+.plate{margin-top:var(--dimension-1-6-rem)}}}
+.judge-report[data-astro-cid-oumf4dpd].preview{padding:var(--dimension-1-rem);border:var(--dimension-1-px) solid var(--rule);margin:0}.judge-report[data-astro-cid-oumf4dpd].preview h2:first-child{margin-top:0}.judge-report[data-astro-cid-oumf4dpd] h1{font-family:var(--display);font-weight:var(--number-font-weight-400);font-size:var(--dimension-1-8-rem);letter-spacing:calc(var(--relative-0-06-em) * 1em)}.judge-report[data-astro-cid-oumf4dpd] h2:not(:first-child){margin-top:var(--dimension-2-6-rem)}.judge-report[data-astro-cid-oumf4dpd] table{border-collapse:collapse;width:100%;margin:var(--dimension-1-4-rem) 0;font-size:var(--dimension-0-98-rem);line-height:var(--number-line-height-1-5)}.judge-report[data-astro-cid-oumf4dpd] th,.judge-report[data-astro-cid-oumf4dpd] td{padding:var(--dimension-0-7-rem) var(--dimension-0-5-rem);border-bottom:var(--dimension-1-px) solid var(--rule);text-align:left;vertical-align:top}.judge-report[data-astro-cid-oumf4dpd] th{font-family:var(--display);font-weight:var(--number-font-weight-400);letter-spacing:calc(var(--relative-0-06-em) * 1em);color:var(--ink-soft)}.judge-report[data-astro-cid-oumf4dpd] th:first-child,.judge-report[data-astro-cid-oumf4dpd] td:first-child{padding-left:0}.judge-report[data-astro-cid-oumf4dpd] th:last-child,.judge-report[data-astro-cid-oumf4dpd] td:last-child{padding-right:0}.judge-report[data-astro-cid-oumf4dpd] ul{padding-left:var(--dimension-1-4-rem)}.judge-report[data-astro-cid-oumf4dpd] li+li{margin-top:var(--dimension-0-5-rem)}.judge-report[data-astro-cid-oumf4dpd] blockquote{margin:var(--dimension-1-rem) 0;padding-left:var(--dimension-1-rem);border-left:var(--dimension-1-px) solid var(--rule);color:var(--ink-soft);font-style:italic}.judge-report[data-astro-cid-oumf4dpd] hr{border:0;border-top:var(--dimension-1-px) solid var(--rule);margin:var(--dimension-2-6-rem) 0}
 </style></head>
   <body data-page="the-pulse">
     
@@ -127,7 +128,100 @@
           <div class="shot"><img src="./assets/the-pulse-harness-report.webp" alt="A Test Harness Session Report: session ID, story Shadow Over Innsmouth, outcome timeout, 92s duration, key metrics (final turn, tangents, private moments paid off), and a cost breakdown of narrator, player, and classification tokens totalling $0.0175." loading="lazy"></div>
           <figcaption>A real session report from the harness. It records the story, outcome, and turn count; scores narrative-quality signals (tangents, private moments paid off); and breaks token cost down by role — here 27,692 tokens for $0.0175. This run hit the configured turn limit (timeout).</figcaption>
         </figure>
-        <p><a class="button" href="./the-pulse-judge-report.html">Read one full judge report</a></p>
+        <figure class="plate">
+          <section class="work judge-report preview" data-astro-cid-oumf4dpd="true"><h2 id="overall-5310-poor">Overall: 5.3/10 (poor)</h2>
+<p>Strong sensory horror and responsive exploration are undermined by skipped character creation, repeated assumptions about player actions, and a trapdoor scene that stalls despite a completed countdown. The dimension average is 5.33; the requested weighted calculation is 5.97, with neither affected by the 8.5 cap.</p>
+<h2 id="scores">Scores</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Score</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agency Respect</td>
+<td>4/10</td>
+<td>2.0x</td>
+</tr>
+<tr>
+<td>Declaration vs Acknowledgment</td>
+<td>5/10</td>
+<td>1.5x</td>
+</tr>
+<tr>
+<td>Invitation Architecture</td>
+<td>6/10</td>
+<td>1.5x</td>
+</tr>
+<tr>
+<td>Branching Persistence</td>
+<td>6/10</td>
+<td>1.5x</td>
+</tr>
+<tr>
+<td>Equipment Engagement</td>
+<td>4/10</td>
+<td>1.0x</td>
+</tr>
+<tr>
+<td>NPC Dialogue</td>
+<td>5/10</td>
+<td>1.0x</td>
+</tr>
+<tr>
+<td>Spatial Consistency</td>
+<td>7/10</td>
+<td>1.0x</td>
+</tr>
+<tr>
+<td>Character Creation</td>
+<td>1/10</td>
+<td>1.0x</td>
+</tr>
+<tr>
+<td>Atmosphere &amp; Feeling</td>
+<td>8/10</td>
+<td>1.0x</td>
+</tr>
+<tr>
+<td>Curiosity Following</td>
+<td>7/10</td>
+<td>1.0x</td>
+</tr>
+<tr>
+<td>Pacing &amp; Breath</td>
+<td>3/10</td>
+<td>1.0x</td>
+</tr>
+<tr>
+<td>Actionable vs Atmospheric</td>
+<td>8/10</td>
+<td>1.0x</td>
+</tr>
+</tbody>
+</table>
+<h3 id="agency-respect-critical-410">Agency Respect (Critical): 4/10</h3>
+<p>Several clear boundary slips occur. Conversely, the Narrator avoids inventing player dialogue or major decisions.</p>
+<p><strong>Evidence</strong>:</p>
+<ul>
+<li><strong>Turn 2</strong>: “when you flatten it, a second line reveals itself” — Taking the note was proposed, but flattening its corner was not declared; the Narrator supplies an investigative action.</li>
+<li><strong>Turn 4</strong>: “The light is failing faster now” — Time advances while players are still choosing whether to lift the trapdoor, contrary to the explicit pause rule.</li>
+<li><strong>Turn 5</strong>: “Beneath your fingers, the iron ring is cold” — The Narrator assumes contact before players establish it; both characters previously specified examining without touching.</li>
+</ul>
+<h3 id="pacing--breath-310">Pacing &amp; Breath: 3/10</h3>
+<p>The problem is prolonged suspense rather than a plot sprint. A full story ending was unrealistic in six turns, but the immediate trapdoor action could have reached a consequence.</p>
+<p><strong>Evidence</strong>:</p>
+<ul>
+<li><strong>Turn 3</strong>: “a single, low croak” — An initially effective restrained reveal leaves room for discussion.</li>
+<li><strong>Turn 5</strong>: “The drag-scrape stops.” — Another incremental sound change extends a decision already occupying several exchanges.</li>
+<li><strong>Turn 6</strong>: “One. Two.” — Resetting the completed countdown consumes the final available turn without resolving the attempted peek.</li>
+</ul>
+</section>
+          <figcaption>One real judge report, before the fixes: the overall score, all twelve criteria, and evidence for agency and pacing. <a class="button" href="./the-pulse-judge-report.html">Read the full report</a></figcaption>
+        </figure>
         <figure class="plate">
           <div class="shot"><img src="./assets/the-pulse-evaluation-loop.svg" alt="Public-safe evaluation loop: story guides feed simulated players and a narrator model, a comparison runner records sessions to checkpoints, and reports aggregate turn and quality metrics." loading="lazy"></div>
           <figcaption>This diagram shows how the evaluation loop fits together: a story and a narrator model/prompt drive a simulated group, each session is captured to checkpoints, and reports aggregate the results so narrators can be compared head to head.</figcaption>
